@@ -1,0 +1,1418 @@
+[
+    {
+      "A": "No Genre",
+      "B": "Purple",
+      "C": "Where was the first vault placed?",
+      "D": "Bellevue"
+    },
+    {
+      "A": "No Genre",
+      "B": "Purple",
+      "C": "How many minutes did it take for the Hawaii floating vault to open?",
+      "D": "4"
+    },
+    {
+      "A": "No Genre",
+      "B": "Purple",
+      "C": "Who was the first player to craft the fire dragon cubie?",
+      "D": "Cryptosaoirse"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Red",
+      "C": "To whom the warning \"Beware the ides of March\" was directed at?",
+      "D": "Julius Ceasar"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Red",
+      "C": "What does a philographist collect?",
+      "D": "Autographs"
+    },
+    {
+      "A": "Science",
+      "B": "Red",
+      "C": "What would be the weight on earth of earth's largest artificial satellite?",
+      "D": "480 tons"
+    },
+    {
+      "A": "Science",
+      "B": "Red",
+      "C": "ESA shuttles have found over 1000 volcanoes on which planet since 2006?",
+      "D": "Venus"
+    },
+    {
+      "A": "TV",
+      "B": "Red",
+      "C": "How many season did MASH run for?",
+      "D": "11"
+    },
+    {
+      "A": "TV",
+      "B": "Red",
+      "C": "Which movie is the quote \"at my signal unleash hell\" from?",
+      "D": "Gladiator"
+    },
+    {
+      "A": "TV",
+      "B": "Red",
+      "C": "Which race car driver did Ashley Judd divorce in 2013?",
+      "D": "Dario Franchitti"
+    },
+    {
+      "A": "Books",
+      "B": "Yellow",
+      "C": "Who wrote the novel \"Native Son\"?",
+      "D": "Richard Wright"
+    },
+    {
+      "A": "Celebrity",
+      "B": "Yellow",
+      "C": "With what name was Judy Garland born with?",
+      "D": "Frances Gumm"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Yellow",
+      "C": "The FOX drama “The O.C.” gained much acclaim for something special related to production. What?",
+      "D": "the music"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Yellow",
+      "C": "President Josiah Bartlett appears in which TV series?",
+      "D": "The West Wing"
+    },
+    {
+      "A": "Films",
+      "B": "Yellow",
+      "C": "Which year was the movie 'MASH' made?",
+      "D": "1970"
+    },
+    {
+      "A": "Granville Island",
+      "B": "Yellow",
+      "C": "Which First Nations people arrived at Granville Island first?",
+      "D": "Salish"
+    },
+    {
+      "A": "LACMA",
+      "B": "Yellow",
+      "C": "How many lamps are in the Urban Light art installation at LACMA?",
+      "D": "202"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Yellow",
+      "C": "In Chess, the Knight moves in what letter shape?",
+      "D": "L"
+    },
+    {
+      "A": "Prince’s Island Park",
+      "B": "Yellow",
+      "C": "How big is Prince’s Island Park?",
+      "D": "20 hectares"
+    },
+    {
+      "A": "St. Lawrence Market",
+      "B": "Yellow",
+      "C": "How many vendors are listed in the St. Lawrence Market directory?",
+      "D": "120"
+    },
+    {
+      "A": "TV",
+      "B": "Yellow",
+      "C": "A man keeps seeing the neighbor's dog as a talking Australian man in a dog costume.",
+      "D": "Wilfred"
+    },
+    {
+      "A": "TV",
+      "B": "Yellow",
+      "C": "\"Who played the overtly promiscuous divorce lawyer Arnie Becker on the Emmy-winning series L.A. Law?",
+      "D": "Corbin Bernsen"
+    },
+    {
+      "A": "TV",
+      "B": "Yellow",
+      "C": "A man keeps seeing the neighbour’s dog as a talking Australian man in a dog costume",
+      "D": "Wilfred"
+    },
+    {
+      "A": "Books",
+      "B": "Green",
+      "C": "Who wrote the 2001 book \"Life of Pi\"?",
+      "D": "Yann Martel"
+    },
+    {
+      "A": "Books",
+      "B": "Green",
+      "C": "Who is the coauthor to Autobiography of Malcolm X?",
+      "D": "Alex Haley"
+    },
+    {
+      "A": "Books",
+      "B": "Green",
+      "C": "Leo Tolstoy wrote about which woman?",
+      "D": "Anna Karenina"
+    },
+    {
+      "A": "Books",
+      "B": "Green",
+      "C": "What are the first two names of poet TS Eliot?",
+      "D": "Thomas Stearns"
+    },
+    {
+      "A": "Books",
+      "B": "Green",
+      "C": "Which one was not one of the Secret Seven?",
+      "D": "Anne"
+    },
+    {
+      "A": "Celebrity",
+      "B": "Green",
+      "C": "Fenty Beauty is a line by which celebrity?",
+      "D": "Rihanna"
+    },
+    {
+      "A": "Celebrity",
+      "B": "Green",
+      "C": "Denise Richards used to be married to what actor?",
+      "D": "Charlie Sheen"
+    },
+    {
+      "A": "Celebrity",
+      "B": "Green",
+      "C": "Who claimed he funded an investigation into President Obama's birth certificate only to produce nothing?",
+      "D": "Donald Trump"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "In what state do Jerry's parents live in Seinfeld?",
+      "D": "Florida"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Can't Hold Us is a song by which American rapper?",
+      "D": "Macklemore"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Which classic 1970s track starts off with \"sometimes it's hard to be a woman\"?",
+      "D": "Stand by Your Man"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "In which city did John Lennon die?",
+      "D": "New York City"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Which actor played the tenth Doctor Who?",
+      "D": "David Tennant"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Which actor plays Carrie in 'Homeland'?",
+      "D": "Claire Danes"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Which great 70s album featured the tracks 'Liufe in the Fast Lane' and 'Victim of Love'?",
+      "D": "Hotel California"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Chasing Pavements' and 'Rumor Has It' are singles by which artist?",
+      "D": "Adele"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Who stars in the film 'Mean Streets'?",
+      "D": "Robert DeNiro"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "What boy befriends and helps a lost alien in E.T. Extra-Terrestrial?",
+      "D": "Elliott"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Ellen De Generes provided the voice of Dory in what movie?",
+      "D": "Finding Nemo"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "In which of these movies did Matt Damon not appear?",
+      "D": "Reservoir Dogs"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "Just Give Me a Reason appears on which Pink album?",
+      "D": "The Truth About Love"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "West End Girls was a 1986 single by which of these?",
+      "D": "Pet Shop Boys"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "What was Elvis Presley's middle name?",
+      "D": "Aaron"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "2001: A Space Odyssey' was based on a short story by whom?",
+      "D": "Arthur C. Clarke"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "The characters Cally and Soolin appear in what sci fi show?",
+      "D": "Blake's 7"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "What is '70s legend Donna's last name?",
+      "D": "Summer"
+    },
+    {
+      "A": "Entertainment",
+      "B": "Green",
+      "C": "The Edward Albee novel and subsequent movie asked \"Whose Afraid of...?\"",
+      "D": "Virginia Woolf"
+    },
+    {
+      "A": "Films",
+      "B": "Green",
+      "C": "What colour is Tintin's loyal dog?",
+      "D": "White"
+    },
+    {
+      "A": "Films",
+      "B": "Green",
+      "C": "The Perfect Murder starred which actress?",
+      "D": "Gwyneth Paltrow"
+    },
+    {
+      "A": "Films",
+      "B": "Green",
+      "C": "In Beauty and the Beast, what is Lumiere?",
+      "D": "Candlestick"
+    },
+    {
+      "A": "Films",
+      "B": "Green",
+      "C": "In Beauty and the Beast, what is Lumiere?",
+      "D": "Candlestick"
+    },
+    {
+      "A": "Films",
+      "B": "Green",
+      "C": "Who had their own Buffy spin-off, Angel?",
+      "D": "David Boreanaz"
+    },
+    {
+      "A": "Films",
+      "B": "Green",
+      "C": "What movie is villain Norman Bates from?",
+      "D": "Psycho"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which architect designed the Walt Disney Concert Hall in LA?",
+      "D": "Gehry"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Basil Spence designed which English Cathedral?",
+      "D": "Coventry"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "How many squares are empty at the start of a game of checkers?",
+      "D": "8"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which famous American performer has 5 stars on the Hollywood Walk of Fame?",
+      "D": "Gene Autry"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Islam ranks where on the list of popular religions?",
+      "D": "2nd"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "In Japan, on New Year's Eve what do Buddhists do at temples 108 times at midnight?",
+      "D": "Ring the bells"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which country was beaten by France in the 2018 Word Cup Final?",
+      "D": "Croatia"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Eunice Shriver, who died in 2009, was a member of which famous family?",
+      "D": "Kennedy"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which city would you be visiting if you flew into Barajas airport?",
+      "D": "Madrid"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Children's fictional character Babar is which type of Creature?",
+      "D": "Elephant"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "\"Can we talk?\" is a catchphrase associated with which of these?",
+      "D": "Joan Rivers"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "What was the name of the Greek woman whose face launched 1000 ships?",
+      "D": "Helen"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "In 1857 Joseph Gayetty invented which household item?",
+      "D": "Toilet Roll"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Who said \"I see no ships\"?",
+      "D": "Lord Nelson"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "What's the last name of popular big band leader Jools?",
+      "D": "Holland"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "What nationality was Luciano Pavarotti?",
+      "D": "Italian"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Where is the Union Pacific Railroad museum located?",
+      "D": "Nebraska"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "The Cairngorms Nation Park is in which country?",
+      "D": "Scotland"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which B is an ice cream dish?",
+      "D": "Bombe"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "How many Freddy Krueger movies have there been?",
+      "D": "9"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Who said of Issey Miyaki \"So I asked Issey to make me some of his black turtlenecks that I liked, and he made me like a hundred of them\"?",
+      "D": "Steve Jobs"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which of these crime headlines of yesteryear appeared in the newspapers before the others?",
+      "D": "Ruth Ellis Hanged"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which country is ruled by a single dynasty for more than two thousand years?",
+      "D": "Japan"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Where was Alexander Bell Graham born?",
+      "D": "Edinburg"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "Which city had the United States first subway system?",
+      "D": "Boston"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Green",
+      "C": "In which organ is Vitamin A primarily stored?",
+      "D": "Liver"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is the capital of Peru",
+      "D": "Lima"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is the currency of Turkey",
+      "D": "Lira"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Mars was the Roman God of what?",
+      "D": "War"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is Britain's longest river?",
+      "D": "The Severn"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Mecca is in which country?",
+      "D": "Saudi Arabia"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is India's largest city by population?",
+      "D": "Mumbai"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What do the Finns call Finland?",
+      "D": "Suomi"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "The Dali Lama is a diety of?",
+      "D": "Tibet"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Which K is an island in Alaska?",
+      "D": "Kodiak"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "The Yukon is what?",
+      "D": "A River"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is the oldest city in the world?",
+      "D": "Jericho"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Mars was the Roman God of what?",
+      "D": "War"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Which city is on every continent (except Antartica)?",
+      "D": "Rome"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is Britain's longest motorway?",
+      "D": "M6"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "The Uffizi gallery can be found where?",
+      "D": "Florence"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Sol was the Norse God of what?",
+      "D": "The Sun"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "The Belfry is in which country?",
+      "D": "England"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Chesterfield is famed for its?",
+      "D": "Crooked Spire"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is the largest city in Italy by population?",
+      "D": "Rome"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "Which L is a port in Cyprus?",
+      "D": "Limassol"
+    },
+    {
+      "A": "Geography",
+      "B": "Green",
+      "C": "What is the world’s largest bird?",
+      "D": "Ostrich"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "Discoloured toenails are a sign that what kind of infection is present?",
+      "D": "Nail fungus, Onychomycosis"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "What kind of makeup is used to add shade or highlights to the area around the eyes?",
+      "D": "Eye Shadow"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "Cindy Crawford and which actor were once named \"People\" Magazine's \"Sexiest Couple Alive\"?",
+      "D": "Richard Gere"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "In medical terms, what does the suffix \"-genic\" mean?",
+      "D": "Producing"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "What eye ailment could prevent you from becoming a pilot?",
+      "D": "Colour Blindness"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "Rubella is the medical term for what disease?",
+      "D": "Measles"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "Frangipane is a filling made from or flavored with what?",
+      "D": "Almonds"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "Go is purported to have originated in which country 4000 years ago?",
+      "D": "China"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "How many ways is there to end an untimed game of Chess?",
+      "D": "3"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "How does a castle/rook move on a chess board?",
+      "D": "In a straight line"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Green",
+      "C": "How many player characters are there is cluedo?",
+      "D": "6"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Who sang \"Suspicious Minds\" and \"Burning Love\"?",
+      "D": "Elvis Presley"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Whose album is titled 'Elephunk'?",
+      "D": "Black Eyed Peas"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Kirsty Maccool died in what year?",
+      "D": "2000"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "What is Dire Straits best selling album?",
+      "D": "Brothers in Arms"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Which musical opened on Broadway in 1972?",
+      "D": "Grease"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Who sang the song “take on me”?",
+      "D": "A-ha"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Who married radio presenter Chris Evans?",
+      "D": "Billie Piper"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "During what decade was Cher born?",
+      "D": "The 1940s"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Who was 'Bulletproof in 2010?",
+      "D": "La Roux"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Which of these was a hit single of Debbie Harry?",
+      "D": "French Kissin"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "What is Cheryl Cole's maiden name?",
+      "D": "Tweedy"
+    },
+    {
+      "A": "Music",
+      "B": "Green",
+      "C": "Who was 'So Fine' in 2009?",
+      "D": "Sean Paul"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "How many naturally occurring noble gases are in a periodic table?",
+      "D": "6"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "Which of the following is not a type of stem cell?",
+      "D": "Fat Cells"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "Acceleration is determined by the force acting on it and what else?",
+      "D": "Mass"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "What was a saber-tooth cat's average weight?",
+      "D": "750 pounds"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "What word describes how living organizms rely on each other to exist?",
+      "D": "Interdependence"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "The bone at the base of your spine is known as the what?",
+      "D": "Coccyx"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "What is the process of removing dead skin cells from the body called?",
+      "D": "Exofoliation"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "When do plants photosynthesize?",
+      "D": "In the light"
+    },
+    {
+      "A": "Science",
+      "B": "Green",
+      "C": "Which of these is a type of dolphin?",
+      "D": "Bottlenose"
+    },
+    {
+      "A": "Sports",
+      "B": "Green",
+      "C": "Which tennis player has won the most Grand Slams?",
+      "D": "Roger Federer"
+    },
+    {
+      "A": "Sports",
+      "B": "Green",
+      "C": "The Verizon Center is the home location of which basketball team?",
+      "D": "Washington Wizards"
+    },
+    {
+      "A": "Sports",
+      "B": "Green",
+      "C": "Brad Friedel played which sport professionally for the United States?",
+      "D": "Soccer"
+    },
+    {
+      "A": "Sports",
+      "B": "Green",
+      "C": "The Bankers Life Fieldhouse is a arena used for what sport?",
+      "D": "Basketball"
+    },
+    {
+      "A": "Sports",
+      "B": "Green",
+      "C": "Eldora Speedway is a motor racing venue in which US State?",
+      "D": "Ohio"
+    },
+    {
+      "A": "Sport",
+      "B": "Green",
+      "C": "What state was Michael Jordan born in?",
+      "D": "New York"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "In 2004 Mozilla released version 1.0 of its email and news client, titled what?",
+      "D": "Thunderbird"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "In what year was the Apple OS 'Leopard' launched?",
+      "D": "2007"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "In what country was chicken restaurant Nando's founded?",
+      "D": "South Africa"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "As of 2013 the App Store offered more than how many apps from both Apple and third parties?",
+      "D": "1m"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "LG accused Apple of basing the design of the iPhone on which of their models?",
+      "D": "Prada"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "The courtroom battles between Apple and which company made worldwide headlines?",
+      "D": "Samsung"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "Jimmy Fallon's parody of which TV show became a popular video on YouTube?",
+      "D": "Breaking Bad"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "First gen mini iPod capacity?",
+      "D": "4gb only"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "Jonah Peretti is the founder of which website?",
+      "D": "Buzzfeed"
+    },
+    {
+      "A": "Technology",
+      "B": "Green",
+      "C": "The first generation iPhone was released with how much DRAM?",
+      "D": "128 MB"
+    },
+    {
+      "A": "TV",
+      "B": "Green",
+      "C": "On which kids TV show will you see Kaboodle, Pip, and Snout?",
+      "D": "Kerwhizz"
+    },
+    {
+      "A": "TV",
+      "B": "Green",
+      "C": "On which TV show did the Olsen twins get their start in show business?",
+      "D": "Full House"
+    },
+    {
+      "A": "TV",
+      "B": "Green",
+      "C": "On which night did Jonathan Ross host his chat show?",
+      "D": "Friday"
+    },
+    {
+      "A": "TV",
+      "B": "Green",
+      "C": "Hogans Heroes was set during which conflict?",
+      "D": "World War II"
+    },
+    {
+      "A": "TV",
+      "B": "Green",
+      "C": "Anne Wood created which popular childrens TV show?",
+      "D": "Tellytubbies"
+    },
+    {
+      "A": "TV",
+      "B": "Green",
+      "C": "On the TV show 'Frasier', what was the dog's name?",
+      "D": "Eddie"
+    },
+    {
+      "A": "TV",
+      "B": "Green",
+      "C": "Actress is Amy Yasbeck is best known as which one of these?",
+      "D": "Casey on NBCs Wings"
+    },
+    {
+      "A": "Celebrity",
+      "B": "Blue",
+      "C": "What country singer is married to fellow country singer Tim McGraw?",
+      "D": "Faith Hill"
+    },
+    {
+      "A": "Celebrity",
+      "B": "Blue",
+      "C": "Marc Anthony got divorced from what actress/singer in 2014?",
+      "D": "Jennifer Lopez"
+    },
+    {
+      "A": "Films",
+      "B": "Blue",
+      "C": "What was Quentin Tarantino's first movie?",
+      "D": "Reservoir Dogs"
+    },
+    {
+      "A": "Films",
+      "B": "Blue",
+      "C": "Who composed the score for Blade Runner?",
+      "D": "Vangelis"
+    },
+    {
+      "A": "Films",
+      "B": "Blue",
+      "C": "Which Michael starred in Falling Down?",
+      "D": "Michael Douglas"
+    },
+    {
+      "A": "Films",
+      "B": "Blue",
+      "C": "When did DVDs first go on sale in the US?",
+      "D": "1997"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "Which of these is the guitarist amongst the pianists?",
+      "D": "Jimi Hendrix"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "Who is the world's largest online retailer?",
+      "D": "Amazon"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "Where was the first Wal-Mart store located?",
+      "D": "Rogers, Arkansas"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "Lavazza is a famous name for making which type of drink?",
+      "D": "Coffee"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "Where is The Church of Jesus Christ of Latter-day Saints based?",
+      "D": "Utah"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "What's the name given to the type of murder sometimes carried out within Asian communities in the UK?",
+      "D": "Honour killing"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "Where do Jews go to pray?",
+      "D": "Synagogue"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "In cosmetics, veneers are added to what?",
+      "D": "Teeth"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "The letters TGFOP can be found on what?",
+      "D": "Tea"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "Who said \"Canada? I don't even know what street Canada is on\"?",
+      "D": "Al Capone"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "What is the state capital of Arkansas?",
+      "D": "Little Rock"
+    },
+    {
+      "A": "General Knowledge",
+      "B": "Blue",
+      "C": "In stargazing, what is the name given to collections of stars in a pattern?",
+      "D": "Constellation"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "In what US state is Philadelphia located?",
+      "D": "Pennsylvania"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Apollo was the Greek God of what?",
+      "D": "Art"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "How many continents are there?",
+      "D": "Seven"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "The Pied Piper of Hamilton saved the town from?",
+      "D": "Rats"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "What is the most dangerous shark to humans?",
+      "D": "The Great White"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Marrakech is in what country?",
+      "D": "Morocco"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "The Bermuda Triangle is where?",
+      "D": "The Atlantic"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Which of these national parks is in the state of Colorado?",
+      "D": "Rocky Mountain"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Which meat contains the most protein?",
+      "D": "Beef"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Which city does not hold a spectacular carnival?",
+      "D": "Sydney"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Arthur's Seat is in which Scottish city?",
+      "D": "Edinburgh"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "The Valley of the Kings is noted for its what?",
+      "D": "Tombs"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "What is the largest whale in the world?",
+      "D": "The Blue Whale"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Coal is what type of fuel?",
+      "D": "Fossil"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "What is the tallest animal in the world?",
+      "D": "Giraffe"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "What is Eyjafjallajakull?",
+      "D": "A volcano in Iceland"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Which foodstuff has the highest fat content?",
+      "D": "Nuts"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Name Guyana's second city.",
+      "D": "Linden"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Brooklyn and the Bronx are in which state?",
+      "D": "New York"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "What is the state capital of Arkansas?",
+      "D": "Little Rock"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "What is the state capital of Missouri?",
+      "D": "Jefferson City"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "The Louvre is in which city?",
+      "D": "Paris"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "What is the state capitol of Colorado?",
+      "D": "Denver"
+    },
+    {
+      "A": "Geography",
+      "B": "Blue",
+      "C": "Where is the Great Barrier Reef located?",
+      "D": "Australia"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "What is the body function that dictates how quickly you burn off fat?",
+      "D": "Metabolism"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "How does a traditional game of Draughts end?",
+      "D": "When one player can't move a piece"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "Brazilian company Natura's \"Mamae e Bebe\" product line was aimed at whom?",
+      "D": "Women and Children"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "How many units of alcohol are women told not to exceed per week?",
+      "D": "14"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "What kind of makeup will not smear or come off when wet?",
+      "D": "Waterproof"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "If you eliminate an opponent in Risk, what do you receive?",
+      "D": "That opponent's cards"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "What is the English translation of the French term \"eau de toilette\", a lightly-scented substance?",
+      "D": "Toilet Water"
+    },
+    {
+      "A": "Lifestyle",
+      "B": "Blue",
+      "C": "Chanel No.5, Allure, Coco and Chance are perfumes made by a company founded by whom?",
+      "D": "Coco Chanel"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "Which city was a hit for Ultravox",
+      "D": "Vienna"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "Which band is not Irish?",
+      "D": "Little River Band"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "Who had a 2003 hit with 'Rock Your Body'?",
+      "D": "Justin Timberlake"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "Who is the lead singer of Blondie?",
+      "D": "Debbie Harry"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "Which band is not from 'Oz'?",
+      "D": "Split Enz"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "What famous quintet made the number-one hit single 'I'll Be There'?",
+      "D": "Jackson 5"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "When did Roxy Music first break up?",
+      "D": "1976"
+    },
+    {
+      "A": "Music",
+      "B": "Blue",
+      "C": "What is Miley Cyrus’s Christened name?",
+      "D": "Destiny"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "Bill Gates founded which company in Albuquerque, New Mexico in 1975?",
+      "D": "Microsoft"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "Owls can't see anything within a few inches of their eyes because they are what?",
+      "D": "Far-sighted"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "From which word does the abbreviation of the top-level domain extension '.com' come?",
+      "D": "Commercial"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "A circuit with more than one path is known as a what circuit?",
+      "D": "Parallel"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "What would be the best equipment for sampling plants in a big area?",
+      "D": "Quadrat"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "How many volts of electricity is in a bolt of lightning?",
+      "D": "Millions"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "When was the element bohrium discovered?",
+      "D": "1981"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "What is the name for an animal who only eats meat?",
+      "D": "Carnivore"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "The study of forests and woods is called what?",
+      "D": "Forestry"
+    },
+    {
+      "A": "Science",
+      "B": "Blue",
+      "C": "What is the back of the neck called?",
+      "D": "Nape"
+    },
+    {
+      "A": "Sports",
+      "B": "Blue",
+      "C": "In which city is the MLB team known as The Twins located?",
+      "D": "Minnesota"
+    },
+    {
+      "A": "Technology",
+      "B": "Blue",
+      "C": "Who was the CEO of IBM in 2010?",
+      "D": "Lou Gerstner"
+    },
+    {
+      "A": "Technology",
+      "B": "Blue",
+      "C": "The 1st gen iPod Mini had what memory capacity?",
+      "D": "4GB"
+    },
+    {
+      "A": "Technology",
+      "B": "Blue",
+      "C": "A video on Youtube, which has over 10 million views, stars 2 year old Makena singing a song by which Britishh singer?",
+      "D": "Adele"
+    },
+    {
+      "A": "Technology",
+      "B": "Blue",
+      "C": "As of 2014 how many versions of the iPad has there been?",
+      "D": "7"
+    },
+    {
+      "A": "Technology",
+      "B": "Blue",
+      "C": "The Apple I basically consisted of what?",
+      "D": "Circuit Board"
+    },
+    {
+      "A": "TV",
+      "B": "Blue",
+      "C": "An FBI agent investigates the death of Laura Palmer in a bizarre town.",
+      "D": "Twin Peaks"
+    },
+    {
+      "A": "TV",
+      "B": "Blue",
+      "C": "A live episode of which TV soap opera was broadcast on BBC on 19 February 2010, to celebrate 25 years since the broadcast of the first episode?",
+      "D": "EastEnders"
+    },
+    {
+      "A": "TV",
+      "B": "Blue",
+      "C": "Actress Justine Bateman is best known as which one of these?",
+      "D": "Actress On Men Behaving Badly"
+    },
+    {
+      "A": "TV",
+      "B": "Blue",
+      "C": "What character did Neil Brown Jr. Play on The Walking Dead?",
+      "D": "Guillermo"
+    }
+   ]

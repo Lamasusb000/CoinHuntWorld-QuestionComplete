@@ -5,10 +5,13 @@ import "../components/CSS/Header.css"
 import "../components/CSS/bootstrap.min.css"
 
 import ExternalLinks from "./Links-External"
+import EXTlinks from "../../site/settings/HeaderLinks.json"
 import InternalLinks from "./Links-Internal"
 
 import Theme from "../../site/settings/Theme.json"
 import LinkLabels from "../../site/settings/HeaderLinks.json"
+
+import SiteMetadata from "../../site/settings/SiteMetadata.json"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -34,37 +37,14 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           className="navbar-brand mr-auto">
-            {siteTitle}
+            {SiteMetadata.SiteName}
         </Link>
           <div
           className="collapse navbar-collapse"
           id="BurgerMenu">
             <ul
             className="navbar-nav nav">
-              <nav className="navbar navbar-fixed-top navbar-default">
-                <button
-                className="navbar-toggler navbar-dark"
-                type="button"
-                data-toggle="collapse"
-                data-target="#SocialBurgerMenu"
-                aria-controls="SocialBurgerMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                  <span
-                  className="navbar-toggler-icon">
-                  </span>
-                </button>
-                <p className="navbar-brand mr-auto">
-                  {LinkLabels.ExternalLinks}
-                </p>
-                <div
-                className="collapse navbar-collapse"
-                id="SocialBurgerMenu">
-                  <ul className="navbar-nav nav">
-                    <ExternalLinks/>
-                  </ul>
-                </div>
-              </nav>
+              {CheckForEXTlinks()}
               <nav className="navbar navbar-fixed-top navbar-default">
                 <button
                 className="navbar-toggler navbar-dark"
@@ -100,6 +80,37 @@ Header.propTypes = {
 
 Header.defaultProps = {
   siteTitle: ``,
+}
+
+function CheckForEXTlinks(){
+  if(EXTlinks.LinkSet.length > 0){
+    return (
+      <nav className="navbar navbar-fixed-top navbar-default">
+      <button
+      className="navbar-toggler navbar-dark"
+      type="button"
+      data-toggle="collapse"
+      data-target="#SocialBurgerMenu"
+      aria-controls="SocialBurgerMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+        <span
+        className="navbar-toggler-icon">
+        </span>
+      </button>
+      <p className="navbar-brand mr-auto">
+        {LinkLabels.ExternalLinks}
+      </p>
+      <div
+      className="collapse navbar-collapse"
+      id="SocialBurgerMenu">
+        <ul className="navbar-nav nav">
+          <ExternalLinks/>
+        </ul>
+      </div>
+    </nav>
+    )
+  }
 }
 
 export default Header

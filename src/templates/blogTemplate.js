@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Layout from "../components/layout"
 import "../components/CSS/Markdown-Pages.css"
 
@@ -13,7 +13,7 @@ export default function Template({
   const { html } = markdownRemark
   return (
     <Layout>
-        <SEO title={frontmatter.title}/>
+        <Seo title={frontmatter.title}/>
         <h1
         className="Title"
         style={{
