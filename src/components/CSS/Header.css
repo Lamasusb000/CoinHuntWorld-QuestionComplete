@@ -1,0 +1,30 @@
+.navbar-brand, .nav-item{
+    font-size: 3vmin;
+    padding: 1vh 0 1vh;
+}
+.navbar{
+    padding: 1vh 1.5vw 1vh;
+}
+.navbar-brand, .navbar, .nav-item, .nav-link{
+    color: inherit!important;
+    font-family: inherit!important;
+}
+@media (min-width:999px){
+    nav .navbar-collapse{
+        text-align: left!important;
+        padding-right: 2vw;
+    }
+}
+@media (max-height: 500px){
+    .navbar-brand{
+        font-size: 4vmax;
+    }
+}
+@media (max-width: 500px){
+    .navbar-brand{
+        font-size: 2.5vmax;
+    }
+}
+.navbar p {
+    margin-bottom: 0%!important;
+}

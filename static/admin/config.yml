@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+# This line should *not* be indented
+# These lines should *not* be indented
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+show_preview_links: false
+collections:
+  - name: "Page-Settings"
+    label: "Page Settings"
+    files:
+      - label: "Header Bar Links Config"
+        name: "links"
+        file: site/settings/HeaderLinks.json
+        editor:
+          preview: false
+        fields:
+          - {label: "Label For External Links (Social Media/ Other Sites)", name: "ExternalLinks", widget: "string"}
+          - {label: "Label For Internal Links (Blog Pages)", name: "InternalLinks", widget: "string"}
+          - label: "External Link Set"
+            name: "LinkSet"
+            widget: "list"
+            allow_add: true
+            collapsed: false
+            summary: '{{fields.LinkName}}'
+            fields:
+              - { label: "HTTPS Link (The https://www. Link)", name: "LinkURL", widget: "string"}
+              - { label: "Link Label (What Users Will See)", name: "LinkName", widget: "string"}
+      - label: "Site Metadata"
+        name: "Metadata"
+        file: site/settings/SiteMetadata.json
+        editor: 
+          preview: false
+        fields:
+          - {label: "Site Name", name: "SiteName", widget: "string"}
+          - {label: "Site Icon", name: "Icon", widget: "image"}
+      - label: "Contact Information"
+        name: "ContactInfo"
+        file: site/settings/SiteContactInfo.json
+        editor: 
+          preview: false
+        fields:
+          - {label: "Contact Number:", name: "Phone", widget: "string"}
+          - {label: "Email", name: "Email", widget: "string"}
+          - label: "Address"
+            name: "Address"
+            widget: "list"
+            allow_add: true
+            collapsed: false
+            max: 1
+            min: 1
+            summary: "Address"
+            fields:
+              - {label: "Address Line: 1", name: "AddressLine1", widget: "string", required: false}
+              - {label: "Address Line: 2", name: "AddressLine2", widget: "string", required: false}
+              - {label: "City", name: "City", widget: "string", required: true}
+              - {label: "Zip Code", name: "Zipcode", widget: "string", required: false}
+              - {label: "State", name: "State", widget: "string", required: true}
+      - label: "About Section (Footer)"
+        name: "About"
+        file: site/settings/AboutSection.md
+        editor:
+          preview: false
+        fields: 
+          - {label: "About Section Title", name: "title", widget: "string"}
+          - {label: "About Paragraph", name: "body", widget: "markdown"}
+      - label: "Theme"
+        name: "Theme"
+        file: site/settings/Theme.json
+        fields: 
+          - {label: "Header Color", name: "HeaderColor", widget: "color"}
+          - {label: "Body Color", name: "BodyColor", widget: "color"}
+          - {label: "Footer Color", name: "FooterColor", widget: "color"}
+          - {label: "Text Color", name: "TextColor", widget: "color"}
+          - {label: "Link Color", name: "LinkColor", widget: "color"}
+          - label: "Link Decoration"
+            name: "LinkDecor"
+            widget: "select"
+            options: ["None", "Underline"]
+          - label: "Font Family"
+            name: "Font"
+            widget: "select"
+            options: ["Times New Roman", "Arial", "Georgia", "Garamond", "Courier New"]
+  - name: "Pages"
+    label: "Blog Style Page"
+    folder: "src/markdown-pages"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - {label: "URL Address", name: "slug", widget: "string", pattern: ['^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$','A slug can have no spaces or special characters']}
+      - {label: "Date Published", name: "date", widget: "datetime", time_format: true, date_format: true, }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "SubTitle", name: "subtitle", widget: "string"}
+      - {label: "Page Body", name: "body", widget: "markdown"}
+

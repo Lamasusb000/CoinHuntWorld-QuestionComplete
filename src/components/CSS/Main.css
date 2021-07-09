@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding: env(safe-area-inset);
+}
+body {
+  margin: 0;
+  word-wrap: break-word;
+}
+.FilledBody{
+  min-height: 92vh;
+  min-width: 100%;
+}
+.Main-Image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  align-items: center;
+}
+.Centered{
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+.Title{
+    text-align: center;
+}
+.Page-Body{
+    padding-left: 8vw;
+    max-width: 84vw;
+}
+blockquote, pre{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    max-width: 75vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-left: 5vw;
+}
+blockquote p {
+    margin: 0%;
+}
+main pre{
+    color: inherit!important
+}
+@media (max-width: 500px){
+    h1{
+        font-size: 10vw;
+    }
+    h2{
+        font-size: 7vw;
+    }
+}

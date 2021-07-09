@@ -1,0 +1,14 @@
+{
+  "Phone": "",
+  "Email": "Junior@JuniorLamas.com",
+  "Address": [
+    {
+      "AddressLine1": "",
+      "AddressLine2": "",
+      "City": "Sumner",
+      "Zipcode": "98390",
+      "State": "Washington",
+      "Country": "United States of America"
+    }
+  ]
+}

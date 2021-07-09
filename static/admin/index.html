@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle("./Preview.css")
+  </script>
+
+  <!--Page Preview Template-->
+  <script>
+    var PostPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var image = entry.getIn(['data', 'image']);
+        var bg = this.props.getAsset(image);
+        return h("div", {className: "PreviewContainer", style: {fontFamily: `${entry.getIn(["data", "Font"])}`}}, 
+          h("div", {className: "HeaderPreview", style: {backgroundColor: `${entry.getIn(["data", "HeaderColor"])}`}},
+            h("h1", {style: {color: `${entry.getIn(["data", "TextColor"])}`}}, "Display Text")
+          ),
+          h("div", {className: "BodyPreview", style: {backgroundColor: `${entry.getIn(["data", "BodyColor"])}`}},
+            h("h1", {style: {color: `${entry.getIn(["data", "TextColor"])}`}}, "Display Text"),
+            h("h1", {style: {textDecoration: `${entry.getIn(["data", "LinkDecor"])}` ,color: `${entry.getIn(["data", "LinkColor"])}`}}, "Link Apperence")
+          ),
+          h("div", {className: "FooterPreview", style: {backgroundColor: `${entry.getIn(["data", "FooterColor"])}`}},
+            h("h1", {style: {color: `${entry.getIn(["data", "TextColor"])}`}}, "Display Text")
+          )
+        )
+      }
+    });
+  
+    CMS.registerPreviewTemplate("Theme", PostPreview);
+    CMS.registerPreviewTemplate("Pages", BlogPreview)
+  </script>
+</body>
+</html>
