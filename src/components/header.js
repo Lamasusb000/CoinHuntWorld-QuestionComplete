@@ -6,7 +6,6 @@ import "../components/CSS/bootstrap.min.css"
 
 import ExternalLinks from "./Links-External"
 import EXTlinks from "../../site/settings/HeaderLinks.json"
-import InternalLinks from "./Links-Internal"
 
 import Theme from "../../site/settings/Theme.json"
 import LinkLabels from "../../site/settings/HeaderLinks.json"
@@ -45,30 +44,6 @@ const Header = ({ siteTitle }) => (
             <ul
             className="navbar-nav nav">
               {CheckForEXTlinks()}
-              <nav className="navbar navbar-fixed-top navbar-default">
-                <button
-                className="navbar-toggler navbar-dark"
-                type="button"
-                data-toggle="collapse"
-                data-target="#BlogBurgerMenu"
-                aria-controls="BlogBurgerMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                  <span
-                  className="navbar-toggler-icon">
-                  </span>
-                </button>
-                <p className="navbar-brand mr-auto">
-                  {LinkLabels.InternalLinks}
-                </p>
-                <div
-                className="collapse navbar-collapse"
-                id="BlogBurgerMenu">
-                  <ul className="navbar-nav nav">
-                    <InternalLinks/>
-                  </ul>
-                </div>
-              </nav>
             </ul>
           </div>
       </nav>
