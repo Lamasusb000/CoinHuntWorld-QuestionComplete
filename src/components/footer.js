@@ -21,9 +21,7 @@ const Footer = () => (
                         node {
                           html  
                           frontmatter {
-                            slug
                             title
-                            date(formatString: "DD MMMM, YYYY")
                           }
                         }
                       }
