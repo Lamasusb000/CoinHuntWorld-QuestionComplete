@@ -82,16 +82,3 @@ collections:
             name: "Font"
             widget: "select"
             options: ["Times New Roman", "Arial", "Georgia", "Garamond", "Courier New"]
-  - name: "Pages"
-    label: "Blog Style Page"
-    folder: "src/markdown-pages"
-    editor:
-      preview: false
-    create: true
-    fields:
-      - {label: "URL Address", name: "slug", widget: "string", pattern: ['^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$','A slug can have no spaces or special characters']}
-      - {label: "Date Published", name: "date", widget: "datetime", time_format: true, date_format: true, }
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "SubTitle", name: "subtitle", widget: "string"}
-      - {label: "Page Body", name: "body", widget: "markdown"}
-
