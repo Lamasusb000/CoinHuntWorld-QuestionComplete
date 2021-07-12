@@ -3,6 +3,7 @@ async function ContactAPI() {
 		method: "GET"
 	});
 	if (response.status === 200){
+        console.log(response)
 		let data = await response.json()
 		console.log(data)
 	}
