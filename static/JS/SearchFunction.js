@@ -8,11 +8,12 @@ async function ContactAPI() {
 	if (response.status === 200){
 		let data = await response.json()
         window.RequestedData = data
+        return
 	}
 }
 
-function GetQuestions(){
-    ContactAPI()
+async function GetQuestions(){
+    await ContactAPI()
     var QuestionList = []
     for (let i = 0; i < window.RequestedData.length; i++) {
         QuestionList.push(window.RequestedData[i].Question)
