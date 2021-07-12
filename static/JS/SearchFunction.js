@@ -1,6 +1,9 @@
 async function ContactAPI() {
 	let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/GrabQuestions", {
-		method: "GET"
+		body: JSON.stringify({
+            Text: "Dummy Text"
+        }),
+        method: "POST"
 	});
 	if (response.status === 200){
         console.log(response)
