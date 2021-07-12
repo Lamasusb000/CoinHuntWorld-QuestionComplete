@@ -6,31 +6,15 @@ async function ContactAPI() {
         method: "POST"
 	});
 	if (response.status === 200){
-        console.log(response)
 		let data = await response.json()
-		console.log(data)
+        window.RequestedData = data
 	}
 }
 
-
-
-
-
-var RequestedData = [
-    {
-        "Question": "What Color is the inside of a watermelon",
-        "Answer": "Red"
-    },
-    {
-        "Question": "Where was the first uservault",
-        "Answer": "Bellevue"
-    }
-]
-
 function GetQuestions(){
     var QuestionList = []
-    for (let i = 0; i < RequestedData.length; i++) {
-        QuestionList.push(RequestedData[i].Question)
+    for (let i = 0; i < window.RequestedData.length; i++) {
+        QuestionList.push(window.RequestedData[i].Question)
     }
     return QuestionList
 }
@@ -56,9 +40,9 @@ var autoCompleteJS = new autoComplete({
 });
 
 function CollectResult(selection){
-    for (let i = 0; i < RequestedData.length; i++) {
-        if (selection === RequestedData[i].Question){
-            SendAnswer(RequestedData[i].Answer)
+    for (let i = 0; i < window.RequestedData.length; i++) {
+        if (selection === window.RequestedData[i].Question){
+            SendAnswer(window.RequestedData[i].Answer)
         }
     }
 }
