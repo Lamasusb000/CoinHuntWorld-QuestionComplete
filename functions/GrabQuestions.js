@@ -3,9 +3,7 @@ q = faunadb.query;
 const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN' })
 Output = "JSON Did not Attach"
 
-exports.handler = (event, context, callback) => {
-	UserLogin = JSON.parse(event.body)
-	UserLogin = UserLogin.login
+exports.handler = (callback) => {
 	Client.query(
 		q.Get(
 			q.Match(q.Index("QuestionAndAnswer"))
