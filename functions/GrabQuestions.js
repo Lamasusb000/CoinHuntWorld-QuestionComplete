@@ -15,7 +15,15 @@ exports.handler = (event, context, callback) => {
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
+        var Questions = []
 		Output = result.data
+
+        for (let i = 0; i < Output.length; i++) {
+            Questions[i] = Output[i].data
+            
+        }
+        console.log(Questions)
+
         console.log(Output)
 		console.log(JSON.stringify(Output))
 		return callback(null, {
