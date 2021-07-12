@@ -17,8 +17,8 @@ exports.handler = () => {
 		Output = result.data
 		var Questions = []
 		for (let i = 0; i < Output.length; i++) {
-			Questions[i].Question = Output.data[0].Question
-			Questions[i].Answer = Output.data[0].Answer
+			Questions[i].Question = Output[i].data[0].Question
+			Questions[i].Answer = Output[i].data[0].Answer
 		}
 
 
