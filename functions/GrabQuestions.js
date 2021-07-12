@@ -17,7 +17,6 @@ exports.handler = (event, context, callback) => {
 		}
         var Questions = []
 		Output = result.data
-
         for (let i = 0; i < Output.length; i++) {
             Questions[i] = Output[i].data
             
