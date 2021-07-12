@@ -17,7 +17,7 @@ const IndexPage = () => (
     <div class="autoComplete_wrapper">
         <input id="autoComplete" type="search" dir="ltr" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off"/>
     </div>
-    <br/><br/><br/>
+    <br/><br/>
     <h3 id="AnswerResults"/>
   </Layout>
 )
