@@ -1,0 +1,5 @@
+[build]
+    functions = "./functions"
+[[redirects]]
+    from = "/API/*"
+    to = "/.netlify/functions/:splat"
