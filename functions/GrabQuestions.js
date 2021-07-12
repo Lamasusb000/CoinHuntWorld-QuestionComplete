@@ -6,7 +6,7 @@ Output = "JSON Did not Attach"
 exports.handler = (callback) => {
 	Client.query(
 		q.Get(
-			q.Match(q.Index("QuestionAndAnswer"))
+			q.Paginate((q.Match(q.Index("QuestionAndAnswer"))))
 		)
 	)
 	.then(function(result){
