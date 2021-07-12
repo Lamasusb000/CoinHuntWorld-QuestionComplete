@@ -52,3 +52,7 @@ function CollectResult(selection){
 function SendAnswer(Answer){
     document.getElementById("AnswerResults").innerText = Answer
 }
+
+function ClearBox(){
+    document.getElementById("autoComplete").value = ""
+}
