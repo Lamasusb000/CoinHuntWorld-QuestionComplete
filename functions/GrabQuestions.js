@@ -22,13 +22,9 @@ exports.handler = (event, context, callback) => {
             Questions[i] = Output[i].data
             
         }
-        console.log(Questions)
-
-        console.log(Output)
-		console.log(JSON.stringify(Output))
 		return callback(null, {
 			statusCode: 200,
-			body: `${JSON.stringify(Output)}`
+			body: `${JSON.stringify(Questions)}`
 		  })
 	})
   }
