@@ -1,7 +1,7 @@
 const faunadb = require('faunadb'),
 q = faunadb.query;
 const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN' })
-Output = "JSON Did not Attach"
+var Output = "JSON Did not Attach"
 
 exports.handler = ( callback ) => {
 	Client.query(
@@ -18,7 +18,7 @@ exports.handler = ( callback ) => {
         console.log(Output)
 		return {
 			statusCode: 200,
-			body: JSON.stringify({Output})
+			body: JSON.stringify(Output)
 		}
 	})
   }
