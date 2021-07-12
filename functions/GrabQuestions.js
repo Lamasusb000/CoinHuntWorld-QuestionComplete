@@ -15,17 +15,11 @@ exports.handler = () => {
 			console.log("No Result")
 		}
 		Output = result.data
-		var Questions = []
-		for (let i = 0; i < Output.length; i++) {
-			Questions[i].data = Output[i].data
-		}
-
-
-        console.log(Questions)
-		console.log(JSON.stringify(Questions))
+        console.log(Output)
+		console.log(JSON.stringify(Output))
 		return {
 			statusCode: 200,
-			body: `Hello!`
+			body: `${JSON.stringify(Output)}`
 		  }
 	})
   }
