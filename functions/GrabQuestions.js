@@ -16,9 +16,9 @@ exports.handler = ( callback ) => {
 		}
         console.log(result.data)
 		Output = result.data
-		return callback(null, {
+		return {
 			statusCode: 200,
 			body: JSON.stringify({Output})
-		})
+		}
 	})
   }
