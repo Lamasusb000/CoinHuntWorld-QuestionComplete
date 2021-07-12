@@ -3,7 +3,7 @@ q = faunadb.query;
 const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN' })
 Output = "JSON Did not Attach"
 
-exports.handler = (callback) => {
+exports.handler = ( callback ) => {
 	Client.query(
         q.Map(
             q.Paginate(q.Match(q.Index("QuestionAndAnswer"))),
@@ -18,7 +18,7 @@ exports.handler = (callback) => {
 		Output = result.data
 		return callback(null, {
 			statusCode: 200,
-			body: JSON.stringify(result.data)
-		  })
+			body: JSON.stringify({Output})
+		})
 	})
   }
