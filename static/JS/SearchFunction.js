@@ -12,6 +12,7 @@ async function ContactAPI() {
 }
 
 function GetQuestions(){
+    ContactAPI()
     var QuestionList = []
     for (let i = 0; i < window.RequestedData.length; i++) {
         QuestionList.push(window.RequestedData[i].Question)
