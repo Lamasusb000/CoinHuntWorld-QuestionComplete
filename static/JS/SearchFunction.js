@@ -1,3 +1,17 @@
+async function ContactAPI() {
+	let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/GrabQuestions", {
+		method: "GET"
+	});
+	if (response.status === 200){
+		let data = await response.json()
+		console.log(data)
+	}
+}
+
+
+
+
+
 var RequestedData = [
     {
         "Question": "What Color is the inside of a watermelon",
