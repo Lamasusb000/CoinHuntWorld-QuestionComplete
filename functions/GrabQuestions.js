@@ -14,7 +14,7 @@ exports.handler = ( callback ) => {
 		if(result == "" | undefined){
 			console.log("Hopefully This Says It Didnt Work")
 		}
-		Output = result.data.data
+		Output = result.data
         console.log(Output)
 		return {
 			statusCode: 200,
