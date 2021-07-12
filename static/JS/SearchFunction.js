@@ -17,7 +17,7 @@ function GetQuestions(){
     return QuestionList
 }
 
-const autoCompleteJS = new autoComplete({
+var autoCompleteJS = new autoComplete({
     placeHolder: "Search Question",
     data: {
         src: GetQuestions(),
