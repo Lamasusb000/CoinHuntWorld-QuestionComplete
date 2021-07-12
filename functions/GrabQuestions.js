@@ -14,8 +14,8 @@ exports.handler = ( callback ) => {
 		if(result == "" | undefined){
 			console.log("Hopefully This Says It Didnt Work")
 		}
-        console.log(result.data)
-		Output = result.data
+		Output = result.data.data
+        console.log(Output)
 		return {
 			statusCode: 200,
 			body: JSON.stringify({Output})
