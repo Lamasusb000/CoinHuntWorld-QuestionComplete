@@ -19,7 +19,7 @@ exports.handler = () => {
 		console.log(JSON.stringify(Output))
 		return {
 			statusCode: 200,
-			body: "JSON.stringify(Output)"
+			body: "Hello"
 		}
 	})
   }
