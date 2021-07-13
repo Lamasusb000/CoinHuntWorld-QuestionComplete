@@ -1420,7 +1420,7 @@ var QuestionArray = [
 async function SendToAPI() {
     SentData = []
     for (let i = 0; i < QuestionArray.length; i++) {
-        SentData.Question = QuestionArray[i].Quesiton
+        SentData.Question = QuestionArray[i].Question
         SentData.Answer = QuestionArray[i].Answer
         SentData.Color = QuestionArray[i].Color
         SentData.Category = QuestionArray[i].Category
@@ -1428,7 +1428,7 @@ async function SendToAPI() {
         
         let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/SendQuestions", {
             body: JSON.stringify({
-                Quesiton: `${SentData.Question}`,
+                Question: `${SentData.Question}`,
                 Answer:`${SentData.Answer}`,
                 Color:`${SentData.Color}`,
                 Category:`${SentData.Category}`,
