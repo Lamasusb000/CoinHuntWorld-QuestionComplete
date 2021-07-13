@@ -1,1418 +1,1428 @@
 [
     {
-      "A": "No Genre",
-      "B": "Purple",
-      "C": "Where was the first vault placed?",
-      "D": "Bellevue"
+      "Category": "No Genre",
+      "Color": "Purple",
+      "Question": "Where was the first vault placed?",
+      "Answer": "Bellevue"
     },
     {
-      "A": "No Genre",
-      "B": "Purple",
-      "C": "How many minutes did it take for the Hawaii floating vault to open?",
-      "D": "4"
+      "Category": "No Genre",
+      "Color": "Purple",
+      "Question": "How many minutes did it take for the Hawaii floating vault to open?",
+      "Answer": "4"
     },
     {
-      "A": "No Genre",
-      "B": "Purple",
-      "C": "Who was the first player to craft the fire dragon cubie?",
-      "D": "Cryptosaoirse"
+      "Category": "No Genre",
+      "Color": "Purple",
+      "Question": "Who was the first player to craft the fire dragon cubie?",
+      "Answer": "Cryptosaoirse"
     },
     {
-      "A": "General Knowledge",
-      "B": "Red",
-      "C": "To whom the warning \"Beware the ides of March\" was directed at?",
-      "D": "Julius Ceasar"
+      "Category": "General Knowledge",
+      "Color": "Red",
+      "Question": "To whom the warning \"Beware the ides of March\" was directed at?",
+      "Answer": "Julius Ceasar"
     },
     {
-      "A": "General Knowledge",
-      "B": "Red",
-      "C": "What does a philographist collect?",
-      "D": "Autographs"
+      "Category": "General Knowledge",
+      "Color": "Red",
+      "Question": "What does a philographist collect?",
+      "Answer": "Autographs"
     },
     {
-      "A": "Science",
-      "B": "Red",
-      "C": "What would be the weight on earth of earth's largest artificial satellite?",
-      "D": "480 tons"
+      "Category": "Science",
+      "Color": "Red",
+      "Question": "What would be the weight on earth of earth's largest artificial satellite?",
+      "Answer": "480 tons"
     },
     {
-      "A": "Science",
-      "B": "Red",
-      "C": "ESA shuttles have found over 1000 volcanoes on which planet since 2006?",
-      "D": "Venus"
+      "Category": "Science",
+      "Color": "Red",
+      "Question": "ESA shuttles have found over 1000 volcanoes on which planet since 2006?",
+      "Answer": "Venus"
     },
     {
-      "A": "TV",
-      "B": "Red",
-      "C": "How many season did MASH run for?",
-      "D": "11"
+      "Category": "TV",
+      "Color": "Red",
+      "Question": "How many season did MASH run for?",
+      "Answer": "11"
     },
     {
-      "A": "TV",
-      "B": "Red",
-      "C": "Which movie is the quote \"at my signal unleash hell\" from?",
-      "D": "Gladiator"
+      "Category": "TV",
+      "Color": "Red",
+      "Question": "Which movie is the quote \"at my signal unleash hell\" from?",
+      "Answer": "Gladiator"
     },
     {
-      "A": "TV",
-      "B": "Red",
-      "C": "Which race car driver did Ashley Judd divorce in 2013?",
-      "D": "Dario Franchitti"
+      "Category": "TV",
+      "Color": "Red",
+      "Question": "Which race car driver did Ashley Judd divorce in 2013?",
+      "Answer": "Dario Franchitti"
     },
     {
-      "A": "Books",
-      "B": "Yellow",
-      "C": "Who wrote the novel \"Native Son\"?",
-      "D": "Richard Wright"
+      "Category": "Books",
+      "Color": "Yellow",
+      "Question": "Who wrote the novel \"Native Son\"?",
+      "Answer": "Richard Wright"
     },
     {
-      "A": "Celebrity",
-      "B": "Yellow",
-      "C": "With what name was Judy Garland born with?",
-      "D": "Frances Gumm"
+      "Category": "Celebrity",
+      "Color": "Yellow",
+      "Question": "With what name was Judy Garland born with?",
+      "Answer": "Frances Gumm"
     },
     {
-      "A": "Entertainment",
-      "B": "Yellow",
-      "C": "The FOX drama “The O.C.” gained much acclaim for something special related to production. What?",
-      "D": "the music"
+      "Category": "Entertainment",
+      "Color": "Yellow",
+      "Question": "The FOX drama “The O.C.” gained much acclaim for something special related to production. What?",
+      "Answer": "the music"
     },
     {
-      "A": "Entertainment",
-      "B": "Yellow",
-      "C": "President Josiah Bartlett appears in which TV series?",
-      "D": "The West Wing"
+      "Category": "Entertainment",
+      "Color": "Yellow",
+      "Question": "President Josiah Bartlett appears in which TV series?",
+      "Answer": "The West Wing"
     },
     {
-      "A": "Films",
-      "B": "Yellow",
-      "C": "Which year was the movie 'MASH' made?",
-      "D": "1970"
+      "Category": "Films",
+      "Color": "Yellow",
+      "Question": "Which year was the movie 'MASH' made?",
+      "Answer": "1970"
     },
+
+
+
+
+
+
+
+
+
+    
     {
-      "A": "Granville Island",
-      "B": "Yellow",
-      "C": "Which First Nations people arrived at Granville Island first?",
-      "D": "Salish"
+      "Category": "Granville Island",
+      "Color": "Yellow",
+      "Question": "Which First Nations people arrived at Granville Island first?",
+      "Answer": "Salish"
     },
     {
-      "A": "LACMA",
-      "B": "Yellow",
-      "C": "How many lamps are in the Urban Light art installation at LACMA?",
-      "D": "202"
+      "Category": "LACMA",
+      "Color": "Yellow",
+      "Question": "How many lamps are in the Urban Light art installation at LACMA?",
+      "Answer": "202"
     },
     {
-      "A": "Lifestyle",
-      "B": "Yellow",
-      "C": "In Chess, the Knight moves in what letter shape?",
-      "D": "L"
+      "Category": "Lifestyle",
+      "Color": "Yellow",
+      "Question": "In Chess, the Knight moves in what letter shape?",
+      "Answer": "L"
     },
     {
-      "A": "Prince’s Island Park",
-      "B": "Yellow",
-      "C": "How big is Prince’s Island Park?",
-      "D": "20 hectares"
+      "Category": "Prince’s Island Park",
+      "Color": "Yellow",
+      "Question": "How big is Prince’s Island Park?",
+      "Answer": "20 hectares"
     },
     {
-      "A": "St. Lawrence Market",
-      "B": "Yellow",
-      "C": "How many vendors are listed in the St. Lawrence Market directory?",
-      "D": "120"
+      "Category": "St. Lawrence Market",
+      "Color": "Yellow",
+      "Question": "How many vendors are listed in the St. Lawrence Market directory?",
+      "Answer": "120"
     },
     {
-      "A": "TV",
-      "B": "Yellow",
-      "C": "A man keeps seeing the neighbor's dog as a talking Australian man in a dog costume.",
-      "D": "Wilfred"
+      "Category": "TV",
+      "Color": "Yellow",
+      "Question": "A man keeps seeing the neighbor's dog as a talking Australian man in a dog costume.",
+      "Answer": "Wilfred"
     },
     {
-      "A": "TV",
-      "B": "Yellow",
-      "C": "\"Who played the overtly promiscuous divorce lawyer Arnie Becker on the Emmy-winning series L.A. Law?",
-      "D": "Corbin Bernsen"
+      "Category": "TV",
+      "Color": "Yellow",
+      "Question": "\"Who played the overtly promiscuous divorce lawyer Arnie Becker on the Emmy-winning series L.A. Law?",
+      "Answer": "Corbin Bernsen"
     },
     {
-      "A": "TV",
-      "B": "Yellow",
-      "C": "A man keeps seeing the neighbour’s dog as a talking Australian man in a dog costume",
-      "D": "Wilfred"
+      "Category": "TV",
+      "Color": "Yellow",
+      "Question": "A man keeps seeing the neighbour’s dog as a talking Australian man in a dog costume",
+      "Answer": "Wilfred"
     },
     {
-      "A": "Books",
-      "B": "Green",
-      "C": "Who wrote the 2001 book \"Life of Pi\"?",
-      "D": "Yann Martel"
+      "Category": "Books",
+      "Color": "Green",
+      "Question": "Who wrote the 2001 book \"Life of Pi\"?",
+      "Answer": "Yann Martel"
     },
     {
-      "A": "Books",
-      "B": "Green",
-      "C": "Who is the coauthor to Autobiography of Malcolm X?",
-      "D": "Alex Haley"
+      "Category": "Books",
+      "Color": "Green",
+      "Question": "Who is the coauthor to Autobiography of Malcolm X?",
+      "Answer": "Alex Haley"
     },
     {
-      "A": "Books",
-      "B": "Green",
-      "C": "Leo Tolstoy wrote about which woman?",
-      "D": "Anna Karenina"
+      "Category": "Books",
+      "Color": "Green",
+      "Question": "Leo Tolstoy wrote about which woman?",
+      "Answer": "Anna Karenina"
     },
     {
-      "A": "Books",
-      "B": "Green",
-      "C": "What are the first two names of poet TS Eliot?",
-      "D": "Thomas Stearns"
+      "Category": "Books",
+      "Color": "Green",
+      "Question": "What are the first two names of poet TS Eliot?",
+      "Answer": "Thomas Stearns"
     },
     {
-      "A": "Books",
-      "B": "Green",
-      "C": "Which one was not one of the Secret Seven?",
-      "D": "Anne"
+      "Category": "Books",
+      "Color": "Green",
+      "Question": "Which one was not one of the Secret Seven?",
+      "Answer": "Anne"
     },
     {
-      "A": "Celebrity",
-      "B": "Green",
-      "C": "Fenty Beauty is a line by which celebrity?",
-      "D": "Rihanna"
+      "Category": "Celebrity",
+      "Color": "Green",
+      "Question": "Fenty Beauty is a line by which celebrity?",
+      "Answer": "Rihanna"
     },
     {
-      "A": "Celebrity",
-      "B": "Green",
-      "C": "Denise Richards used to be married to what actor?",
-      "D": "Charlie Sheen"
+      "Category": "Celebrity",
+      "Color": "Green",
+      "Question": "Denise Richards used to be married to what actor?",
+      "Answer": "Charlie Sheen"
     },
     {
-      "A": "Celebrity",
-      "B": "Green",
-      "C": "Who claimed he funded an investigation into President Obama's birth certificate only to produce nothing?",
-      "D": "Donald Trump"
+      "Category": "Celebrity",
+      "Color": "Green",
+      "Question": "Who claimed he funded an investigation into President Obama's birth certificate only to produce nothing?",
+      "Answer": "Donald Trump"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "In what state do Jerry's parents live in Seinfeld?",
-      "D": "Florida"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "In what state do Jerry's parents live in Seinfeld?",
+      "Answer": "Florida"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Can't Hold Us is a song by which American rapper?",
-      "D": "Macklemore"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Can't Hold Us is a song by which American rapper?",
+      "Answer": "Macklemore"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Which classic 1970s track starts off with \"sometimes it's hard to be a woman\"?",
-      "D": "Stand by Your Man"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Which classic 1970s track starts off with \"sometimes it's hard to be a woman\"?",
+      "Answer": "Stand by Your Man"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "In which city did John Lennon die?",
-      "D": "New York City"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "In which city did John Lennon die?",
+      "Answer": "New York City"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Which actor played the tenth Doctor Who?",
-      "D": "David Tennant"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Which actor played the tenth Doctor Who?",
+      "Answer": "David Tennant"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Which actor plays Carrie in 'Homeland'?",
-      "D": "Claire Danes"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Which actor plays Carrie in 'Homeland'?",
+      "Answer": "Claire Danes"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Which great 70s album featured the tracks 'Liufe in the Fast Lane' and 'Victim of Love'?",
-      "D": "Hotel California"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Which great 70s album featured the tracks 'Liufe in the Fast Lane' and 'Victim of Love'?",
+      "Answer": "Hotel California"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Chasing Pavements' and 'Rumor Has It' are singles by which artist?",
-      "D": "Adele"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Chasing Pavements' and 'Rumor Has It' are singles by which artist?",
+      "Answer": "Adele"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Who stars in the film 'Mean Streets'?",
-      "D": "Robert DeNiro"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Who stars in the film 'Mean Streets'?",
+      "Answer": "Robert DeNiro"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "What boy befriends and helps a lost alien in E.T. Extra-Terrestrial?",
-      "D": "Elliott"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "What boy befriends and helps a lost alien in E.T. Extra-Terrestrial?",
+      "Answer": "Elliott"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Ellen De Generes provided the voice of Dory in what movie?",
-      "D": "Finding Nemo"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Ellen De Generes provided the voice of Dory in what movie?",
+      "Answer": "Finding Nemo"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "In which of these movies did Matt Damon not appear?",
-      "D": "Reservoir Dogs"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "In which of these movies did Matt Damon not appear?",
+      "Answer": "Reservoir Dogs"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "Just Give Me a Reason appears on which Pink album?",
-      "D": "The Truth About Love"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "Just Give Me a Reason appears on which Pink album?",
+      "Answer": "The Truth About Love"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "West End Girls was a 1986 single by which of these?",
-      "D": "Pet Shop Boys"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "West End Girls was a 1986 single by which of these?",
+      "Answer": "Pet Shop Boys"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "What was Elvis Presley's middle name?",
-      "D": "Aaron"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "What was Elvis Presley's middle name?",
+      "Answer": "Aaron"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "2001: A Space Odyssey' was based on a short story by whom?",
-      "D": "Arthur C. Clarke"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "2001: A Space Odyssey' was based on a short story by whom?",
+      "Answer": "Arthur C. Clarke"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "The characters Cally and Soolin appear in what sci fi show?",
-      "D": "Blake's 7"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "The characters Cally and Soolin appear in what sci fi show?",
+      "Answer": "Blake's 7"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "What is '70s legend Donna's last name?",
-      "D": "Summer"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "What is '70s legend Donna's last name?",
+      "Answer": "Summer"
     },
     {
-      "A": "Entertainment",
-      "B": "Green",
-      "C": "The Edward Albee novel and subsequent movie asked \"Whose Afraid of...?\"",
-      "D": "Virginia Woolf"
+      "Category": "Entertainment",
+      "Color": "Green",
+      "Question": "The Edward Albee novel and subsequent movie asked \"Whose Afraid of...?\"",
+      "Answer": "Virginia Woolf"
     },
     {
-      "A": "Films",
-      "B": "Green",
-      "C": "What colour is Tintin's loyal dog?",
-      "D": "White"
+      "Category": "Films",
+      "Color": "Green",
+      "Question": "What colour is Tintin's loyal dog?",
+      "Answer": "White"
     },
     {
-      "A": "Films",
-      "B": "Green",
-      "C": "The Perfect Murder starred which actress?",
-      "D": "Gwyneth Paltrow"
+      "Category": "Films",
+      "Color": "Green",
+      "Question": "The Perfect Murder starred which actress?",
+      "Answer": "Gwyneth Paltrow"
     },
     {
-      "A": "Films",
-      "B": "Green",
-      "C": "In Beauty and the Beast, what is Lumiere?",
-      "D": "Candlestick"
+      "Category": "Films",
+      "Color": "Green",
+      "Question": "In Beauty and the Beast, what is Lumiere?",
+      "Answer": "Candlestick"
     },
     {
-      "A": "Films",
-      "B": "Green",
-      "C": "In Beauty and the Beast, what is Lumiere?",
-      "D": "Candlestick"
+      "Category": "Films",
+      "Color": "Green",
+      "Question": "In Beauty and the Beast, what is Lumiere?",
+      "Answer": "Candlestick"
     },
     {
-      "A": "Films",
-      "B": "Green",
-      "C": "Who had their own Buffy spin-off, Angel?",
-      "D": "David Boreanaz"
+      "Category": "Films",
+      "Color": "Green",
+      "Question": "Who had their own Buffy spin-off, Angel?",
+      "Answer": "David Boreanaz"
     },
     {
-      "A": "Films",
-      "B": "Green",
-      "C": "What movie is villain Norman Bates from?",
-      "D": "Psycho"
+      "Category": "Films",
+      "Color": "Green",
+      "Question": "What movie is villain Norman Bates from?",
+      "Answer": "Psycho"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which architect designed the Walt Disney Concert Hall in LA?",
-      "D": "Gehry"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which architect designed the Walt Disney Concert Hall in LA?",
+      "Answer": "Gehry"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Basil Spence designed which English Cathedral?",
-      "D": "Coventry"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Basil Spence designed which English Cathedral?",
+      "Answer": "Coventry"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "How many squares are empty at the start of a game of checkers?",
-      "D": "8"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "How many squares are empty at the start of a game of checkers?",
+      "Answer": "8"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which famous American performer has 5 stars on the Hollywood Walk of Fame?",
-      "D": "Gene Autry"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which famous American performer has 5 stars on the Hollywood Walk of Fame?",
+      "Answer": "Gene Autry"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Islam ranks where on the list of popular religions?",
-      "D": "2nd"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Islam ranks where on the list of popular religions?",
+      "Answer": "2nd"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "In Japan, on New Year's Eve what do Buddhists do at temples 108 times at midnight?",
-      "D": "Ring the bells"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "In Japan, on New Year's Eve what do Buddhists do at temples 108 times at midnight?",
+      "Answer": "Ring the bells"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which country was beaten by France in the 2018 Word Cup Final?",
-      "D": "Croatia"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which country was beaten by France in the 2018 Word Cup Final?",
+      "Answer": "Croatia"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Eunice Shriver, who died in 2009, was a member of which famous family?",
-      "D": "Kennedy"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Eunice Shriver, who died in 2009, was a member of which famous family?",
+      "Answer": "Kennedy"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which city would you be visiting if you flew into Barajas airport?",
-      "D": "Madrid"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which city would you be visiting if you flew into Barajas airport?",
+      "Answer": "Madrid"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Children's fictional character Babar is which type of Creature?",
-      "D": "Elephant"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Children's fictional character Babar is which type of Creature?",
+      "Answer": "Elephant"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "\"Can we talk?\" is a catchphrase associated with which of these?",
-      "D": "Joan Rivers"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "\"Can we talk?\" is a catchphrase associated with which of these?",
+      "Answer": "Joan Rivers"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "What was the name of the Greek woman whose face launched 1000 ships?",
-      "D": "Helen"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "What was the name of the Greek woman whose face launched 1000 ships?",
+      "Answer": "Helen"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "In 1857 Joseph Gayetty invented which household item?",
-      "D": "Toilet Roll"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "In 1857 Joseph Gayetty invented which household item?",
+      "Answer": "Toilet Roll"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Who said \"I see no ships\"?",
-      "D": "Lord Nelson"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Who said \"I see no ships\"?",
+      "Answer": "Lord Nelson"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "What's the last name of popular big band leader Jools?",
-      "D": "Holland"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "What's the last name of popular big band leader Jools?",
+      "Answer": "Holland"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "What nationality was Luciano Pavarotti?",
-      "D": "Italian"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "What nationality was Luciano Pavarotti?",
+      "Answer": "Italian"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Where is the Union Pacific Railroad museum located?",
-      "D": "Nebraska"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Where is the Union Pacific Railroad museum located?",
+      "Answer": "Nebraska"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "The Cairngorms Nation Park is in which country?",
-      "D": "Scotland"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "The Cairngorms Nation Park is in which country?",
+      "Answer": "Scotland"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which B is an ice cream dish?",
-      "D": "Bombe"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which B is an ice cream dish?",
+      "Answer": "Bombe"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "How many Freddy Krueger movies have there been?",
-      "D": "9"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "How many Freddy Krueger movies have there been?",
+      "Answer": "9"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Who said of Issey Miyaki \"So I asked Issey to make me some of his black turtlenecks that I liked, and he made me like a hundred of them\"?",
-      "D": "Steve Jobs"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Who said of Issey Miyaki \"So I asked Issey to make me some of his black turtlenecks that I liked, and he made me like a hundred of them\"?",
+      "Answer": "Steve Jobs"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which of these crime headlines of yesteryear appeared in the newspapers before the others?",
-      "D": "Ruth Ellis Hanged"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which of these crime headlines of yesteryear appeared in the newspapers before the others?",
+      "Answer": "Ruth Ellis Hanged"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which country is ruled by a single dynasty for more than two thousand years?",
-      "D": "Japan"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which country is ruled by a single dynasty for more than two thousand years?",
+      "Answer": "Japan"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Where was Alexander Bell Graham born?",
-      "D": "Edinburg"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Where was Alexander Bell Graham born?",
+      "Answer": "Edinburg"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "Which city had the United States first subway system?",
-      "D": "Boston"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "Which city had the United States first subway system?",
+      "Answer": "Boston"
     },
     {
-      "A": "General Knowledge",
-      "B": "Green",
-      "C": "In which organ is Vitamin A primarily stored?",
-      "D": "Liver"
+      "Category": "General Knowledge",
+      "Color": "Green",
+      "Question": "In which organ is Vitamin A primarily stored?",
+      "Answer": "Liver"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is the capital of Peru",
-      "D": "Lima"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is the capital of Peru",
+      "Answer": "Lima"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is the currency of Turkey",
-      "D": "Lira"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is the currency of Turkey",
+      "Answer": "Lira"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Mars was the Roman God of what?",
-      "D": "War"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Mars was the Roman God of what?",
+      "Answer": "War"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is Britain's longest river?",
-      "D": "The Severn"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is Britain's longest river?",
+      "Answer": "The Severn"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Mecca is in which country?",
-      "D": "Saudi Arabia"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Mecca is in which country?",
+      "Answer": "Saudi Arabia"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is India's largest city by population?",
-      "D": "Mumbai"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is India's largest city by population?",
+      "Answer": "Mumbai"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What do the Finns call Finland?",
-      "D": "Suomi"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What do the Finns call Finland?",
+      "Answer": "Suomi"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "The Dali Lama is a diety of?",
-      "D": "Tibet"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "The Dali Lama is a diety of?",
+      "Answer": "Tibet"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Which K is an island in Alaska?",
-      "D": "Kodiak"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Which K is an island in Alaska?",
+      "Answer": "Kodiak"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "The Yukon is what?",
-      "D": "A River"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "The Yukon is what?",
+      "Answer": "A River"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is the oldest city in the world?",
-      "D": "Jericho"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is the oldest city in the world?",
+      "Answer": "Jericho"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Mars was the Roman God of what?",
-      "D": "War"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Mars was the Roman God of what?",
+      "Answer": "War"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Which city is on every continent (except Antartica)?",
-      "D": "Rome"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Which city is on every continent (except Antartica)?",
+      "Answer": "Rome"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is Britain's longest motorway?",
-      "D": "M6"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is Britain's longest motorway?",
+      "Answer": "M6"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "The Uffizi gallery can be found where?",
-      "D": "Florence"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "The Uffizi gallery can be found where?",
+      "Answer": "Florence"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Sol was the Norse God of what?",
-      "D": "The Sun"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Sol was the Norse God of what?",
+      "Answer": "The Sun"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "The Belfry is in which country?",
-      "D": "England"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "The Belfry is in which country?",
+      "Answer": "England"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Chesterfield is famed for its?",
-      "D": "Crooked Spire"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Chesterfield is famed for its?",
+      "Answer": "Crooked Spire"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is the largest city in Italy by population?",
-      "D": "Rome"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is the largest city in Italy by population?",
+      "Answer": "Rome"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "Which L is a port in Cyprus?",
-      "D": "Limassol"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "Which L is a port in Cyprus?",
+      "Answer": "Limassol"
     },
     {
-      "A": "Geography",
-      "B": "Green",
-      "C": "What is the world’s largest bird?",
-      "D": "Ostrich"
+      "Category": "Geography",
+      "Color": "Green",
+      "Question": "What is the world’s largest bird?",
+      "Answer": "Ostrich"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "Discoloured toenails are a sign that what kind of infection is present?",
-      "D": "Nail fungus, Onychomycosis"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "Discoloured toenails are a sign that what kind of infection is present?",
+      "Answer": "Nail fungus, Onychomycosis"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "What kind of makeup is used to add shade or highlights to the area around the eyes?",
-      "D": "Eye Shadow"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "What kind of makeup is used to add shade or highlights to the area around the eyes?",
+      "Answer": "Eye Shadow"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "Cindy Crawford and which actor were once named \"People\" Magazine's \"Sexiest Couple Alive\"?",
-      "D": "Richard Gere"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "Cindy Crawford and which actor were once named \"People\" Magazine's \"Sexiest Couple Alive\"?",
+      "Answer": "Richard Gere"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "In medical terms, what does the suffix \"-genic\" mean?",
-      "D": "Producing"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "In medical terms, what does the suffix \"-genic\" mean?",
+      "Answer": "Producing"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "What eye ailment could prevent you from becoming a pilot?",
-      "D": "Colour Blindness"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "What eye ailment could prevent you from becoming a pilot?",
+      "Answer": "Colour Blindness"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "Rubella is the medical term for what disease?",
-      "D": "Measles"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "Rubella is the medical term for what disease?",
+      "Answer": "Measles"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "Frangipane is a filling made from or flavored with what?",
-      "D": "Almonds"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "Frangipane is a filling made from or flavored with what?",
+      "Answer": "Almonds"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "Go is purported to have originated in which country 4000 years ago?",
-      "D": "China"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "Go is purported to have originated in which country 4000 years ago?",
+      "Answer": "China"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "How many ways is there to end an untimed game of Chess?",
-      "D": "3"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "How many ways is there to end an untimed game of Chess?",
+      "Answer": "3"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "How does a castle/rook move on a chess board?",
-      "D": "In a straight line"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "How does a castle/rook move on a chess board?",
+      "Answer": "In a straight line"
     },
     {
-      "A": "Lifestyle",
-      "B": "Green",
-      "C": "How many player characters are there is cluedo?",
-      "D": "6"
+      "Category": "Lifestyle",
+      "Color": "Green",
+      "Question": "How many player characters are there is cluedo?",
+      "Answer": "6"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Who sang \"Suspicious Minds\" and \"Burning Love\"?",
-      "D": "Elvis Presley"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Who sang \"Suspicious Minds\" and \"Burning Love\"?",
+      "Answer": "Elvis Presley"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Whose album is titled 'Elephunk'?",
-      "D": "Black Eyed Peas"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Whose album is titled 'Elephunk'?",
+      "Answer": "Black Eyed Peas"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Kirsty Maccool died in what year?",
-      "D": "2000"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Kirsty Maccool died in what year?",
+      "Answer": "2000"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "What is Dire Straits best selling album?",
-      "D": "Brothers in Arms"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "What is Dire Straits best selling album?",
+      "Answer": "Brothers in Arms"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Which musical opened on Broadway in 1972?",
-      "D": "Grease"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Which musical opened on Broadway in 1972?",
+      "Answer": "Grease"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Who sang the song “take on me”?",
-      "D": "A-ha"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Who sang the song “take on me”?",
+      "Answer": "A-ha"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Who married radio presenter Chris Evans?",
-      "D": "Billie Piper"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Who married radio presenter Chris Evans?",
+      "Answer": "Billie Piper"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "During what decade was Cher born?",
-      "D": "The 1940s"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "During what decade was Cher born?",
+      "Answer": "The 1940s"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Who was 'Bulletproof in 2010?",
-      "D": "La Roux"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Who was 'Bulletproof in 2010?",
+      "Answer": "La Roux"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Which of these was a hit single of Debbie Harry?",
-      "D": "French Kissin"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Which of these was a hit single of Debbie Harry?",
+      "Answer": "French Kissin"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "What is Cheryl Cole's maiden name?",
-      "D": "Tweedy"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "What is Cheryl Cole's maiden name?",
+      "Answer": "Tweedy"
     },
     {
-      "A": "Music",
-      "B": "Green",
-      "C": "Who was 'So Fine' in 2009?",
-      "D": "Sean Paul"
+      "Category": "Music",
+      "Color": "Green",
+      "Question": "Who was 'So Fine' in 2009?",
+      "Answer": "Sean Paul"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "How many naturally occurring noble gases are in a periodic table?",
-      "D": "6"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "How many naturally occurring noble gases are in a periodic table?",
+      "Answer": "6"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "Which of the following is not a type of stem cell?",
-      "D": "Fat Cells"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "Which of the following is not a type of stem cell?",
+      "Answer": "Fat Cells"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "Acceleration is determined by the force acting on it and what else?",
-      "D": "Mass"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "Acceleration is determined by the force acting on it and what else?",
+      "Answer": "Mass"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "What was a saber-tooth cat's average weight?",
-      "D": "750 pounds"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "What was a saber-tooth cat's average weight?",
+      "Answer": "750 pounds"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "What word describes how living organizms rely on each other to exist?",
-      "D": "Interdependence"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "What word describes how living organizms rely on each other to exist?",
+      "Answer": "Interdependence"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "The bone at the base of your spine is known as the what?",
-      "D": "Coccyx"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "The bone at the base of your spine is known as the what?",
+      "Answer": "Coccyx"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "What is the process of removing dead skin cells from the body called?",
-      "D": "Exofoliation"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "What is the process of removing dead skin cells from the body called?",
+      "Answer": "Exofoliation"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "When do plants photosynthesize?",
-      "D": "In the light"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "When do plants photosynthesize?",
+      "Answer": "In the light"
     },
     {
-      "A": "Science",
-      "B": "Green",
-      "C": "Which of these is a type of dolphin?",
-      "D": "Bottlenose"
+      "Category": "Science",
+      "Color": "Green",
+      "Question": "Which of these is a type of dolphin?",
+      "Answer": "Bottlenose"
     },
     {
-      "A": "Sports",
-      "B": "Green",
-      "C": "Which tennis player has won the most Grand Slams?",
-      "D": "Roger Federer"
+      "Category": "Sports",
+      "Color": "Green",
+      "Question": "Which tennis player has won the most Grand Slams?",
+      "Answer": "Roger Federer"
     },
     {
-      "A": "Sports",
-      "B": "Green",
-      "C": "The Verizon Center is the home location of which basketball team?",
-      "D": "Washington Wizards"
+      "Category": "Sports",
+      "Color": "Green",
+      "Question": "The Verizon Center is the home location of which basketball team?",
+      "Answer": "Washington Wizards"
     },
     {
-      "A": "Sports",
-      "B": "Green",
-      "C": "Brad Friedel played which sport professionally for the United States?",
-      "D": "Soccer"
+      "Category": "Sports",
+      "Color": "Green",
+      "Question": "Brad Friedel played which sport professionally for the United States?",
+      "Answer": "Soccer"
     },
     {
-      "A": "Sports",
-      "B": "Green",
-      "C": "The Bankers Life Fieldhouse is a arena used for what sport?",
-      "D": "Basketball"
+      "Category": "Sports",
+      "Color": "Green",
+      "Question": "The Bankers Life Fieldhouse is a arena used for what sport?",
+      "Answer": "Basketball"
     },
     {
-      "A": "Sports",
-      "B": "Green",
-      "C": "Eldora Speedway is a motor racing venue in which US State?",
-      "D": "Ohio"
+      "Category": "Sports",
+      "Color": "Green",
+      "Question": "Eldora Speedway is a motor racing venue in which US State?",
+      "Answer": "Ohio"
     },
     {
-      "A": "Sport",
-      "B": "Green",
-      "C": "What state was Michael Jordan born in?",
-      "D": "New York"
+      "Category": "Sport",
+      "Color": "Green",
+      "Question": "What state was Michael Jordan born in?",
+      "Answer": "New York"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "In 2004 Mozilla released version 1.0 of its email and news client, titled what?",
-      "D": "Thunderbird"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "In 2004 Mozilla released version 1.0 of its email and news client, titled what?",
+      "Answer": "Thunderbird"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "In what year was the Apple OS 'Leopard' launched?",
-      "D": "2007"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "In what year was the Apple OS 'Leopard' launched?",
+      "Answer": "2007"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "In what country was chicken restaurant Nando's founded?",
-      "D": "South Africa"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "In what country was chicken restaurant Nando's founded?",
+      "Answer": "South Africa"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "As of 2013 the App Store offered more than how many apps from both Apple and third parties?",
-      "D": "1m"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "As of 2013 the App Store offered more than how many apps from both Apple and third parties?",
+      "Answer": "1m"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "LG accused Apple of basing the design of the iPhone on which of their models?",
-      "D": "Prada"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "LG accused Apple of basing the design of the iPhone on which of their models?",
+      "Answer": "Prada"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "The courtroom battles between Apple and which company made worldwide headlines?",
-      "D": "Samsung"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "The courtroom battles between Apple and which company made worldwide headlines?",
+      "Answer": "Samsung"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "Jimmy Fallon's parody of which TV show became a popular video on YouTube?",
-      "D": "Breaking Bad"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "Jimmy Fallon's parody of which TV show became a popular video on YouTube?",
+      "Answer": "Breaking Bad"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "First gen mini iPod capacity?",
-      "D": "4gb only"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "First gen mini iPod capacity?",
+      "Answer": "4gb only"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "Jonah Peretti is the founder of which website?",
-      "D": "Buzzfeed"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "Jonah Peretti is the founder of which website?",
+      "Answer": "Buzzfeed"
     },
     {
-      "A": "Technology",
-      "B": "Green",
-      "C": "The first generation iPhone was released with how much DRAM?",
-      "D": "128 MB"
+      "Category": "Technology",
+      "Color": "Green",
+      "Question": "The first generation iPhone was released with how much DRAM?",
+      "Answer": "128 MB"
     },
     {
-      "A": "TV",
-      "B": "Green",
-      "C": "On which kids TV show will you see Kaboodle, Pip, and Snout?",
-      "D": "Kerwhizz"
+      "Category": "TV",
+      "Color": "Green",
+      "Question": "On which kids TV show will you see Kaboodle, Pip, and Snout?",
+      "Answer": "Kerwhizz"
     },
     {
-      "A": "TV",
-      "B": "Green",
-      "C": "On which TV show did the Olsen twins get their start in show business?",
-      "D": "Full House"
+      "Category": "TV",
+      "Color": "Green",
+      "Question": "On which TV show did the Olsen twins get their start in show business?",
+      "Answer": "Full House"
     },
     {
-      "A": "TV",
-      "B": "Green",
-      "C": "On which night did Jonathan Ross host his chat show?",
-      "D": "Friday"
+      "Category": "TV",
+      "Color": "Green",
+      "Question": "On which night did Jonathan Ross host his chat show?",
+      "Answer": "Friday"
     },
     {
-      "A": "TV",
-      "B": "Green",
-      "C": "Hogans Heroes was set during which conflict?",
-      "D": "World War II"
+      "Category": "TV",
+      "Color": "Green",
+      "Question": "Hogans Heroes was set during which conflict?",
+      "Answer": "World War II"
     },
     {
-      "A": "TV",
-      "B": "Green",
-      "C": "Anne Wood created which popular childrens TV show?",
-      "D": "Tellytubbies"
+      "Category": "TV",
+      "Color": "Green",
+      "Question": "Anne Wood created which popular childrens TV show?",
+      "Answer": "Tellytubbies"
     },
     {
-      "A": "TV",
-      "B": "Green",
-      "C": "On the TV show 'Frasier', what was the dog's name?",
-      "D": "Eddie"
+      "Category": "TV",
+      "Color": "Green",
+      "Question": "On the TV show 'Frasier', what was the dog's name?",
+      "Answer": "Eddie"
     },
     {
-      "A": "TV",
-      "B": "Green",
-      "C": "Actress is Amy Yasbeck is best known as which one of these?",
-      "D": "Casey on NBCs Wings"
+      "Category": "TV",
+      "Color": "Green",
+      "Question": "Actress is Amy Yasbeck is best known as which one of these?",
+      "Answer": "Casey on NBCs Wings"
     },
     {
-      "A": "Celebrity",
-      "B": "Blue",
-      "C": "What country singer is married to fellow country singer Tim McGraw?",
-      "D": "Faith Hill"
+      "Category": "Celebrity",
+      "Color": "Blue",
+      "Question": "What country singer is married to fellow country singer Tim McGraw?",
+      "Answer": "Faith Hill"
     },
     {
-      "A": "Celebrity",
-      "B": "Blue",
-      "C": "Marc Anthony got divorced from what actress/singer in 2014?",
-      "D": "Jennifer Lopez"
+      "Category": "Celebrity",
+      "Color": "Blue",
+      "Question": "Marc Anthony got divorced from what actress/singer in 2014?",
+      "Answer": "Jennifer Lopez"
     },
     {
-      "A": "Films",
-      "B": "Blue",
-      "C": "What was Quentin Tarantino's first movie?",
-      "D": "Reservoir Dogs"
+      "Category": "Films",
+      "Color": "Blue",
+      "Question": "What was Quentin Tarantino's first movie?",
+      "Answer": "Reservoir Dogs"
     },
     {
-      "A": "Films",
-      "B": "Blue",
-      "C": "Who composed the score for Blade Runner?",
-      "D": "Vangelis"
+      "Category": "Films",
+      "Color": "Blue",
+      "Question": "Who composed the score for Blade Runner?",
+      "Answer": "Vangelis"
     },
     {
-      "A": "Films",
-      "B": "Blue",
-      "C": "Which Michael starred in Falling Down?",
-      "D": "Michael Douglas"
+      "Category": "Films",
+      "Color": "Blue",
+      "Question": "Which Michael starred in Falling Down?",
+      "Answer": "Michael Douglas"
     },
     {
-      "A": "Films",
-      "B": "Blue",
-      "C": "When did DVDs first go on sale in the US?",
-      "D": "1997"
+      "Category": "Films",
+      "Color": "Blue",
+      "Question": "When did DVDs first go on sale in the US?",
+      "Answer": "1997"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "Which of these is the guitarist amongst the pianists?",
-      "D": "Jimi Hendrix"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "Which of these is the guitarist amongst the pianists?",
+      "Answer": "Jimi Hendrix"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "Who is the world's largest online retailer?",
-      "D": "Amazon"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "Who is the world's largest online retailer?",
+      "Answer": "Amazon"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "Where was the first Wal-Mart store located?",
-      "D": "Rogers, Arkansas"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "Where was the first Wal-Mart store located?",
+      "Answer": "Rogers, Arkansas"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "Lavazza is a famous name for making which type of drink?",
-      "D": "Coffee"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "Lavazza is a famous name for making which type of drink?",
+      "Answer": "Coffee"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "Where is The Church of Jesus Christ of Latter-day Saints based?",
-      "D": "Utah"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "Where is The Church of Jesus Christ of Latter-day Saints based?",
+      "Answer": "Utah"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "What's the name given to the type of murder sometimes carried out within Asian communities in the UK?",
-      "D": "Honour killing"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "What's the name given to the type of murder sometimes carried out within Asian communities in the UK?",
+      "Answer": "Honour killing"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "Where do Jews go to pray?",
-      "D": "Synagogue"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "Where do Jews go to pray?",
+      "Answer": "Synagogue"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "In cosmetics, veneers are added to what?",
-      "D": "Teeth"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "In cosmetics, veneers are added to what?",
+      "Answer": "Teeth"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "The letters TGFOP can be found on what?",
-      "D": "Tea"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "The letters TGFOP can be found on what?",
+      "Answer": "Tea"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "Who said \"Canada? I don't even know what street Canada is on\"?",
-      "D": "Al Capone"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "Who said \"Canada? I don't even know what street Canada is on\"?",
+      "Answer": "Al Capone"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "What is the state capital of Arkansas?",
-      "D": "Little Rock"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "What is the state capital of Arkansas?",
+      "Answer": "Little Rock"
     },
     {
-      "A": "General Knowledge",
-      "B": "Blue",
-      "C": "In stargazing, what is the name given to collections of stars in a pattern?",
-      "D": "Constellation"
+      "Category": "General Knowledge",
+      "Color": "Blue",
+      "Question": "In stargazing, what is the name given to collections of stars in a pattern?",
+      "Answer": "Constellation"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "In what US state is Philadelphia located?",
-      "D": "Pennsylvania"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "In what US state is Philadelphia located?",
+      "Answer": "Pennsylvania"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Apollo was the Greek God of what?",
-      "D": "Art"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Apollo was the Greek God of what?",
+      "Answer": "Art"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "How many continents are there?",
-      "D": "Seven"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "How many continents are there?",
+      "Answer": "Seven"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "The Pied Piper of Hamilton saved the town from?",
-      "D": "Rats"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "The Pied Piper of Hamilton saved the town from?",
+      "Answer": "Rats"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "What is the most dangerous shark to humans?",
-      "D": "The Great White"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "What is the most dangerous shark to humans?",
+      "Answer": "The Great White"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Marrakech is in what country?",
-      "D": "Morocco"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Marrakech is in what country?",
+      "Answer": "Morocco"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "The Bermuda Triangle is where?",
-      "D": "The Atlantic"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "The Bermuda Triangle is where?",
+      "Answer": "The Atlantic"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Which of these national parks is in the state of Colorado?",
-      "D": "Rocky Mountain"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Which of these national parks is in the state of Colorado?",
+      "Answer": "Rocky Mountain"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Which meat contains the most protein?",
-      "D": "Beef"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Which meat contains the most protein?",
+      "Answer": "Beef"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Which city does not hold a spectacular carnival?",
-      "D": "Sydney"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Which city does not hold a spectacular carnival?",
+      "Answer": "Sydney"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Arthur's Seat is in which Scottish city?",
-      "D": "Edinburgh"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Arthur's Seat is in which Scottish city?",
+      "Answer": "Edinburgh"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "The Valley of the Kings is noted for its what?",
-      "D": "Tombs"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "The Valley of the Kings is noted for its what?",
+      "Answer": "Tombs"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "What is the largest whale in the world?",
-      "D": "The Blue Whale"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "What is the largest whale in the world?",
+      "Answer": "The Blue Whale"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Coal is what type of fuel?",
-      "D": "Fossil"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Coal is what type of fuel?",
+      "Answer": "Fossil"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "What is the tallest animal in the world?",
-      "D": "Giraffe"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "What is the tallest animal in the world?",
+      "Answer": "Giraffe"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "What is Eyjafjallajakull?",
-      "D": "A volcano in Iceland"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "What is Eyjafjallajakull?",
+      "Answer": "A volcano in Iceland"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Which foodstuff has the highest fat content?",
-      "D": "Nuts"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Which foodstuff has the highest fat content?",
+      "Answer": "Nuts"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Name Guyana's second city.",
-      "D": "Linden"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Name Guyana's second city.",
+      "Answer": "Linden"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Brooklyn and the Bronx are in which state?",
-      "D": "New York"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Brooklyn and the Bronx are in which state?",
+      "Answer": "New York"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "What is the state capital of Arkansas?",
-      "D": "Little Rock"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "What is the state capital of Arkansas?",
+      "Answer": "Little Rock"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "What is the state capital of Missouri?",
-      "D": "Jefferson City"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "What is the state capital of Missouri?",
+      "Answer": "Jefferson City"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "The Louvre is in which city?",
-      "D": "Paris"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "The Louvre is in which city?",
+      "Answer": "Paris"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "What is the state capitol of Colorado?",
-      "D": "Denver"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "What is the state capitol of Colorado?",
+      "Answer": "Denver"
     },
     {
-      "A": "Geography",
-      "B": "Blue",
-      "C": "Where is the Great Barrier Reef located?",
-      "D": "Australia"
+      "Category": "Geography",
+      "Color": "Blue",
+      "Question": "Where is the Great Barrier Reef located?",
+      "Answer": "Australia"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "What is the body function that dictates how quickly you burn off fat?",
-      "D": "Metabolism"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "What is the body function that dictates how quickly you burn off fat?",
+      "Answer": "Metabolism"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "How does a traditional game of Draughts end?",
-      "D": "When one player can't move a piece"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "How does a traditional game of Draughts end?",
+      "Answer": "When one player can't move a piece"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "Brazilian company Natura's \"Mamae e Bebe\" product line was aimed at whom?",
-      "D": "Women and Children"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "Brazilian company Natura's \"Mamae e Bebe\" product line was aimed at whom?",
+      "Answer": "Women and Children"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "How many units of alcohol are women told not to exceed per week?",
-      "D": "14"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "How many units of alcohol are women told not to exceed per week?",
+      "Answer": "14"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "What kind of makeup will not smear or come off when wet?",
-      "D": "Waterproof"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "What kind of makeup will not smear or come off when wet?",
+      "Answer": "Waterproof"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "If you eliminate an opponent in Risk, what do you receive?",
-      "D": "That opponent's cards"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "If you eliminate an opponent in Risk, what do you receive?",
+      "Answer": "That opponent's cards"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "What is the English translation of the French term \"eau de toilette\", a lightly-scented substance?",
-      "D": "Toilet Water"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "What is the English translation of the French term \"eau de toilette\", a lightly-scented substance?",
+      "Answer": "Toilet Water"
     },
     {
-      "A": "Lifestyle",
-      "B": "Blue",
-      "C": "Chanel No.5, Allure, Coco and Chance are perfumes made by a company founded by whom?",
-      "D": "Coco Chanel"
+      "Category": "Lifestyle",
+      "Color": "Blue",
+      "Question": "Chanel No.5, Allure, Coco and Chance are perfumes made by a company founded by whom?",
+      "Answer": "Coco Chanel"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "Which city was a hit for Ultravox",
-      "D": "Vienna"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "Which city was a hit for Ultravox",
+      "Answer": "Vienna"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "Which band is not Irish?",
-      "D": "Little River Band"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "Which band is not Irish?",
+      "Answer": "Little River Band"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "Who had a 2003 hit with 'Rock Your Body'?",
-      "D": "Justin Timberlake"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "Who had a 2003 hit with 'Rock Your Body'?",
+      "Answer": "Justin Timberlake"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "Who is the lead singer of Blondie?",
-      "D": "Debbie Harry"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "Who is the lead singer of Blondie?",
+      "Answer": "Debbie Harry"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "Which band is not from 'Oz'?",
-      "D": "Split Enz"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "Which band is not from 'Oz'?",
+      "Answer": "Split Enz"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "What famous quintet made the number-one hit single 'I'll Be There'?",
-      "D": "Jackson 5"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "What famous quintet made the number-one hit single 'I'll Be There'?",
+      "Answer": "Jackson 5"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "When did Roxy Music first break up?",
-      "D": "1976"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "When did Roxy Music first break up?",
+      "Answer": "1976"
     },
     {
-      "A": "Music",
-      "B": "Blue",
-      "C": "What is Miley Cyrus’s Christened name?",
-      "D": "Destiny"
+      "Category": "Music",
+      "Color": "Blue",
+      "Question": "What is Miley Cyrus’s Christened name?",
+      "Answer": "Destiny"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "Bill Gates founded which company in Albuquerque, New Mexico in 1975?",
-      "D": "Microsoft"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "Bill Gates founded which company in Albuquerque, New Mexico in 1975?",
+      "Answer": "Microsoft"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "Owls can't see anything within a few inches of their eyes because they are what?",
-      "D": "Far-sighted"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "Owls can't see anything within a few inches of their eyes because they are what?",
+      "Answer": "Far-sighted"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "From which word does the abbreviation of the top-level domain extension '.com' come?",
-      "D": "Commercial"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "From which word does the abbreviation of the top-level domain extension '.com' come?",
+      "Answer": "Commercial"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "A circuit with more than one path is known as a what circuit?",
-      "D": "Parallel"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "A circuit with more than one path is known as a what circuit?",
+      "Answer": "Parallel"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "What would be the best equipment for sampling plants in a big area?",
-      "D": "Quadrat"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "What would be the best equipment for sampling plants in a big area?",
+      "Answer": "Quadrat"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "How many volts of electricity is in a bolt of lightning?",
-      "D": "Millions"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "How many volts of electricity is in a bolt of lightning?",
+      "Answer": "Millions"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "When was the element bohrium discovered?",
-      "D": "1981"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "When was the element bohrium discovered?",
+      "Answer": "1981"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "What is the name for an animal who only eats meat?",
-      "D": "Carnivore"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "What is the name for an animal who only eats meat?",
+      "Answer": "Carnivore"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "The study of forests and woods is called what?",
-      "D": "Forestry"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "The study of forests and woods is called what?",
+      "Answer": "Forestry"
     },
     {
-      "A": "Science",
-      "B": "Blue",
-      "C": "What is the back of the neck called?",
-      "D": "Nape"
+      "Category": "Science",
+      "Color": "Blue",
+      "Question": "What is the back of the neck called?",
+      "Answer": "Nape"
     },
     {
-      "A": "Sports",
-      "B": "Blue",
-      "C": "In which city is the MLB team known as The Twins located?",
-      "D": "Minnesota"
+      "Category": "Sports",
+      "Color": "Blue",
+      "Question": "In which city is the MLB team known as The Twins located?",
+      "Answer": "Minnesota"
     },
     {
-      "A": "Technology",
-      "B": "Blue",
-      "C": "Who was the CEO of IBM in 2010?",
-      "D": "Lou Gerstner"
+      "Category": "Technology",
+      "Color": "Blue",
+      "Question": "Who was the CEO of IBM in 2010?",
+      "Answer": "Lou Gerstner"
     },
     {
-      "A": "Technology",
-      "B": "Blue",
-      "C": "The 1st gen iPod Mini had what memory capacity?",
-      "D": "4GB"
+      "Category": "Technology",
+      "Color": "Blue",
+      "Question": "The 1st gen iPod Mini had what memory capacity?",
+      "Answer": "4GB"
     },
     {
-      "A": "Technology",
-      "B": "Blue",
-      "C": "A video on Youtube, which has over 10 million views, stars 2 year old Makena singing a song by which Britishh singer?",
-      "D": "Adele"
+      "Category": "Technology",
+      "Color": "Blue",
+      "Question": "A video on Youtube, which has over 10 million views, stars 2 year old Makena singing a song by which Britishh singer?",
+      "Answer": "Adele"
     },
     {
-      "A": "Technology",
-      "B": "Blue",
-      "C": "As of 2014 how many versions of the iPad has there been?",
-      "D": "7"
+      "Category": "Technology",
+      "Color": "Blue",
+      "Question": "As of 2014 how many versions of the iPad has there been?",
+      "Answer": "7"
     },
     {
-      "A": "Technology",
-      "B": "Blue",
-      "C": "The Apple I basically consisted of what?",
-      "D": "Circuit Board"
+      "Category": "Technology",
+      "Color": "Blue",
+      "Question": "The Apple I basically consisted of what?",
+      "Answer": "Circuit Board"
     },
     {
-      "A": "TV",
-      "B": "Blue",
-      "C": "An FBI agent investigates the death of Laura Palmer in a bizarre town.",
-      "D": "Twin Peaks"
+      "Category": "TV",
+      "Color": "Blue",
+      "Question": "An FBI agent investigates the death of Laura Palmer in a bizarre town.",
+      "Answer": "Twin Peaks"
     },
     {
-      "A": "TV",
-      "B": "Blue",
-      "C": "A live episode of which TV soap opera was broadcast on BBC on 19 February 2010, to celebrate 25 years since the broadcast of the first episode?",
-      "D": "EastEnders"
+      "Category": "TV",
+      "Color": "Blue",
+      "Question": "A live episode of which TV soap opera was broadcast on BBC on 19 February 2010, to celebrate 25 years since the broadcast of the first episode?",
+      "Answer": "EastEnders"
     },
     {
-      "A": "TV",
-      "B": "Blue",
-      "C": "Actress Justine Bateman is best known as which one of these?",
-      "D": "Actress On Men Behaving Badly"
+      "Category": "TV",
+      "Color": "Blue",
+      "Question": "Actress Justine Bateman is best known as which one of these?",
+      "Answer": "Actress On Men Behaving Badly"
     },
     {
-      "A": "TV",
-      "B": "Blue",
-      "C": "What character did Neil Brown Jr. Play on The Walking Dead?",
-      "D": "Guillermo"
+      "Category": "TV",
+      "Color": "Blue",
+      "Question": "What character did Neil Brown Jr. Play on The Walking Dead?",
+      "Answer": "Guillermo"
     }
    ]
