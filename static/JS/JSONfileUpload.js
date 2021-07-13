@@ -1439,7 +1439,6 @@ async function SendToAPI() {
         if (response.status === 200){
             let data = await response.text()
             console.log(`${data.body}${ i + 1} / ${QuestionArray.length}`)
-            return
         }
     }
 }
