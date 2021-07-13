@@ -1418,15 +1418,13 @@ var QuestionArray = [
 ]
 
 async function SendToAPI() {
-
+    SentData = []
     for (let i = 0; i < QuestionArray.length; i++) {
         SentData.Question = QuestionArray[i].Quesiton
         SentData.Answer = QuestionArray[i].Answer
         SentData.Color = QuestionArray[i].Color
         SentData.Category = QuestionArray[i].Category
         SentData.UserID = "FileUploadedJSON"
-
-        console.log(`${ i + 1} / ${QuestionArray.length}`)
         
         let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/SendQuestions", {
             body: JSON.stringify({
@@ -1439,8 +1437,8 @@ async function SendToAPI() {
             method: "POST"
         });
         if (response.status === 200){
-            let data = await response.json()
-            window.RequestedData = data
+            let data = await response.text()
+            console.log(`${data.body}${ i + 1} / ${QuestionArray.length}`)
             return
         }
     }
