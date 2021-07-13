@@ -7,6 +7,9 @@ exports.handler = (event, context, callback) => {
 	var RecievedData = []
 	RecievedData = JSON.parse(event.body)
 
+	if( RecievedData.UserID == undefined || RecievedData.UserID == ""){
+		RecievedData.UserID = "No UserID Provided"
+	}
 	Client.query(
         q.Create(
 			q.Collection("QuestionAnswerCollection"),
@@ -15,7 +18,7 @@ exports.handler = (event, context, callback) => {
 				Answer: `${RecievedData.Answer}`,
 				Color: `${RecievedData.Color}`,
 				Category: `${RecievedData.Category}`,
-				UserID: `${RecievedData/UserID}`
+				UserID: `${RecievedData.UserID}`
 			}}
 		)
 	)
