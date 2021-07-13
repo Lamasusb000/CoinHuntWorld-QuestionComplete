@@ -34,7 +34,9 @@ var autoCompleteJS = new autoComplete({
         input: {
             selection: (event) => {
                 const selection = event.detail.selection.value;
-                autoCompleteJS.input.value = "";
+				setTimeout(function(){
+                	autoCompleteJS.input.value = "";
+                },150 )
                 CollectResult(selection)
             }
         }
