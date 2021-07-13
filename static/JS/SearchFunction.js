@@ -36,7 +36,8 @@ var autoCompleteJS = new autoComplete({
                 const selection = event.detail.selection.value;
 				setTimeout(function(){
                 	autoCompleteJS.input.value = "";
-                },150 )
+                	autoCompleteJS.input.blur()
+                },100)
                 CollectResult(selection)
             }
         }
