@@ -7,7 +7,7 @@ exports.handler = (event, context, callback) => {
     console.log(event.body)
 	Client.query(
         q.Map(
-            q.Paginate(q.Match(q.Index("QuestionAndAnswer"))),
+            q.Paginate(q.Match(q.Index("GrabAllQuestions"))),
             q.Lambda("X", q.Get(q.Var("X")))
           )
 	)
