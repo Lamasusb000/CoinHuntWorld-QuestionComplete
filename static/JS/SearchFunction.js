@@ -1,3 +1,5 @@
+const Autocomplete = require("react-autocomplete");
+
 async function ContactAPI() {
 	let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/GrabQuestions", {
 		body: JSON.stringify({
@@ -37,6 +39,7 @@ var autoCompleteJS = new autoComplete({
 				setTimeout(function(){
                 	autoCompleteJS.input.value = "";
                 	autoCompleteJS.input.blur()
+					autoCompleteJS.input.focus()
                 },100)
                 CollectResult(selection)
             }
