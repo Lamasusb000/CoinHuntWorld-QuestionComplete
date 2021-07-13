@@ -1,4 +1,4 @@
-[
+var QuestionArray = [
     {
       "Category": "No Genre",
       "Color": "Purple",
@@ -1415,4 +1415,33 @@
       "Question": "What character did Neil Brown Jr. Play on The Walking Dead?",
       "Answer": "Guillermo"
     }
-   ]
+]
+
+async function SendToAPI() {
+
+    for (let i = 0; i < QuestionArray.length; i++) {
+        SentData.Question = QuestionArray[i].Quesiton
+        SentData.Answer = QuestionArray[i].Answer
+        SentData.Color = QuestionArray[i].Color
+        SentData.Category = QuestionArray[i].Category
+        SentData.UserID = "FileUploadedJSON"
+
+        console.log(`${i} / ${QuestionArray.length}`)
+        
+        let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/SendQuestions", {
+            body: JSON.stringify({
+                Quesiton: `${SentData.Quesiton}`,
+                Answer:`${SentData.Answer}`,
+                Color:`${SentData.Color}`,
+                Category:`${SentData.Category}`,
+                UserID:`${SentData.UserID}`
+            }),
+            method: "POST"
+        });
+        if (response.status === 200){
+            let data = await response.json()
+            window.RequestedData = data
+            return
+        }
+    }
+}
