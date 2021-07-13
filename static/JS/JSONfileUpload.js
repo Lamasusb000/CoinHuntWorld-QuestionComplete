@@ -1428,7 +1428,7 @@ async function SendToAPI() {
         
         let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/SendQuestions", {
             body: JSON.stringify({
-                Quesiton: `${SentData.Quesiton}`,
+                Quesiton: `${SentData.Question}`,
                 Answer:`${SentData.Answer}`,
                 Color:`${SentData.Color}`,
                 Category:`${SentData.Category}`,
