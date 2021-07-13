@@ -1426,7 +1426,7 @@ async function SendToAPI() {
         SentData.Category = QuestionArray[i].Category
         SentData.UserID = "FileUploadedJSON"
 
-        console.log(`${i} / ${QuestionArray.length}`)
+        console.log(`${ i + 1} / ${QuestionArray.length}`)
         
         let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/SendQuestions", {
             body: JSON.stringify({
