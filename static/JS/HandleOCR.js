@@ -27,6 +27,8 @@ Tesseract.recognize(
     'eng',
     { logger: m => LogPercent(m) }
   ).then(({ data: { text } }) => {
+    var TextArray = text.split(`\n`)
+    console.log(TextArray)
     document.getElementById("TextOutput").innerText = text;
   })
 }

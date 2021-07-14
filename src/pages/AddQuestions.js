@@ -4,6 +4,7 @@ import Seo from "../components/seo"
 import JSimport from "../components/JS-Import"
 import JsCdn from "../components/JS-CDN"
 import "../components/CSS/AlignCenter.css"
+import "../components/CSS/croppie.css"
 
 
 

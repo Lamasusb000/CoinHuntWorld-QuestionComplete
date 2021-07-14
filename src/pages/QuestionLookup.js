@@ -23,6 +23,10 @@ const QuestionLookup = () => (
     <h3 id="AnswerResults">
       <br/>
     </h3>
+    <br/><br/>
+    <p>
+      <br/>
+    </p>
     </div>
   </Layout>
 )
