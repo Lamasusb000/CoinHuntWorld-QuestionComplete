@@ -17,7 +17,7 @@ const QuestionLookup = () => (
         <h4 className="AlignCenter">
             Add Questions
         </h4>
-        <input type="file" id="ScreenshotSubmission"/>
+        <input type="file" id="ScreenshotSubmission" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"/>
         <br/><br/>
         <div id="TextOutput">
             <br/>
