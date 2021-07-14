@@ -1426,7 +1426,7 @@ async function SendToAPI() {
         SentData.Category = QuestionArray[i].Category
         SentData.UserID = "FileUploadedJSON"
         
-        let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/SendQuestions", {
+        let response = await fetch("https://coinhuntworldtrivia.com/API/GrabQuestions/SendQuestions", {
             body: JSON.stringify({
                 Question: `${SentData.Question}`,
                 Answer:`${SentData.Answer}`,

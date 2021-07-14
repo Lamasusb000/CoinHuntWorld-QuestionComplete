@@ -1,5 +1,5 @@
 async function ContactAPI() {
-	let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/GrabQuestions", {
+	let response = await fetch("https://coinhuntworldtrivia.com/API/GrabQuestions", {
 		body: JSON.stringify({
             Text: "Dummy Text"
         }),
