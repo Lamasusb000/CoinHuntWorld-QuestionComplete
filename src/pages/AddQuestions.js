@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import JSimport from "../components/JS-Import"
-import JSCDN from "../components/JS-CDN"
+import JsCdn from "../components/JS-CDN"
 import "../components/CSS/AlignCenter.css"
 
 
@@ -10,7 +10,7 @@ import "../components/CSS/AlignCenter.css"
 const QuestionLookup = () => (
   <Layout>
     <Seo title="Home" />
-    <JSCDN URL="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"/>
+    <JsCdn URL="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"/>
     <JSimport File="HandleOCR.js"/>
     <div className="AlignCenter">
         <h4 className="AlignCenter">
