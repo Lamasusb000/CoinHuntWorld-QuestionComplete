@@ -1,5 +1,3 @@
-const Autocomplete = require("react-autocomplete");
-
 async function ContactAPI() {
 	let response = await fetch("https://keen-mclean-f877d3.netlify.app/.netlify/functions/GrabQuestions", {
 		body: JSON.stringify({
