@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: coinhuntworldtrivia.com
+Token: 51668f567969852535b7c7bea4219487e367b69c35ba89cc88f011caf95eb5ef
