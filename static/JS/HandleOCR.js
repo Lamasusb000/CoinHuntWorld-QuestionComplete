@@ -14,14 +14,18 @@ function ImageToURL() {
       reader.readAsDataURL(file);
     }
   }
-
+function LogPercent(Log){
+    if (Log.status == "recognizing text"){
+        document.getElementById("TextOutput").innerText = `${(Log.progress * 100).toFixed(2)}% Done`
+    }
+}
 
 
 function ProcessSubmission(DataURL){
 Tesseract.recognize(
     `${DataURL}`,
     'eng',
-    { logger: m => console.log(m) }
+    { logger: m => LogPercent(m) }
   ).then(({ data: { text } }) => {
     document.getElementById("TextOutput").innerText = text;
   })
