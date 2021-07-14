@@ -7,7 +7,7 @@ import "../components/CSS/AlignCenter.css"
 
 
 
-const IndexPage = () => (
+const QuestionLookup = () => (
   <Layout>
     <Seo title="Home" />
     <JSimport File={"autoComplete.js"}/>
@@ -20,9 +20,11 @@ const IndexPage = () => (
         <input id="autoComplete" type="search" dir="ltr" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off"/>
     </div>
     <br/><br/>
-    <h3 id="AnswerResults"></h3>
+    <h3 id="AnswerResults">
+      <br/>
+    </h3>
     </div>
   </Layout>
 )
 
-export default IndexPage
+export default QuestionLookup

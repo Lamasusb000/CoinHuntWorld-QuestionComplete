@@ -45,10 +45,15 @@ const Header = ({ siteTitle }) => (
             className="navbar-nav nav">
               {CheckForEXTlinks()}
               <li className="nav-item">
-            <Link to="/QuestionLookup" className="nav-link">
-              Question Search
-            </Link>
-          </li>
+                <Link to="/QuestionLookup" className="nav-link">
+                  Question Search
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/AddQuestions" className="nav-link">
+                  Add Questions
+                </Link>
+              </li>
             </ul>
           </div>
       </nav>
