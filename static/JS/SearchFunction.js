@@ -21,29 +21,31 @@ async function GetQuestions(){
     return QuestionList
 }
 
-var autoCompleteJS = new autoComplete({
-    placeHolder: "Search Question",
-    data: {
-        src: GetQuestions(),
-        cache: true,
-    },
-    resultItem: {
-        highlight: true
-    },
-    events: {
-        input: {
-            selection: (event) => {
-                const selection = event.detail.selection.value;
-				setTimeout(function(){
-                	autoCompleteJS.input.value = "";
-                	autoCompleteJS.input.blur()
-					autoCompleteJS.input.focus()
-                },100)
-                CollectResult(selection)
-            }
-        }
-    }
-});
+window.addEventListener('load', function() {
+    var autoCompleteJS = new autoComplete({
+		placeHolder: "Search Question",
+		data: {
+			src: GetQuestions(),
+			cache: true,
+		},
+		resultItem: {
+			highlight: true
+		},
+		events: {
+			input: {
+				selection: (event) => {
+					const selection = event.detail.selection.value;
+					setTimeout(function(){
+						autoCompleteJS.input.value = "";
+						autoCompleteJS.input.blur()
+						autoCompleteJS.input.focus()
+					},100)
+					CollectResult(selection)
+				}
+			}
+		}
+	});
+})
 
 function CollectResult(selection){
     for (let i = 0; i < window.RequestedData.length; i++) {
