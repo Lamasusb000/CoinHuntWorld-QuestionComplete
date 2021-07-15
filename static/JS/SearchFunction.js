@@ -21,7 +21,7 @@ async function GetQuestions(){
     return QuestionList
 }
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function LoadQuestions() {
     var autoCompleteJS = new autoComplete({
 		placeHolder: "Search Question",
 		data: {
