@@ -21,7 +21,8 @@ async function GetQuestions(){
     return QuestionList
 }
 var EnsureThingy = false
-window.addEventListener('load', function LoadQuestions() {
+window.addEventListener('load', LoadQuestions)
+function LoadQuestions() {
 	EnsureThingy = true
     var autoCompleteJS = new autoComplete({
 		placeHolder: "Search Question",
@@ -46,7 +47,7 @@ window.addEventListener('load', function LoadQuestions() {
 			}
 		}
 	});
-})
+}
 
 function CollectResult(selection){
     for (let i = 0; i < window.RequestedData.length; i++) {
@@ -61,5 +62,5 @@ function SendAnswer(Answer){
 }
 
 if (EnsureThingy == false) {
-	LoadQuestions
+	LoadQuestions()
 }
