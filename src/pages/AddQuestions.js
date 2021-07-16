@@ -13,6 +13,7 @@ const QuestionLookup = () => (
     <Seo title="Home" />
     <JsCdn URL="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"/>
     <JSimport File="HandleOCR.js"/>
+    <JSimport File="croppie.js"/>
     <div className="AlignCenter">
         <h4 className="AlignCenter">
             Add Questions
@@ -22,6 +23,12 @@ const QuestionLookup = () => (
         <div id="TextOutput">
             <br/>
         </div>
+        <div id="page">
+            <div id="demo-basic">
+                <button id="basic-result">Result</button>
+            </div>
+        </div>
+
     </div>
   </Layout>
 )

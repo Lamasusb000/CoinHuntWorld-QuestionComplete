@@ -1,13 +1,12 @@
 document.getElementById("ScreenshotSubmission").addEventListener("change", ImageToURL);
 
 function ImageToURL() {
-    const preview = document.querySelector('img');
     const file = document.getElementById('ScreenshotSubmission').files[0];
     const reader = new FileReader();
   
     reader.addEventListener("load", function () {
       // convert image file to base64 string
-      ProcessSubmission(reader.result)
+      SetCroppie(reader.result)
     }, false);
   
     if (file) {
@@ -29,6 +28,24 @@ Tesseract.recognize(
   ).then(({ data: { text } }) => {
     var TextArray = text.split(`\n`)
     console.log(TextArray)
-    document.getElementById("TextOutput").innerText = text;
   })
+}
+
+function SetCroppie(DataURL){
+    $(function() {
+        var basic = $('#demo-basic').croppie({
+          viewport: {
+            width: 300,
+            height: 100
+          }
+        });
+        basic.croppie('bind', {
+          url: `${DataURL}`
+        });
+        document.getElementById("basic-result").addEventListener("click", function(){
+          basic.croppie("result",'base64').then(function(base64) {
+            ProcessSubmission(base64)
+        });
+        })
+      });
 }
