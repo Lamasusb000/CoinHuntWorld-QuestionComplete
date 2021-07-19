@@ -13,20 +13,20 @@ const QuestionLookup = () => (
     <JSimport File={"autoComplete.js"}/>
     <JSimport File={"SearchFunction.js"}/>
     <div className="AlignCenter">
-    <h4 className="AlignCenter">
-      Question Search
-    </h4>
-    <div class="autoComplete_wrapper AlignCenter">
+      <h4 className="AlignCenter">
+        Question Search
+      </h4>
+      <div class="autoComplete_wrapper AlignCenter">
         <input id="autoComplete" type="search" dir="ltr" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off"/>
-    </div>
-    <br/><br/>
-    <h3 id="AnswerResults">
-      <br/>
-    </h3>
-    <br/><br/>
-    <p>
-      <br/>
-    </p>
+      </div>
+      <br/><br/>
+      <h3 id="AnswerResults">
+        <br/>
+      </h3>
+      <br/><br/>
+      <p>
+        <br/>
+      </p>
     </div>
   </Layout>
 )

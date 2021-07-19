@@ -1,7 +1,16 @@
-document.getElementById("ScreenshotSubmission").addEventListener("change", ImageToURL);
-
+var ScreenshotSubmission = document.getElementById("ScreenshotSubmission")
+var ModalOpener = document.getElementById("Modal-Opener")
+var SubmissionPrompt = document.getElementById("SubmissionPrompt")
+var CroppieContainer = document.getElementById("croppie-basic")
+SubmissionPrompt.style.visibility = "hidden"
+ScreenshotSubmission.addEventListener("change", ImageToURL);
 function ImageToURL() {
-    const file = document.getElementById('ScreenshotSubmission').files[0];
+    ScreenshotSubmission.style.visibility = "hidden"
+    if (SubmissionPrompt.style.visibility == "hidden"){
+      SubmissionPrompt.style.visibility = "visible"
+    }
+    SubmissionPrompt.style.visibility = "visible"
+    const file = ScreenshotSubmission.files[0];
     const reader = new FileReader();
   
     reader.addEventListener("load", function () {
@@ -16,9 +25,11 @@ function ImageToURL() {
 function LogPercent(Log){
     if (Log.status == "recognizing text"){
         document.getElementById("TextOutput").innerText = `${(Log.progress * 100).toFixed(2)}% Done`
+        if (Log.progress == 1){
+          document.getElementById("TextOutput").innerText = ""
+        }
     }
 }
-
 
 function ProcessSubmission(DataURL){
 Tesseract.recognize(
@@ -27,13 +38,29 @@ Tesseract.recognize(
     { logger: m => LogPercent(m) }
   ).then(({ data: { text } }) => {
     var TextArray = text.split(`\n`)
-    console.log(TextArray)
+    FormatSubmission(TextArray)
   })
 }
+var SubmissionArray = []
+function FormatSubmission(Submission){
+  var TempObj = []
+  for (let i = 0; i < Submission.length; i++) {
+    if (Submission[i] != "") {
+      TempObj.push(Submission[i])
+    }
+  }
+  TempObj = TempObj.join(" ")
+  SubmissionArray.push(TempObj)
+  if(SubmissionArray.length == 3){
+    SendVerificaiton()
+  }
+}
 
+var BasicResult = document.getElementById("basic-result")
+var CroppieController = false
 function SetCroppie(DataURL){
     $(function() {
-        var basic = $('#demo-basic').croppie({
+        var basic = $('#croppie-basic').croppie({
           viewport: {
             width: 300,
             height: 100
@@ -42,10 +69,44 @@ function SetCroppie(DataURL){
         basic.croppie('bind', {
           url: `${DataURL}`
         });
-        document.getElementById("basic-result").addEventListener("click", function(){
-          basic.croppie("result",'base64').then(function(base64) {
-            ProcessSubmission(base64)
-        });
-        })
+        if (CroppieController == false){
+          BasicResult.addEventListener("click", function(){
+            basic.croppie("result",'base64').then(function(base64) {
+              ChangePrompts()
+              ProcessSubmission(base64)
+          });
+          })
+          CroppieController = true
+        }
       });
+}
+
+var i = 0
+var PromptArray = ["Select Question","Select Answer","Select Category"]
+function ChangePrompts(){
+  if (i >= 2) {
+    $("#SubmissionModal").modal("hide")
+    SubmissionPrompt.innerText = PromptArray[2]
+    SubmissionPrompt.style.visibility = "hidden"
+    ScreenshotSubmission.style.visibility = "visible"
+    ModalOpener.style.visibility = "hidden"
+    CroppieContainer.innerHTML = ""
+    CroppieContainer.className = ""
+    i = 0
+    return
+  }else{
+    SubmissionPrompt.innerText = PromptArray[i]
+    i++
+  }
+}
+
+var VerificationContainer = document.getElementById("SubmissionVerification")
+var CategoryVerification = document.getElementById("CategoryVerification")
+var QuestionVerification = document.getElementById("QuestionVerification")
+var AnswerVerification = document.getElementById("AnswerVerification")
+function SendVerificaiton(){
+  CategoryVerification.value = SubmissionArray[0]
+  QuestionVerification.value = SubmissionArray[1]
+  AnswerVerification.value = SubmissionArray[2]
+  VerificationContainer.style.visibility = "visible"
 }
