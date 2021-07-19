@@ -51,16 +51,28 @@ const QuestionLookup = () => (
             </div>
         </div>
         </div>
-        <div id="SubmissionVerification" style={{visibility: "hidden"}}>
-            <label>Verify Category</label><br/>
+        <form id="SubmissionVerification" style={{visibility: "hidden"}}>
+            <label>Verify Category</label>
             <input id="CategoryVerification"/>
             <br/>
-            <label>Verify Question</label><br/>
+            <label>Verify Question</label>
             <input id="QuestionVerification"/>
             <br/>
-            <label>Verify Answer</label><br/>
+            <label>Verify Answer</label>
             <input id="AnswerVerification"/>
-        </div>
+            <br/>
+            <label>Select Vault Color</label>
+            <select id="ColorVerification">
+                <option value="Unknown">Unknown</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Red">Red</option>
+                <option value="Purple">Purple</option>
+            </select>
+            <br/><br/>
+            <button id="FormSubmission">Submit Form</button>
+        </form>
     </div>
   </Layout>
 )

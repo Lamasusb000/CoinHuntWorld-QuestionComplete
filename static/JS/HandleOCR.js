@@ -2,8 +2,11 @@ var ScreenshotSubmission = document.getElementById("ScreenshotSubmission")
 var ModalOpener = document.getElementById("Modal-Opener")
 var SubmissionPrompt = document.getElementById("SubmissionPrompt")
 var CroppieContainer = document.getElementById("croppie-basic")
+var ColorVerification = document.getElementById("ColorVerification")
+var VerificationSubmission = document.getElementById("FormSubmission")
 SubmissionPrompt.style.visibility = "hidden"
 ScreenshotSubmission.addEventListener("change", ImageToURL);
+VerificationSubmission.addEventListener("click", SendToDatabase)
 function ImageToURL() {
     ScreenshotSubmission.style.visibility = "hidden"
     if (SubmissionPrompt.style.visibility == "hidden"){
@@ -109,4 +112,13 @@ function SendVerificaiton(){
   QuestionVerification.value = SubmissionArray[1]
   AnswerVerification.value = SubmissionArray[2]
   VerificationContainer.style.visibility = "visible"
+}
+
+function SendToDatabase(){
+  var SendingData = []
+  SendingData.Category = CategoryVerification.value
+  SendingData.Question = QuestionVerification.value
+  SendingData.Answer = AnswerVerification.value
+  SendingData.Color = ColorVerification.value
+  console.log(SendingData)
 }
