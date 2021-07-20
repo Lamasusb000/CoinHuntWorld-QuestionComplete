@@ -23,7 +23,8 @@ exports.handler = (event, context, callback) => {
 	.then(function(result){
 		console.log(JSON.stringify(result))
 		console.log(JSON.stringify(result.data))
-		if (result.data[0] == "" | undefined){
+		var AnswerString = results.data
+		if (AnswerString.length == 0){
 			Client.query(
 				q.Create(
 					q.Collection("QuestionAnswerCollection"),
