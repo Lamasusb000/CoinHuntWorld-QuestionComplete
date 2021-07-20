@@ -133,13 +133,18 @@ function SendVerificaiton(){
 async function SendToDatabase(){
   var SendingData = []
   SendingData.Category = CategoryVerification.value
-  SendingData.Question = QuestionVerification.value
-  SendingData.Answer = AnswerVerification.value
+  SendingData.Question = 
+  SendingData.Answer = 
   SendingData.Color = ColorVerification.value
 
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadQuestions", {
 		body: JSON.stringify({
-            Text: "Dummy Text"
+            Category: `${CategoryVerification.value}`,
+            Question: `${QuestionVerification.value}`,
+            Answer: `${AnswerVerification.value}`,
+            Color: `${ColorVerification.value}`,
+            UserID: `${netlifyIdentity.currentUser().id}`,
+            UserEmail: `${netlifyIdentity.currentUser().email}`
         }),
     method: "POST"
 	});
