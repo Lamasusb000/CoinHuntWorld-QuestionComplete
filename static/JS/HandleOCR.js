@@ -4,9 +4,18 @@ var SubmissionPrompt = document.getElementById("SubmissionPrompt")
 var CroppieContainer = document.getElementById("croppie-basic")
 var ColorVerification = document.getElementById("ColorVerification")
 var VerificationSubmission = document.getElementById("FormSubmission")
-SubmissionPrompt.style.visibility = "hidden"
-ScreenshotSubmission.addEventListener("change", ImageToURL);
-VerificationSubmission.addEventListener("click", SendToDatabase)
+
+var OneTimeLoad = false
+window.addEventListener("load", StartPage)
+function StartPage(){
+  if(OneTimeLoad == false){
+    OneTimeLoad = true
+    SubmissionPrompt.style.visibility = "hidden"
+    ScreenshotSubmission.addEventListener("change", ImageToURL);
+    VerificationSubmission.addEventListener("click", SendToDatabase)
+  }
+}
+
 function ImageToURL() {
     ScreenshotSubmission.style.visibility = "hidden"
     if (SubmissionPrompt.style.visibility == "hidden"){
