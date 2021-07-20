@@ -17,9 +17,12 @@ $("#Modal-Opener").on("click", StartPage)
 $(".RestartPage").off("click", ReloadPage)
 $(".RestartPage").on("click", ReloadPage)
 
-$(".Signup").off("click", netlifyIdentity.open())
-$(".Signup").on("click", netlifyIdentity.open())
+$(".Signup").off("click", OpenNetlify)
+$(".Signup").on("click", OpenNetlify)
 
+function OpenNetlify(){
+  netlifyIdentity.open()
+}
 function ReloadPage(){
   location.reload()
 }
