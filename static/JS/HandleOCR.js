@@ -137,7 +137,7 @@ async function SendToDatabase(){
   SendingData.Answer = AnswerVerification.value
   SendingData.Color = ColorVerification.value
 
-	let response = await fetch("https://coinhuntworldtrivia.com/API/UploadQuestions", {
+	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadQuestions", {
 		body: JSON.stringify({
             Text: "Dummy Text"
         }),
