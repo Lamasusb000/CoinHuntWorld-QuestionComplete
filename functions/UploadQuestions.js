@@ -2,9 +2,9 @@ const faunadb = require('faunadb'),
 q = faunadb.query;
 const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN' })
 var Output = "JSON Did not Attach"
+var RecievedData = []
 
 exports.handler = (event, context, callback) => {
-	var RecievedData = []
 	console.log(event.body)
 	RecievedData = JSON.parse(event.body)
 
