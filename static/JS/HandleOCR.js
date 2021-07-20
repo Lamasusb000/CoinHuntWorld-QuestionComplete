@@ -141,7 +141,7 @@ async function SendToDatabase(){
 		body: JSON.stringify({
             Text: "Dummy Text"
         }),
-    method: POST
+    method: "POST"
 	});
 	if (response.status === 200){
 		let data = await response.json()
