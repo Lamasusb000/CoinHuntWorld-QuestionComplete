@@ -1,5 +1,3 @@
-import { object } from "prop-types"
-
 var ScreenshotSubmission = document.getElementById("ScreenshotSubmission")
 var ModalOpener = document.getElementById("Modal-Opener")
 var SubmissionPrompt = document.getElementById("SubmissionPrompt")
