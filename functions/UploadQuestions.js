@@ -21,7 +21,7 @@ exports.handler = (event, context, callback) => {
 		)
 	)
 	.then(function(result){
-		if (result.data[i] == "" | undefined){
+		if (result.data[0] == "" | undefined){
 			Client.query(
 				q.Create(
 					q.Collection("QuestionAnswerCollection"),
