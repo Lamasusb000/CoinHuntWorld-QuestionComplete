@@ -6,7 +6,18 @@ var SubmissionPrompt = document.getElementById("SubmissionPrompt")
 var CroppieContainer = document.getElementById("croppie-basic")
 var ColorVerification = document.getElementById("ColorVerification")
 var VerificationSubmission = document.getElementById("FormSubmission")
-
+var OneTimeLoad = false
+window.addEventListener("load", StartPage)
+function StartPage(){
+  if(OneTimeLoad == false){
+    OneTimeLoad = true
+    Object.freeze(OneTimeLoad)
+    SubmissionPrompt.style.visibility = "hidden"
+    ScreenshotSubmission.addEventListener("change", ImageToURL);
+    VerificationSubmission.addEventListener("click", SendToDatabase)
+    document.getElementById("ImageCallback").addEventListener("click", ReviewImage)
+  }
+}
 var ImageCallbackStorage = ""
 
 function ImageToURL() {
@@ -129,21 +140,6 @@ function SendToDatabase(){
 
 function ReviewImage() {
   document.getElementById("ImageReviewerObj").src = ImageCallbackStorage
-}
-
-
-
-var OneTimeLoad = false
-window.addEventListener("load", StartPage)
-function StartPage(){
-  if(OneTimeLoad == false){
-    OneTimeLoad = true
-    Object.freeze(OneTimeLoad)
-    SubmissionPrompt.style.visibility = "hidden"
-    ScreenshotSubmission.addEventListener("change", ImageToURL);
-    VerificationSubmission.addEventListener("click", SendToDatabase)
-    document.getElementById("ImageCallback").addEventListener("click", ReviewImage)
-  }
 }
 
 StartPage()
