@@ -140,12 +140,12 @@ async function SendToDatabase(){
   
 	let response = await fetch("https://coinhuntworldtrivia.com/API/UploadQuestions", {
 		body: JSON.stringify({
-            Category: SendingData.Category,
-            Question: SendingData.Question,
-            Answer: SendingData.Answer,
-            Color: SendingData.Color,
-            UserID: netlifyIdentity.currentUser().id,
-            UserEmail: netlifyIdentity.currentUser().email
+            Category: `${SendingData.Category}`,
+            Question: `${SendingData.Question}`,
+            Answer: `${SendingData.Answer}`,
+            Color: `${SendingData.Color}`,
+            UserID: `${netlifyIdentity.currentUser().id}`,
+            UserEmail: `${netlifyIdentity.currentUser().email}`
         }),
         method: "POST"
 	});

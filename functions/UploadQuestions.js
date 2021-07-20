@@ -5,7 +5,6 @@ var Output = "JSON Did not Attach"
 
 exports.handler = (event, context, callback) => {
 	var RecievedData = []
-	console.log(event)
 	console.log(event.body)
 	RecievedData = JSON.parse(event.body)
 
