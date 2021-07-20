@@ -136,21 +136,16 @@ async function SendToDatabase(){
   SendingData.Question = QuestionVerification.value
   SendingData.Answer = AnswerVerification.value
   SendingData.Color = ColorVerification.value
-  
-  let response = await fetch("https://CoinHuntWorldTrivia.com/API/UploadQuestions",{
-    body: JSON.stringify({
-      Category: `${SendingData.Category}`,
-      Question: `${SendingData.Question}`,
-      Answer: `${SendingData.Answer}`,
-      Color: `${SendingData.Color}`,
-      UserID: `${netlifyIdentity.currentUser().id}`,
-      UserEmail: `${netlifyIdentity.currentUser().email}`
-    }),
-    method: "POST"
-    })
+
+	let response = await fetch("https://coinhuntworldtrivia.com/API/UploadQuestions", {
+		body: JSON.stringify({
+            Text: "Dummy Text"
+        }),
+        method: "POST"
+	});
 	if (response.status === 200){
-		let data = await response.text()
-        console.log(data)
+		let data = await response.json()
+        window.RequestedData = data
         return
 	}
 }
