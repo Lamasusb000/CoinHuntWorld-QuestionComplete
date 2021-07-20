@@ -22,6 +22,9 @@ exports.handler = (event, context, callback) => {
 	)
 	.then(function(result){
 		var AnswerString = result.data[0]
+		console.log(result)
+		console.log(result.data)
+		console.log(AnswerString)
 		if (AnswerString == "" | undefined){
 			Client.query(
 				q.Create(
