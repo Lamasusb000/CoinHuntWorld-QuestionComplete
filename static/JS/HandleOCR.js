@@ -22,6 +22,8 @@ $(".Signup").on("click", OpenNetlify)
 
 function OpenNetlify(){
   netlifyIdentity.open()
+  $(".btnClose").off("click", ReloadPage)
+  $(".btnClose").on("click", ReloadPage)  
 }
 function ReloadPage(){
   location.reload()
@@ -32,6 +34,8 @@ function StartPage(){
     OneTimeLoad = true
     if (netlifyIdentity.currentUser() == undefined | netlifyIdentity.currentUser() == null){
       NetlifySignup()
+    }else{
+      $("#SubmissionModal").modal("show")
     }
     ScreenshotSubmission.addEventListener("change", ImageToURL);
     VerificationSubmission.addEventListener("click", SendToDatabase)
@@ -69,9 +73,10 @@ function LogPercent(Log){
 }
 
 function NetlifySignup(){
-  $("#SubmissionModal").modal("hide")
-  ModalOpener.style.visibility = "hidden"
-  
+  ModalOpener.style.display = "none"
+  VerificationContainer.style.display = "none"
+
+  document.getElementById("CreateAccount").style.display = "block"
 }
 
 function ProcessSubmission(DataURL){

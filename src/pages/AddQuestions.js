@@ -21,7 +21,7 @@ const QuestionLookup = () => (
         <div id="TextOutput">
             <br/>
         </div>
-        <button type="button" id="Modal-Opener" className="btn btn-primary" data-toggle="modal" data-target="#SubmissionModal">
+        <button type="button" id="Modal-Opener" className="btn btn-primary">
             Upload File
         </button>
 
@@ -93,10 +93,11 @@ const QuestionLookup = () => (
             </div>
         </div>
 
-        <div style={{display: "none"}} id="SuccessPage">
+        <div style={{display: "none"}} id="CreateAccount">
             <h2>
                 You Have To Create an Account With us First.
             </h2>
+            <p>Once Signed Up Just Give A Quick Refresh</p>
             <button type="button" className="btn btn-primary Signup">
                 Signup/ Login Here!
             </button>
