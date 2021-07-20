@@ -4,6 +4,9 @@ var SubmissionPrompt = document.getElementById("SubmissionPrompt")
 var CroppieContainer = document.getElementById("croppie-basic")
 var ColorVerification = document.getElementById("ColorVerification")
 var VerificationSubmission = document.getElementById("FormSubmission")
+var SuccessPage = document.getElementById("SuccessPage")
+var FailurePage = document.getElementById("FailurePage")
+var ErrorPage = document.getElementById("ErrorPage")
 var OneTimeLoad = false
 
 SubmissionPrompt.style.visibility = "hidden"
@@ -11,6 +14,12 @@ SubmissionPrompt.style.visibility = "hidden"
 $("#Modal-Opener").off("click", StartPage)
 $("#Modal-Opener").on("click", StartPage)
 
+$(".RestartPage").off("click", ReloadPage)
+$(".RestartPage").on("click", ReloadPage)
+
+function ReloadPage(){
+  location.reload()
+}
 
 function StartPage(){
   if(OneTimeLoad == false){
@@ -150,8 +159,20 @@ async function SendToDatabase(){
 	});
 	if (response.status === 200){
 		let data = await response.text()
+    if (data == "Suceess"){
+      VerificationContainer.style.display = "none"
+      SuccessPage.style.display = "block"
+      console.log(`The Process was an ${data}`)
+    }else{
+      if (data == "Failed. Already in Database"){
+        VerificationContainer.style.display = "none"
+        FailurePage.style.display = "block"
         console.log(data)
-        return
+      }else{
+        ErrorPage.style.display = "block"
+        console.log(`Unknown Data Callback: ${data}`)
+      }
+    }
 	}
 }
 

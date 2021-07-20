@@ -10,11 +10,14 @@ const IndexPage = () => (
       Road Map
     </h3>
     <ol>
-    <li>
-        Impliment Netlify Idendity to get users to create an account and get a Account-ID hash that will be used to track user activity (Prevent Malicious Intents)
+      <li>
+        Make Croppie.js More user friendly
       </li>
       <li>
-        Write JS that will talk to self hosted API that will pass along information to the database
+        Impliment netlifyIdentity Signup/ login/  Logout buttons (Currently just console based)
+      </li>
+      <li>
+        Create Database Addition Success/ Failure Pages
       </li>
       <li>
         Add Search Box Filtering by Color/Category

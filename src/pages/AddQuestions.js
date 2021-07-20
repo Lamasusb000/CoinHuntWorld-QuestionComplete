@@ -45,6 +45,7 @@ const QuestionLookup = () => (
                 </div>
             </div>
             <div className="modal-footer">
+                <button type="button" className="btn btn-secondary RestartPage">Restart Process</button>
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" id="basic-result" className="btn btn-primary">Submit Snip</button>
             </div>
@@ -90,6 +91,33 @@ const QuestionLookup = () => (
                     <button type="button" className="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
+        </div>
+
+        <div style={{display: "none"}} id="SuccessPage">
+            <h1>
+                You have Successfully Submitted a Question!
+            </h1>
+            <button type="button" className="btn btn-primary RestartPage">
+                Submit Another Question!
+            </button>
+        </div>
+
+        <div style={{display: "none"}} id="FailurePage">
+            <h1>
+                The Question is Already in our Database. <br/> Please Try Again
+            </h1>
+            <button type="button" className="btn btn-primary RestartPage">
+                Submit Another Question!
+            </button>
+        </div>
+
+        <div style={{display: "none"}} id="ErrorPage">
+            <h1>
+                Something Went Wrong. Please Reach out to a Dev
+            </h1>
+            <button type="button" className="btn btn-primary RestartPage">
+                Submit Another Question!
+            </button>
         </div>
     </div>
   </Layout>
