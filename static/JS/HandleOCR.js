@@ -30,7 +30,7 @@ function ReloadPage(){
 function StartPage(){
   if(OneTimeLoad == false){
     OneTimeLoad = true
-    if (netlifyIdentity.currentUser().id == undefined){
+    if (netlifyIdentity.currentUser() == undefined | netlifyIdentity.currentUser() == null){
       NetlifySignup()
     }
     ScreenshotSubmission.addEventListener("change", ImageToURL);
