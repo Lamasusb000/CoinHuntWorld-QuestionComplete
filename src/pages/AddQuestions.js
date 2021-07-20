@@ -21,7 +21,7 @@ const QuestionLookup = () => (
         <div id="TextOutput">
             <br/>
         </div>
-        <button type="button" id="Modal-Opener"className="btn btn-primary" data-toggle="modal" data-target="#SubmissionModal">
+        <button type="button" id="Modal-Opener" className="btn btn-primary" data-toggle="modal" data-target="#SubmissionModal">
             Upload File
         </button>
 

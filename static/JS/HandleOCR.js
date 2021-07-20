@@ -4,11 +4,14 @@ var SubmissionPrompt = document.getElementById("SubmissionPrompt")
 var CroppieContainer = document.getElementById("croppie-basic")
 var ColorVerification = document.getElementById("ColorVerification")
 var VerificationSubmission = document.getElementById("FormSubmission")
+
+
+
+window.removeEventListener("load", StartPage)
+window.addEventListener("load",StartPage)
+
+
 var OneTimeLoad = false
-
-console.log("I Ran")
-
-window.addEventListener("load", StartPage)
 function StartPage(){
   if(OneTimeLoad == false){
     var OneTimeLoad = true
