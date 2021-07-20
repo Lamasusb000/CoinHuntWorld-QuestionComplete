@@ -13,8 +13,11 @@ function StartPage(){
     SubmissionPrompt.style.visibility = "hidden"
     ScreenshotSubmission.addEventListener("change", ImageToURL);
     VerificationSubmission.addEventListener("click", SendToDatabase)
+    document.getElementById("ImageCallback").addEventListener("click", ReviewImage)
   }
 }
+
+var ImageCallbackStorage = ""
 
 function ImageToURL() {
     ScreenshotSubmission.style.visibility = "hidden"
@@ -28,6 +31,7 @@ function ImageToURL() {
     reader.addEventListener("load", function () {
       // convert image file to base64 string
       SetCroppie(reader.result)
+      ImageCallbackStorage = reader.result
     }, false);
   
     if (file) {
@@ -131,5 +135,10 @@ function SendToDatabase(){
   SendingData.Color = ColorVerification.value
   console.log(SendingData)
 }
+
+function ReviewImage() {
+  document.getElementById("ImageReviewerObj").src = ImageCallbackStorage
+}
+
 
 StartPage()

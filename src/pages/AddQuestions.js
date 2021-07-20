@@ -5,7 +5,6 @@ import JSimport from "../components/JS-Import"
 import JsCdn from "../components/JS-CDN"
 import "../components/CSS/AlignCenter.css"
 import "../components/CSS/croppie.css"
-import "../components/css/AddQuestions.css"
 
 
 
@@ -47,7 +46,7 @@ const QuestionLookup = () => (
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" id="basic-result" className="btn btn-primary">Save changes</button>
+                <button type="button" id="basic-result" className="btn btn-primary">Submit Snip</button>
             </div>
             </div>
         </div>
@@ -71,18 +70,27 @@ const QuestionLookup = () => (
             </div>
             <div className="form-group">
                 <label htmlFor="QuestionVerification">Select Vault Color</label>
-                <select className="form-control" id="ColorVerification">
-                    <option value="Unknown">Unknown</option>
+                <select className="form-control" id="ColorVerification" defaultValue="">
                     <option value="Blue">Blue</option>
                     <option value="Green">Green</option>
                     <option value="Yellow">Yellow</option>
                     <option value="Red">Red</option>
                     <option value="Purple">Purple</option>
                 </select>
-                <small class="form-text">If You Do Not Remember, The Countdown Timer Color is Also The Vault Color</small>
+                <small className="form-text">If You Do Not Remember, The Countdown Timer Color is Also The Vault Color</small>
+                <small id="ImageCallback" style={{textDecoration: "underline", cursor: "pointer"}} className="form-text" data-toggle="modal" data-target="#ImageReviewModal">Click Here To Check Again</small>
             </div>
             <button className="btn btn-primary"type="button" id="FormSubmission">Submit Form</button>
         </form>
+
+        <div className="modal fade" id="ImageReviewModal" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div className="modal-dialog modal-sm">
+                <div className="modal-content">
+                    <img id="ImageReviewerObj" alt="ReviewImage"/>
+                    <button type="button" className="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
   </Layout>
 )
