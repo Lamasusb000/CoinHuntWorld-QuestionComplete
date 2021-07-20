@@ -4,12 +4,10 @@ var SubmissionPrompt = document.getElementById("SubmissionPrompt")
 var CroppieContainer = document.getElementById("croppie-basic")
 var ColorVerification = document.getElementById("ColorVerification")
 var VerificationSubmission = document.getElementById("FormSubmission")
-var OneTimeLoad = false
 window.addEventListener("load", StartPage)
 function StartPage(){
-  if(OneTimeLoad == false){
-    OneTimeLoad = true
-    Object.freeze(OneTimeLoad)
+  if(OneTimeLoad == undefined){
+    var OneTimeLoad = true
     SubmissionPrompt.style.visibility = "hidden"
     ScreenshotSubmission.addEventListener("change", ImageToURL);
     VerificationSubmission.addEventListener("click", SendToDatabase)
@@ -72,7 +70,6 @@ function FormatSubmission(Submission){
 }
 
 var BasicResult = document.getElementById("basic-result")
-var CroppieController = false
 function SetCroppie(DataURL){
     $(function() {
         var basic = $('#croppie-basic').croppie({
@@ -84,14 +81,14 @@ function SetCroppie(DataURL){
         basic.croppie('bind', {
           url: `${DataURL}`
         });
-        if (CroppieController == false){
+        if (CroppieController == undefined){
           BasicResult.addEventListener("click", function(){
             basic.croppie("result",'base64').then(function(base64) {
               ChangePrompts()
               ProcessSubmission(base64)
           });
           })
-          CroppieController = true
+          var CroppieController = true
           Object.freeze(CroppieController)
         }
       });
