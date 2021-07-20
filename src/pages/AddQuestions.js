@@ -94,6 +94,15 @@ const QuestionLookup = () => (
         </div>
 
         <div style={{display: "none"}} id="SuccessPage">
+            <h2>
+                You Have To Create an Account With us First.
+            </h2>
+            <button type="button" className="btn btn-primary Signup">
+                Signup/ Login Here!
+            </button>
+        </div>
+
+        <div style={{display: "none"}} id="SuccessPage">
             <h1>
                 You have Successfully Submitted a Question!
             </h1>

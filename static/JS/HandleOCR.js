@@ -17,6 +17,9 @@ $("#Modal-Opener").on("click", StartPage)
 $(".RestartPage").off("click", ReloadPage)
 $(".RestartPage").on("click", ReloadPage)
 
+$(".Signup").off("click", netlifyIdentity.open())
+$(".Signup").on("click", netlifyIdentity.open())
+
 function ReloadPage(){
   location.reload()
 }
@@ -24,6 +27,9 @@ function ReloadPage(){
 function StartPage(){
   if(OneTimeLoad == false){
     OneTimeLoad = true
+    if (netlifyIdentity.currentUser().id == undefined){
+      NetlifySignup()
+    }
     ScreenshotSubmission.addEventListener("change", ImageToURL);
     VerificationSubmission.addEventListener("click", SendToDatabase)
     document.getElementById("ImageCallback").addEventListener("click", ReviewImage)
@@ -57,6 +63,12 @@ function LogPercent(Log){
           document.getElementById("TextOutput").innerText = ""
         }
     }
+}
+
+function NetlifySignup(){
+  $("#SubmissionModal").modal("hide")
+  ModalOpener.style.visibility = "hidden"
+  
 }
 
 function ProcessSubmission(DataURL){
