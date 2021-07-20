@@ -21,6 +21,8 @@ exports.handler = (event, context, callback) => {
 		)
 	)
 	.then(function(result){
+		console.log(result)
+		console.log(result.data)
 		if (result.data[0] == "" | undefined){
 			Client.query(
 				q.Create(
