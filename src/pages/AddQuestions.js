@@ -115,6 +115,13 @@ const QuestionLookup = () => (
             <h1>
                 Something Went Wrong. Please Reach out to a Dev
             </h1>
+            <span>
+                Error Code: 
+                <span id="ErrorCode">
+                    This
+                </span>
+            </span>
+            <br/>
             <button type="button" className="btn btn-primary RestartPage">
                 Submit Another Question!
             </button>

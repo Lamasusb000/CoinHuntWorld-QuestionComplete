@@ -159,7 +159,7 @@ async function SendToDatabase(){
 	});
 	if (response.status === 200){
 		let data = await response.text()
-    if (data == "Suceess"){
+    if (data == "Success"){
       VerificationContainer.style.display = "none"
       SuccessPage.style.display = "block"
       console.log(`The Process was an ${data}`)
@@ -170,6 +170,7 @@ async function SendToDatabase(){
         console.log(data)
       }else{
         ErrorPage.style.display = "block"
+        document.getElementById("ErrorCode").innerText = data
         console.log(`Unknown Data Callback: ${data}`)
       }
     }
