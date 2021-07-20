@@ -12,17 +12,11 @@ const IndexPage = () => (
       Road Map
     </h3>
     <ol>
-      <li>
-        Integrate the croppie.js library into the submission box to allow prompts of "Select Category/Question/Answer"
-      </li>
-      <li>
-        Write JS to handle multiple OCR submissions and collections
+    <li>
+        Impliment Netlify Idendity to get users to create an account and get a Account-ID hash that will be used to track user activity (Prevent Malicious Intents)
       </li>
       <li>
         Write JS that will talk to self hosted API that will pass along information to the database
-      </li>
-      <li>
-        Impliment Netlify Idendity to get users to create an account and get a Account-ID hash that will be used to track user activity (Prevent Malicious Intents)
       </li>
       <li>
         Add Search Box Filtering by Color/Category
