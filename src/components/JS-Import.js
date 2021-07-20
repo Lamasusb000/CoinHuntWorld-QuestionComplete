@@ -6,7 +6,7 @@ class JSimport extends React.Component {
     render() {
         return (
             <Helmet>
-                <script defer src={withPrefix(`JS/${this.props.File}`)}/>
+                <script async="async" defer src={withPrefix(`JS/${this.props.File}`)}/>
             </Helmet>
         )
     }
