@@ -6,16 +6,15 @@ var ColorVerification = document.getElementById("ColorVerification")
 var VerificationSubmission = document.getElementById("FormSubmission")
 var OneTimeLoad = false
 
+SubmissionPrompt.style.visibility = "hidden"
 
-window.removeEventListener("load", StartPage)
-window.addEventListener("load",StartPage)
-
+$("#Modal-Opener").off("click", StartPage)
+$("#Modal-Opener").on("click", StartPage)
 
 
 function StartPage(){
   if(OneTimeLoad == false){
     OneTimeLoad = true
-    SubmissionPrompt.style.visibility = "hidden"
     ScreenshotSubmission.addEventListener("change", ImageToURL);
     VerificationSubmission.addEventListener("click", SendToDatabase)
     document.getElementById("ImageCallback").addEventListener("click", ReviewImage)
@@ -143,5 +142,3 @@ function SendToDatabase(){
 function ReviewImage() {
   document.getElementById("ImageReviewerObj").src = ImageCallbackStorage
 }
-
-StartPage()
