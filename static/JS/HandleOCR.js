@@ -130,13 +130,30 @@ function SendVerificaiton(){
   VerificationContainer.style.visibility = "visible"
 }
 
-function SendToDatabase(){
+async function SendToDatabase(){
   var SendingData = []
   SendingData.Category = CategoryVerification.value
   SendingData.Question = QuestionVerification.value
   SendingData.Answer = AnswerVerification.value
   SendingData.Color = ColorVerification.value
-  console.log(SendingData)
+
+  
+	let response = await fetch("https://coinhuntworldtrivia.com/API/UploadQuestions", {
+		body: JSON.stringify({
+            Category: SendingData.Category,
+            Question: SendingData.Question,
+            Answer: SendingData.Answer,
+            Color: SendingData.Color,
+            UserID: netlifyIdentity.currentUser().id,
+            UserEmail: netlifyIdentity.currentUser().email
+        }),
+        method: "POST"
+	});
+	if (response.status === 200){
+		let data = await response.json()
+        window.RequestedData = data
+        return
+	}
 }
 
 function ReviewImage() {
