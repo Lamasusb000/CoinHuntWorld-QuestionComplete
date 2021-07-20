@@ -147,7 +147,7 @@ async function SendToDatabase(){
             UserID: `${netlifyIdentity.currentUser().id}`,
             UserEmail: `${netlifyIdentity.currentUser().email}`
         }),
-        method: "POST"
+    method: "POST"
 	});
 	if (response.status === 200){
 		let data = await response.text()
