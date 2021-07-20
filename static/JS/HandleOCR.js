@@ -150,8 +150,8 @@ async function SendToDatabase(){
         method: "POST"
 	});
 	if (response.status === 200){
-		let data = await response.json()
-        window.RequestedData = data
+		let data = await response.text()
+        console.log(data)
         return
 	}
 }
