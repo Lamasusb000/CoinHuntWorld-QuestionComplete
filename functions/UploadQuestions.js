@@ -25,7 +25,7 @@ exports.handler = (event, context, callback) => {
 		console.log(result)
 		console.log(result.data)
 		console.log(AnswerString)
-		if (AnswerString == "" | undefined){
+		if (AnswerString == undefined){
 			Client.query(
 				q.Create(
 					q.Collection("QuestionAnswerCollection"),
