@@ -14,7 +14,7 @@ window.addEventListener("load",StartPage)
 
 function StartPage(){
   if(OneTimeLoad == false){
-    var OneTimeLoad = true
+    OneTimeLoad = true
     SubmissionPrompt.style.visibility = "hidden"
     ScreenshotSubmission.addEventListener("change", ImageToURL);
     VerificationSubmission.addEventListener("click", SendToDatabase)
@@ -97,7 +97,6 @@ function SetCroppie(DataURL){
           });
           })
           CroppieController = true
-          Object.freeze(CroppieController)
         }
       });
 }
