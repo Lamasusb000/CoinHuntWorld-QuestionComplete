@@ -5,6 +5,7 @@ import JSimport from "../components/JS-Import"
 import JsCdn from "../components/JS-CDN"
 import "../components/CSS/AlignCenter.css"
 import "../components/CSS/croppie.css"
+import "../components/css/AddQuestions.css"
 
 
 
@@ -51,30 +52,36 @@ const QuestionLookup = () => (
             </div>
         </div>
         </div>
-        <form id="SubmissionVerification" style={{visibility: "hidden"}}>
-            <label>
-                Verify Category
-                <input id="CategoryVerification"/>
-            </label>
-            
-            <br/>
-            <label>Verify Question</label>
-            <input id="QuestionVerification"/>
-            <br/>
-            <label>Verify Answer</label>
-            <input id="AnswerVerification"/>
-            <br/>
-            <label>Select Vault Color</label>
-            <select id="ColorVerification">
-                <option value="Unknown">Unknown</option>
-                <option value="Blue">Blue</option>
-                <option value="Green">Green</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Red">Red</option>
-                <option value="Purple">Purple</option>
-            </select>
-            <br/><br/>
-            <button type="button" id="FormSubmission">Submit Form</button>
+        <form autoComplete="off" id="SubmissionVerification" style={{
+            visibility: "hidden",
+            textAlign: "left",
+            margin: "auto",
+            width: "50%"}}>
+            <div className="form-group">
+                <label htmlFor="CategoryVerification">Verify Category</label>
+                <input type="text" className="form-control" id="CategoryVerification"/>
+            </div>
+            <div className="form-group">
+                <label htmlFor="QuestionVerification">Verify Question</label>
+                <input type="text" className="form-control" id="QuestionVerification"/>
+            </div>
+            <div className="form-group">
+                <label htmlFor="AnswerVerification">Verify Answer</label>
+                <input type="text" className="form-control" id="AnswerVerification"/>
+            </div>
+            <div className="form-group">
+                <label htmlFor="QuestionVerification">Select Vault Color</label>
+                <select className="form-control" id="ColorVerification">
+                    <option value="Unknown">Unknown</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Red">Red</option>
+                    <option value="Purple">Purple</option>
+                </select>
+                <small class="form-text">If You Do Not Remember, The Countdown Timer Color is Also The Vault Color</small>
+            </div>
+            <button className="btn btn-primary"type="button" id="FormSubmission">Submit Form</button>
         </form>
     </div>
   </Layout>

@@ -131,3 +131,5 @@ function SendToDatabase(){
   SendingData.Color = ColorVerification.value
   console.log(SendingData)
 }
+
+StartPage()
