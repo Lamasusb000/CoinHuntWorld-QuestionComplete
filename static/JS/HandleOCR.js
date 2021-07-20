@@ -1,3 +1,5 @@
+import { object } from "prop-types"
+
 var ScreenshotSubmission = document.getElementById("ScreenshotSubmission")
 var ModalOpener = document.getElementById("Modal-Opener")
 var SubmissionPrompt = document.getElementById("SubmissionPrompt")
@@ -81,6 +83,7 @@ function SetCroppie(DataURL){
           });
           })
           CroppieController = true
+          Object.freeze(CroppieController)
         }
       });
 }
@@ -135,12 +138,11 @@ window.addEventListener("load", StartPage)
 function StartPage(){
   if(OneTimeLoad == false){
     OneTimeLoad = true
+    Object.freeze(OneTimeLoad)
     SubmissionPrompt.style.visibility = "hidden"
     ScreenshotSubmission.addEventListener("change", ImageToURL);
     VerificationSubmission.addEventListener("click", SendToDatabase)
     document.getElementById("ImageCallback").addEventListener("click", ReviewImage)
-  }else{
-    return
   }
 }
 
