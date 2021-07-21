@@ -10,8 +10,8 @@ import "../components/CSS/AlignCenter.css"
 const QuestionLookup = () => (
   <Layout>
     <Seo title="Home" />
-    <JSimport File={"autoComplete.js"}/>
-    <JSimport File={"SearchFunction.js"}/>
+    <JSimport Defer={false} File={"autoComplete.js"}/>
+    <JSimport Defer={true} File={"SearchFunction.js"}/>
     <div className="AlignCenter">
       <h4 className="AlignCenter">
         Question Search
