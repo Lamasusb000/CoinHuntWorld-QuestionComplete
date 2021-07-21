@@ -1,3 +1,5 @@
+$("#autoComplete-Import").on("load", LoadQuestions)
+
 async function ContactAPI() {
 	let response = await fetch("https://coinhuntworldtrivia.com/API/GrabQuestions", {
 		body: JSON.stringify({

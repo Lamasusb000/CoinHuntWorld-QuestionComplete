@@ -6,9 +6,14 @@ class JSimport extends React.Component {
     render() {
         return (
             <Helmet>
-                <script async="async" defer={this.props.Defer} src={withPrefix(`JS/${this.props.File}`)}/>
+                <script async="async" id={GetScriptID(this.props.File)}  defer src={withPrefix(`JS/${this.props.File}`)}/>
             </Helmet>
         )
     }
 }
 export default JSimport
+
+function GetScriptID(FileName){
+    FileName = `${FileName.slice(0, -3)}-Import`
+    return FileName
+}
