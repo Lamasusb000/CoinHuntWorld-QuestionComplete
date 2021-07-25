@@ -111,13 +111,14 @@ function SetCroppie(DataURL){
     $(function() {
         var Element = document.getElementById("croppie-basic")
         var basic = new Croppie(Element, {
-          viewport: { width: 250, height: 100},
-          boundary: { width: 300, height: 300 },
+          viewport: { width: 370, height: 100},
+          boundary: { width: 400, height: 300 },
           showZoomer: false,
           enableResize: true
         });
         basic.bind({
-          url: `${DataURL}`
+          url: `${DataURL}`,
+          zoom: 0
         })
         if (CroppieController == false){
           BasicResult.addEventListener("click", function(){
