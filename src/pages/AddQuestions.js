@@ -70,7 +70,7 @@ const QuestionLookup = () => (
             </div>
             <div className="form-group">
                 <label htmlFor="QuestionVerification">Verify Question</label>
-                <input type="text" className="form-control" id="QuestionVerification"/>
+                <textarea type="text" className="form-control" id="QuestionVerification"/>
             </div>
             <div className="form-group">
                 <label htmlFor="AnswerVerification">Verify Answer</label>
