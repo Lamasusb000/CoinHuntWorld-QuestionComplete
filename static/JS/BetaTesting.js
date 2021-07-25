@@ -1,6 +1,3 @@
-$("#NetlifyIdentity").off("load", Beta)
-$("#NetlifyIdentity").on("load", Beta)
-
 function Beta(){
     if (netlifyIdentity.currentUser()){
         console.log("Approved Tester")
@@ -9,3 +6,5 @@ function Beta(){
         window.location.href = "/"
     }
 }
+
+Beta()
