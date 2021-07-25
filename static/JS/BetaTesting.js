@@ -16,4 +16,4 @@ function BetaV2(){
     }
 }
 
-BetaV2
+BetaV2()
