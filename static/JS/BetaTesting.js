@@ -1,11 +1,16 @@
-$("#NetlifyIdentity").off("load", Beta)
-$("#NetlifyIdentity").on("load", Beta)
+$("#NetlifyIdentity").off("load", BetaV2)
+$("#NetlifyIdentity").on("load", BetaV2)
 
-function Beta(){
+function BetaV2(){
     if (netlifyIdentity.currentUser()){
-        console.log("Approved Tester")
+        if (netlifyIdentity.currentUser().app_metadata.roles.includes("Beta")){
+            console.log("Approved Tester")
+        }else{
+            console.log("Not an Approved Tester")
+            window.location.href = "/"
+        }
     }else{
-        console.log("Not An Approved Tester")
+        console.log("Not an Approved Tester")
         window.location.href = "/"
     }
 }
