@@ -7,12 +7,12 @@
   }
   
   /* IMAGE STYLES */
-  [type=radio] + .gatsby-image-wrapper  {
+  [type=radio] + img  {
     cursor: pointer;
   }
   
   /* CHECKED STYLES */
-  [type=radio]:checked + .gatsby-image-wrapper  {
+  [type=radio]:checked + img  {
     background-color: rgba(0, 0, 0, 0.5);
   }
   .PictureList label{

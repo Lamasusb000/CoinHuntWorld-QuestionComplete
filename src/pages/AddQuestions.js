@@ -7,6 +7,12 @@ import "../components/CSS/AlignCenter.css"
 import "../components/CSS/croppie.css"
 import { StaticImage } from "gatsby-plugin-image"
 
+import VaultBlue from "../images/VaultBlue.png"
+import VaultGreen from "../images/VaultGreen.png"
+import VaultYellow from "../images/VaultYellow.png"
+import VaultRed from "../images/VaultRed.png"
+import VaultPurple from "../images/VaultPurple.png"
+
 
 
 const QuestionLookup = () => (
@@ -15,6 +21,7 @@ const QuestionLookup = () => (
     <JsCdn URL="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"/>
     <JSimport File="HandleOCR.js"/>
     <JSimport File="croppie.js"/>
+    <JSimport Defer={false} File="BetaTesting.js"/>
     <div className="AlignCenter">
         <h4 className="AlignCenter">
             Add Questions
@@ -74,23 +81,23 @@ const QuestionLookup = () => (
                 <p>Select Vault Color</p>
                 <label>
                     <input type="radio" name="ColorSelection" value="Blue"/>
-                    <StaticImage src="../Images/VaultBlue.png" className="VaultSelection" alt="Blue Vault"/>
+                    <img src={VaultBlue} className="VaultSelection" alt="Blue Vault"/>
                 </label>
                 <label>
                     <input type="radio" name="ColorSelection" value="Green"/>
-                    <StaticImage src="../Images/VaultGreen.png" className="VaultSelection" alt="Green Vault"/>
+                    <img src={VaultGreen} className="VaultSelection" alt="Green Vault"/>
                 </label>
                 <label>
                     <input type="radio" name="ColorSelection" value="Yellow"/>
-                    <StaticImage src="../Images/VaultYellow.png" className="VaultSelection" alt="Yellow Vault"/>
+                    <img src={VaultYellow} className="VaultSelection" alt="Yellow Vault"/>
                 </label>
                 <label>
                     <input type="radio" name="ColorSelection" value="Red"/>
-                    <StaticImage src="../Images/VaultRed.png" className="VaultSelection" alt="Red Vault"/>
+                    <img src={VaultRed} className="VaultSelection" alt="Red Vault"/>
                 </label>
                 <label>
                     <input type="radio" name="ColorSelection" value="Purple"/>
-                    <StaticImage src="../Images/VaultPurple.png" className="VaultSelection" alt="Purple Vault"/>
+                    <img src={VaultPurple} className="VaultSelection" alt="Purple Vault"/>
                 </label>
                 <small className="form-text">If You Do Not Remember, The Countdown Timer Color is Also The Vault Color</small>
                 <small id="ImageCallback" style={{textDecoration: "underline", cursor: "pointer"}} className="form-text" data-toggle="modal" data-target="#ImageReviewModal">Click Here To Check Again</small>
