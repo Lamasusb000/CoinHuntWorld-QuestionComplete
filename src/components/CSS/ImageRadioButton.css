@@ -18,3 +18,14 @@
   .PictureList label{
       width: 20%;
   }
+
+  .PictureList label img{
+    width: 100%;
+  }
+
+
+  @media (max-width: 800px){
+    #SubmissionVerification{
+      width: 100%!important;
+    }
+  }
