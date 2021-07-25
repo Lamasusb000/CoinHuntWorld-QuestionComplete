@@ -11,15 +11,6 @@ const IndexPage = () => (
     </h3>
     <ol>
       <li>
-        Make Croppie.js More user friendly
-      </li>
-      <li>
-        Impliment netlifyIdentity Signup/ login/  Logout buttons (Currently just console based)
-      </li>
-      <li>
-        Create Database Addition Success/ Failure Pages
-      </li>
-      <li>
         Add Search Box Filtering by Color/Category
         <ul>
           <li>
