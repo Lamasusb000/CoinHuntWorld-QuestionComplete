@@ -23,7 +23,7 @@ class ContactInfo extends React.Component{
                             }}>
                                 {CheckAddressLine1()}
                                 {CheckAddressLine2()}
-                                {ContactInfoJSON.Address[0].City}, {ContactInfoJSON.Address[0].State} {ContactInfoJSON.Address[0].Zipcode}
+                                {CheckCity()} {ContactInfoJSON.Address[0].State} {ContactInfoJSON.Address[0].Zipcode}
                                 <br/>
                                 {ContactInfoJSON.Address[0].Country}
                             </a>
@@ -99,7 +99,7 @@ function FormatTellLink(phone) {
 }
 
 function CheckAddressLine1(){
-    if (ContactInfoJSON.Address[0].AddressLine1 === "" | ContactInfoJSON){
+    if (ContactInfoJSON.Address[0].AddressLine1 === ""){
         return
     }
     if (ContactInfoJSON.Address[0].AddressLine1 !== ""){
@@ -113,7 +113,7 @@ function CheckAddressLine1(){
 }
 
 function CheckAddressLine2(){
-    if (ContactInfoJSON.Address[0].AddressLine2 === "" | ContactInfoJSON){
+    if (ContactInfoJSON.Address[0].AddressLine2 === ""){
         return
     }
     if (ContactInfoJSON.Address[0].AddressLine2 !== ""){
@@ -121,6 +121,19 @@ function CheckAddressLine2(){
             <span>
                 {ContactInfoJSON.Address[0].AddressLine2}
                 <br/>
+            </span>
+        )
+    }
+}
+
+function CheckCity(){
+    if (ContactInfoJSON.Address[0].City === ""){
+        return
+    }
+    if (ContactInfoJSON.Address[0].City !== ""){
+        return(
+            <span>
+                {ContactInfoJSON.Address[0].City},
             </span>
         )
     }
