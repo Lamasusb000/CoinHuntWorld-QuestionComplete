@@ -50,6 +50,11 @@ const Header = ({ siteTitle }) => (
                 </Link>
               </li>
               <li className="nav-item">
+                <Link to="/FilteredLookup" className="nav-link">
+                  Filtered Question Search
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link to="/AddQuestions" className="nav-link">
                   Add Questions
                 </Link>

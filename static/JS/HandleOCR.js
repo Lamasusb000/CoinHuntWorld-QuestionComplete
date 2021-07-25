@@ -2,7 +2,6 @@ var ScreenshotSubmission = document.getElementById("ScreenshotSubmission")
 var ModalOpener = document.getElementById("Modal-Opener")
 var SubmissionPrompt = document.getElementById("SubmissionPrompt")
 var CroppieContainer = document.getElementById("croppie-basic")
-var ColorVerification = document.getElementById("ColorVerification")
 var VerificationSubmission = document.getElementById("FormSubmission")
 var SuccessPage = document.getElementById("SuccessPage")
 var FailurePage = document.getElementById("FailurePage")
@@ -19,6 +18,9 @@ $(".RestartPage").on("click", ReloadPage)
 
 $(".Signup").off("click", OpenNetlify)
 $(".Signup").on("click", OpenNetlify)
+
+$("input[type=radio]").off("click", SetColor)
+$("input[type=radio]").on("click", SetColor)
 
 function OpenNetlify(){
   netlifyIdentity.open()
@@ -108,18 +110,19 @@ var BasicResult = document.getElementById("basic-result")
 var CroppieController = false
 function SetCroppie(DataURL){
     $(function() {
-        var basic = $('#croppie-basic').croppie({
-          viewport: {
-            width: 300,
-            height: 100
-          }
+        var Element = document.getElementById("croppie-basic")
+        var basic = new Croppie(Element, {
+          viewport: { width: 250, height: 100},
+          boundary: { width: 300, height: 300 },
+          showZoomer: false,
+          enableResize: true
         });
-        basic.croppie('bind', {
+        basic.bind({
           url: `${DataURL}`
-        });
+        })
         if (CroppieController == false){
           BasicResult.addEventListener("click", function(){
-            basic.croppie("result",'base64').then(function(base64) {
+            basic.result('base64').then(function(base64) {
               ChangePrompts()
               ProcessSubmission(base64)
           });
@@ -158,20 +161,29 @@ function SendVerificaiton(){
   AnswerVerification.value = SubmissionArray[2]
   VerificationContainer.style.visibility = "visible"
 }
-
+var ColorVerification = ""
+function SetColor(){
+  var Radios = document.getElementsByName("ColorSelection")
+  for (let i = 0; i < Radios.length; i++) {
+    if (Radios[i].checked){
+      ColorVerification = Radios[i].value
+    }
+    
+  }
+}
+var SpellCheck = false
 async function SendToDatabase(){
-  var SendingData = []
-  SendingData.Category = CategoryVerification.value
-  SendingData.Question = 
-  SendingData.Answer = 
-  SendingData.Color = ColorVerification.value
-
+  if (SpellCheck == false){
+    alert("Please Double Check Spelling is Correct Before Submitting")
+    SpellCheck = true
+    return
+  }
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadQuestions", {
 		body: JSON.stringify({
             Category: `${CategoryVerification.value}`,
             Question: `${QuestionVerification.value}`,
             Answer: `${AnswerVerification.value}`,
-            Color: `${ColorVerification.value}`,
+            Color: `${ColorVerification}`,
             UserID: `${netlifyIdentity.currentUser().id}`,
             UserEmail: `${netlifyIdentity.currentUser().email}`
         }),

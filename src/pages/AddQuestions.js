@@ -5,6 +5,7 @@ import JSimport from "../components/JS-Import"
 import JsCdn from "../components/JS-CDN"
 import "../components/CSS/AlignCenter.css"
 import "../components/CSS/croppie.css"
+import { StaticImage } from "gatsby-plugin-image"
 
 
 
@@ -69,15 +70,28 @@ const QuestionLookup = () => (
                 <label htmlFor="AnswerVerification">Verify Answer</label>
                 <input type="text" className="form-control" id="AnswerVerification"/>
             </div>
-            <div className="form-group">
-                <label htmlFor="QuestionVerification">Select Vault Color</label>
-                <select className="form-control" id="ColorVerification" defaultValue="">
-                    <option value="Blue">Blue</option>
-                    <option value="Green">Green</option>
-                    <option value="Yellow">Yellow</option>
-                    <option value="Red">Red</option>
-                    <option value="Purple">Purple</option>
-                </select>
+            <div className="form-group PictureList">
+                <p>Select Vault Color</p>
+                <label>
+                    <input type="radio" name="ColorSelection" value="Blue"/>
+                    <StaticImage src="../Images/VaultBlue.png" className="VaultSelection" alt="Blue Vault"/>
+                </label>
+                <label>
+                    <input type="radio" name="ColorSelection" value="Green"/>
+                    <StaticImage src="../Images/VaultGreen.png" className="VaultSelection" alt="Green Vault"/>
+                </label>
+                <label>
+                    <input type="radio" name="ColorSelection" value="Yellow"/>
+                    <StaticImage src="../Images/VaultYellow.png" className="VaultSelection" alt="Yellow Vault"/>
+                </label>
+                <label>
+                    <input type="radio" name="ColorSelection" value="Red"/>
+                    <StaticImage src="../Images/VaultRed.png" className="VaultSelection" alt="Red Vault"/>
+                </label>
+                <label>
+                    <input type="radio" name="ColorSelection" value="Purple"/>
+                    <StaticImage src="../Images/VaultPurple.png" className="VaultSelection" alt="Purple Vault"/>
+                </label>
                 <small className="form-text">If You Do Not Remember, The Countdown Timer Color is Also The Vault Color</small>
                 <small id="ImageCallback" style={{textDecoration: "underline", cursor: "pointer"}} className="form-text" data-toggle="modal" data-target="#ImageReviewModal">Click Here To Check Again</small>
             </div>

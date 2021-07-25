@@ -10,14 +10,14 @@ import "../components/CSS/ImageRadioButton.css"
 
 const QuestionLookup = () => (
   <Layout>
-    <Seo title="Question Lookup" />
+    <Seo title="Filtered Lookup" />
     <JSimport File={"autoComplete.js"}/>
     <JSimport File={"SearchFunction.js"}/>
     <div className="AlignCenter">
       <h4 className="AlignCenter">
         Question Search
       </h4>
-      <div className="autoComplete_wrapper AlignCenter">
+      <div class="autoComplete_wrapper AlignCenter">
         <input id="autoComplete" type="search" dir="ltr" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off"/>
       </div>
       <br/><br/>

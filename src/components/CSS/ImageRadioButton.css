@@ -1,0 +1,20 @@
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + .gatsby-image-wrapper  {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + .gatsby-image-wrapper  {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .PictureList label{
+      width: 20%;
+  }
