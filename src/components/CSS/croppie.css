@@ -1,7 +1,9 @@
-#page {
-    padding: 20px;
-    margin: 20px;
-  }
+@media (min-width: 801px){
+    #page {
+        margin: 20px;
+        padding: 20px;
+    }
+}
   
 #croppie-basic {
     margin: auto;

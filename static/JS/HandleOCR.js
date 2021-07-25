@@ -111,8 +111,8 @@ function SetCroppie(DataURL){
     $(function() {
         var Element = document.getElementById("croppie-basic")
         var basic = new Croppie(Element, {
-          viewport: { width: 370, height: 100},
-          boundary: { width: 400, height: 300 },
+          viewport: { width: 300, height: 100},
+          boundary: { width: 320, height: 200 },
           showZoomer: false,
           enableResize: true
         });
