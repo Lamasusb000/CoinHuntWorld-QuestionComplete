@@ -9,7 +9,8 @@ function BetaV2(){
                 window.location.href = "/"
             }
         }else{
-            if (localStorage.getItem("Beta") == true){
+            var Beta = localStorage.getItem("Beta")
+            if (Beta == true){
                 console.log("Approved Tester")
             }else{
                 console.log("Not an Approved Tester")
