@@ -5,7 +5,6 @@ import JSimport from "../components/JS-Import"
 import JsCdn from "../components/JS-CDN"
 import "../components/CSS/AlignCenter.css"
 import "../components/CSS/croppie.css"
-import { StaticImage } from "gatsby-plugin-image"
 
 import VaultBlue from "../images/VaultBlue.png"
 import VaultGreen from "../images/VaultGreen.png"

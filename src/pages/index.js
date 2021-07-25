@@ -6,6 +6,15 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
+    <h2>
+      Welcome To The CHW Trivia Beta Site!
+    </h2>
+    <p>
+      The General Goal currently is User engagement refining to allow ease of use in those tense trivia Moments.
+      <br/>
+      This is Unfortunately the only Page of the Site for Those without Beta Access But be sure to <a href="https://discord.gg/ggk9CAF5">Ask for permission to the Beta!</a>
+
+    </p>
     <h3>
       Road Map
     </h3>
@@ -17,6 +26,9 @@ const IndexPage = () => (
             Just needs to get HTML, CSS and JS written. Database already has Indexes implimented
           </li>
         </ul>
+      </li>
+      <li>
+        Make some general UI Improvements
       </li>
     </ol>
     <br/><br/>

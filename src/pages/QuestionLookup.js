@@ -13,6 +13,7 @@ const QuestionLookup = () => (
     <Seo title="Question Lookup" />
     <JSimport File={"autoComplete.js"}/>
     <JSimport File={"SearchFunction.js"}/>
+    <JSimport Defer={false} File="BetaTesting.js"/>
     <div className="AlignCenter">
       <h4 className="AlignCenter">
         Question Search
