@@ -35,8 +35,7 @@ const Layout = ({ children }) => {
           {
             `
             a, a:hover{
-              color:${Theme.LinkColor};
-              text-decoration:${Theme.LinkDecor}
+              color:${Theme.LinkColor}
             }
             `
           }
