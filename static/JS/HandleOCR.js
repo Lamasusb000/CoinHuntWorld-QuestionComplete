@@ -33,7 +33,6 @@ function ReloadPage(){
 
 function StartPage(){
   if(OneTimeLoad == false){
-    OneTimeLoad = true
     if (netlifyIdentity.currentUser() == undefined | netlifyIdentity.currentUser() == null){
       NetlifySignup()
     }else{
