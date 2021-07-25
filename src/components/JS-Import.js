@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { withPrefix} from "gatsby-link"
-import PropTypes from "prop-types"
 
 class JSimport extends React.Component {
     render() {
@@ -21,8 +20,4 @@ function GetScriptID(FileName){
 
 JSimport.defaultProps = {
     Defer: true
-  }
-  
-  JSimport.propTypes = {
-    Defer: PropTypes.string
   }
