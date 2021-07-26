@@ -171,16 +171,18 @@ function SetColor(){
     
   }
 }
-
+var AlertOnce = true
 async function SendToDatabase(){
   var SubmissionCount = localStorage.getItem("SubmissionCount") == null ? 0 : parseInt(localStorage.getItem("SubmissionCount"))
   SubmissionCount++
   localStorage.setItem("SubmissionCount", SubmissionCount)
 
-  if( SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
+  if( AlertOnce = true || SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
     alert("Please Double Check Spelling is Correct Before Submitting")
+    AlertOnce = false
     return
   }
+  VerificationSubmission.disabled = true
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadQuestions", {
 		body: JSON.stringify({
             Category: `${CategoryVerification.value}`,
