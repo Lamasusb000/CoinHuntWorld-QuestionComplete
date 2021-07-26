@@ -6,10 +6,11 @@ var Output = "JSON Did not Attach"
 exports.handler = (event, context, callback) => {
     console.log(event.body)
 	Client.query(
-        q.Map(
-            q.Paginate(q.Match(q.Index("GrabAllQuestionsV2")), {size: 5000}),
-            q.Lambda("X", q.Get(q.Var("X")))
-          )
+		q.Paginate(
+			q.Match(
+				q.Index('GrabAllQuestionsV3')),
+				{size: 5000}
+		)
 	)
 	.then(function(result){
 		if(result == "" | undefined){
