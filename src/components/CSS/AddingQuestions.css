@@ -29,3 +29,11 @@
       width: 100%!important;
     }
   }
+
+  @media (max-width: 576px){
+    #ImageReviewerObj{
+      margin: auto;
+      object-fit: cover;
+      max-height: 70vh;
+    }
+  }
