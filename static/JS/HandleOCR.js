@@ -177,7 +177,7 @@ async function SendToDatabase(){
   SubmissionCount++
   localStorage.setItem("SubmissionCount", SubmissionCount)
 
-  if( AlertOnce = true || SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
+  if( AlertOnce == true || SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
     alert("Please Double Check Spelling is Correct Before Submitting")
     AlertOnce = false
     return
