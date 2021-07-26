@@ -23,10 +23,12 @@ async function GetQuestions(){
     return QuestionList
 }
 
-var EnsureThingy = false
-window.addEventListener('load', LoadQuestions)
+
+$( window ).off("load", LoadQuestions)
+$( window ).on("load", LoadQuestions)
+
+
 function LoadQuestions() {
-	EnsureThingy = true
     var autoCompleteJS = new autoComplete({
 		placeHolder: "Search Question",
 		data: {
@@ -62,8 +64,4 @@ function CollectResult(selection){
 
 function SendAnswer(Answer){
     document.getElementById("AnswerResults").innerText = Answer
-}
-
-if (EnsureThingy == false) {
-	LoadQuestions()
 }
