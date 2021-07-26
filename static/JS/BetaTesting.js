@@ -1,6 +1,5 @@
 function BetaV2(){
     try{
-        console.log(netlifyIdentity.currentUser())
         if (netlifyIdentity.currentUser()){
             if (netlifyIdentity.currentUser().app_metadata.roles.includes("Beta")){
                 console.log("Approved Tester")

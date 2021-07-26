@@ -171,11 +171,14 @@ function SetColor(){
     
   }
 }
-var SpellCheck = false
+
 async function SendToDatabase(){
-  if (SpellCheck == false){
+  var SubmissionCount = localStorage.getItem("SubmissionCount") == null ? 0 : parseInt(localStorage.getItem("SubmissionCount"))
+  SubmissionCount++
+  localStorage.setItem("SubmissionCount", SubmissionCount)
+
+  if( SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
     alert("Please Double Check Spelling is Correct Before Submitting")
-    SpellCheck = true
     return
   }
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadQuestions", {
