@@ -177,11 +177,15 @@ async function SendToDatabase(){
   SubmissionCount++
   localStorage.setItem("SubmissionCount", SubmissionCount)
 
-  if( AlertOnce == true || SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
-    alert("Please Double Check Spelling is Correct Before Submitting")
+  if (AlertOnce == true){
+    if( SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
+      alert("Please Double Check Spelling is Correct Before Submitting")
+      AlertOnce = false
+      return
+    }
     AlertOnce = false
-    return
   }
+
   VerificationSubmission.disabled = true
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadQuestions", {
 		body: JSON.stringify({
