@@ -17,22 +17,6 @@ const IndexPage = () => (
       This is Unfortunately the only Page of the Site for Those without Beta Access But be sure to <a href="https://discord.gg/ggk9CAF5">Ask for permission to the Beta!</a>
     </p>
     <button type="button" className="btn btn-primary NetlifyOpen">Beta Tester Signin</button>
-    <h3>
-      Road Map
-    </h3>
-    <ol>
-      <li>
-        Add Search Box Filtering by Color/Category
-        <ul>
-          <li>
-            Just needs to get HTML, CSS and JS written. Database already has Indexes implimented
-          </li>
-        </ul>
-      </li>
-      <li>
-        Make some general UI Improvements
-      </li>
-    </ol>
     <br/><br/>
     <p>Site Deployment Status</p>
 	  <img src="https://api.netlify.com/api/v1/badges/ff689e6b-7919-45be-aea5-69df18e249cf/deploy-status" alt="Deploy status badge"></img>
