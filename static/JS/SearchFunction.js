@@ -1,7 +1,7 @@
 $("#autoComplete-Import").on("load", LoadQuestions)
 
 async function ContactAPI() {
-	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestions", {
+	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
 		body: JSON.stringify({
             Text: "Dummy Text"
         }),
@@ -15,13 +15,14 @@ async function ContactAPI() {
 }
 
 async function GetQuestions(){
-    await ContactAPI()
+	ContactAPI()
     var QuestionList = []
     for (let i = 0; i < window.RequestedData.length; i++) {
-        QuestionList.push(window.RequestedData[i].Question)
+        QuestionList.push(window.RequestedData[i][0])
     }
     return QuestionList
 }
+
 var EnsureThingy = false
 window.addEventListener('load', LoadQuestions)
 function LoadQuestions() {
@@ -53,8 +54,8 @@ function LoadQuestions() {
 
 function CollectResult(selection){
     for (let i = 0; i < window.RequestedData.length; i++) {
-        if (selection === window.RequestedData[i].Question){
-            SendAnswer(window.RequestedData[i].Answer)
+        if (selection === window.RequestedData[i][0]){
+            SendAnswer(window.RequestedData[i][1])
         }
     }
 }
