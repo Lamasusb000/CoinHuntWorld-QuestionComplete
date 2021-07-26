@@ -16,8 +16,6 @@ exports.handler = (event, context, callback) => {
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
-		console.log(result)
-		console.log(result.data)
 		return callback(null, {
 			statusCode: 200,
 			body: `${JSON.stringify(result.data)}`
