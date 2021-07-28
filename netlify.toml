@@ -3,3 +3,4 @@
 [[redirects]]
     from = "/API/*"
     to = "/.netlify/functions/:splat"
+    status = 200
