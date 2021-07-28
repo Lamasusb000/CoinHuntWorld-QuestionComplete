@@ -80,18 +80,18 @@ function NetlifySignup(){
   document.getElementById("CreateAccount").style.display = "block"
 }
 
-function ProcessSubmission(DataURL){
+function ProcessSubmission(DataURL, Count){
 Tesseract.recognize(
     `${DataURL}`,
     'eng',
     { logger: m => LogPercent(m) }
   ).then(({ data: { text } }) => {
     var TextArray = text.split(`\n`)
-    FormatSubmission(TextArray)
+    FormatSubmission(TextArray, Count)
   })
 }
 var SubmissionArray = []
-function FormatSubmission(Submission){
+function FormatSubmission(Submission, Count){
   var TempObj = []
   for (let i = 0; i < Submission.length; i++) {
     if (Submission[i] != "") {
@@ -99,7 +99,7 @@ function FormatSubmission(Submission){
     }
   }
   TempObj = TempObj.join(" ")
-  SubmissionArray.push(TempObj)
+  SubmissionArray[Count] = TempObj
   if(SubmissionArray.length == 3){
     SendVerificaiton()
   }
@@ -149,11 +149,12 @@ async function SetCroppie(DataURL){
           url: `${DataURL}`,
           points: [window.Points[0], window.Points[1], window.Points[2], window.Points[3]]
         })
+        var SubmissionLabel = CroppieCounter
         if (CroppieController == false){
           BasicResult.removeEventListener("click", function(){
             basic.result('base64').then(function(base64) {
               ChangePrompts()
-              ProcessSubmission(base64)
+              ProcessSubmission(base64, SubmissionLabel)
               basic.destroy()
               CroppieController = false
           });
@@ -161,7 +162,7 @@ async function SetCroppie(DataURL){
           BasicResult.addEventListener("click", function(){
             basic.result('base64').then(function(base64) {
               ChangePrompts()
-              ProcessSubmission(base64)
+              ProcessSubmission(base64, SubmissionLabel)
               basic.destroy()
               CroppieController = false
           });
