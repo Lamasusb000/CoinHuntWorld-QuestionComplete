@@ -6,24 +6,19 @@ var Output = "JSON Did not Attach"
 exports.handler = (event, context, callback) => {
     console.log(event.body)
 	Client.query(
-        q.Map(
-            q.Paginate(q.Match(q.Index("GrabAllQuestions")), {size: 5000}),
-            q.Lambda("X", q.Get(q.Var("X")))
-          )
+		q.Paginate(
+			q.Match(
+				q.Index('ExportJSON')),
+				{size: 10000}
+		)
 	)
 	.then(function(result){
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
-        var Questions = []
-		Output = result.data
-        for (let i = 0; i < Output.length; i++) {
-            Questions[i] = Output[i].data
-            
-        }
 		return callback(null, {
 			statusCode: 200,
-			body: `${JSON.stringify(Questions)}`
+			body: `${JSON.stringify(result.data)}`
 		  })
 	})
   }

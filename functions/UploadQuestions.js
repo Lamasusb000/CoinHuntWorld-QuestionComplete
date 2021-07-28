@@ -35,7 +35,8 @@ exports.handler = (event, context, callback) => {
 						Color: `${RecievedData.Color}`,
 						Category: `${RecievedData.Category}`,
 						UserID: `${RecievedData.UserID}`,
-						UserEmail: `${RecievedData.UserEmail}`
+						UserEmail: `${RecievedData.UserEmail}`,
+						DupeCheck: `${RecievedData.Question.replace(/[^A-Za-z]/g, '').toLowerCase()}`
 					}}
 				)
 			)
