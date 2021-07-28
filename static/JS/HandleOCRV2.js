@@ -107,30 +107,98 @@ function FormatSubmission(Submission){
 
 var BasicResult = document.getElementById("basic-result")
 var CroppieController = false
-function SetCroppie(DataURL){
+var ResolutionSelection = 0
+
+
+let ResolutionArray = [
+  {
+    "Resolution": {"X": 0, "Y": 0},
+    "Viewport": {"X": 300, "Y": 60},
+    "Points": [
+      [70, 400, 760, 360],
+    ]
+  },
+  {
+    "Resolution": {"X": 9, "Y": 19.5},
+    "Viewport": [
+      {"X": 300, "Y": 60},
+      {"X": 300, "Y": 100},
+      {"X": 300, "Y": 60}
+    ],
+    "Points": [
+      [0.084541063, 0.223214286, 0.917874396, 0.200892857],
+      [0.024154589, 0.295758929, 0.966183575, 0.558035714],
+      [0.108695652, 0.5859375, 0.881642512, 0.608258929]
+    ]
+  }
+]
+
+
+var CroppieCounter = 0
+async function SetCroppie(DataURL){
+  ResolutionSelection = GetResolutionSelection(DataURL, CroppieCounter)
     $(function() {
         var Element = document.getElementById("croppie-basic")
         var basic = new Croppie(Element, {
-          viewport: { width: 300, height: 100},
+          viewport: { width: ResolutionArray[ResolutionSelection].Viewport[CroppieCounter].X, height: ResolutionArray[ResolutionSelection].Viewport[CroppieCounter].Y},
           boundary: { width: 320, height: 200 },
           showZoomer: false,
           enableResize: true
         });
         basic.bind({
           url: `${DataURL}`,
-          zoom: 0
+          points: [window.Points[0], window.Points[1], window.Points[2], window.Points[3]]
         })
         if (CroppieController == false){
+          BasicResult.removeEventListener("click", function(){
+            basic.result('base64').then(function(base64) {
+              ChangePrompts()
+              ProcessSubmission(base64)
+              basic.destroy()
+              CroppieController = false
+          });
+          })
           BasicResult.addEventListener("click", function(){
             basic.result('base64').then(function(base64) {
               ChangePrompts()
               ProcessSubmission(base64)
+              basic.destroy()
+              CroppieController = false
           });
           })
           CroppieController = true
+          CroppieCounter++
         }
       });
 }
+
+var PointsPush = []
+async function GetResolutionSelection(DataURL, CroppieCounter){
+  var img = new Image()
+  img.onload = function(){
+    OverrideHeight = this.height
+    if(OverrideHeight == 1792){
+      OverrideHeight = 1794
+    }
+    for (let z = 0; z < ResolutionArray.length; z++) {
+      if (this.width % ResolutionArray[z].Resolution.X == 0 && (OverrideHeight % ResolutionArray[z].Resolution.Y).toFixed(1) == 0){
+        ResolutionSelection = z
+      }
+    }
+    Xratio = this.width / ResolutionArray[ResolutionSelection].Resolution.X
+    Yratio = this.height / ResolutionArray[ResolutionSelection].Resolution.Y
+    PointsPush.push(ResolutionArray[ResolutionSelection].Points[CroppieCounter][0] * this.width)
+    PointsPush.push(ResolutionArray[ResolutionSelection].Points[CroppieCounter][1] * this.height)
+    PointsPush.push(ResolutionArray[ResolutionSelection].Points[CroppieCounter][2] * this.width)
+    PointsPush.push(ResolutionArray[ResolutionSelection].Points[CroppieCounter][3] * this.height)
+    window.Points = PointsPush
+    PointsPush = []
+    return ResolutionSelection
+  }
+  img.src = DataURL
+  
+}
+
 
 var i = 0
 var PromptArray = ["Select Question","Select Answer","Select Category"]
@@ -147,6 +215,7 @@ function ChangePrompts(){
     return
   }else{
     SubmissionPrompt.innerText = PromptArray[i]
+    SetCroppie(ImageCallbackStorage)
     i++
   }
 }
@@ -174,6 +243,7 @@ function SetColor(){
 var AlertOnce = true
 async function SendToDatabase(){
   var SubmissionCount = localStorage.getItem("SubmissionCount") == null ? 0 : parseInt(localStorage.getItem("SubmissionCount"))
+  SubmissionCount++
   localStorage.setItem("SubmissionCount", SubmissionCount)
 
   if (AlertOnce == true){
