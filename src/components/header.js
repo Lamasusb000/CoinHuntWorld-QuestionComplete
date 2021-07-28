@@ -59,6 +59,11 @@ const Header = ({ siteTitle }) => (
                   Add Questions
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/AddQuestionsV2" className="nav-link">
+                  Add Questions (Testing Feature: Smart Jumping)
+                </Link>
+              </li>
             </ul>
           </div>
       </nav>
