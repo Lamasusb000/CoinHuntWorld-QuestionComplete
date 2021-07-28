@@ -5,7 +5,12 @@ var Output = "JSON Did not Attach"
 var RecievedData = []
 
 exports.handler = (event, context, callback) => {
-	console.log(event.body)
+	if(event.headers.origin != "https://coinhuntworldtrivia.com"){
+		return callback(null, {
+			statusCode: 403,
+			body: "Sorry But This API is For CoinHuntWorldTrivia.com. Please Reach To Arrange Access"
+		})
+	}
 	RecievedData = JSON.parse(event.body)
 
 	if( RecievedData.UserID == undefined || RecievedData.UserID == ""){
