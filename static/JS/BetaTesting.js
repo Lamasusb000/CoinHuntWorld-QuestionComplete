@@ -9,10 +9,11 @@ function BetaV2(){
             }
         }else{
             console.log("Not an Approved Tester")
-                window.location.href = "/"
+            window.location.href = "/"
         }
     }catch(err){
-        setTimeout(BetaV2, 100)
+        console.log("Not an Approved Tester")
+        window.location.href = "/"
     }
 }
 
