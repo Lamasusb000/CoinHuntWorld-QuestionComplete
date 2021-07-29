@@ -125,7 +125,7 @@ let ResolutionArray = [
     ]
   },
   {
-    "Resolution": {"X": 9, "Y": 19.5, "Ratio": 2.17},
+    "Resolution": {"X": 9, "Y": 19.5, "RatioLow": 2.16, "RatioHigh": 2.18},
     "Viewport": [
       {"X": 300, "Y": 60},
       {"X": 300, "Y": 100},
@@ -138,7 +138,7 @@ let ResolutionArray = [
     ]
   },
   {
-    "Resolution": {"X": 9, "Y": 19, "Ratio": 2.11},
+    "Resolution": {"X": 9, "Y": 19, "RatioLow": 2.10, "RatioHigh": 2.12},
     "Viewport": [
       {"X": 300, "Y": 60},
       {"X": 300, "Y": 100},
@@ -201,7 +201,8 @@ async function GetResolutionSelection(DataURL, CroppieCounter){
     console.log(`${this.width}x${this.height}`)
     console.log(ScreenRatio)
     for (let z = 0; z < ResolutionArray.length; z++) {
-      if (ScreenRatio == ResolutionArray[z].Resolution.Ratio){
+      console.log(`Debug: ${ResolutionArray[z].Resolution.RatioLow} <= ${ScreenRatio} <= ${ResolutionArray[z].Resolution.RatioHigh}`)
+      if (ResolutionArray[z].Resolution.RatioLow <= ScreenRatio <= ResolutionArray[z].Resolution.RatioHigh){
         ResolutionSelection = z
       }
     }
