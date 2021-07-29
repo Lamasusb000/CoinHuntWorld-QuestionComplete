@@ -32,7 +32,7 @@ exports.handler = (event, context, callback) => {
 			console.log(err)
 		}
 		try{
-			console.log(`${result.data[0][3]}  This is No Ref or ref`)
+			console.log(`${result.data[0][3][4]}  This is Numerical Selection`)
 		}catch(err){
 			console.log(err)
 		}
