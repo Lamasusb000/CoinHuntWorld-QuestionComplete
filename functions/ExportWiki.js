@@ -4,6 +4,7 @@ const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNns
 var Output = "JSON Did not Attach"
 
 exports.handler = (event, context, callback) => {
+	console.log(event.headers.body)
 	if (event.headers.body != "07092021"){
 		return callback(null, {
 			statusCode: 403,
