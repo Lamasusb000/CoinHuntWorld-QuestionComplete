@@ -25,10 +25,10 @@ exports.handler = (event, context, callback) => {
 		for (let i = 0; i < result.data.length; i++) {
 			Client.query(
 				q.Update(
-					q.Ref(q.Collection("QuestionAnswerCollection"), `${results.data[i][3]["@ref"].id}`),
+					q.Ref(q.Collection("QuestionAnswerCollection"), `${result.data[i][3]["@ref"].id}`),
 					{
 					  data: {
-						DupeCheck: `${results.data[i][0].replace(/[^A-Za-z]/g, '').toLowerCase()}`
+						DupeCheck: `${result.data[i][0].replace(/[^A-Za-z]/g, '').toLowerCase()}`
 					  }
 					}
 				  )
