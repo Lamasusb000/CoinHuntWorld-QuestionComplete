@@ -21,8 +21,9 @@ exports.handler = (event, context, callback) => {
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
-
-
+		var DatabaseLength = result.data.length
+		var Success = 0
+		var Failure = 0
 		for (let i = 0; i < result.data.length; i++) {
 			var TempObj = JSON.stringify(result.data[i][3])
 			TempObj = JSON.parse(TempObj)
@@ -39,9 +40,11 @@ exports.handler = (event, context, callback) => {
 			)
 			.then(function (result){
 				if(result == "" | undefined){
-					console.log("Failed Modification")
+					Failure++
+					console.log(`${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`)
 				}else{
-					console.log("Successfull Modification")
+					Success++
+					console.log(`${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`)
 				}
 			})
 			
