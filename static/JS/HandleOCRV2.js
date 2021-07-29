@@ -125,7 +125,7 @@ let ResolutionArray = [
     ]
   },
   {
-    "Resolution": {"X": 9, "Y": 19.5},
+    "Resolution": {"X": 9, "Y": 19.5, "Ratio": 2.17},
     "Viewport": [
       {"X": 300, "Y": 60},
       {"X": 300, "Y": 100},
@@ -138,7 +138,7 @@ let ResolutionArray = [
     ]
   },
   {
-    "Resolution": {"X": 9, "Y": 19},
+    "Resolution": {"X": 9, "Y": 19, "Ratio": 2.11},
     "Viewport": [
       {"X": 300, "Y": 60},
       {"X": 300, "Y": 100},
@@ -196,12 +196,12 @@ var PointsPush = []
 async function GetResolutionSelection(DataURL, CroppieCounter){
   var img = new Image()
   img.onload = function(){
-    OverrideHeight = this.height
-    if(OverrideHeight == 1792){
-      OverrideHeight = 1794
-    }
+    var ScreenRatio = this.height / this.width
+    ScreenRatio = ScreenRatio.toFixed(2)
+    console.log(`${this.width}x${this.height}`)
+    console.log(ScreenRatio)
     for (let z = 0; z < ResolutionArray.length; z++) {
-      if (this.width % ResolutionArray[z].Resolution.X == 0 && (OverrideHeight % ResolutionArray[z].Resolution.Y).toFixed(1) == 0){
+      if (ScreenRatio == ResolutionArray[z].Resolution.Ratio){
         ResolutionSelection = z
       }
     }
