@@ -6,12 +6,12 @@ var Output = "JSON Did not Attach"
 exports.handler = (event, context, callback) => {
 	const Password = "07092021"
 
-	console.log(event.headers.body)
+	console.log(parseInt(event.headers.body))
 	console.log(Password)
-	console.log(event.headers.body == Password )
+	console.log(parseInt(event.headers.body) == Password )
 	
 	
-	if (event.headers.body != "07092021"){
+	if (parseInt(event.headers.body) != "07092021"){
 		return callback(null, {
 			statusCode: 403,
 			body: "This API is For https://coinhuntworldwiki.com/"
