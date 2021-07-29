@@ -21,44 +21,15 @@ exports.handler = (event, context, callback) => {
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
-		try{
-			console.log(`${result.data[0][3]["Ref"]}  This is Ref No @`)
-		}catch(err){
-			console.log(err)
-		}
-		try{
-			console.log(`${result.data[0][3]["ref"]}  This is ref no @`)
-		}catch(err){
-			console.log(err)
-		}
-		try{
-			console.log(`${result.data[0][3][4]}  This is Numerical Selection`)
-		}catch(err){
-			console.log(err)
-		}
-		try{
-			console.log(`${JSON.stringify(result.data[0][3])}  This is stringified`)
-		}catch(err){
-			console.log(err)
-		}
-		try{
-			console.log(`${result.data[0][3]["@ref"].id}  This it with @ref`)
-		}catch(err){
-			console.log(err)
-		}
-		try{
-			var TempObj = JSON.stringify(result.data[0][3])
-			TempObj = JSON.parse(TempObj)
-			console.log(`${TempObj["@ref"].id}  This it stringed then parsed`)
-		}catch(err){
-			console.log(err)
-		}
+
 
 		for (let i = 0; i < result.data.length; i++) {
-			console.log(result.data[i])
+			var TempObj = JSON.stringify(result.data[i][3])
+			TempObj = JSON.parse(TempObj)
+			console.log(TempObj)
 			Client.query(
 				q.Update(
-					q.Ref(q.Collection("QuestionAnswerCollection"), `${result.data[i][3]["@ref"].id}`),
+					q.Ref(q.Collection("QuestionAnswerCollection"), `${TempObj["@ref"].id}`),
 					{
 					  data: {
 						DupeCheck: `${result.data[i][0].replace(/[^A-Za-z]/g, '').toLowerCase()}`
