@@ -5,6 +5,10 @@ var Output = "JSON Did not Attach"
 
 exports.handler = (event, context, callback) => {
 	console.log(event.headers.body)
+	console.log("07092021")
+	console.log(event.headers.body == "07092021")
+	
+	
 	if (event.headers.body != "07092021"){
 		return callback(null, {
 			statusCode: 403,
