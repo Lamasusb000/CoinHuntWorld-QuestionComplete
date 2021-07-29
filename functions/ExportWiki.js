@@ -4,14 +4,14 @@ const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNns
 var Output = "JSON Did not Attach"
 
 exports.handler = (event, context, callback) => {
-	const Password = "07092021"
-
-	console.log(parseInt(event.headers.body))
+	var Password = "07092021"
+	Password = Password.toString()
+	console.log(event.headers.body)
 	console.log(Password)
-	console.log(parseInt(event.headers.body) == Password )
+	console.log(event.headers.body == Password )
 	
 	
-	if (parseInt(event.headers.body) != "07092021"){
+	if (event.headers.body != Password){
 		return callback(null, {
 			statusCode: 403,
 			body: "This API is For https://coinhuntworldwiki.com/"
