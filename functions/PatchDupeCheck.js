@@ -21,9 +21,11 @@ exports.handler = (event, context, callback) => {
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
-		console.log(result.data)
-		console.log(JSON.stringify(result.data))
-		console.log(JSON.parse(JSON.stringify(result.data)))
+		try{
+			console.log(result.data["@Ref"])
+		}catch(err){
+			console.log(result.data["@ref"])
+		}
 		for (let i = 0; i < result.data.length; i++) {
 			console.log(result.data[i])
 			Client.query(
