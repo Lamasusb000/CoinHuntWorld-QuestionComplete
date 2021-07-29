@@ -198,10 +198,9 @@ async function GetResolutionSelection(DataURL, CroppieCounter){
   img.onload = function(){
     var ScreenRatio = this.height / this.width
     ScreenRatio = ScreenRatio.toFixed(2)
-    console.log(`${this.width}x${this.height}`)
-    console.log(ScreenRatio)
+
+    ResolutionSelection = 0
     for (let z = 0; z < ResolutionArray.length; z++) {
-      console.log(`Debug: ${ResolutionArray[z].Resolution.RatioLow} <= ${ScreenRatio} <= ${ResolutionArray[z].Resolution.RatioHigh}`)
       if (ResolutionArray[z].Resolution.RatioLow <= ScreenRatio <= ResolutionArray[z].Resolution.RatioHigh){
         ResolutionSelection = z
       }
@@ -232,6 +231,7 @@ function ChangePrompts(){
     ModalOpener.style.visibility = "hidden"
     CroppieContainer.innerHTML = ""
     CroppieContainer.className = ""
+    $("input[type=radio]:first").attr("checked", true)
     i = 0
     return
   }else{
