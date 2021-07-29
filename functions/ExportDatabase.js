@@ -4,7 +4,7 @@ const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNns
 var Output = "JSON Did not Attach"
 
 exports.handler = (event, context, callback) => {
-    if(event.headers.origin != "https://coinhuntworldtrivia.com" && event.body.Role == "Admin" && event.body.Password == "07092021"){
+    if(event.headers.origin != "https://coinhuntworldtrivia.com" && event.body == "07092021"){
 		return callback(null, {
 			statusCode: 403,
 			body: "Sorry But This API is For CoinHuntWorldTrivia.com Admins."
@@ -30,11 +30,8 @@ exports.handler = (event, context, callback) => {
   }
 
 async function ExportDataBase() {
-	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
-		body: JSON.stringify({
-            Role: `${netlifyIdentity.currentUser().app_metadata.roles[0]}`,
-			Password: ""
-        }),
+	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/ExportDatabase", {
+		body: "",
         method: "POST"
 	});
 	if (response.status === 200){
