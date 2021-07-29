@@ -41,6 +41,18 @@ exports.handler = (event, context, callback) => {
 		}catch(err){
 			console.log(err)
 		}
+		try{
+			console.log(`${result.data[0][3]["@ref"].id}  This it with @ref`)
+		}catch(err){
+			console.log(err)
+		}
+		try{
+			var TempObj = JSON.stringify(result.data[0][3])
+			TempObj = JSON.parse(TempObj)
+			console.log(`${TempObj["@ref"].id}  This it stringed then parsed`)
+		}catch(err){
+			console.log(err)
+		}
 
 		for (let i = 0; i < result.data.length; i++) {
 			console.log(result.data[i])
