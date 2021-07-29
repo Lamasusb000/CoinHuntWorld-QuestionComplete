@@ -266,6 +266,7 @@ async function SendToDatabase(){
   var SubmissionCount = localStorage.getItem("SubmissionCount") == null ? 0 : parseInt(localStorage.getItem("SubmissionCount"))
   SubmissionCount++
   localStorage.setItem("SubmissionCount", SubmissionCount)
+  SetColor()
 
   if (AlertOnce == true){
     if( SubmissionCount < 4 || SubmissionCount % 5 == 0 ){
