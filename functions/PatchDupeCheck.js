@@ -24,8 +24,19 @@ exports.handler = (event, context, callback) => {
 		try{
 			console.log(`${result.data[0][3]["@Ref"]}  This is Ref`)
 		}catch(err){
-			console.log(`${result.data[0][3]["@ref"]}  This is ref`)
+			console.log(err)
 		}
+		try{
+			console.log(`${result.data[0][3]["@ref"]}  This is ref`)
+		}catch(err){
+			console.log(err)
+		}
+		try{
+			console.log(`${result.data[0][3]}  This is No Ref or ref`)
+		}catch(err){
+			console.log(err)
+		}
+
 		for (let i = 0; i < result.data.length; i++) {
 			console.log(result.data[i])
 			Client.query(
