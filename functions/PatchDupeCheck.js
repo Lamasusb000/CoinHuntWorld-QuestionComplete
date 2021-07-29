@@ -22,9 +22,9 @@ exports.handler = (event, context, callback) => {
 			console.log("No Result")
 		}
 		try{
-			console.log(result.data["@Ref"])
+			console.log(`${result.data[0][3]["@Ref"]}  This is Ref`)
 		}catch(err){
-			console.log(result.data["@ref"])
+			console.log(`${result.data[0][3]["@ref"]}  This is ref`)
 		}
 		for (let i = 0; i < result.data.length; i++) {
 			console.log(result.data[i])
