@@ -22,7 +22,7 @@ exports.handler = (event, context, callback) => {
 	Client.query(
 		q.Paginate(
 			q.Match(
-				q.Index("FindQuestion"), `${RecievedData.Question}`)
+				q.Index("FindQuestion"), `${RecievedData.Question.replace(/[^A-Za-z]/g, '').toLowerCase()}`)
 		)
 	)
 	.then(function(result){
