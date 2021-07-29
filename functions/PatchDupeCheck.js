@@ -37,7 +37,7 @@ exports.handler = (event, context, callback) => {
 			console.log(err)
 		}
 		try{
-			console.log(`${JSON.stringify(result.data[0][3][4])}  This is stringified`)
+			console.log(`${JSON.stringify(result.data[0][3])}  This is stringified`)
 		}catch(err){
 			console.log(err)
 		}
