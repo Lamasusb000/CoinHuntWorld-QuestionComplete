@@ -66,7 +66,7 @@ function SendAnswer(Answer){
 var RoundCounter = 1
 function CheckPageLoad(){
     try{
-        if (autocompleteloader){
+        if (jQuery.ready){
             console.log(`It took ${RoundCounter} Attemp/s to load AutoComplete`)
             LoadQuestions()
         }
