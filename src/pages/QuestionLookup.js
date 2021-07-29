@@ -34,7 +34,7 @@ const QuestionLookup = () => (
 )
 
 function Loader(){
-  window.autocompleteloader = true
+  window.$autocompleteloader = true
 }
 
 export default QuestionLookup
