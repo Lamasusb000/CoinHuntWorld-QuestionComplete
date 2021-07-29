@@ -23,7 +23,7 @@ exports.handler = (event, context, callback) => {
 		}
 		console.log(results.data)
 		for (let i = 0; i < result.data.length; i++) {
-			console.log(results.data[i])
+			console.log(result.data[i])
 			Client.query(
 				q.Update(
 					q.Ref(q.Collection("QuestionAnswerCollection"), `${result.data[i][3]["@ref"].id}`),
