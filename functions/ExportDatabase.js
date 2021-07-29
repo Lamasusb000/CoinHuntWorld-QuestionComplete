@@ -14,7 +14,7 @@ exports.handler = (event, context, callback) => {
 	Client.query(
 		q.Paginate(
 			q.Match(
-				q.Index('GrabAllQuestionsV3')),
+				q.Index('ExportDatabase')),
 				{size: 5000}
 		)
 	)
@@ -29,7 +29,7 @@ exports.handler = (event, context, callback) => {
 	})
   }
 
-async function ContactAPI() {
+async function ExportDataBase() {
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
 		body: JSON.stringify({
             Role: `${netlifyIdentity.currentUser().app_metadata.roles[0]}`,
