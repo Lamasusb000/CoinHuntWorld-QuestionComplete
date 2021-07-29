@@ -18,7 +18,7 @@ const QuestionLookup = () => (
       <h4 className="AlignCenter">
         Question Search
       </h4>
-      <div className="autoComplete_wrapper AlignCenter">
+      <div className="autoComplete_wrapper AlignCenter" onLoad={Loader()}>
         <input id="autoComplete" type="search" dir="ltr" spellcheck="false" autocorrect="off" autocomplete="off" autocapitalize="off"/>
       </div>
       <br/><br/>
@@ -32,5 +32,9 @@ const QuestionLookup = () => (
     </div>
   </Layout>
 )
+
+function Loader(){
+  window.autocompleteloader = true
+}
 
 export default QuestionLookup

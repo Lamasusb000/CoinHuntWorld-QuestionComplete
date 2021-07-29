@@ -24,8 +24,6 @@ async function GetQuestions(){
 }
 
 
-$( window ).off("load", LoadQuestions)
-$( window ).on("load", LoadQuestions)
 
 
 function LoadQuestions() {
@@ -65,3 +63,18 @@ function CollectResult(selection){
 function SendAnswer(Answer){
     document.getElementById("AnswerResults").innerText = Answer
 }
+var RoundCounter = 1
+function CheckPageLoad(){
+    try{
+		console.log(autocompleteloader)
+        if (autocompleteloader){
+            console.log(`It took ${RoundCounter} Attemp/s to load AutoComplete`)
+            LoadQuestions()
+        }
+    }catch(err){
+        RoundCounter ++
+        setTimeout(CheckPageLoad, 100)
+    }
+}
+
+CheckPageLoad()
