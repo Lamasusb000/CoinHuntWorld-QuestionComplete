@@ -22,6 +22,8 @@ exports.handler = (event, context, callback) => {
 			console.log("No Result")
 		}
 		console.log(result.data)
+		console.log(JSON.stringify(result.data))
+		console.log(JSON.parse(JSON.stringify(result.data)))
 		for (let i = 0; i < result.data.length; i++) {
 			console.log(result.data[i])
 			Client.query(
