@@ -21,7 +21,7 @@ exports.handler = (event, context, callback) => {
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
-		console.log(results.data)
+		console.log(result.data)
 		for (let i = 0; i < result.data.length; i++) {
 			console.log(result.data[i])
 			Client.query(
