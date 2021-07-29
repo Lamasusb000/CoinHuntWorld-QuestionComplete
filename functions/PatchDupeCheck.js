@@ -21,8 +21,9 @@ exports.handler = (event, context, callback) => {
 		if(result == "" | undefined){
 			console.log("No Result")
 		}
-
+		console.log(results.data)
 		for (let i = 0; i < result.data.length; i++) {
+			console.log(results.data[i])
 			Client.query(
 				q.Update(
 					q.Ref(q.Collection("QuestionAnswerCollection"), `${result.data[i][3]["@ref"].id}`),
