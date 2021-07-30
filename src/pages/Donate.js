@@ -51,9 +51,7 @@ const IndexPage = () => (
             </p>
             <a className="donate-with-crypto AlignCenter"
             href="https://commerce.coinbase.com/checkout/baa6c9f9-0571-44e1-83b4-f7999d97a85f">
-                <button type="button" class="btn btn-primary">
-                    Donate Via Crypto
-                </button>
+                Donate Via Crypto
             </a>
             <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"/>
         </div>
