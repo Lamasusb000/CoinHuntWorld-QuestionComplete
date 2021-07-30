@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Footer from "./footer"
 import "../components/CSS/Main.css"
 
 import Theme from "../../site/settings/Theme.json"
@@ -56,7 +55,6 @@ const Layout = ({ children }) => {
           color: "inherit"
         }}>{children}</main>
       </div>
-      <Footer/>
     </>
   )
 }
