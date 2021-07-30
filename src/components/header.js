@@ -56,7 +56,12 @@ const Header = ({ siteTitle }) => (
               </li>
               <li className="nav-item">
                 <Link to="/AddQuestionsV2" className="nav-link">
-                  Add Questions (Testing Feature: Smart Jumping)
+                  Add QuestionsV2 (Testing Feature: Smart Jumping)
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Donate" className="nav-link">
+                  Donation Page
                 </Link>
               </li>
             </ul>

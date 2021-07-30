@@ -1,0 +1,27 @@
+.AlignCenter{
+    text-align: center;
+}
+.AlignLeft{
+    text-align: left;
+}
+.WidthControl50{
+    margin: auto;
+    width: 50%;
+}
+.WidthControl80{
+    margin: auto;
+    width: 80%;
+}
+.AutoCap{
+    text-transform: capitalize
+}
+
+@media (max-width: 800px) {
+    .WidthControl50{
+        width: 100%;
+    }
+    .WidthControl80{
+        margin: auto;
+        width: 100%;
+    }
+}

@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import JSimport from "../components/JS-Import"
 import "../components/CSS/autoCompletes.css"
-import "../components/CSS/AlignCenter.css"
+import "../components/CSS/SpecialFormats.css"
 import "../components/CSS/AddingQuestions.css"
 
 

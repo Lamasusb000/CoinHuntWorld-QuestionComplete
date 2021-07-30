@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import JSimport from "../components/JS-Import"
 import JsCdn from "../components/JS-CDN"
-import "../components/CSS/AlignCenter.css"
+import "../components/CSS/SpecialFormats.css"
 import "../components/CSS/croppie.css"
 
 import VaultBlue from "../images/VaultBlue.png"
