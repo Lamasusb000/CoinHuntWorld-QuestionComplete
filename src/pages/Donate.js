@@ -13,7 +13,7 @@ const IndexPage = () => (
         Welcome To The Donation Page!
     </h2>
     <hr/>
-    <div className="AlignCenter WidthControl80 AutoCap">
+    <div className="AlignCenter WidthControl80">
         <div className="AlignLeft">
             <h3>
                 The Team Behind CHW Trivia
@@ -47,7 +47,7 @@ const IndexPage = () => (
             <p>
                 Coinbase Commerce runs our POS through Crypto Network Transactions. Which any crypto wallet platform can send to (Including Coinbase, Ledger, Trust, and of course, Uphold)
                 <br/>
-                if you cannot afford to donate but still want to help? Brave is a awesome way to support creators. You can donate automatically by simply using our website (Android and PC only)
+                if you cannot afford to donate but still want to help? Brave is an awesome way to support creators. You can donate automatically by simply using our website (Android and PC only)
             </p>
             <a className="donate-with-crypto AlignCenter"
             href="https://commerce.coinbase.com/checkout/baa6c9f9-0571-44e1-83b4-f7999d97a85f">
