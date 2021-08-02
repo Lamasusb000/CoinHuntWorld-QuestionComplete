@@ -155,7 +155,7 @@ var ResolutionArray = [
 
 var CroppieCounter = 0
 async function SetCroppie(DataURL){
-  ResolutionSelection = GetResolutionSelection(DataURL, CroppieCounter)
+  ResolutionSelection = await GetResolutionSelection(DataURL, CroppieCounter)
     $(function() {
       try{
         var Element = document.getElementById("croppie-basic")
