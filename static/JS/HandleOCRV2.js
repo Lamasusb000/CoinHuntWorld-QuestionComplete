@@ -110,7 +110,7 @@ var CroppieController = false
 var ResolutionSelection = 0
 
 
-let ResolutionArray = [
+var ResolutionArray = [
   {
     "Resolution": {"X": 0, "Y": 0},
     "Viewport": [
@@ -157,6 +157,7 @@ var CroppieCounter = 0
 async function SetCroppie(DataURL){
   ResolutionSelection = GetResolutionSelection(DataURL, CroppieCounter)
     $(function() {
+      try{
         var Element = document.getElementById("croppie-basic")
         var basic = new Croppie(Element, {
           viewport: { width: ResolutionArray[ResolutionSelection].Viewport[CroppieCounter].X, height: ResolutionArray[ResolutionSelection].Viewport[CroppieCounter].Y},
@@ -189,6 +190,9 @@ async function SetCroppie(DataURL){
           CroppieController = true
           CroppieCounter++
         }
+      }catch(err){
+        alert(err)
+      }
       });
 }
 
