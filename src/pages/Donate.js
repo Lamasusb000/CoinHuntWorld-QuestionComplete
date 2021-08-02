@@ -49,13 +49,24 @@ const IndexPage = () => (
                 <br/>
                 if you cannot afford to donate but still want to help? Brave is an awesome way to support creators. You can donate automatically by simply using our website (Android and PC only)
             </p>
-            <a className="donate-with-crypto AlignCenter"
-            href="https://commerce.coinbase.com/checkout/baa6c9f9-0571-44e1-83b4-f7999d97a85f">
-                <button type="button" class="btn btn-primary">
-                    Donate Via Crypto
-                </button>
-            </a>
-            
+            <div className="d-grid gap-3">
+                <div className="p-2">
+                <a className="donate-with-crypto AlignCenter"
+                href="https://commerce.coinbase.com/checkout/baa6c9f9-0571-44e1-83b4-f7999d97a85f">
+                    <button type="button" class="btn btn-primary">
+                        Donate Via Crypto
+                    </button>
+                </a>
+                </div>
+                <div className="p-2">
+                <a className="AlignCenter"
+                href="https://www.patreon.com/CHW_Trivia">
+                    <button type="button" class="btn btn-primary">
+                        Donate Via Fiat ($, €, etc)
+                    </button>
+                </a>
+                </div>
+            </div>
         </div>
     </div>
   </Layout>
