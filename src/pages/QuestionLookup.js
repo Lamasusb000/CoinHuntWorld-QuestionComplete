@@ -12,6 +12,7 @@ const QuestionLookup = () => (
   <Layout>
     <Seo title="Question Lookup" />
     <JSimport File={"autoComplete.js"}/>
+    <JSimport File="Cookie.js"/>
     <JSimport File={"SearchFunction.js"}/>
     <JSimport File="BetaTesting.js"/>
     <div className="AlignCenter">
