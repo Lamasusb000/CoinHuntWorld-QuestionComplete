@@ -61,7 +61,8 @@ function CheckCache(){
 	if ( readCookie("Cache") != null){
 		return JSON.parse(localStorage.getItem("Cache"))
 	}else{
-		GetQuestions()
+		return await GetQuestions()
+		
 	}
 }
 
