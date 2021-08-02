@@ -3,8 +3,6 @@ var ExpirationDate = new Date()
 var HourInUTC = TempDate.getUTCHours()
 var DayInUTC = TempDate.toGMTString()
 
-/*Testing Code*/
-
 if (0 <= HourInUTC && HourInUTC <= 11){
     ExpirationDate.setUTCHours(12, 0, 0, 0)
     console.log(DayInUTC)
