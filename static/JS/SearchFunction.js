@@ -47,6 +47,9 @@ async function ContactAPI() {
 
 async function GetQuestions(){
 	await ContactAPI()
+	localStorage.setItem("Cache", JSON.stringify(RequestedData))
+	createCookie("Cache", "True", ExpirationDate.toGMTString())
+
     var QuestionList = []
     for (let i = 0; i < window.RequestedData.length; i++) {
         QuestionList.push(window.RequestedData[i][0])
@@ -106,6 +109,7 @@ function CheckPageLoad(){
         if (jQuery.ready){
             console.log(`It took ${RoundCounter} Attemp/s to load AutoComplete`)
             LoadQuestions()
+			return
         }
     }catch(err){
         RoundCounter ++
