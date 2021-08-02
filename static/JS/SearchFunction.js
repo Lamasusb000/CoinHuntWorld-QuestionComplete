@@ -104,16 +104,20 @@ function SendAnswer(Answer){
     document.getElementById("AnswerResults").innerText = Answer
 }
 var RoundCounter = 1
+var Stopper = false
 function CheckPageLoad(){
     try{
         if (jQuery.ready){
             console.log(`It took ${RoundCounter} Attemp/s to load AutoComplete`)
             LoadQuestions()
+			Stopper = true
 			return
         }
     }catch(err){
         RoundCounter ++
-        setTimeout(CheckPageLoad, 100)
+        if (Stopper == false){
+			setTimeout(CheckPageLoad, 100)
+		}
     }
 }
 
