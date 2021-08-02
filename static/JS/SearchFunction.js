@@ -57,7 +57,7 @@ async function GetQuestions(){
     return QuestionList
 }
 
-function CheckCache(){
+async function CheckCache(){
 	if ( readCookie("Cache") != null){
 		return JSON.parse(localStorage.getItem("Cache"))
 	}else{
