@@ -1,6 +1,5 @@
 function createCookie(name,value,Expiration) {
-	if (days) {
-		var date = new Date();
+	if (Expiration) {
 		var expires = "; expires="+Expiration;
 	}
 	else var expires = "";
