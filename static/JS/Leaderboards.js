@@ -20,7 +20,7 @@ if (0 <= HourInUTC && HourInUTC <= 11){
 async function CheckForCookies(){
     if ( readCookie("Cache") == null){
         await ContactAPIForCookie()
-        createCookie("Cache", RequestedData, ExpirationDate)
+        createCookie("Cache", JSON.stringify(RequestedData), ExpirationDate.toGMTString())
         console.log("Created a Cookie")
     }else{
         console.log("Cookie Already Exists")
