@@ -1,6 +1,9 @@
 $("#autoComplete-Import").on("load", LoadQuestions)
 
 async function ContactAPI() {
+
+
+
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
 		body: JSON.stringify({
             Text: "Dummy Text"
@@ -77,3 +80,5 @@ function CheckPageLoad(){
 }
 
 CheckPageLoad()
+
+
