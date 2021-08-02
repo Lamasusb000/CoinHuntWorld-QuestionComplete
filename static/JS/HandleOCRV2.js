@@ -191,7 +191,7 @@ async function SetCroppie(DataURL){
           CroppieCounter++
         }
       }catch(err){
-        alert(err)
+        alert(`${err}, ResolutionSelection is ${ResolutionSelection}`)
       }
       });
 }
