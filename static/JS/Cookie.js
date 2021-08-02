@@ -1,8 +1,7 @@
-function createCookie(name,value,days) {
+function createCookie(name,value,Expiration) {
 	if (days) {
 		var date = new Date();
-		date.setHours(12, 0, 0 , 0);
-		var expires = "; expires="+date.toGMTString();
+		var expires = "; expires="+Expiration;
 	}
 	else var expires = "";
 	document.cookie = name+"="+value+expires+"; path=/";
