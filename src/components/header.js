@@ -50,13 +50,8 @@ const Header = ({ siteTitle }) => (
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/AddQuestions" className="nav-link">
-                  Add Questions
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link to="/AddQuestionsV2" className="nav-link">
-                  Add QuestionsV2 (Testing Feature: Smart Jumping)
+                  Add QuestionsV2
                 </Link>
               </li>
               <li className="nav-item">
