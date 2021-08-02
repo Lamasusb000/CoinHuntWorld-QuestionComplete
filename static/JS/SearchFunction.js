@@ -109,8 +109,8 @@ function CheckPageLoad(){
     try{
         if (jQuery.ready){
             console.log(`It took ${RoundCounter} Attemp/s to load AutoComplete`)
-            LoadQuestions()
 			Stopper = true
+            LoadQuestions()
 			return
         }
     }catch(err){
