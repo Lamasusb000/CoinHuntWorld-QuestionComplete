@@ -34,6 +34,7 @@ async function ContactAPI() {
 	if (response.status === 200){
 		let data = await response.json()
         window.RequestedData = data
+		window.Preventor = undefined
         return
 	}
 }
