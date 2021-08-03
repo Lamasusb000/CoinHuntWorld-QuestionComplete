@@ -15,6 +15,9 @@
 .AutoCap{
     text-transform: capitalize
 }
+.Underline{
+    text-decoration: underline;
+}
 
 @media (max-width: 800px) {
     .WidthControl50{
