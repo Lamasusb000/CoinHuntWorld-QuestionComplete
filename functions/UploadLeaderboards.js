@@ -34,7 +34,7 @@ exports.handler = (event, context, callback) => {
         RefID = TempObj["@ref"].id
         Client.query(
             q.Update(
-                q.Ref(q.Collection("LeaderBoardNames"), `${TempObj["@ref"].id}`),
+                q.Ref(q.Collection("LeaderboardNames"), `${TempObj["@ref"].id}`),
                 {
                   data: {
                     Name: `${InputData.Name}`
