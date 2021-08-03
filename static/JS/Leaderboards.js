@@ -98,11 +98,60 @@ async function FormatLeaderboards(){
         return b.Count - a.Count;
     });
     SortedDatabase = SortedDatabase.slice(0, 10)
-    var LeaderboardList = document.createElement("ol")
+    var LeaderboardList = document.createElement("table")
+    var TableContainer = document.createElement("thead")
+    var LeaderboardRow = document.createElement("tr")
+    var Listing = document.createElement("td")
+    var SubmissionCount = document.createElement("td")
+    var SubmissionRank = document.createElement("td")
+    Listing.appendChild(document.createTextNode("User"))
+    SubmissionCount.appendChild(document.createTextNode("Submission Count"))
+    SubmissionRank.appendChild(document.createTextNode("Rank"))
+    LeaderboardRow.appendChild(SubmissionRank)
+    LeaderboardRow.appendChild(Listing)
+    LeaderboardRow.appendChild(SubmissionCount)
+    TableContainer.appendChild(LeaderboardRow)
+    LeaderboardList.appendChild(TableContainer)
+
+
+    var TableContainer = document.createElement("tbody")
     for (let i = 0; i < SortedDatabase.length; i++) {
-        var Listing = document.createElement("li")
+        var LeaderboardRow = document.createElement("tr")
+        var Listing = document.createElement("td")
+        var SubmissionCount = document.createElement("td")
+        var SubmissionRank = document.createElement("td")
         Listing.appendChild(document.createTextNode(SortedDatabase[i].Name))
-        LeaderboardList.appendChild(Listing)
+        SubmissionCount.appendChild(document.createTextNode(SortedDatabase[i].Count))
+        SubmissionRank.appendChild(document.createTextNode(i + 1))
+        LeaderboardRow.appendChild(SubmissionRank)
+        LeaderboardRow.appendChild(Listing)
+        LeaderboardRow.appendChild(SubmissionCount)
+        TableContainer.appendChild(LeaderboardRow)
     }
-    document.getElementById("LeaderBoard").appendChild(LeaderboardList)
+    LeaderboardContainer = document.getElementById("LeaderBoard")
+    LeaderboardList.appendChild(TableContainer)
+    LeaderboardList.className = "table text-white"
+    var LeaderboardHeading = document.createElement("h2")
+    LeaderboardHeading.appendChild(document.createTextNode("Top 10 Triva Contributors"))
+    LeaderboardHeading.className = "AlignCenter"
+    LeaderboardContainer.appendChild(LeaderboardHeading)
+    LeaderboardContainer.appendChild(LeaderboardList)
+}
+
+var RoundCounter = 1
+var Stopper = false
+function LoadLeaderboards(){
+    try{
+        if (jQuery.ready){
+            console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
+			Stopper = true
+            FormatLeaderboards()
+			return
+        }
+    }catch(err){
+        RoundCounter ++
+        if (Stopper == false){
+			setTimeout(LoadLeaderboards, 100)
+		}
+    }
 }

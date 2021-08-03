@@ -1,0 +1,11 @@
+#Leaderboard{
+    width: 75%;
+    margin: auto;
+}
+
+@media (max-width: 800){
+    #Leaderboard{
+        width: 100%;
+        margin: auto;
+    }
+}
