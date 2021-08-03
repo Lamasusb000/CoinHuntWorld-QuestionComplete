@@ -186,7 +186,7 @@ async function SendDisplayName(){
         var DisplayName = prompt("Please Enter Your Desired Display Name. Max Length is 40 Characters", netlifyIdentity.currentUser().id)
         if(DisplayName){
             if(DisplayName.length > 40){
-                alert("The Max Length is 40")
+                alert("The Max Length is 40. Please try again with a smaller Name")
                 return
             }
             let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadLeaderboards", {

@@ -11,16 +11,23 @@ const IndexPage = () => (
     <JSimport File="NetlifyFunctions.js"/>
     <JSimport File="Cookie.js"/>
     <JSimport File="Leaderboards.js"/>
-    <h2>
+    <h2 className="AlignCenter">
       Welcome To The CHW Trivia Beta Site!
     </h2>
-    <p>
-      The General Goal currently is User engagement refining to allow ease of use in those tense trivia Moments.
-      <br/>
-      This is Unfortunately the only Page of the Site for Those without Beta Access But be sure to <a href="https://discord.gg/ggk9CAF5">Ask for permission to the Beta!</a>
-    </p>
-    <button type="button" className="btn btn-primary NetlifyOpen">Beta Tester Signin</button>
-    <br/><br/>
+    <div className="WidthControl50">
+      <p className="AlignCenter">Welcome To CHW Trivia.com!</p>
+      <hr/>
+      <p className="Indent2">
+        This site is a community created tool to be used to assist in your adventures on the CoinHuntWorld App! CoinHuntWorld is a geolocation game where users travel around the real world to places around their cities to collect keys and answer questions to collect REAL Crypto!
+      </p>
+      <p className="Indent2">
+        Sometimes Within the game hunters recieve questions that are so bizzare even Google can't help them solve it but with a community sourced database hosted here any hunter can help their fellow hunters solve their most complex questions with a simple search from our database!
+      </p>
+      <p className="Indent2">
+        Remember! Cheating is not fun and please be safe hunting the crypto and most of all... Have fun!
+      </p>
+    </div>
+    <br/><br/><br/><br/>
     <div id="LeaderBoard"/>
   </Layout>
 )

@@ -21,6 +21,9 @@
 .CursorClick{
     cursor: pointer;
 }
+.Indent2{
+    text-indent: 2em;
+}
 
 @media (max-width: 800px) {
     .WidthControl50{
