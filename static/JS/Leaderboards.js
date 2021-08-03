@@ -133,7 +133,7 @@ async function FormatLeaderboards(){
     var LeaderBoardJoin = document.createElement("p")
     LeaderBoardJoin.appendChild(document.createTextNode("Click Here To Set Your LeaderBoard Name"))
     LeaderBoardJoin.addEventListener("click", SendDisplayName)
-    LeaderBoardJoin.className("AlignCenter Underline")
+    LeaderBoardJoin.className = "AlignCenter Underline"
     LeaderboardContainer.appendChild(LeaderboardHeading)
     LeaderboardContainer.appendChild(LeaderboardList)
     LeaderboardContainer.appendChild(LeaderBoardJoin)
