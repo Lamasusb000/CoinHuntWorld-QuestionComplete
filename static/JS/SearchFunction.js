@@ -103,7 +103,6 @@ function SendAnswer(Answer){
     document.getElementById("AnswerResults").innerText = Answer
 }
 var RoundCounter = 1
-var Preventor = false
 function LoadSearchFunction(){
 	Preventor = true
     if(window.Stopper == undefined){
