@@ -105,7 +105,7 @@ var RoundCounter = 1
 var Preventor = false
 function LoadSearchFunction(){
 	Preventor = true
-    if(window.Stopper != undefined){
+    if(window.Stopper == undefined){
         try{
             if (jQuery.ready){
                 window.Stopper = true
@@ -115,7 +115,7 @@ function LoadSearchFunction(){
             }
         }catch(err){
             RoundCounter ++
-            if (window.Stopper != undefined){
+            if (window.Stopper == undefined){
                 setTimeout(LoadSearchFunction, 100)
             }
         }
