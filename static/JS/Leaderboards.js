@@ -155,3 +155,5 @@ function LoadLeaderboards(){
 		}
     }
 }
+
+LoadLeaderboards()
