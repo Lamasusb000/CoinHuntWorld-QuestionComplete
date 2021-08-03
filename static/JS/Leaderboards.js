@@ -141,19 +141,22 @@ async function FormatLeaderboards(){
 var RoundCounter = 1
 window.Stopper = false
 function LoadLeaderboards(){
-    try{
-        if (jQuery.ready){
-            console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
-			window.Stopper = true
-            FormatLeaderboards()
-			return
+    if(window.Stopper == false){
+        try{
+            if (jQuery.ready){
+                window.Stopper = true
+                console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
+                FormatLeaderboards()
+                return
+            }
+        }catch(err){
+            RoundCounter ++
+            if (window.Stopper == false){
+                setTimeout(LoadLeaderboards, 100)
+            }
         }
-    }catch(err){
-        RoundCounter ++
-        if (window.Stopper == false){
-			setTimeout(LoadLeaderboards, 100)
-		}
     }
+
 }
 
 LoadLeaderboards()
