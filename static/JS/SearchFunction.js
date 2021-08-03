@@ -124,8 +124,18 @@ function LoadSearchFunction(){
 $(window).off("load", LoadSearchFunction)
 $(window).on("load", LoadSearchFunction)
 
-if(window.Preventor == undefined){
-	window.Preventor = true
+if(window.SearchPreventor == undefined){
+	window.SearchPreventor = true
 	LoadSearchFunction()
 }
 
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}

@@ -136,15 +136,16 @@ async function FormatLeaderboards(){
 
 var RoundCounter = 1
 function LoadLeaderboards(){
-    if(window.LeaderboardStopper == false){
+	Preventor = true
+    if(window.LeaderboardStopper == undefined){
         try{
-            window.LeaderboardStopper = true
-            console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
-            FormatLeaderboards()
-            return
+			window.LeaderboardStopper = true
+			console.log(`It took ${RoundCounter} Attemp/s to load The Leaderboards`)
+			FormatLeaderboards()
+			return
         }catch(err){
             RoundCounter ++
-            if (window.LeaderboardStopper == false){
+            if (window.LeaderboardStopper == undefined){
                 setTimeout(LoadLeaderboards, 100)
             }
         }
@@ -154,3 +155,8 @@ function LoadLeaderboards(){
 
 $(window).off("load", LoadLeaderboards)
 $(window).on("load", LoadLeaderboards)
+
+if(window.SearchPreventor == undefined){
+	window.SearchPreventor = true
+	LoadLeaderboards()
+}
