@@ -159,4 +159,5 @@ function LoadLeaderboards(){
 
 }
 
-LoadLeaderboards()
+$(window).off("load", LoadLeaderboards)
+$(window).on("load", LoadLeaderboards)
