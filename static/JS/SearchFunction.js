@@ -106,23 +106,27 @@ function SendAnswer(Answer){
     document.getElementById("AnswerResults").innerText = Answer
 }
 var RoundCounter = 1
-var Stopper = false
-function CheckPageLoad(){
-    try{
-        if (jQuery.ready){
-            console.log(`It took ${RoundCounter} Attemp/s to load AutoComplete`)
-			Stopper = true
-            LoadQuestions()
-			return
+window.Stopper = false
+function LoadSearchFunction(){
+    if(window.Stopper == false){
+        try{
+            if (jQuery.ready){
+                window.Stopper = true
+                console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
+                FormatLeaderboards()
+                return
+            }
+        }catch(err){
+            RoundCounter ++
+            if (window.Stopper == false){
+                setTimeout(LoadSearchFunction, 100)
+            }
         }
-    }catch(err){
-        RoundCounter ++
-        if (Stopper == false){
-			setTimeout(CheckPageLoad, 100)
-		}
     }
+
 }
 
-CheckPageLoad()
+$(window).off("load", LoadSearchFunction)
+$(window).on("load", LoadSearchFunction)
 
 

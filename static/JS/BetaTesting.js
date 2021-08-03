@@ -18,16 +18,25 @@ function BetaV2(){
 }
 
 var RoundCounter = 1
-function CheckLoad(){
-    try{
-        if (netlifyloader){
-            console.log(`It took ${RoundCounter} Attemp/s to load Netlify Identity`)
-            BetaV2()
+window.Stopper = false
+function LoadBetaSoftware(){
+    if(window.Stopper == false){
+        try{
+            if (jQuery.ready){
+                window.Stopper = true
+                console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
+                FormatLeaderboards()
+                return
+            }
+        }catch(err){
+            RoundCounter ++
+            if (window.Stopper == false){
+                setTimeout(LoadBetaSoftware, 100)
+            }
         }
-    }catch(err){
-        RoundCounter ++
-        setTimeout(CheckLoad, 100)
     }
+
 }
 
-CheckLoad()
+$(window).off("load", LoadBetaSoftware)
+$(window).on("load", LoadBetaSoftware)
