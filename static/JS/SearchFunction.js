@@ -23,9 +23,6 @@ async function CheckForCookies(){
         await ContactAPI()
         localStorage.setItem("Cache", JSON.stringify(RequestedData))
         createCookie("Cache", "True", ExpirationDate.toGMTString())
-        console.log("Created a Cookie")
-    }else{
-        console.log("Cookie Already Exists")
     }
 }
 

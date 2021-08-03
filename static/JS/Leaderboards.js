@@ -20,9 +20,6 @@ async function CheckForCookies(){
         await ContactAPIForCookie()
         localStorage.setItem("Cache", JSON.stringify(RequestedData))
         createCookie("Cache", "True", ExpirationDate.toGMTString())
-        console.log("Created a Cookie")
-    }else{
-        console.log("Cookie Already Exists")
     }
 }
 
@@ -39,4 +36,65 @@ async function ContactAPIForCookie() {
         window.RequestedData = data
         return
 	}
+}
+
+async function GrabLeaderBoards() {
+	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
+		body: JSON.stringify({
+            Text: "Dummy Text"
+        }),
+        method: "POST"
+	});
+	if (response.status === 200){
+		let data = await response.json()
+        window.RequestedData = data
+        return
+	}
+}
+
+async function ConstructLeaderboardArray(){
+    await CheckForCookies()
+    RequestedData = JSON.parse(localStorage.getItem("Cache"))
+    var LeaderBoards = []
+    var AllUserIDs = []
+    for (let i = 0; i < RequestedData.length; i++) {
+        AllUserIDs.push(RequestedData[i][2]) 
+    }
+    UniqueUserIDs = [...new Set(AllUserIDs)]
+
+    for (let l = 0; l < UniqueUserIDs.length; l++) {
+        LeaderBoards.push({"Name": UniqueUserIDs[l], "Count": 0})
+
+        for (let i = 0; i < RequestedData.length; i++) {
+            if (RequestedData[i][2] == UniqueUserIDs[l]){
+                LeaderBoards[l].Count ++
+            }
+        }
+    }
+    window.LeaderBoards = LeaderBoards
+    return
+}
+
+async function FormatLeaderboards(){
+    await ConstructLeaderboardArray()
+    let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
+		body: JSON.stringify({
+            Text: "Dummy Text"
+        }),
+        method: "POST"
+	});
+	if (response.status === 200){
+		let data = await response.json()
+        window.LeaderboardNames = data
+        return
+	}
+
+
+    for (let i = 0; i < LeaderBoards.length; i++) {
+        for (let z = 0; z < array.length; z++) {
+            if (LeaderBoards[l].Name == LeaderboardNames[z][1]){
+                LeaderBoards[l].Name = LeaderboardNames[z][0]
+            }
+        }
+    }
 }
