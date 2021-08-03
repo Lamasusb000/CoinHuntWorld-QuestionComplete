@@ -96,9 +96,10 @@ async function FormatLeaderboards(){
     }
     var SortedDatabase = LeaderBoards.sort(function(a, b) {
         return b.Count - a.Count;
-      });
+    });
+    SortedDatabase = SortedDatabase.slice(0, 10)
     var LeaderboardList = document.createElement("ol")
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < SortedDatabase.length; i++) {
         var Listing = document.createElement("li")
         Listing.appendChild(document.createTextNode(SortedDatabase[i].Name))
         LeaderboardList.appendChild(Listing)
