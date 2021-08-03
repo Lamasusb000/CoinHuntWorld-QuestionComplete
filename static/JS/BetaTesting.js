@@ -18,25 +18,16 @@ function BetaV2(){
 }
 
 var RoundCounter = 1
-window.Stopper = false
-function LoadBetaSoftware(){
-    if(window.Stopper == false){
-        try{
-            if (jQuery.ready){
-                window.Stopper = true
-                console.log(`It took ${RoundCounter} Attemp/s to load BetaTesting`)
-                BetaV2()
-                return
-            }
-        }catch(err){
-            RoundCounter ++
-            if (window.Stopper == false){
-                setTimeout(LoadBetaSoftware, 100)
-            }
+function CheckLoad(){
+    try{
+        if (netlifyloader){
+            console.log(`It took ${RoundCounter} Attemp/s to load Netlify Identity`)
+            BetaV2()
         }
+    }catch(err){
+        RoundCounter ++
+        setTimeout(CheckLoad, 100)
     }
-
 }
 
-$(window).off("load", LoadBetaSoftware)
-$(window).on("load", LoadBetaSoftware)
+CheckLoad()
