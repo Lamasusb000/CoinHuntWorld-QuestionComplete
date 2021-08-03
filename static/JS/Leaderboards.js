@@ -130,6 +130,9 @@ async function FormatLeaderboards(){
     var LeaderboardHeading = document.createElement("h2")
     LeaderboardHeading.appendChild(document.createTextNode("Top 10 Triva Contributors"))
     LeaderboardHeading.className = "AlignCenter"
+    var LeaderBoardJoin = document.createElement("p")
+    LeaderBoardJoin.appendChild(document.createTextNode("Click Here To Set Your LeaderBoard Name"))
+    LeaderBoardJoin.addEventListener("click", SendDisplayName())
     LeaderboardContainer.appendChild(LeaderboardHeading)
     LeaderboardContainer.appendChild(LeaderboardList)
     window.LeaderboardPreventor = undefined
@@ -173,4 +176,30 @@ function readCookie(name) {
 		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
 	}
 	return null;
+}
+
+
+async function SendDisplayName(){
+    if(netlifyIdentity.currentUser().id){
+        var DisplayName = prompt("Please Enter Your Desired Display Name", netlifyIdentity.currentUser().id)
+
+        let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/Leaderboards", {
+            body: JSON.stringify({
+                Name: `${DisplayName}`,
+                UserID: `${netlifyIdentity.currentUser().id}`
+            }),
+            method: "POST"
+        });
+        if (response.status === 200){
+            let data = await response.json()
+            window.LeaderboardNames = data
+        }
+
+    }else{
+        alert("Please Signin Before Attemping This")
+    }
+
+    
+
+
 }
