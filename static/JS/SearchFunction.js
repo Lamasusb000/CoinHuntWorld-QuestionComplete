@@ -35,6 +35,7 @@ async function ContactAPI() {
 		let data = await response.json()
         window.RequestedData = data
 		window.SearchPreventor = undefined
+		window.SearchStopper = undefined
         return
 	}
 }

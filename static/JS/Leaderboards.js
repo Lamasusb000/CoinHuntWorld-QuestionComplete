@@ -132,6 +132,7 @@ async function FormatLeaderboards(){
     LeaderboardHeading.className = "AlignCenter"
     LeaderboardContainer.appendChild(LeaderboardHeading)
     LeaderboardContainer.appendChild(LeaderboardList)
+    window.LeaderboardPreventor = undefined
     window.LeaderboardStopper = undefined
 }
 
