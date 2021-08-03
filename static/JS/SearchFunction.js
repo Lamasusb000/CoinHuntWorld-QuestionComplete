@@ -107,12 +107,10 @@ function LoadSearchFunction(){
 	Preventor = true
     if(window.Stopper == undefined){
         try{
-            if (jQuery.ready){
-                window.Stopper = true
-                console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
-                LoadQuestions()
-                return
-            }
+			window.Stopper = true
+			console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
+			LoadQuestions()
+			return
         }catch(err){
             RoundCounter ++
             if (window.Stopper == undefined){
@@ -126,8 +124,8 @@ function LoadSearchFunction(){
 $(window).off("load", LoadSearchFunction)
 $(window).on("load", LoadSearchFunction)
 
-if(Preventor == false){
-	Preventor = true
+if(window.Preventor == undefined){
+	window.Preventor = true
 	LoadSearchFunction()
 }
 
