@@ -143,7 +143,7 @@ window.Stopper = false
 function LoadLeaderboards(){
     if(window.Stopper == false){
         try{
-            if (jQuery.ready){
+            if (window.PageLoad){
                 window.Stopper = true
                 console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
                 FormatLeaderboards()

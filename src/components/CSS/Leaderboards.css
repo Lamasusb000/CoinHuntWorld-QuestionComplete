@@ -3,7 +3,7 @@
     margin: auto;
 }
 
-@media (max-width: 800){
+@media (max-width: 800px){
     #LeaderBoard{
         width: 100%;
         margin: auto;

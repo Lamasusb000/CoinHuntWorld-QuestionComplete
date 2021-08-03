@@ -21,10 +21,12 @@ const IndexPage = () => (
     </p>
     <button type="button" className="btn btn-primary NetlifyOpen">Beta Tester Signin</button>
     <br/><br/>
-    <p>Site Deployment Status</p>
-	  <img src="https://api.netlify.com/api/v1/badges/ff689e6b-7919-45be-aea5-69df18e249cf/deploy-status" alt="Deploy status badge"></img>
-    <div id="LeaderBoard"/>
+    <div id="LeaderBoard" onLoad={SetWindow()}/>
   </Layout>
 )
 
 export default IndexPage
+
+function SetWindow(){
+  window.PageLoad = true
+}
