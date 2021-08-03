@@ -126,7 +126,8 @@ function LoadSearchFunction(){
 $(window).off("load", LoadSearchFunction)
 $(window).on("load", LoadSearchFunction)
 
-if(Preventor == false)[
+if(Preventor == false){
+	Preventor = true
 	LoadSearchFunction()
-]
+}
 

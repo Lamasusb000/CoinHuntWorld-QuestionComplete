@@ -14,7 +14,7 @@ const QuestionLookup = () => (
     <JSimport File={"autoComplete.js"}/>
     <JSimport File="Cookie.js"/>
     <JSimport File={"SearchFunction.js"}/>
-    <JSimport File="BetaTesting.js"/>
+    <JSimport File="BetaTesting.js" Defer={false}/>
     <div className="AlignCenter">
       <h4 className="AlignCenter">
         Question Search
