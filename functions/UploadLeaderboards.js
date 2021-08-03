@@ -29,7 +29,7 @@ exports.handler = (event, context, callback) => {
                 TempObj = JSON.parse(TempObj)
             }
         }
-
+        console.log(TempObj)
         if(TempObj == undefined){
             Client.query(
                 q.Create(
@@ -42,6 +42,10 @@ exports.handler = (event, context, callback) => {
                     }
                 )
             )
+            return callback(null, {
+                statusCode: 200,
+                body: `Name Successfully Added To Leaderboards`
+              })
         }
 
 
