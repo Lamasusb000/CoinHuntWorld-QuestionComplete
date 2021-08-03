@@ -77,7 +77,7 @@ async function ConstructLeaderboardArray(){
 
 async function FormatLeaderboards(){
     await ConstructLeaderboardArray()
-    let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
+    let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/Leaderboards", {
 		body: JSON.stringify({
             Text: "Dummy Text"
         }),
@@ -86,14 +86,13 @@ async function FormatLeaderboards(){
 	if (response.status === 200){
 		let data = await response.json()
         window.LeaderboardNames = data
-        return
 	}
 
 
     for (let i = 0; i < LeaderBoards.length; i++) {
-        for (let z = 0; z < array.length; z++) {
-            if (LeaderBoards[l].Name == LeaderboardNames[z][1]){
-                LeaderBoards[l].Name = LeaderboardNames[z][0]
+        for (let z = 0; z < LeaderboardNames.length; z++) {
+            if (LeaderBoards[l].Name == LeaderboardNames[z][0]){
+                LeaderBoards[l].Name = LeaderboardNames[z][1]
             }
         }
     }
