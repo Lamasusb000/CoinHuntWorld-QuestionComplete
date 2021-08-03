@@ -183,8 +183,12 @@ function readCookie(name) {
 
 async function SendDisplayName(){
     if(netlifyIdentity.currentUser().id){
-        var DisplayName = prompt("Please Enter Your Desired Display Name", netlifyIdentity.currentUser().id)
+        var DisplayName = prompt("Please Enter Your Desired Display Name. Max Length is 40 Characters", netlifyIdentity.currentUser().id)
         if(DisplayName){
+            if(DisplayName.length > 40){
+                alert("The Max Length is 40")
+                return
+            }
             let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadLeaderboards", {
                 body: JSON.stringify({
                     Name: `${DisplayName}`,
