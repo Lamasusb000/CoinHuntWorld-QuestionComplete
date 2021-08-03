@@ -135,19 +135,16 @@ async function FormatLeaderboards(){
 }
 
 var RoundCounter = 1
-window.Stopper = false
 function LoadLeaderboards(){
-    if(window.Stopper == false){
+    if(window.LeaderboardStopper == false){
         try{
-            if (jQuery.ready){
-                window.Stopper = true
-                console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
-                FormatLeaderboards()
-                return
-            }
+            window.LeaderboardStopper = true
+            console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
+            FormatLeaderboards()
+            return
         }catch(err){
             RoundCounter ++
-            if (window.Stopper == false){
+            if (window.LeaderboardStopper == false){
                 setTimeout(LoadLeaderboards, 100)
             }
         }

@@ -105,15 +105,15 @@ function SendAnswer(Answer){
 var RoundCounter = 1
 function LoadSearchFunction(){
 	Preventor = true
-    if(window.Stopper == undefined){
+    if(window.SearchStopper == undefined){
         try{
-			window.Stopper = true
+			window.SearchStopper = true
 			console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
 			LoadQuestions()
 			return
         }catch(err){
             RoundCounter ++
-            if (window.Stopper == undefined){
+            if (window.SearchStopper == undefined){
                 setTimeout(LoadSearchFunction, 100)
             }
         }
