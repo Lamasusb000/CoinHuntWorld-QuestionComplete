@@ -102,9 +102,10 @@ function SendAnswer(Answer){
     document.getElementById("AnswerResults").innerText = Answer
 }
 var RoundCounter = 1
-window.Stopper = false
+var Preventor = false
 function LoadSearchFunction(){
-    if(window.Stopper == false){
+	Preventor = true
+    if(window.Stopper != undefined){
         try{
             if (jQuery.ready){
                 window.Stopper = true
@@ -114,7 +115,7 @@ function LoadSearchFunction(){
             }
         }catch(err){
             RoundCounter ++
-            if (window.Stopper == false){
+            if (window.Stopper != undefined){
                 setTimeout(LoadSearchFunction, 100)
             }
         }
@@ -125,4 +126,7 @@ function LoadSearchFunction(){
 $(window).off("load", LoadSearchFunction)
 $(window).on("load", LoadSearchFunction)
 
+if(Preventor == false)[
+	LoadSearchFunction()
+]
 
