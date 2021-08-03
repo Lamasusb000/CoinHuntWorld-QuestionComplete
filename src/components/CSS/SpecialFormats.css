@@ -18,6 +18,9 @@
 .Underline{
     text-decoration: underline;
 }
+.CursorClick{
+    cursor: pointer;
+}
 
 @media (max-width: 800px) {
     .WidthControl50{
