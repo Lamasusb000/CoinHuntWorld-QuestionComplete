@@ -21,7 +21,7 @@ const IndexPage = () => (
     </p>
     <button type="button" className="btn btn-primary NetlifyOpen">Beta Tester Signin</button>
     <br/><br/>
-    <div id="LeaderBoard" onLoad={SetWindow()}/>
+    <div id="LeaderBoard"/>
   </Layout>
 )
 
