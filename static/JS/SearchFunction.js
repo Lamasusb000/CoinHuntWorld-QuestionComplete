@@ -34,7 +34,7 @@ async function ContactAPI() {
 	if (response.status === 200){
 		let data = await response.json()
         window.RequestedData = data
-		window.Preventor = undefined
+		window.SearchPreventor = undefined
         return
 	}
 }
@@ -104,7 +104,7 @@ function SendAnswer(Answer){
 }
 var RoundCounter = 1
 function LoadSearchFunction(){
-	Preventor = true
+	SearchPreventor = true
     if(window.SearchStopper == undefined){
         try{
 			window.SearchStopper = true

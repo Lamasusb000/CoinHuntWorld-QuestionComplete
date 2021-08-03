@@ -132,11 +132,12 @@ async function FormatLeaderboards(){
     LeaderboardHeading.className = "AlignCenter"
     LeaderboardContainer.appendChild(LeaderboardHeading)
     LeaderboardContainer.appendChild(LeaderboardList)
+    window.LeaderboardStopper = undefined
 }
 
 var RoundCounter = 1
 function LoadLeaderboards(){
-	Preventor = true
+	window.SearchPreventor = true
     if(window.LeaderboardStopper == undefined){
         try{
 			window.LeaderboardStopper = true
