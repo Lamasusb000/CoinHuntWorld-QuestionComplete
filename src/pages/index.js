@@ -26,7 +26,3 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-function SetWindow(){
-  window.PageLoad = true
-}
