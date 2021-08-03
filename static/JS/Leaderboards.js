@@ -87,13 +87,21 @@ async function FormatLeaderboards(){
 		let data = await response.json()
         window.LeaderboardNames = data
 	}
-
-
-    for (let l = 0; i < LeaderBoards.length; l++) {
+    for (let l = 0; l < LeaderBoards.length; l++) {
         for (let z = 0; z < LeaderboardNames.length; z++) {
             if (LeaderBoards[l].Name == LeaderboardNames[z][0]){
                 LeaderBoards[l].Name = LeaderboardNames[z][1]
             }
         }
     }
+    var SortedDatabase = LeaderBoards.sort(function(a, b) {
+        return b.Count - a.Count;
+      });
+    var LeaderboardList = document.createElement("ol")
+    for (let i = 0; i < 15; i++) {
+        var Listing = document.createElement("li")
+        Listing.appendChild(document.createTextNode(SortedDatabase[i].Name))
+        LeaderboardList.appendChild(Listing)
+    }
+    document.getElementById("LeaderBoard").appendChild(LeaderboardList)
 }

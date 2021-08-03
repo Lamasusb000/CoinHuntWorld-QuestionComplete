@@ -22,6 +22,7 @@ const IndexPage = () => (
     <br/><br/>
     <p>Site Deployment Status</p>
 	  <img src="https://api.netlify.com/api/v1/badges/ff689e6b-7919-45be-aea5-69df18e249cf/deploy-status" alt="Deploy status badge"></img>
+    <div id="LeaderBoard"/>
   </Layout>
 )
 
