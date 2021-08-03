@@ -30,6 +30,20 @@ exports.handler = (event, context, callback) => {
             }
         }
 
+        if(TempObj == undefined){
+            Client.query(
+                q.Create(
+                    q.Collection("LeaderboardNames"),
+                    {
+                        data: {
+                            UserID: InputData.UserID,
+                            Name: InputData.Name
+                        }
+                    }
+                )
+            )
+        }
+
 
         RefID = TempObj["@ref"].id
         Client.query(
@@ -47,7 +61,7 @@ exports.handler = (event, context, callback) => {
 
 		return callback(null, {
 			statusCode: 200,
-			body: `Function Finished`
+			body: `Leaderboards Successfully Updated`
 		  })
 	})
   }
