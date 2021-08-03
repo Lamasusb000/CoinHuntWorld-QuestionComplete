@@ -24,7 +24,7 @@ function LoadBetaSoftware(){
         try{
             if (jQuery.ready){
                 window.Stopper = true
-                console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
+                console.log(`It took ${RoundCounter} Attemp/s to load BetaTesting`)
                 FormatLeaderboards()
                 return
             }

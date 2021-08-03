@@ -8,13 +8,9 @@ var DayInUTC = TempDate.toGMTString()
 
 if (0 <= HourInUTC && HourInUTC <= 11){
     ExpirationDate.setUTCHours(12, 0, 0, 0)
-    console.log(DayInUTC)
-    console.log(ExpirationDate.toGMTString())
 }else{
     ExpirationDate.setUTCDate(TempDate.getUTCDay() + 2)
     ExpirationDate.setUTCHours(0, 0, 0, 0)
-    console.log(DayInUTC)
-    console.log(ExpirationDate.toGMTString())
 }
 
 
@@ -112,7 +108,7 @@ function LoadSearchFunction(){
         try{
             if (jQuery.ready){
                 window.Stopper = true
-                console.log(`It took ${RoundCounter} Attemp/s to load Leaderboards`)
+                console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
                 FormatLeaderboards()
                 return
             }
