@@ -104,7 +104,7 @@ function SendAnswer(Answer){
 }
 var RoundCounter = 1
 function LoadSearchFunction(){
-	SearchPreventor = true
+	window.SearchPreventor = true
     if(window.SearchStopper == undefined){
         try{
 			window.SearchStopper = true

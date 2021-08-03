@@ -137,7 +137,7 @@ async function FormatLeaderboards(){
 
 var RoundCounter = 1
 function LoadLeaderboards(){
-	window.SearchPreventor = true
+	window.LeaderboardPreventor = true
     if(window.LeaderboardStopper == undefined){
         try{
 			window.LeaderboardStopper = true
@@ -157,7 +157,7 @@ function LoadLeaderboards(){
 $(window).off("load", LoadLeaderboards)
 $(window).on("load", LoadLeaderboards)
 
-if(window.SearchPreventor == undefined){
-	window.SearchPreventor = true
+if(window.LeaderboardPreventor == undefined){
+	window.LeaderboardPreventor = true
 	LoadLeaderboards()
 }
