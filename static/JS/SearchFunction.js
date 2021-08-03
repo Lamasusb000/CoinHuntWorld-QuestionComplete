@@ -59,10 +59,14 @@ async function GetQuestions(){
 
 async function CheckCache(){
 	if ( readCookie("Cache") != null){
-		return JSON.parse(localStorage.getItem("Cache"))
+		window.RequestedData = localStorage.getItem("Cache")
+		var QuestionList = []
+		for (let i = 0; i < window.RequestedData.length; i++) {
+			QuestionList.push(window.RequestedData[i][0])
+		}
+		return QuestionList
 	}else{
 		return await GetQuestions()
-		
 	}
 }
 
