@@ -15,7 +15,7 @@ const IndexPage = () => (
       Welcome To The CHW Trivia Beta Site!
     </h2>
     <div className="WidthControl50">
-      <p className="AlignCenter">Welcome To CHW Trivia.com!</p>
+      <p className="AlignCenter">Coded For The Community By MrTurtlesGame</p>
       <hr/>
       <p className="Indent2">
         This site is a community created tool to be used to assist in your adventures on the CoinHuntWorld App! CoinHuntWorld is a geolocation game where users travel around the real world to places around their cities to collect keys and answer questions to collect REAL Crypto!
