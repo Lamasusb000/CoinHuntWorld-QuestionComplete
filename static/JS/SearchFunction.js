@@ -109,7 +109,7 @@ function LoadSearchFunction(){
             if (jQuery.ready){
                 window.Stopper = true
                 console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
-                FormatLeaderboards()
+                LoadQuestions()
                 return
             }
         }catch(err){
