@@ -89,7 +89,7 @@ async function FormatLeaderboards(){
 	}
 
 
-    for (let i = 0; i < LeaderBoards.length; i++) {
+    for (let l = 0; i < LeaderBoards.length; l++) {
         for (let z = 0; z < LeaderboardNames.length; z++) {
             if (LeaderBoards[l].Name == LeaderboardNames[z][0]){
                 LeaderBoards[l].Name = LeaderboardNames[z][1]
