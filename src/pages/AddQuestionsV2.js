@@ -20,7 +20,6 @@ const QuestionLookup = () => (
     <JsCdn URL="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"/>
     <JSimport File="HandleOCRV2.js"/>
     <JSimport File="croppie.js"/>
-    <JSimport File="BetaTesting.js"/>
     <div className="AlignCenter">
         <h4 className="AlignCenter">
             Add Questions
