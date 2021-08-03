@@ -132,9 +132,10 @@ async function FormatLeaderboards(){
     LeaderboardHeading.className = "AlignCenter"
     var LeaderBoardJoin = document.createElement("p")
     LeaderBoardJoin.appendChild(document.createTextNode("Click Here To Set Your LeaderBoard Name"))
-    LeaderBoardJoin.addEventListener("click", SendDisplayName())
+    LeaderBoardJoin.addEventListener("click", SendDisplayName)
     LeaderboardContainer.appendChild(LeaderboardHeading)
     LeaderboardContainer.appendChild(LeaderboardList)
+    LeaderboardContainer.appendChild(LeaderBoardJoin)
     window.LeaderboardPreventor = undefined
     window.LeaderboardStopper = undefined
 }
@@ -182,19 +183,19 @@ function readCookie(name) {
 async function SendDisplayName(){
     if(netlifyIdentity.currentUser().id){
         var DisplayName = prompt("Please Enter Your Desired Display Name", netlifyIdentity.currentUser().id)
-
-        let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/Leaderboards", {
-            body: JSON.stringify({
-                Name: `${DisplayName}`,
-                UserID: `${netlifyIdentity.currentUser().id}`
-            }),
-            method: "POST"
-        });
-        if (response.status === 200){
-            let data = await response.json()
-            window.LeaderboardNames = data
+        if(DisplayName){
+            let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/UploadLeaderboards", {
+                body: JSON.stringify({
+                    Name: `${DisplayName}`,
+                    UserID: `${netlifyIdentity.currentUser().id}`
+                }),
+                method: "POST"
+            });
+            if (response.status === 200){
+                let data = await response.text()
+                console.log(data)
+            }
         }
-
     }else{
         alert("Please Signin Before Attemping This")
     }
