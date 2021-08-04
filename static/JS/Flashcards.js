@@ -27,7 +27,8 @@ var TriviaCompleted = 1
 
 
 //Setting Up JQuery Listeners (Off Then On For Double Loading Issues)
-    //Start Trivia
+function FlashcardEventListeners(){
+        //Start Trivia
 $(TriviaStart).off("click", StartTriva)
 $(TriviaStart).on("click", StartTriva)
 
@@ -43,6 +44,7 @@ $(NextQuestion).on("click", TriviaNext)
 $(TriviaRestart).off("click", RestartFlashcards)
 $(TriviaRestart).on("click", RestartFlashcards)
 
+}
 
 
 //Start Trivia
@@ -153,12 +155,12 @@ function LoadTrivia(){
         try{
 			window.TriviaStopper = true
 			console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
-			LoadQuestions()
+			FlashcardEventListeners()
 			return
         }catch(err){
             RoundCounter ++
             if (window.TriviaStopper == undefined){
-                setTimeout(LoadSearchFunction, 100)
+                setTimeout(LoadTrivia, 100)
             }
         }
     }
