@@ -96,6 +96,7 @@ function TriviaNext(){
         //Clear Text and Show Completion
         TriviaCategory.innerText = `You Have Finished ${FlashCardSelection.value} Vault Flashcards!`
         TriviaQuestion.innerText = `Press the Button Below to Restart The Process`
+        TriviaAnswer.innerText = ""
         return
     }
 
