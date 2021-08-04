@@ -47,6 +47,8 @@ $(TriviaRestart).on("click", RestartFlashcards)
 
 //Start Trivia
 function StartTriva(){
+    window.TriviaStopper = undefined
+    window.TriviaPreventor = undefined
     TriviaCompleted = 1
     for (let i = 0; i < Database.length; i++) {
         if (Database[i][4] == FlashCardSelection.value){
@@ -141,4 +143,45 @@ function RandomNumber(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+var RoundCounter = 1
+function LoadTrivia(){
+	window.TriviaPreventor = true
+    if(window.TriviaStopper == undefined){
+        try{
+			window.TriviaStopper = true
+			console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
+			LoadQuestions()
+			return
+        }catch(err){
+            RoundCounter ++
+            if (window.TriviaStopper == undefined){
+                setTimeout(LoadSearchFunction, 100)
+            }
+        }
+    }
+
+}
+
+
+//Prevent Double Loading
+$(window).off("load", LoadTrivia)
+$(window).on("load", LoadTrivia)
+
+if(window.TriviaPreventor == undefined){
+	window.TriviaPreventor = true
+	LoadTrivia()
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
 }
