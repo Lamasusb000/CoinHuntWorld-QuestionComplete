@@ -182,7 +182,7 @@ function readCookie(name) {
 
 
 async function SendDisplayName(){
-    if(netlifyIdentity.currentUser().id){
+    if(netlifyIdentity.currentUser()){
         var DisplayName = prompt("Please Enter Your Desired Display Name. Max Length is 40 Characters", netlifyIdentity.currentUser().id)
         if(DisplayName){
             if(DisplayName.length > 40){
