@@ -18,6 +18,9 @@ const QuestionLookup = () => (
       <h4 className="AlignCenter">
         Question Search
       </h4>
+      <p className="text-center" id="DatabaseRefresh">
+          
+      </p>
       <div className="autoComplete_wrapper AlignCenter">
         <input id="autoComplete" type="search" dir="ltr" spellCheck="false" autoCorrect="off" autoComplete="off" autoCapitalize="off"/>
       </div>

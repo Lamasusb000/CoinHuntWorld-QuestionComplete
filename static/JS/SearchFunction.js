@@ -140,3 +140,16 @@ function readCookie(name) {
 	}
 	return null;
 }
+
+
+function SetDatabaseRefresh(){
+    var TimePeriod = ""
+	var ExpirationHour = ExpirationDate.getHours()
+	if (ExpirationHour >= 12){
+		TimePeriod = "PM"
+	}else{
+		TimePeriod = "AM"
+	}
+
+    return `Database Will Refresh at: ${ExpirationHour}:${String(ExpirationDate.getMinutes()).padStart(2,"0")}${TimePeriod}`
+}
