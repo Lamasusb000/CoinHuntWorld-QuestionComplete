@@ -67,6 +67,7 @@ async function CheckCache(){
 
 
 function LoadQuestions() {
+	document.getElementById("DatabaseRefresh").innerText = SetDatabaseRefresh()
     var autoCompleteJS = new autoComplete({
 		placeHolder: "Search Question",
 		data: {
