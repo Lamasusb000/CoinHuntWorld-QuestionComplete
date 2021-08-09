@@ -63,13 +63,21 @@ async function ConstructLeaderboardArray(){
 
         for (let i = 0; i < RequestedData.length; i++) {
             if (RequestedData[i][2].includes(UniqueUserIDs[l])){
-                LeaderBoards[l].Count ++
+                var TempString = JSON.stringify(RequestedData[i][2])
+                var AddBy = await CountInside(TempString, UniqueUserIDs[l])
+                LeaderBoards.Count = LeaderBoards.Count = AddBy
             }
         }
     }
     window.LeaderBoards = LeaderBoards
     return
 }
+
+
+async function count(string,char) {
+    var re = new RegExp(char,"gi");
+    return string.match(re).length;
+   }
 
 async function FormatLeaderboards(){
     await ConstructLeaderboardArray()

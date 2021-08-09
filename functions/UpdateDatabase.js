@@ -31,6 +31,9 @@ exports.handler = (event, context, callback) => {
 			var ContributorID = [result.data[i][2]]
 			var ContributorEmail = [result.data[i][6]]
 
+			if (ContributorEmail == null){
+				ContributorEmail = "FileUploadedJSON"
+			}
 
 			Client.query(
 				q.Update(
