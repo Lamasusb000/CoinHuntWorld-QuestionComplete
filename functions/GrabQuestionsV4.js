@@ -13,7 +13,7 @@ exports.handler = (event, context, callback) => {
 	Client.query(
 		q.Paginate(
 			q.Match(
-				q.Index('GrabAllQuestionsV3')),
+				q.Index('GrabAllQuestionsV4')),
 				{size: 5000}
 		)
 	)

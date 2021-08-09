@@ -21,7 +21,7 @@ async function CheckForCookies(){
 
 
 async function ContactAPIForCookie() {
-	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
+	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV4", {
 		body: JSON.stringify({
             Text: "Dummy Text"
         }),
@@ -62,7 +62,7 @@ async function ConstructLeaderboardArray(){
         LeaderBoards.push({"Name": UniqueUserIDs[l], "Count": 0})
 
         for (let i = 0; i < RequestedData.length; i++) {
-            if (RequestedData[i][2] == UniqueUserIDs[l]){
+            if (RequestedData[i][2].includes(UniqueUserIDs[l])){
                 LeaderBoards[l].Count ++
             }
         }

@@ -25,7 +25,7 @@ async function CheckForCookies(){
 
 
 async function ContactAPI() {
-	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2", {
+	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV4", {
 		body: JSON.stringify({
             Text: "Dummy Text"
         }),
