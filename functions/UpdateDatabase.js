@@ -28,8 +28,8 @@ exports.handler = (event, context, callback) => {
 			var TempObj = JSON.stringify(result.data[i][3])
 			TempObj = JSON.parse(TempObj)
 
-			var ContributorID = [result.data[2]]
-			var ContributorEmail = [result.data[6]]
+			var ContributorID = [result.data[i][2]]
+			var ContributorEmail = [result.data[i][6]]
 
 
 			Client.query(
