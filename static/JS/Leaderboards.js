@@ -74,7 +74,7 @@ async function ConstructLeaderboardArray(){
 }
 
 
-async function count(string,char) {
+async function CountInside(string,char) {
     var re = new RegExp(char,"gi");
     return string.match(re).length;
    }
