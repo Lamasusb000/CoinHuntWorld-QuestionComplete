@@ -54,8 +54,9 @@ async function ConstructLeaderboardArray(){
     var LeaderBoards = []
     var AllUserIDs = []
     for (let i = 0; i < RequestedData.length; i++) {
-        for (let b = 0; b < RequestedData[2].length; b++) {
-            AllUserIDs.push(RequestedData[i][2][b]) 
+        var IDList = JSON.stringify(RequestedData[i][2])
+        for (let b = 0; b < IDList.length; b++) {
+            AllUserIDs.push(IDList[b]) 
         }
 
     }
