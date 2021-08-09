@@ -69,7 +69,7 @@ async function ConstructLeaderboardArray(){
             if (RequestedData[i][2].includes(UniqueUserIDs[l])){
                 var TempString = JSON.stringify(RequestedData[i][2])
                 var AddBy = await CountInside(TempString, UniqueUserIDs[l])
-                LeaderBoards.Count = LeaderBoards.Count = AddBy
+                LeaderBoards.Count = LeaderBoards.Count + AddBy
             }
         }
     }
