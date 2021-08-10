@@ -1,3 +1,4 @@
+//#region SetCurrent ExpirationDate
 var TempDate = new Date()
 var ExpirationDate = new Date()
 var HourInUTC = TempDate.getUTCHours()
@@ -6,7 +7,7 @@ var DayInUTC = TempDate.toGMTString()
 if (0 <= HourInUTC && HourInUTC <= 11){
     ExpirationDate.setUTCHours(12, 0, 0, 0)
 }else{
-    ExpirationDate.setUTCDate(TempDate.getUTCDay() + 2)
+    ExpirationDate.setUTCDate(TempDate.getUTCDate() + 2)
     ExpirationDate.setUTCHours(0, 0, 0, 0)
 }
 
@@ -18,8 +19,9 @@ async function CheckForCookies(){
         createCookie("Cache", "True", ExpirationDate.toGMTString())
     }
 }
+//#endregion
 
-
+//#region API Calls
 async function ContactAPIForCookie() {
 	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV4", {
 		body: JSON.stringify({
@@ -47,7 +49,9 @@ async function GrabLeaderBoards() {
         return
 	}
 }
+//#endregion
 
+//#region CreateLeaderboards
 async function ConstructLeaderboardArray(){
     await CheckForCookies()
     RequestedData = JSON.parse(localStorage.getItem("Cache"))
@@ -55,9 +59,14 @@ async function ConstructLeaderboardArray(){
     var AllUserIDs = []
     for (let i = 0; i < RequestedData.length; i++) {
         var IDList = JSON.parse(RequestedData[i][2])
-        for (let b = 0; b < IDList.length; b++) {
-            AllUserIDs.push(IDList[b]) 
+        if (IDList){
+            for (let b = 0; b < IDList.length; b++) {
+                AllUserIDs.push(IDList[b]) 
+            }
+        }else{
+            console.log(`Problem on Interval ${i}`)
         }
+
 
     }
     UniqueUserIDs = [...new Set(AllUserIDs)]
@@ -76,12 +85,6 @@ async function ConstructLeaderboardArray(){
     window.LeaderBoards = LeaderBoards
     return
 }
-
-
-async function CountInside(string,char) {
-    var re = new RegExp(char,"gi");
-    return string.match(re).length;
-   }
 
 async function FormatLeaderboards(){
     await ConstructLeaderboardArray()
@@ -152,7 +155,9 @@ async function FormatLeaderboards(){
     window.LeaderboardPreventor = undefined
     window.LeaderboardStopper = undefined
 }
+//#endregion
 
+//#region Gatsby Prevent Double Load
 var RoundCounter = 1
 function LoadLeaderboards(){
 	window.LeaderboardPreventor = true
@@ -179,8 +184,9 @@ if(window.LeaderboardPreventor == undefined){
 	window.LeaderboardPreventor = true
 	LoadLeaderboards()
 }
+//#endregion
 
-
+//#region Miscellaneous Functions
 function readCookie(name) {
 	var nameEQ = name + "=";
 	var ca = document.cookie.split(';');
@@ -191,8 +197,13 @@ function readCookie(name) {
 	}
 	return null;
 }
+async function CountInside(string,char) {
+    var re = new RegExp(char,"gi");
+    return string.match(re).length;
+}
+//#endregion
 
-
+//#region Upload Leaderboard Names
 async function SendDisplayName(){
     if(netlifyIdentity.currentUser()){
         var DisplayName = prompt("Please Enter Your Desired Display Name. Max Length is 40 Characters", netlifyIdentity.currentUser().id)
@@ -216,8 +227,5 @@ async function SendDisplayName(){
     }else{
         alert("Please Signin Before Attemping This")
     }
-
-    
-
-
 }
+//#endregion

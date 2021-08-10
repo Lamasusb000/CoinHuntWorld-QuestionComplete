@@ -37,6 +37,8 @@ exports.handler = (event, context, callback) => {
 						Color: `${RecievedData.Color}`,
 						Category: `${RecievedData.Category}`,
 						UserID: `${RecievedData.UserID}`,
+						ContributorID: `${JSON.stringify(RecievedData.UserID)}`,
+						ContributorEmail: `${JSON.stringify(RecievedData.UserEmail)}`,
 						UserEmail: `${RecievedData.UserEmail}`,
 						DupeCheck: `${RecievedData.Question.replace(/[^A-Za-z]/g, '').toLowerCase()}`
 					}}
@@ -61,9 +63,14 @@ exports.handler = (event, context, callback) => {
 				body: "Success"
 			})
 		}else{
-			return callback(null, {
-				body: "Failed. Already in Database"
-			})
+			var AnswerArray = JSON.parse(result.data.Answers)
+			if (AnswerArray.includes(RecievedData.Answer)){
+				return callback(null, {
+					body: "Failed. Already in Database"
+				})
+			}else{
+				
+			}
 		}
 	})
   }
