@@ -126,6 +126,7 @@ function RestartFlashcards(){
     //Reset CSS
     $(".FormStart").css("display", "block")
     $(".FlashCard").css("display", "none")
+    $(TriviaAnswer).css("visibility", "hidden")
 
     //Hide Reset Button
     $(TriviaRestart).css("display", "none")
