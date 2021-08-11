@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
         return callback(null, {
             statusCode: 403,
             body:
-                "Sorry But This API is For CoinHuntWorldTrivia.com. Please Reach To Arrange Access",
+                "Sorry But This API is For CoinHuntWorldTrivia.com. Please Reach Out To Arrange Access",
         })
     }
     Client.query(
@@ -20,8 +20,8 @@ exports.handler = (event, context, callback) => {
             console.log("No Result")
         }
         var DatabaseLength = result.data.length
-        var Success = 0
-        var Failure = 0
+        window.Success = 0
+        window.Failure = 0
         for (let i = 0; i < result.data.length; i++) {
             var TempObj = JSON.stringify(result.data[i][3])
             TempObj = JSON.parse(TempObj)
@@ -54,14 +54,9 @@ exports.handler = (event, context, callback) => {
                 )
             ).then(function (result) {
                 if ((result == "") | undefined) {
-                    Failure++
-                    console.log(
-                        `${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`
-                    )
+                    window.Failure++
                 } else {
-                    Success++
-                    console.log(
-                        `${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`
+                    window.Success++
                     )
                 }
             })
@@ -69,14 +64,14 @@ exports.handler = (event, context, callback) => {
 
         return callback(null, {
             statusCode: 200,
-            body: `Function Finished With ${Failure} Failures and ${Success} Successful Updates`,
+            body: `Function Finished With ${window.Failure} Failures and ${window.Success} Successful Updates`,
         })
     })
 }
 
 //#region Code To Run in Console
 /*
-async function ContactAPIForCookie() {
+async function UpdateDatabase() {
     let response = await fetch(
         "https://coinhuntworldtrivia.com/.netlify/functions/UpdateDatabase",
         {
