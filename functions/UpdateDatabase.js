@@ -57,7 +57,6 @@ exports.handler = (event, context, callback) => {
                     window.Failure++
                 } else {
                     window.Success++
-                    )
                 }
             })
         }
