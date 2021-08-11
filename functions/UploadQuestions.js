@@ -38,16 +38,16 @@ exports.handler = (event, context, callback) => {
                     q.Collection("QuestionAnswerCollection"),
                     // prettier-ignore
                     { data: {
-						Question: `${RecievedData.Question}`,
-						Answer: `${RecievedData.Answer}`,
-						Color: `${RecievedData.Color}`,
-						Category: `${RecievedData.Category}`,
+						Question: `${RecievedData.Question.replace(/[^A-Za-z0-9" "]/g, "")}`,
+						Answer: `${RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, "")}`,
+						Color: `${RecievedData.Color.replace(/[^A-Za-z0-9" "]/g, "")}`,
+						Category: `${RecievedData.Category.replace(/[^A-Za-z0-9" "]/g, "")}`,
 						UserID: `${RecievedData.UserID}`,
 						ContributorID: `${JSON.stringify(RecievedData.UserID)}`,
 						ContributorEmail: `${JSON.stringify(RecievedData.UserEmail)}`,
 						UserEmail: `${RecievedData.UserEmail}`,
 						DupeCheck: `${RecievedData.Question.replace(/[^A-Za-z]/g, '').toLowerCase()}`,
-                        AnswerArray: `${JSON.stringify(new Array(RecievedData.Answer))}`
+                        AnswerArray: `${JSON.stringify(new Array(RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, "")))}`
 					}}
                 )
             ).then(function (result) {
