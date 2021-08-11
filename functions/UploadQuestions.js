@@ -26,10 +26,8 @@ exports.handler = (event, context, callback) => {
         q.Paginate(
             q.Match(
                 q.Index("FindQuestion"),
-                `${RecievedData.Question.replace(
-                    /[^A-Za-z]/g,
-                    ""
-                ).toLowerCase()}`
+                //prettier-ignore
+                `${RecievedData.Question.replace(/[^A-Za-z]/g,"").toLowerCase()}`
             )
         )
     ).then(function (result) {
