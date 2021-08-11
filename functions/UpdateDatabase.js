@@ -75,7 +75,7 @@ exports.handler = (event, context, callback) => {
 }
 
 //#region Code To Run in Console
-
+/*
 async function ContactAPIForCookie() {
     let response = await fetch(
         "https://coinhuntworldtrivia.com/.netlify/functions/UpdateDatabase",
@@ -92,5 +92,5 @@ async function ContactAPIForCookie() {
         return
     }
 }
-
+*/
 //#endregion
