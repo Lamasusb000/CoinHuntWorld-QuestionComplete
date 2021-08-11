@@ -124,7 +124,7 @@ async function FormatLeaderboards() {
         localStorage.setItem("Leaderboards", JSON.stringify(SortedDatabase))
         createCookie("Leaderboards", "true", ExpirationDate.toGMTString())
     } else {
-        SortedDatabase = JSON.stringify(localStorage.getItem("Leaderboards"))
+        SortedDatabase = JSON.parse(localStorage.getItem("Leaderboards"))
     }
     SortedDatabase = SortedDatabase.slice(0, 10)
     //#endregion
