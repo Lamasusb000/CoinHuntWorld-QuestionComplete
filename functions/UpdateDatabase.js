@@ -22,13 +22,15 @@ exports.handler = (event, context, callback) => {
         var DatabaseLength = result.data.length
         window.Success = 0
         window.Failure = 0
+        //prettier-ignore
         for (let i = 0; i < result.data.length; i++) {
             var TempObj = JSON.stringify(result.data[i][3])
             TempObj = JSON.parse(TempObj)
 
             //#region Usable Variables
             var Question = result.data[i][0]
-            var AnswerArray = new Array(result.data[i][1])
+            var Answer = result.data[i][1]
+            var AnswerArray = new Array(result.data[i][1].replace(/[^A-Za-z0-9" "]/g, ""))
             var ContributorID = [result.data[i][2]]
             var ReferenceID = TempObj
             var Color = result.data[i][4]
@@ -48,6 +50,7 @@ exports.handler = (event, context, callback) => {
                     ),
                     {
                         data: {
+                            Answer: `${Answer.replace(/[^A-Za-z0-9" "]/g, "")}`,
                             AnswerArray: `${JSON.stringify(AnswerArray)}`,
                         },
                     }
@@ -88,7 +91,3 @@ async function UpdateDatabase() {
 }
 */
 //#endregion
-
-for (let i = 0; i < RequestedData.length; i++) {
-    RequestedData[i][1] = RequestedData[i][1].replace(/[^A-Za-z0-9" "]/g, "")
-}
