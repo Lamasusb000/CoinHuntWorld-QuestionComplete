@@ -1,5 +1,3 @@
-console.log("test")
-
 //#region SetCurrent ExpirationDate
 var TempDate = new Date()
 var ExpirationDate = new Date()
