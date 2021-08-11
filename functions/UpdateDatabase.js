@@ -1,68 +1,96 @@
-const faunadb = require('faunadb'),
-q = faunadb.query;
-const Client = new faunadb.Client({ secret: 'fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN' })
+const faunadb = require("faunadb"),
+    q = faunadb.query
+const Client = new faunadb.Client({
+    secret: "fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN",
+})
 var Output = "JSON Did not Attach"
 
 exports.handler = (event, context, callback) => {
-    if(event.headers.origin != "https://coinhuntworldtrivia.com"){
-		return callback(null, {
-			statusCode: 403,
-			body: "Sorry But This API is For CoinHuntWorldTrivia.com. Please Reach To Arrange Access"
-		})
-	}
-	Client.query(
-		q.Paginate(
-			q.Match(
-				q.Index('UpdateData')),
-				{size: 5000}
-		)
-	)
-	.then(function(result){
-		if(result == "" | undefined){
-			console.log("No Result")
-		}
-		var DatabaseLength = result.data.length
-		var Success = 0
-		var Failure = 0
-		for (let i = 0; i < result.data.length; i++) {
-			var TempObj = JSON.stringify(result.data[i][3])
-			TempObj = JSON.parse(TempObj)
+    if (event.headers.origin != "https://coinhuntworldtrivia.com") {
+        return callback(null, {
+            statusCode: 403,
+            body:
+                "Sorry But This API is For CoinHuntWorldTrivia.com. Please Reach To Arrange Access",
+        })
+    }
+    Client.query(
+        q.Paginate(q.Match(q.Index("UpdateData")), { size: 5000 })
+    ).then(function (result) {
+        if ((result == "") | undefined) {
+            console.log("No Result")
+        }
+        var DatabaseLength = result.data.length
+        var Success = 0
+        var Failure = 0
+        for (let i = 0; i < result.data.length; i++) {
+            var TempObj = JSON.stringify(result.data[i][3])
+            TempObj = JSON.parse(TempObj)
 
-			var ContributorID = [result.data[i][2]]
-			var ContributorEmail = [result.data[i][6]]
+            //#region Usable Variables
+            var Question = result.data[i][0]
+            var AnswerArray = new Array(result.data[i][1])
+            var ContributorID = [result.data[i][2]]
+            var ReferenceID = TempObj
+            var Color = result.data[i][4]
+            var Category = result.data[i][5]
+            var ContributorEmail =
+                result.data[i][6] != null
+                    ? [result.data[i][6]]
+                    : "FileUploadedJSON"
 
-			if (ContributorEmail == null){
-				ContributorEmail = "FileUploadedJSON"
-			}
+            //#endregion
 
-			Client.query(
-				q.Update(
-					q.Ref(q.Collection("QuestionAnswerCollection"), `${TempObj["@ref"].id}`),
-					{
-					  data: {
-						ContributorID: `${JSON.stringify(ContributorID)}`,
-						ContributorEmail: `${JSON.stringify(ContributorEmail)}`
-					  }
-					}
-				  )
-			)
-			.then(function (result){
-				if(result == "" | undefined){
-					Failure++
-					console.log(`${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`)
-				}else{
-					Success++
-					console.log(`${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`)
-				}
-			})
-			
-		}
+            Client.query(
+                q.Update(
+                    q.Ref(
+                        q.Collection("QuestionAnswerCollection"),
+                        `${TempObj["@ref"].id}`
+                    ),
+                    {
+                        data: {
+                            AnswerArray: `${JSON.stringify(AnswerArray)}`,
+                        },
+                    }
+                )
+            ).then(function (result) {
+                if ((result == "") | undefined) {
+                    Failure++
+                    console.log(
+                        `${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`
+                    )
+                } else {
+                    Success++
+                    console.log(
+                        `${i} / ${DatabaseLength} Completed With ${Success} Successful and ${Failure} Failures`
+                    )
+                }
+            })
+        }
 
+        return callback(null, {
+            statusCode: 200,
+            body: `Function Finished With ${Failure} Failures and ${Success} Successful Updates`,
+        })
+    })
+}
 
+//#region Code To Run in Console
 
-		return callback(null, {
-			statusCode: 200,
-			body: `Function Finished`
-		  })
-	})
-  }
+async function ContactAPIForCookie() {
+    let response = await fetch(
+        "https://coinhuntworldtrivia.com/.netlify/functions/UpdateDatabase",
+        {
+            body: JSON.stringify({
+                Text: "Dummy Text",
+            }),
+            method: "POST",
+        }
+    )
+    if (response.status === 200) {
+        let data = await response.text()
+        console.log(data)
+        return
+    }
+}
+
+//#endregion
