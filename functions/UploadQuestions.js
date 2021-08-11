@@ -68,12 +68,15 @@ exports.handler = (event, context, callback) => {
                 body: "Success",
             })
         } else {
-            var AnswerArray = JSON.parse(result.data.Answers)
-            if (AnswerArray.includes(RecievedData.Answer)) {
+            //prettier-ignore
+            var AnswerArray = JSON.parse(result.data.AnswerArray).replace(/[^A-Za-z0-9" ""//?"]/g, "")
+            //prettier-ignore
+            if (AnswerArray.includes(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, ""))) {
                 return callback(null, {
                     body: "Failed. Already in Database",
                 })
             } else {
+                
             }
         }
     })
