@@ -11,8 +11,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "page-settings",
-        path: `${__dirname}/site/settings`
-      }
+        path: `${__dirname}/site/settings`,
+      },
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
