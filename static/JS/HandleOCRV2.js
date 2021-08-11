@@ -284,9 +284,12 @@ var CategoryVerification = document.getElementById("CategoryVerification")
 var QuestionVerification = document.getElementById("QuestionVerification")
 var AnswerVerification = document.getElementById("AnswerVerification")
 function SendVerificaiton() {
-    CategoryVerification.value = SubmissionArray[0]
-    QuestionVerification.value = SubmissionArray[1]
-    AnswerVerification.value = SubmissionArray[2]
+    //prettier-ignore
+    CategoryVerification.value = SubmissionArray[0].replace(/[^A-Za-z0-9" "]/g, "")
+    //prettier-ignore
+    QuestionVerification.value = SubmissionArray[1].replace(/[^A-Za-z0-9" "]/g, "")
+    //prettier-ignore
+    AnswerVerification.value = SubmissionArray[2].replace(/[^A-Za-z0-9" "]/g, "")
     VerificationContainer.style.visibility = "visible"
 }
 var ColorVerification = ""
