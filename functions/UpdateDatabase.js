@@ -88,3 +88,7 @@ async function UpdateDatabase() {
 }
 */
 //#endregion
+
+for (let i = 0; i < RequestedData.length; i++) {
+    RequestedData[i][1] = RequestedData[i][1].replace(/[^A-Za-z0-9" "]/g, "")
+}
