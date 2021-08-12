@@ -136,7 +136,9 @@ async function FormatLeaderboards() {
         $(`#Count${i + 1}`).text(SortedDatabase[i].Count)
     }
 
-    LeaderBoardJoin.addEventListener("click", SendDisplayName)
+    document
+        .getElementById("JoinLeaderboard")
+        .addEventListener("click", SendDisplayName)
     window.LeaderboardPreventor = undefined
     window.LeaderboardStopper = undefined
 }

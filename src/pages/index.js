@@ -102,7 +102,10 @@ const IndexPage = () => (
                         </tr>
                     </tbody>
                 </table>
-                <p className="text-center Underline CursorClick">
+                <p
+                    id="JoinLeaderboard"
+                    className="text-center Underline CursorClick"
+                >
                     Click Here To Set You Leaderboard Name
                 </p>
             </div>
