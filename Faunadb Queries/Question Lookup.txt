@@ -1,5 +1,0 @@
-Paginate(
-    Match(
-	    Index('AdminQuestionLookup'), ""),
-				{size: 5000}
-		)
