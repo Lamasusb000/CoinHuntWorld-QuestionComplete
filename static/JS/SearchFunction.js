@@ -22,8 +22,6 @@ async function CheckForCookies() {
         localStorage.setItem("Cache", JSON.stringify(RequestedData))
         createCookie("Cache", "True", ExpirationDate.toGMTString())
     }
-    $(".RefreshDatabase").off("click", RefreshDatabase)
-    $(".RefreshDatabase").on("click", RefreshDatabase)
 }
 
 async function ContactAPI() {
@@ -58,6 +56,8 @@ async function GetQuestions() {
 }
 
 async function CheckCache() {
+    $(".RefreshDatabase").off("click", RefreshDatabase)
+    $(".RefreshDatabase").on("click", RefreshDatabase)
     if (readCookie("Cache") != null) {
         window.RequestedData = JSON.parse(localStorage.getItem("Cache"))
         var QuestionList = []
