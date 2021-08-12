@@ -68,7 +68,7 @@ exports.handler = (event, context, callback) => {
                 body: "Success",
             })
         } else {
-            console.log(result.data[0])
+            console.log(result.data)
             //prettier-ignore
             var AnswerArray = JSON.parse(result.data[0][8]).replace(/[^A-Za-z0-9" ""//?"]/g, "")
             //prettier-ignore
