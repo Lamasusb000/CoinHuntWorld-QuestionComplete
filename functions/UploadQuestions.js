@@ -78,9 +78,8 @@ exports.handler = (event, context, callback) => {
                     body: "Failed. Already in Database",
                 })
             } else {
-
                 var RefID = JSON.stringify(result.data[3])
-                RefID = JSON.parse(TempObj)
+                RefID = JSON.parse(RefID)
                 AnswerArray.push(RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, ""))
                 Client.query(
                 q.Update(
