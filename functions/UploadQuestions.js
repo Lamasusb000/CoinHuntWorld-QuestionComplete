@@ -78,22 +78,34 @@ exports.handler = (event, context, callback) => {
                     body: "Failed. Already in Database",
                 })
             } else {
-                var RefID = JSON.stringify(result.data[3])
+                var RefID = JSON.stringify(result.data[0][2])
                 RefID = JSON.parse(RefID)
                 AnswerArray.push(RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, ""))
                 Client.query(
-                q.Update(
-                    q.Ref(
-                        q.Collection("QuestionAnswerCollection"),
-                        `${RefID["@ref"].id}`
-                    ),
-                    {
-                        data: {
-                            AnswerArray: `${JSON.stringify(AnswerArray)}`,
-                        },
+                    q.Update(
+                        q.Ref(
+                            q.Collection("QuestionAnswerCollection"),
+                            `${RefID["@ref"].id}`
+                        ),
+                        {
+                            data: {
+                                AnswerArray: `${JSON.stringify(AnswerArray)}`,
+                            },
+                        }
+                    )
+                ).then(function (result) {
+                    if ((result == "") | undefined) {
+                        console.log("No Result")
+                        return callback(null, {
+                            statusCode: 500,
+                            body: "Could Not Post Question",
+                        })
                     }
-                )
-                )
+                    return callback(null, {
+                        statusCode: 200,
+                        body: `Successfully Posted Quesiton`,
+                    })
+                })
             }
         }
     })
