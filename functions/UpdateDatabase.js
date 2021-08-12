@@ -52,8 +52,12 @@ exports.handler = (event, context, callback) => {
                     ),
                     {
                         data: {
-                            Answer: `${Answer.replace(/[^A-Za-z0-9" "]/g, "")}`,
-                            AnswerArray: `${JSON.stringify(AnswerArray)}`,
+                            ContributorID: JSON.stringify(
+                                new Array(ContributorID)
+                            ),
+                            ContributorEmail: JSON.stringify(
+                                new Array(ContributorEmail)
+                            ),
                         },
                     }
                 )
@@ -65,7 +69,7 @@ exports.handler = (event, context, callback) => {
                     Success++
                     Completed++
                 }
-                if(Completed == Length){
+                if (Completed == Length) {
                     return callback(null, {
                         statusCode: 200,
                         body: `Function Finished With ${Failure} Failures and ${Success} Successful Updates`,
