@@ -97,7 +97,10 @@ async function FormatLeaderboards() {
     await ConstructLeaderboardArray()
 
     //#region Grab Leaderboard Names
-    if (readCookie("Leaderboards") == null && readCookie("Cache") != "") {
+    if (
+        (readCookie("Leaderboards") == null) |
+        (readCookie("Leaderboards") == "")
+    ) {
         let response = await fetch(
             "https://coinhuntworldtrivia.com/.netlify/functions/Leaderboards",
             {
