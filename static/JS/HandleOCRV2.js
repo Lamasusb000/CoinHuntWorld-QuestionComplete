@@ -287,7 +287,7 @@ function SendVerificaiton() {
     //prettier-ignore
     CategoryVerification.value = SubmissionArray[0].replace(/[^A-Za-z0-9" "]/g, "")
     //prettier-ignore
-    QuestionVerification.value = SubmissionArray[1].replace(/[^A-Za-z0-9" "]/g, "")
+    QuestionVerification.value = SubmissionArray[1].replace(/[^A-Za-z0-9" ""//?"]/g, "")
     //prettier-ignore
     AnswerVerification.value = SubmissionArray[2].replace(/[^A-Za-z0-9" "]/g, "")
     VerificationContainer.style.visibility = "visible"
