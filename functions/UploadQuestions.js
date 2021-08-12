@@ -69,8 +69,9 @@ exports.handler = (event, context, callback) => {
             })
         } else {
             console.log(result)
+            console.log(result.data)
             //prettier-ignore
-            var AnswerArray = JSON.parse(result.data[8]).replace(/[^A-Za-z0-9" ""//?"]/g, "")
+            var AnswerArray = JSON.parse(result.data[1]).replace(/[^A-Za-z0-9" ""//?"]/g, "")
             //prettier-ignore
             if (AnswerArray.includes(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, ""))) {
                 return callback(null, {
@@ -78,6 +79,22 @@ exports.handler = (event, context, callback) => {
                 })
             } else {
 
+                var RefID = JSON.stringify(result.data[3])
+                RefID = JSON.parse(TempObj)
+                AnswerArray.push(RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, ""))
+                Client.query(
+                q.Update(
+                    q.Ref(
+                        q.Collection("QuestionAnswerCollection"),
+                        `${RefID["@ref"].id}`
+                    ),
+                    {
+                        data: {
+                            AnswerArray: `${JSON.stringify(AnswerArray)}`,
+                        },
+                    }
+                )
+                )
             }
         }
     })
