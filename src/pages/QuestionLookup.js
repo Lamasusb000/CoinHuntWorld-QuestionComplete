@@ -31,7 +31,10 @@ const QuestionLookup = () => (
             <h3 className="AnswerLabel" style={{ visibility: "hidden" }}>
                 Possible Answers
             </h3>
-            <hr className="AnswerLabel" style={{ visibility: "hidden" }} />
+            <hr
+                className="AnswerLabel bg-white WidthControl50 mb-3"
+                style={{ visibility: "hidden" }}
+            />
             <h4 id="AnswerResults">
                 <br />
             </h4>
