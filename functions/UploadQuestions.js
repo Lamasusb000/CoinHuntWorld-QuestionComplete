@@ -43,8 +43,8 @@ exports.handler = (event, context, callback) => {
 						Color: `${RecievedData.Color.replace(/[^A-Za-z0-9" "]/g, "")}`,
 						Category: `${RecievedData.Category.replace(/[^A-Za-z0-9" "]/g, "")}`,
 						UserID: `${RecievedData.UserID}`,
-						ContributorID: `${JSON.stringify(RecievedData.UserID)}`,
-						ContributorEmail: `${JSON.stringify(RecievedData.UserEmail)}`,
+						ContributorID: `${JSON.stringify(new Array(RecievedData.UserID))}`,
+						ContributorEmail: `${JSON.stringify(new Array(RecievedData.UserEmail))}`,
 						UserEmail: `${RecievedData.UserEmail}`,
 						DupeCheck: `${RecievedData.Question.replace(/[^A-Za-z]/g, '').toLowerCase()}`,
                         AnswerArray: `${JSON.stringify(new Array(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, "")))}`
