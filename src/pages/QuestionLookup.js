@@ -43,6 +43,9 @@ const QuestionLookup = () => (
             <p>
                 <br />
             </p>
+            <p className="RefreshDatabase CursorClick Underline text-white fixed-bottom">
+                Refresh Database Manually
+            </p>
         </div>
     </Layout>
 )

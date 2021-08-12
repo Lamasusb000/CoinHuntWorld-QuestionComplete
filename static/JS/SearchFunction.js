@@ -11,6 +11,10 @@ if (0 <= HourInUTC && HourInUTC <= 11) {
     ExpirationDate.setUTCDate(TempDate.getUTCDay() + 2)
     ExpirationDate.setUTCHours(0, 0, 0, 0)
 }
+function RefreshDatabase() {
+    eraseCookie("Cache")
+    window.location.reload()
+}
 
 async function CheckForCookies() {
     if (readCookie("Cache") == null) {
@@ -18,6 +22,8 @@ async function CheckForCookies() {
         localStorage.setItem("Cache", JSON.stringify(RequestedData))
         createCookie("Cache", "True", ExpirationDate.toGMTString())
     }
+    $(".RefreshDatabase").off("click", RefreshDatabase)
+    $(".RefreshDatabase").on("click", RefreshDatabase)
 }
 
 async function ContactAPI() {
