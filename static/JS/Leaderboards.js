@@ -129,61 +129,17 @@ async function FormatLeaderboards() {
     SortedDatabase = SortedDatabase.slice(0, 10)
     //#endregion
 
-    //#region Create Table Header
-    var LeaderboardList = document.createElement("table")
-    var TableContainer = document.createElement("thead")
-    var LeaderboardRow = document.createElement("tr")
-    var Listing = document.createElement("td")
-    var SubmissionCount = document.createElement("td")
-    var SubmissionRank = document.createElement("td")
-    Listing.appendChild(document.createTextNode("User"))
-    SubmissionCount.appendChild(document.createTextNode("Submission Count"))
-    SubmissionRank.appendChild(document.createTextNode("Rank"))
-    LeaderboardRow.appendChild(SubmissionRank)
-    LeaderboardRow.appendChild(Listing)
-    LeaderboardRow.appendChild(SubmissionCount)
-    TableContainer.appendChild(LeaderboardRow)
-    LeaderboardList.appendChild(TableContainer)
-    //#endregion
-
-    //#region Create Table Body
-    var TableContainer = document.createElement("tbody")
+    //#region Fill Table
     for (let i = 0; i < SortedDatabase.length; i++) {
-        var LeaderboardRow = document.createElement("tr")
-        var Listing = document.createElement("td")
-        var SubmissionCount = document.createElement("td")
-        var SubmissionRank = document.createElement("td")
-        Listing.appendChild(document.createTextNode(SortedDatabase[i].Name))
-        SubmissionCount.appendChild(
-            document.createTextNode(SortedDatabase[i].Count)
-        )
-        SubmissionRank.appendChild(document.createTextNode(i + 1))
-        LeaderboardRow.appendChild(SubmissionRank)
-        LeaderboardRow.appendChild(Listing)
-        LeaderboardRow.appendChild(SubmissionCount)
-        TableContainer.appendChild(LeaderboardRow)
+        $(`#Rank${i + 1}`).text(i + 1)
+        $(`#User${i + 1}`).text(SortedDatabase[i].Name)
+        $(`#Count${i + 1}`).text(SortedDatabase[i].Count)
     }
-    LeaderboardContainer = document.getElementById("LeaderBoard")
-    LeaderboardList.appendChild(TableContainer)
-    LeaderboardList.className = "table text-white"
-    var LeaderboardHeading = document.createElement("h2")
-    LeaderboardHeading.appendChild(
-        document.createTextNode("Top 10 Triva Contributors")
-    )
-    LeaderboardHeading.className = "AlignCenter"
-    var LeaderBoardJoin = document.createElement("p")
-    LeaderBoardJoin.appendChild(
-        document.createTextNode("Click Here To Set Your LeaderBoard Name")
-    )
+
     LeaderBoardJoin.addEventListener("click", SendDisplayName)
-    LeaderBoardJoin.className = "AlignCenter Underline CursorClick"
-    LeaderboardContainer.appendChild(LeaderboardHeading)
-    LeaderboardContainer.appendChild(LeaderboardList)
-    LeaderboardContainer.appendChild(LeaderBoardJoin)
     window.LeaderboardPreventor = undefined
     window.LeaderboardStopper = undefined
 }
-//#endregion
 //#endregion
 
 //#region Gatsby Prevent Double Load
