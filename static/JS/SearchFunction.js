@@ -16,14 +16,6 @@ function RefreshDatabase() {
     window.location.reload()
 }
 
-async function CheckForCookies() {
-    if (readCookie("Cache") == null) {
-        await ContactAPI()
-        localStorage.setItem("Cache", JSON.stringify(RequestedData))
-        createCookie("Cache", "True", ExpirationDate.toGMTString())
-    }
-}
-
 async function ContactAPI() {
     let response = await fetch(
         "https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV4",
@@ -58,7 +50,7 @@ async function GetQuestions() {
 async function CheckCache() {
     $(".RefreshDatabase").off("click", RefreshDatabase)
     $(".RefreshDatabase").on("click", RefreshDatabase)
-    if ((readCookie("Cache") != null) | (readCookie("Cache") != "")) {
+    if (readCookie("Cache") != null && readCookie("Cache") != "") {
         window.RequestedData = JSON.parse(localStorage.getItem("Cache"))
         var QuestionList = []
         for (let i = 0; i < window.RequestedData.length; i++) {
