@@ -6,34 +6,42 @@ import "../components/CSS/autoCompletes.css"
 import "../components/CSS/SpecialFormats.css"
 import "../components/CSS/AddingQuestions.css"
 
-
-
 const QuestionLookup = () => (
-  <Layout>
-    <Seo title="Question Lookup" />
-    <JSimport File={"autoComplete.js"}/>
-    <JSimport File="Cookie.js"/>
-    <JSimport File={"SearchFunction.js"}/>
-    <div className="AlignCenter">
-      <h4 className="AlignCenter">
-        Question Search
-      </h4>
-      <p className="text-center" id="DatabaseRefresh">
-          
-      </p>
-      <div className="autoComplete_wrapper AlignCenter">
-        <input id="autoComplete" type="search" dir="ltr" spellCheck="false" autoCorrect="off" autoComplete="off" autoCapitalize="off"/>
-      </div>
-      <br/><br/>
-      <h3 id="AnswerResults">
-        <br/>
-      </h3>
-      <br/><br/>
-      <p>
-        <br/>
-      </p>
-    </div>
-  </Layout>
+    <Layout>
+        <Seo title="Question Lookup" />
+        <JSimport File={"autoComplete.js"} />
+        <JSimport File="Cookie.js" />
+        <JSimport File={"SearchFunction.js"} />
+        <div className="AlignCenter">
+            <h4 className="AlignCenter">Question Search</h4>
+            <p className="text-center" id="DatabaseRefresh"></p>
+            <div className="autoComplete_wrapper AlignCenter">
+                <input
+                    id="autoComplete"
+                    type="search"
+                    dir="ltr"
+                    spellCheck="false"
+                    autoCorrect="off"
+                    autoComplete="off"
+                    autoCapitalize="off"
+                />
+            </div>
+            <br />
+            <br />
+            <h3 className="AnswerLabel" style={{ visibility: "hidden" }}>
+                Possible Answers
+            </h3>
+            <hr className="AnswerLabel" style={{ visibility: "hidden" }} />
+            <h4 id="AnswerResults">
+                <br />
+            </h4>
+            <br />
+            <br />
+            <p>
+                <br />
+            </p>
+        </div>
+    </Layout>
 )
 
 export default QuestionLookup

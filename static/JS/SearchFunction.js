@@ -96,6 +96,7 @@ function CollectResult(selection) {
         if (selection === window.RequestedData[i][0]) {
             var Answer = JSON.parse(window.RequestedData[i][1])
             Answer = Answer.join("<br><br>")
+            $(".AnswerLabel").css("visibility", "visible")
             document.getElementById("AnswerResults").innerHTML = Answer
         }
     }
