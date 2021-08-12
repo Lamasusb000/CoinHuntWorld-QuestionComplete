@@ -38,7 +38,7 @@ exports.handler = (event, context, callback) => {
                     q.Collection("QuestionAnswerCollection"),
                     // prettier-ignore
                     { data: {
-						Question: `${RecievedData.Question.replace(/[^A-Za-z0-9" "]/g, "")}`,
+						Question: `${RecievedData.Question.replace(/[^A-Za-z0-9" ""//?"]/g, "")}`,
 						Answer: `${RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, "")}`,
 						Color: `${RecievedData.Color.replace(/[^A-Za-z0-9" "]/g, "")}`,
 						Category: `${RecievedData.Category.replace(/[^A-Za-z0-9" "]/g, "")}`,
@@ -47,7 +47,7 @@ exports.handler = (event, context, callback) => {
 						ContributorEmail: `${JSON.stringify(RecievedData.UserEmail)}`,
 						UserEmail: `${RecievedData.UserEmail}`,
 						DupeCheck: `${RecievedData.Question.replace(/[^A-Za-z]/g, '').toLowerCase()}`,
-                        AnswerArray: `${JSON.stringify(new Array(RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, "")))}`
+                        AnswerArray: `${JSON.stringify(new Array(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, "")))}`
 					}}
                 )
             ).then(function (result) {
@@ -70,7 +70,7 @@ exports.handler = (event, context, callback) => {
         } else {
             console.log(result.data)
             //prettier-ignore
-            var AnswerArray = JSON.parse(result.data[0][8]).replace(/[^A-Za-z0-9" ""//?"]/g, "")
+            var AnswerArray = JSON.parse(result.data[8]).replace(/[^A-Za-z0-9" ""//?"]/g, "")
             //prettier-ignore
             if (AnswerArray.includes(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, ""))) {
                 return callback(null, {
