@@ -12,7 +12,7 @@ if (0 <= HourInUTC && HourInUTC <= 11) {
 }
 
 async function CheckForCookies() {
-    if (readCookie("Cache") == null) {
+    if ((readCookie("Cache") == null) | (readCookie("Cache") != "")) {
         await ContactAPIForCookie()
         localStorage.setItem("Cache", JSON.stringify(RequestedData))
         createCookie("Cache", "True", ExpirationDate.toGMTString())
@@ -97,7 +97,7 @@ async function FormatLeaderboards() {
     await ConstructLeaderboardArray()
 
     //#region Grab Leaderboard Names
-    if (readCookie("Leaderboards") == null) {
+    if ((readCookie("Leaderboards") == null) | (readCookie("Cache") != "")) {
         let response = await fetch(
             "https://coinhuntworldtrivia.com/.netlify/functions/Leaderboards",
             {

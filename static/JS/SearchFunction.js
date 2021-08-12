@@ -58,7 +58,7 @@ async function GetQuestions() {
 async function CheckCache() {
     $(".RefreshDatabase").off("click", RefreshDatabase)
     $(".RefreshDatabase").on("click", RefreshDatabase)
-    if (readCookie("Cache") != null) {
+    if ((readCookie("Cache") != null) | (readCookie("Cache") != "")) {
         window.RequestedData = JSON.parse(localStorage.getItem("Cache"))
         var QuestionList = []
         for (let i = 0; i < window.RequestedData.length; i++) {
