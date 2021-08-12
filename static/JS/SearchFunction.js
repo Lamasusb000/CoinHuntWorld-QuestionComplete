@@ -13,6 +13,7 @@ if (0 <= HourInUTC && HourInUTC <= 11) {
 }
 function RefreshDatabase() {
     eraseCookie("Cache")
+    eraseCookie("Leaderboards")
     window.location.reload()
 }
 
