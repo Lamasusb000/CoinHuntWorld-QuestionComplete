@@ -20,8 +20,10 @@ exports.handler = (event, context, callback) => {
             console.log("No Result")
         }
         var DatabaseLength = result.data.length
-        window.Success = 0
-        window.Failure = 0
+        var Success = 0
+        var Failure = 0
+        var Completed = 0
+        var Length = result.data.length
         //prettier-ignore
         for (let i = 0; i < result.data.length; i++) {
             var TempObj = JSON.stringify(result.data[i][3])
@@ -30,7 +32,7 @@ exports.handler = (event, context, callback) => {
             //#region Usable Variables
             var Question = result.data[i][0]
             var Answer = result.data[i][1]
-            var AnswerArray = new Array(result.data[i][1].replace(/[^A-Za-z0-9" ""//?"]/g, ""))
+            var AnswerArray = new Array(result.data[i][1].replace(/[^A-Za-z0-9" "]/g, ""))
             var ContributorID = [result.data[i][2]]
             var ReferenceID = TempObj
             var Color = result.data[i][4]
@@ -57,17 +59,20 @@ exports.handler = (event, context, callback) => {
                 )
             ).then(function (result) {
                 if ((result == "") | undefined) {
-                    window.Failure++
+                    Failure++
+                    Completed++
                 } else {
-                    window.Success++
+                    Success++
+                    Completed++
+                }
+                if(Completed == Length){
+                    return callback(null, {
+                        statusCode: 200,
+                        body: `Function Finished With ${Failure} Failures and ${Success} Successful Updates`,
+                    })
                 }
             })
         }
-
-        return callback(null, {
-            statusCode: 200,
-            body: `Function Finished With ${window.Failure} Failures and ${window.Success} Successful Updates`,
-        })
     })
 }
 
