@@ -1,0 +1,5 @@
+Paginate(
+    Match(
+	    Index('GrabAllQuestionsV4')),
+				{size: 5000}
+		)
