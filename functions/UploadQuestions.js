@@ -55,7 +55,7 @@ exports.handler = (event, context, callback) => {
                     console.log("No Result")
                     return callback(null, {
                         statusCode: 500,
-                        body: "Could Not Post Question",
+                        body: "Failed in Adding to Database",
                     })
                 }
                 return callback(null, {
@@ -63,7 +63,6 @@ exports.handler = (event, context, callback) => {
                     body: `Successfully Posted Quesiton`,
                 })
             })
-
             return callback(null, {
                 body: "Success",
             })
@@ -98,12 +97,12 @@ exports.handler = (event, context, callback) => {
                         console.log("No Result")
                         return callback(null, {
                             statusCode: 500,
-                            body: "Could Not Post Question",
+                            body: "Failed in Adding To Question Array",
                         })
                     }
                     return callback(null, {
                         statusCode: 200,
-                        body: `Successfully Posted Quesiton`,
+                        body: "Success",
                     })
                 })
             }
