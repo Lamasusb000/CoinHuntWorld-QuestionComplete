@@ -1,49 +1,48 @@
 $("#autoComplete-Import").on("load", LoadQuestions)
 
-
 var TempDate = new Date()
 var ExpirationDate = new Date()
 var HourInUTC = TempDate.getUTCHours()
 var DayInUTC = TempDate.toGMTString()
 
-if (0 <= HourInUTC && HourInUTC <= 11){
+if (0 <= HourInUTC && HourInUTC <= 11) {
     ExpirationDate.setUTCHours(12, 0, 0, 0)
-}else{
+} else {
     ExpirationDate.setUTCDate(TempDate.getUTCDay() + 2)
     ExpirationDate.setUTCHours(0, 0, 0, 0)
 }
 
-
-async function CheckForCookies(){
-    if ( readCookie("Cache") == null){
+async function CheckForCookies() {
+    if (readCookie("Cache") == null) {
         await ContactAPI()
         localStorage.setItem("Cache", JSON.stringify(RequestedData))
         createCookie("Cache", "True", ExpirationDate.toGMTString())
     }
 }
 
-
-
 async function ContactAPI() {
-	let response = await fetch("https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV4", {
-		body: JSON.stringify({
-            Text: "Dummy Text"
-        }),
-        method: "POST"
-	});
-	if (response.status === 200){
-		let data = await response.json()
+    let response = await fetch(
+        "https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV4",
+        {
+            body: JSON.stringify({
+                Text: "Dummy Text",
+            }),
+            method: "POST",
+        }
+    )
+    if (response.status === 200) {
+        let data = await response.json()
         window.RequestedData = data
-		window.SearchPreventor = undefined
-		window.SearchStopper = undefined
+        window.SearchPreventor = undefined
+        window.SearchStopper = undefined
         return
-	}
+    }
 }
 
-async function GetQuestions(){
-	await ContactAPI()
-	localStorage.setItem("Cache", JSON.stringify(RequestedData))
-	createCookie("Cache", "True", ExpirationDate.toGMTString())
+async function GetQuestions() {
+    await ContactAPI()
+    localStorage.setItem("Cache", JSON.stringify(RequestedData))
+    createCookie("Cache", "True", ExpirationDate.toGMTString())
 
     var QuestionList = []
     for (let i = 0; i < window.RequestedData.length; i++) {
@@ -52,105 +51,105 @@ async function GetQuestions(){
     return QuestionList
 }
 
-async function CheckCache(){
-	if ( readCookie("Cache") != null){
-		window.RequestedData = JSON.parse(localStorage.getItem("Cache"))
-		var QuestionList = []
-		for (let i = 0; i < window.RequestedData.length; i++) {
-			QuestionList.push(window.RequestedData[i][0])
-		}
-		return QuestionList
-	}else{
-		return await GetQuestions()
-	}
+async function CheckCache() {
+    if (readCookie("Cache") != null) {
+        window.RequestedData = JSON.parse(localStorage.getItem("Cache"))
+        var QuestionList = []
+        for (let i = 0; i < window.RequestedData.length; i++) {
+            QuestionList.push(window.RequestedData[i][0])
+        }
+        return QuestionList
+    } else {
+        return await GetQuestions()
+    }
 }
-
 
 function LoadQuestions() {
-	document.getElementById("DatabaseRefresh").innerText = SetDatabaseRefresh()
+    document.getElementById("DatabaseRefresh").innerText = SetDatabaseRefresh()
     var autoCompleteJS = new autoComplete({
-		placeHolder: "Search Question",
-		data: {
-			src: CheckCache(),
-			cache: true,
-		},
-		resultItem: {
-			highlight: true
-		},
-		events: {
-			input: {
-				selection: (event) => {
-					const selection = event.detail.selection.value;
-					setTimeout(function(){
-						autoCompleteJS.input.value = "";
-						autoCompleteJS.input.blur()
-						autoCompleteJS.input.focus()
-					},100)
-					CollectResult(selection)
-				}
-			}
-		}
-	});
+        placeHolder: "Search Question",
+        data: {
+            src: CheckCache(),
+            cache: true,
+        },
+        resultItem: {
+            highlight: true,
+        },
+        events: {
+            input: {
+                selection: event => {
+                    const selection = event.detail.selection.value
+                    setTimeout(function () {
+                        autoCompleteJS.input.value = ""
+                        autoCompleteJS.input.blur()
+                        autoCompleteJS.input.focus()
+                    }, 100)
+                    CollectResult(selection)
+                },
+            },
+        },
+    })
 }
 
-function CollectResult(selection){
+function CollectResult(selection) {
     for (let i = 0; i < window.RequestedData.length; i++) {
-        if (selection === window.RequestedData[i][0]){
-            SendAnswer(window.RequestedData[i][1])
+        if (selection === window.RequestedData[i][0]) {
+            var Answer = JSON.parse(window.RequestedData[i][1])
+            Answer = Answer.join("<br><br>")
+            document.getElementById("AnswerResults").innerHTML = Answer
         }
     }
 }
 
-function SendAnswer(Answer){
-    document.getElementById("AnswerResults").innerText = Answer
-}
 var RoundCounter = 1
-function LoadSearchFunction(){
-	window.SearchPreventor = true
-    if(window.SearchStopper == undefined){
-        try{
-			window.SearchStopper = true
-			console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
-			LoadQuestions()
-			return
-        }catch(err){
-            RoundCounter ++
-            if (window.SearchStopper == undefined){
+function LoadSearchFunction() {
+    window.SearchPreventor = true
+    if (window.SearchStopper == undefined) {
+        try {
+            window.SearchStopper = true
+            console.log(
+                `It took ${RoundCounter} Attemp/s to load The Search Function`
+            )
+            LoadQuestions()
+            return
+        } catch (err) {
+            RoundCounter++
+            if (window.SearchStopper == undefined) {
                 setTimeout(LoadSearchFunction, 100)
             }
         }
     }
-
 }
 
 $(window).off("load", LoadSearchFunction)
 $(window).on("load", LoadSearchFunction)
 
-if(window.SearchPreventor == undefined){
-	window.SearchPreventor = true
-	LoadSearchFunction()
+if (window.SearchPreventor == undefined) {
+    window.SearchPreventor = true
+    LoadSearchFunction()
 }
 
 function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0;i < ca.length;i++) {
-		var c = ca[i];
-		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-	}
-	return null;
+    var nameEQ = name + "="
+    var ca = document.cookie.split(";")
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i]
+        while (c.charAt(0) == " ") c = c.substring(1, c.length)
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+    }
+    return null
 }
 
-
-function SetDatabaseRefresh(){
+function SetDatabaseRefresh() {
     var TimePeriod = ""
-	var ExpirationHour = ExpirationDate.getHours()
-	if (ExpirationHour >= 12){
-		TimePeriod = "PM"
-	}else{
-		TimePeriod = "AM"
-	}
+    var ExpirationHour = ExpirationDate.getHours()
+    if (ExpirationHour >= 12) {
+        TimePeriod = "PM"
+    } else {
+        TimePeriod = "AM"
+    }
 
-    return `Database Will Refresh at: ${ExpirationHour}:${String(ExpirationDate.getMinutes()).padStart(2,"0")}${TimePeriod}`
+    return `Database Will Refresh at: ${ExpirationHour}:${String(
+        ExpirationDate.getMinutes()
+    ).padStart(2, "0")}${TimePeriod}`
 }
