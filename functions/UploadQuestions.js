@@ -69,9 +69,9 @@ exports.handler = (event, context, callback) => {
             })
         } else {
             console.log(result.data)
-            console.log(result.data[1])
+            console.log(result.data[0][1])
             //prettier-ignore
-            var AnswerArray = JSON.parse(result.data[1])
+            var AnswerArray = JSON.parse(result.data[0][1])
             //prettier-ignore
             if (AnswerArray.includes(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, ""))) {
                 return callback(null, {
