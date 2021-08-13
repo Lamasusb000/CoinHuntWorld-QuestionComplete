@@ -67,7 +67,7 @@ async function ConstructLeaderboardArray() {
         var IDList = JSON.parse(RequestedData[i][2])
         if (IDList) {
             for (let b = 0; b < IDList.length; b++) {
-                AllUserIDs.push(IDList[0][b])
+                AllUserIDs.push(IDList[b])
             }
         } else {
             console.log(`Problem on Interval ${i}`)
