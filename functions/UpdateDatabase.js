@@ -33,7 +33,7 @@ exports.handler = (event, context, callback) => {
             var Question = result.data[i][0]
             var Answer = result.data[i][1]
             var AnswerArray = new Array(result.data[i][1].replace(/[^A-Za-z0-9" "]/g, ""))
-            var ContributorID = [result.data[i][2]]
+            var ContributorID = result.data[i][2]
             var ReferenceID = TempObj
             var Color = result.data[i][4]
             var Category = result.data[i][5]
