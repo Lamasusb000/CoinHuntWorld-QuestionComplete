@@ -289,7 +289,7 @@ function SendVerificaiton() {
     //prettier-ignore
     QuestionVerification.value = SubmissionArray[1].replace(/[^A-Za-z0-9" ""//?"]/g, "")
     //prettier-ignore
-    AnswerVerification.value = SubmissionArray[2].replace(/[^A-Za-z0-9" ""//-"]/g, "")
+    AnswerVerification.value = SubmissionArray[2].replace(/[^A-Za-z0-9" ""-"]/g, "")
     VerificationContainer.style.visibility = "visible"
 }
 var ColorVerification = ""
