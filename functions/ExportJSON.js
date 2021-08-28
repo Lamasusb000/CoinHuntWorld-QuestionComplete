@@ -23,6 +23,7 @@ exports.handler = (event, context, callback) => {
                 q.Match(q.Index("MeteringLookup"), "coinhuntworldtrivia.com")
             )
         ).then(function (result) {
+            console.log(result)
             if (!result) {
                 RefID = json.stringify(result.data[0][2])
                 RefID = JSON.parse(RefID)
