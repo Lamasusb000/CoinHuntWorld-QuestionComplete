@@ -6,7 +6,7 @@ const Client = new faunadb.Client({
 
 exports.handler = (event, context, callback) => {
     console.log(event.headers)
-    console.log(event.headers.Authorization)
+    console.log(event.headers.authorization)
     Client.query(
         q.Paginate(q.Match(q.Index("ExportJSON")), { size: 10000 })
     ).then(function (result) {
