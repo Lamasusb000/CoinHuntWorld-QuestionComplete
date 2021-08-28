@@ -5,7 +5,38 @@ const Client = new faunadb.Client({
 })
 
 exports.handler = (event, context, callback) => {
-    console.log(event)
+    if (event.httpMethod == "OPTIONS") {
+        console.log("Gave Preflight The CORS Policy")
+        return callback(null, {
+            statusCode: 200,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Authorization",
+                "Access-Control-Request-Headers": "Authorization",
+                "Access-Control-Allow-Credentials": true,
+            },
+        })
+    }
+    if (event.httpMethod == "POST") {
+        console.log(event.headers.authorization)
+        Client.query(
+            q.Paginate(q.Match(q.Index("ExportJSON")), { size: 10000 })
+        ).then(function (result) {
+            if ((result == "") | undefined) {
+                console.log("No Result")
+            }
+            return callback(null, {
+                statusCode: 200,
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Headers": "Authorization",
+                    "Access-Control-Request-Headers": "Authorization",
+                    "Access-Control-Allow-Credentials": true,
+                },
+                body: `${JSON.stringify(result.data)}`,
+            })
+        })
+    }
     console.log(event.headers.authorization)
     Client.query(
         q.Paginate(q.Match(q.Index("ExportJSON")), { size: 10000 })
