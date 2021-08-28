@@ -25,7 +25,7 @@ exports.handler = (event, context, callback) => {
         ).then(function (result) {
             console.log(result)
             if (result) {
-                RefID = json.stringify(result.data[0][2])
+                RefID = JSON.stringify(result.data[0][2])
                 RefID = JSON.parse(RefID)
                 RefID = RefID["@ref"].id
                 Client.query(
