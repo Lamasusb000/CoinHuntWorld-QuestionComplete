@@ -31,8 +31,6 @@ async function ContactAPI() {
     if (response.status === 200) {
         let data = await response.json()
         window.RequestedData = data
-        window.SearchPreventor = undefined
-        window.SearchStopper = undefined
         return
     }
 }
@@ -99,34 +97,6 @@ function CollectResult(selection) {
             document.getElementById("AnswerResults").innerHTML = Answer
         }
     }
-}
-
-var RoundCounter = 1
-function LoadSearchFunction() {
-    window.SearchPreventor = true
-    if (window.SearchStopper == undefined) {
-        try {
-            window.SearchStopper = true
-            console.log(
-                `It took ${RoundCounter} Attemp/s to load The Search Function`
-            )
-            LoadQuestions()
-            return
-        } catch (err) {
-            RoundCounter++
-            if (window.SearchStopper == undefined) {
-                setTimeout(LoadSearchFunction, 100)
-            }
-        }
-    }
-}
-
-$(window).off("load", LoadSearchFunction)
-$(window).on("load", LoadSearchFunction)
-
-if (window.SearchPreventor == undefined) {
-    window.SearchPreventor = true
-    LoadSearchFunction()
 }
 
 function readCookie(name) {
