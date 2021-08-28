@@ -28,12 +28,12 @@ exports.handler = (event, context, callback) => {
                 RefID = JSON.stringify(result.data[0][2])
                 RefID = JSON.parse(RefID)
                 RefID = RefID["@ref"].id
+                Count = parseInt(result.data[0][1])
+                Count++
                 Client.query(
                     q.Update(q.Ref(q.Collection("EmbedMetering"), `${RefID}`), {
                         data: {
-                            Requests: `${function () {
-                                return result.data[0][1] + 1
-                            }}`,
+                            Requests: `${Count}`,
                         },
                     })
                 )
