@@ -36,11 +36,28 @@ exports.handler = (event, context, callback) => {
                     })
                 )
             } else {
+                var CurrentDate = new Date()
+                var Months = [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
+                ]
+                CurrentMonth = CurrentMonth.getUTCMonth
                 Client.query(
                     q.Create(q.Collection("EmbedMetering"), {
                         data: {
                             SiteName: event.headers.authorization,
                             Requests: 1,
+                            Month: `${Months[CurrentDate.getUTCMonth()]}`,
                         },
                     })
                 )
