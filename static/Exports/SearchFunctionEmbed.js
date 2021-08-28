@@ -4,6 +4,7 @@ var TempDate = new Date()
 var ExpirationDate = new Date()
 var HourInUTC = TempDate.getUTCHours()
 var DayInUTC = TempDate.toGMTString()
+var APIKey = ""
 
 if (0 <= HourInUTC && HourInUTC <= 11) {
     ExpirationDate.setUTCHours(12, 0, 0, 0)
@@ -21,9 +22,9 @@ async function ContactAPI() {
     let response = await fetch(
         "https://coinhuntworldtrivia.com/.netlify/functions/ExportJSON",
         {
-            body: JSON.stringify({
-                Text: "Dummy Text",
-            }),
+            headers: {
+                Authorization: `${window.location.hostname}`,
+            },
             method: "POST",
         }
     )
