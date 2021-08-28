@@ -20,7 +20,7 @@ exports.handler = (event, context, callback) => {
         console.log(event.headers.authorization)
         Client.query(
             q.Paginate(
-                q.Match(q.Index("MeteringLookup"), "coinhuntworldtrivia.com")
+                q.Match(q.Index("MeteringLookup"), event.headers.authorization)
             )
         ).then(function (result) {
             console.log(result)
@@ -31,7 +31,9 @@ exports.handler = (event, context, callback) => {
                 Client.query(
                     q.Update(q.Ref(q.Collection("EmbedMetering"), `${RefID}`), {
                         data: {
-                            Requests: `${result.data[0][1]++}`,
+                            Requests: `${function () {
+                                return result.data[0][1] + 1
+                            }}`,
                         },
                     })
                 )
