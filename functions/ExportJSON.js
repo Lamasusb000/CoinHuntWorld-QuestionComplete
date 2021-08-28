@@ -6,7 +6,6 @@ const Client = new faunadb.Client({
 
 exports.handler = (event, context, callback) => {
     if (event.httpMethod == "OPTIONS") {
-        console.log("Gave Preflight The CORS Policy")
         return callback(null, {
             statusCode: 200,
             headers: {
@@ -19,6 +18,34 @@ exports.handler = (event, context, callback) => {
     }
     if (event.httpMethod == "POST") {
         console.log(event.headers.authorization)
+        Client.query(
+            q.Paginate(
+                q.Match(q.Index("MeteringLookup"), "coinhuntworldtrivia.com")
+            )
+        ).then(function (result) {
+            if (!result) {
+                RefID = json.stringify(result.data[0][2])
+                RefID = JSON.parse(RefID)
+                RefID = RefID["@ref"].id
+                Client.query(
+                    q.Update(q.Ref(q.Collection("EmbedMetering"), `${RefID}`), {
+                        data: {
+                            Requests: `${result.data[0][1]++}`,
+                        },
+                    })
+                )
+            } else {
+                Client.query(
+                    q.Create(q.Collection("EmbedMetering"), {
+                        data: {
+                            SiteName: event.headers.authorization,
+                            Requests: 1,
+                        },
+                    })
+                )
+            }
+        })
+
         Client.query(
             q.Paginate(q.Match(q.Index("ExportJSON")), { size: 10000 })
         ).then(function (result) {
@@ -37,7 +64,6 @@ exports.handler = (event, context, callback) => {
             })
         })
     }
-    console.log(event.headers.authorization)
     Client.query(
         q.Paginate(q.Match(q.Index("ExportJSON")), { size: 10000 })
     ).then(function (result) {
