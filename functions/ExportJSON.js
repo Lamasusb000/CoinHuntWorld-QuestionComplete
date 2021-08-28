@@ -17,6 +17,8 @@ exports.handler = (event, context, callback) => {
             statusCode: 200,
             headers: {
                 "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": true,
+                "Access-Control-Request-Headers": true,
                 "Access-Control-Allow-Credentials": true,
             },
             body: `${JSON.stringify(result.data)}`,
