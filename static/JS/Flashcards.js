@@ -73,7 +73,7 @@ function StartTriva() {
     TriviaCriteria.innerText = `${FlashCardSelection.value} Vaults`
     TriviaCategory.innerText = `${Flashcards[RandomQuestion].Category}`
     TriviaQuestion.innerText = `${Flashcards[RandomQuestion].Question}`
-    TriviaAnswer.innerText = `${Flashcards[RandomQuestion].Answer}`
+    TriviaAnswer.innerText = `${JSON.parse(Flashcards[RandomQuestion].Answer)}`
     TriviaCount.innerText = `${TriviaCompleted} / ${TriviaLength}`
 
     //Remove Placed Question From Bank
