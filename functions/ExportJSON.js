@@ -23,7 +23,6 @@ exports.handler = (event, context, callback) => {
                 q.Match(q.Index("MeteringLookup"), event.headers.authorization)
             )
         ).then(function (result) {
-            console.log(result)
             if (result) {
                 RefID = JSON.stringify(result.data[0][2])
                 RefID = JSON.parse(RefID)

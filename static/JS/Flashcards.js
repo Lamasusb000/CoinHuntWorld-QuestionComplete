@@ -25,36 +25,37 @@ var RandomQuestion = 0
 var TriviaLength = 0
 var TriviaCompleted = 1
 
-
 //Setting Up JQuery Listeners (Off Then On For Double Loading Issues)
-function FlashcardEventListeners(){
-        //Start Trivia
-$(TriviaStart).off("click", StartTriva)
-$(TriviaStart).on("click", StartTriva)
+function FlashcardEventListeners() {
+    //Start Trivia
+    $(TriviaStart).off("click", StartTriva)
+    $(TriviaStart).on("click", StartTriva)
 
     //Reveal Answer
-$(RevealAnswer).off("click", TriviaReveal)
-$(RevealAnswer).on("click", TriviaReveal)
+    $(RevealAnswer).off("click", TriviaReveal)
+    $(RevealAnswer).on("click", TriviaReveal)
 
     //Next Question
-$(NextQuestion).off("click", TriviaNext)
-$(NextQuestion).on("click", TriviaNext)
+    $(NextQuestion).off("click", TriviaNext)
+    $(NextQuestion).on("click", TriviaNext)
 
     //Restart Trivia
-$(TriviaRestart).off("click", RestartFlashcards)
-$(TriviaRestart).on("click", RestartFlashcards)
-
+    $(TriviaRestart).off("click", RestartFlashcards)
+    $(TriviaRestart).on("click", RestartFlashcards)
 }
 
-
 //Start Trivia
-function StartTriva(){
+function StartTriva() {
     window.TriviaStopper = undefined
     window.TriviaPreventor = undefined
     TriviaCompleted = 1
     for (let i = 0; i < Database.length; i++) {
-        if (Database[i][4] == FlashCardSelection.value){
-            Flashcards.push({"Question": Database[i][0], "Answer": Database[i][1],"Category": Database[i][5]})
+        if (Database[i][4] == FlashCardSelection.value) {
+            Flashcards.push({
+                Question: Database[i][0],
+                Answer: Database[i][1],
+                Category: Database[i][5],
+            })
         }
     }
     //Set Trivia Length
@@ -64,14 +65,11 @@ function StartTriva(){
     $(".FormStart").css("display", "none")
     $(".FlashCard").css("display", "block")
 
-
-
     //Remove Disabled Attribute From Flashcard Buttons
     $(".FlashcardButton").attr("disabled", false)
 
-
     //Set First Question
-    RandomQuestion = RandomNumber(0, (TriviaLength - 1))
+    RandomQuestion = RandomNumber(0, TriviaLength - 1)
     TriviaCriteria.innerText = `${FlashCardSelection.value} Vaults`
     TriviaCategory.innerText = `${Flashcards[RandomQuestion].Category}`
     TriviaQuestion.innerText = `${Flashcards[RandomQuestion].Question}`
@@ -82,15 +80,14 @@ function StartTriva(){
     Flashcards.splice(RandomQuestion, 1)
 }
 
-function TriviaReveal(){
+function TriviaReveal() {
     $(TriviaAnswer).css("visibility", "visible")
     $(RevealAnswer).attr("disabled", true)
 }
 
-
-function TriviaNext(){
+function TriviaNext() {
     //Check for Completion then reset
-    if(TriviaLength == TriviaCompleted){
+    if (TriviaLength == TriviaCompleted) {
         //Hide Menu Buttons
         $(RevealAnswer).css("display", "none")
         $(NextQuestion).css("display", "none")
@@ -107,14 +104,14 @@ function TriviaNext(){
     //Reset CSS
     $(TriviaAnswer).css("visibility", "hidden")
     $(RevealAnswer).attr("disabled", false)
-    
+
     //Add To The Question Number
     TriviaCompleted++
 
-    RandomQuestion = RandomNumber(0, (Flashcards.length - 1))
+    RandomQuestion = RandomNumber(0, Flashcards.length - 1)
     TriviaCategory.innerText = `${Flashcards[RandomQuestion].Category}`
     TriviaQuestion.innerText = `${Flashcards[RandomQuestion].Question}`
-    TriviaAnswer.innerText = `${Flashcards[RandomQuestion].Answer}`
+    TriviaAnswer.innerText = `${JSON.parse(Flashcards[RandomQuestion].Answer)}`
     TriviaCount.innerText = `${TriviaCompleted} / ${TriviaLength}`
 
     //Remove Placed Question From Bank
@@ -122,7 +119,7 @@ function TriviaNext(){
 }
 
 //Restart Flashcards
-function RestartFlashcards(){
+function RestartFlashcards() {
     //Reset CSS
     $(".FormStart").css("display", "block")
     $(".FlashCard").css("display", "none")
@@ -134,57 +131,51 @@ function RestartFlashcards(){
     //Unhide Menu Buttons
     $(RevealAnswer).css("display", "inline-block")
     $(NextQuestion).css("display", "inline-block")
-
-    
 }
-
-
-
 
 //Random Number For Random Flash Cards
 function RandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min) + min)
 }
 
-
 var RoundCounter = 1
-function LoadTrivia(){
-	window.TriviaPreventor = true
-    if(window.TriviaStopper == undefined){
-        try{
-			window.TriviaStopper = true
-			console.log(`It took ${RoundCounter} Attemp/s to load The Search Function`)
-			FlashcardEventListeners()
-			return
-        }catch(err){
-            RoundCounter ++
-            if (window.TriviaStopper == undefined){
+function LoadTrivia() {
+    window.TriviaPreventor = true
+    if (window.TriviaStopper == undefined) {
+        try {
+            window.TriviaStopper = true
+            console.log(
+                `It took ${RoundCounter} Attemp/s to load The Search Function`
+            )
+            FlashcardEventListeners()
+            return
+        } catch (err) {
+            RoundCounter++
+            if (window.TriviaStopper == undefined) {
                 setTimeout(LoadTrivia, 100)
             }
         }
     }
-
 }
-
 
 //Prevent Double Loading
 $(window).off("load", LoadTrivia)
 $(window).on("load", LoadTrivia)
 
-if(window.TriviaPreventor == undefined){
-	window.TriviaPreventor = true
-	LoadTrivia()
+if (window.TriviaPreventor == undefined) {
+    window.TriviaPreventor = true
+    LoadTrivia()
 }
 
 function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0;i < ca.length;i++) {
-		var c = ca[i];
-		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-	}
-	return null;
+    var nameEQ = name + "="
+    var ca = document.cookie.split(";")
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i]
+        while (c.charAt(0) == " ") c = c.substring(1, c.length)
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+    }
+    return null
 }
