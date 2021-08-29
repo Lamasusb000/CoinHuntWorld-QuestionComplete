@@ -17,11 +17,18 @@ exports.handler = (event, context, callback) => {
         })
     }
     if (event.httpMethod == "POST") {
-        console.log(event.headers.authorization)
+        var Authorization = ""
+        if (event.headers.authorization) {
+            Authorization = event.headers.authorization
+        } else {
+            if (event.headers.origin) {
+                Authorization = event.headers.origin
+            } else {
+                Authorization = "No Origin Or Authorization"
+            }
+        }
         Client.query(
-            q.Paginate(
-                q.Match(q.Index("MeteringLookup"), event.headers.authorization)
-            )
+            q.Paginate(q.Match(q.Index("MeteringLookup"), Authorization))
         ).then(function (result) {
             if (result) {
                 RefID = JSON.stringify(result.data[0][2])
