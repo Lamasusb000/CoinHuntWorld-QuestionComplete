@@ -165,6 +165,9 @@ async function SetCroppie(DataURL) {
     ResolutionSelection = await GetResolutionSelection(DataURL, CroppieCounter)
     $(function () {
         try {
+            if (!ResolutionSelection) {
+                ResolutionSelection = 0
+            }
             var Element = document.getElementById("croppie-basic")
             var basic = new Croppie(Element, {
                 viewport: {
