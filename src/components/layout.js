@@ -16,51 +16,54 @@ import Theme from "../../site/settings/Theme.json"
 import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
         }
-      }
-    }
-  `)
+    `)
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Helmet>
-        <style type="text/css">
-          {
-            `
+    return (
+        <>
+            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+            <Helmet>
+                <style type="text/css">
+                    {`
             a, a:hover{
               color:${Theme.LinkColor}
             }
-            `
-          }
-        </style>
-      </Helmet>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.5vh 1.0875rem 1.45rem`,
-          backgroundColor: `${Theme.BodyColor}`,
-          color: `${Theme.TextColor}`,
-          fontFamily: `${Theme.Font}`
-        }}
-        className="FilledBody"
-      >
-        <main style={{
-          color: "inherit"
-        }}>{children}</main>
-      </div>
-    </>
-  )
+            `}
+                </style>
+            </Helmet>
+            <div
+                style={{
+                    margin: `0 auto`,
+                    maxWidth: 960,
+                    padding: `1.5vh 1.0875rem 1.45rem`,
+                    backgroundColor: `${Theme.BodyColor}`,
+                    color: `${Theme.TextColor}`,
+                    fontFamily: `${Theme.Font}`,
+                }}
+                className="FilledBody"
+            >
+                <JSimport File="NetlifyFunctions.js" />
+                <main
+                    style={{
+                        color: "inherit",
+                    }}
+                >
+                    {children}
+                </main>
+            </div>
+        </>
+    )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Layout
