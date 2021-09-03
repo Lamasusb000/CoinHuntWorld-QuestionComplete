@@ -7,7 +7,6 @@ import "../components/CSS/Leaderboards.css"
 const IndexPage = () => (
     <Layout>
         <Seo title="Home" />
-        <JSimport File="NetlifyFunctions.js" />
         <JSimport File="Cookie.js" />
         <JSimport File="Leaderboards.js" />
         <h2 className="AlignCenter">Welcome To The CHW Trivia Beta Site!</h2>
