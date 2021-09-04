@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => (
                 </ul>
             </div>
             <button
-                onClick={netlifyIdentity.open}
+                onClick={NetlifyOpen}
                 type="button"
                 className="btn btn-primary NetlifyOpen"
             >
@@ -105,6 +105,10 @@ function CheckForEXTlinks() {
             </nav>
         )
     }
+}
+
+function NetlifyOpen() {
+    netlifyIdentity.open()
 }
 
 export default Header
