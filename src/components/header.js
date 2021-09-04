@@ -62,6 +62,7 @@ const Header = ({ siteTitle }) => (
                 </ul>
             </div>
             <button
+                onLoad={PrimeNetlify}
                 onClick={NetlifyOpen}
                 type="button"
                 className="btn btn-primary NetlifyOpen"
@@ -106,11 +107,15 @@ function CheckForEXTlinks() {
         )
     }
 }
-netlifyIdentity.init()
 
 function NetlifyOpen() {
     console.log("The Onclick Was Sent")
     netlifyIdentity.open()
+}
+function PrimeNetlify() {
+    React.useEffect(() => {
+        netlifyIdentity.init({})
+    })
 }
 
 export default Header
