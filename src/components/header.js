@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/CSS/Header.css"
 import "../components/CSS/bootstrap.min.css"
+import netlifyIdentity from "netlify-identity-widget"
 
 import ExternalLinks from "./Links-External"
 import EXTlinks from "../../site/settings/HeaderLinks.json"
@@ -60,7 +61,11 @@ const Header = ({ siteTitle }) => (
                     </li>
                 </ul>
             </div>
-            <button type="button" className="btn btn-primary NetlifyOpen">
+            <button
+                onClick={netlifyIdentity.open()}
+                type="button"
+                className="btn btn-primary NetlifyOpen"
+            >
                 Open Account
             </button>
         </nav>
