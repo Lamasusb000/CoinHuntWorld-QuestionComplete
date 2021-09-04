@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => (
                 </ul>
             </div>
             <button
-                onClick={netlifyIdentity.open()}
+                onClick={netlifyIdentity.open}
                 type="button"
                 className="btn btn-primary NetlifyOpen"
             >
