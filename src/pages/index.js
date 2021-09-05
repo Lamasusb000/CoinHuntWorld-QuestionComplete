@@ -39,9 +39,9 @@ const IndexPage = () => (
         <br />
         <br />
         <br />
-        <div id="LeaderBoard">
+        <div id="LeaderBoard" onLoad={FormatLeaderboards}>
             <div id="Leaderboard">
-                <table className="table text-white" onLoad={FormatLeaderboards}>
+                <table className="table text-white">
                     <thead>
                         <tr>
                             <td>Rank</td>
