@@ -115,19 +115,19 @@ export default Flashcards
 //Grabbing All Necessary Elements
 
 //Form
-var FlashCardSelection = document.getElementById("FlashCardSelection")
+var FlashCardSelection = ""
 
 //Flashcards
-var TriviaCriteria = document.getElementById("TriviaCriteria")
-var TriviaCategory = document.getElementById("TriviaCategory")
-var TriviaQuestion = document.getElementById("TriviaQuestion")
-var TriviaAnswer = document.getElementById("TriviaAnswer")
-var TriviaCount = document.getElementById("TriviaCount")
+var TriviaCriteria = ""
+var TriviaCategory = ""
+var TriviaQuestion = ""
+var TriviaAnswer = ""
+var TriviaCount = ""
 
 //Buttons
-var RevealAnswer = document.getElementById("RevealAnswer")
-var NextQuestion = document.getElementById("NextQuestion")
-var TriviaRestart = document.getElementById("TriviaRestart")
+var RevealAnswer = ""
+var NextQuestion = ""
+var TriviaRestart = ""
 
 //Defining Arrays
 var Database = JSON.parse(localStorage.getItem("Cache"))
