@@ -3,12 +3,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import JSimport from "../components/JS-Import"
 import "../components/CSS/Leaderboards.css"
+import $ from "jquery"
 
 const Flashcards = () => (
     <Layout>
         <Seo title="Home" />
         <JSimport File="Cookie.js" />
-        <JSimport File="Flashcards.js" />
 
         <div className="WidthControl80 text-white FormStart">
             <h3 className="text-center">
@@ -38,7 +38,7 @@ const Flashcards = () => (
                 </select>
                 <div className="input-group-append">
                     <button
-                        id="TriviaStart"
+                        onClick={StartTrivia}
                         type="button"
                         className="btn btn-primary"
                     >
@@ -75,22 +75,23 @@ const Flashcards = () => (
                     </div>
                     <br />
                     <button
+                        onClick={TriviaReveal}
                         id="RevealAnswer"
                         type="button"
-                        disabled={true}
                         className="btn btn-primary mr-2 FlashcardButton"
                     >
                         Reveal Answer
                     </button>
                     <button
+                        onClick={TriviaNext}
                         id="NextQuestion"
                         type="button"
-                        disabled={true}
                         className="btn btn-primary FlashcardButton NextQuestion"
                     >
                         Next Question
                     </button>
                     <button
+                        onClick={RestartFlashcards}
                         id="TriviaRestart"
                         type="button"
                         style={{ display: "none", margin: "auto" }}
@@ -108,3 +109,149 @@ const Flashcards = () => (
 )
 
 export default Flashcards
+
+//#region Flashcards.js Scripts
+
+//Grabbing All Necessary Elements
+
+//Form
+var FlashCardSelection = document.getElementById("FlashCardSelection")
+
+//Flashcards
+var TriviaCriteria = document.getElementById("TriviaCriteria")
+var TriviaCategory = document.getElementById("TriviaCategory")
+var TriviaQuestion = document.getElementById("TriviaQuestion")
+var TriviaAnswer = document.getElementById("TriviaAnswer")
+var TriviaCount = document.getElementById("TriviaCount")
+
+//Buttons
+var RevealAnswer = document.getElementById("RevealAnswer")
+var NextQuestion = document.getElementById("NextQuestion")
+var TriviaRestart = document.getElementById("TriviaRestart")
+
+//Defining Arrays
+var Database = JSON.parse(localStorage.getItem("Cache"))
+var FlashcardArray = []
+
+//Define Variables
+var RandomQuestion = 0
+var TriviaLength = 0
+var TriviaCompleted = 1
+
+//Start Trivia
+function StartTrivia() {
+    //#region Set Variables
+    //Form
+    FlashCardSelection = document.getElementById("FlashCardSelection")
+
+    //Flashcards
+    TriviaCriteria = document.getElementById("TriviaCriteria")
+    TriviaCategory = document.getElementById("TriviaCategory")
+    TriviaQuestion = document.getElementById("TriviaQuestion")
+    TriviaAnswer = document.getElementById("TriviaAnswer")
+    TriviaCount = document.getElementById("TriviaCount")
+
+    //Buttons
+    RevealAnswer = document.getElementById("RevealAnswer")
+    NextQuestion = document.getElementById("NextQuestion")
+    TriviaRestart = document.getElementById("TriviaRestart")
+    //#endregion
+    window.TriviaStopper = undefined
+    window.TriviaPreventor = undefined
+    TriviaCompleted = 1
+    for (let i = 0; i < Database.length; i++) {
+        if (Database[i][4] === FlashCardSelection.value) {
+            FlashcardArray.push({
+                Question: Database[i][0],
+                Answer: Database[i][1],
+                Category: Database[i][5],
+            })
+        }
+    }
+    //Set Trivia Length
+    TriviaLength = FlashcardArray.length
+
+    //Hide Beginning Form and Display Flashcard
+    $(".FormStart").css("display", "none")
+    $(".FlashCard").css("display", "block")
+
+    //Remove Disabled Attribute From Flashcard Buttons
+    $(".FlashcardButton").attr("disabled", false)
+
+    //Set First Question
+    RandomQuestion = RandomNumber(0, TriviaLength - 1)
+    TriviaCriteria.innerText = `${FlashCardSelection.value} Vaults`
+    TriviaCategory.innerText = `${FlashcardArray[RandomQuestion].Category}`
+    TriviaQuestion.innerText = `${FlashcardArray[RandomQuestion].Question}`
+    TriviaAnswer.innerText = `${JSON.parse(
+        FlashcardArray[RandomQuestion].Answer
+    )}`
+    TriviaCount.innerText = `${TriviaCompleted} / ${TriviaLength}`
+
+    //Remove Placed Question From Bank
+    FlashcardArray.splice(RandomQuestion, 1)
+}
+
+function TriviaReveal() {
+    console.log("Test")
+    $(TriviaAnswer).css("visibility", "visible")
+    $(RevealAnswer).attr("disabled", true)
+}
+
+function TriviaNext() {
+    //Check for Completion then reset
+    if (TriviaLength === TriviaCompleted) {
+        //Hide Menu Buttons
+        $(RevealAnswer).css("display", "none")
+        $(NextQuestion).css("display", "none")
+
+        //Show Restart Button
+        $(TriviaRestart).css("display", "block")
+        //Clear Text and Show Completion
+        TriviaCategory.innerText = `You Have Finished ${FlashCardSelection.value} Vault Flashcards!`
+        TriviaQuestion.innerText = `Press the Button Below to Restart The Process`
+        TriviaAnswer.innerText = ""
+        return
+    }
+
+    //Reset CSS
+    $(TriviaAnswer).css("visibility", "hidden")
+    $(RevealAnswer).attr("disabled", false)
+
+    //Add To The Question Number
+    TriviaCompleted++
+
+    RandomQuestion = RandomNumber(0, FlashcardArray.length - 1)
+    TriviaCategory.innerText = `${FlashcardArray[RandomQuestion].Category}`
+    TriviaQuestion.innerText = `${FlashcardArray[RandomQuestion].Question}`
+    TriviaAnswer.innerText = `${JSON.parse(
+        FlashcardArray[RandomQuestion].Answer
+    )}`
+    TriviaCount.innerText = `${TriviaCompleted} / ${TriviaLength}`
+
+    //Remove Placed Question From Bank
+    FlashcardArray.splice(RandomQuestion, 1)
+}
+
+//Restart Flashcards
+function RestartFlashcards() {
+    //Reset CSS
+    $(".FormStart").css("display", "block")
+    $(".FlashCard").css("display", "none")
+    $(TriviaAnswer).css("visibility", "hidden")
+
+    //Hide Reset Button
+    $(TriviaRestart).css("display", "none")
+
+    //Unhide Menu Buttons
+    $(RevealAnswer).css("display", "inline-block")
+    $(NextQuestion).css("display", "inline-block")
+}
+
+//Random Number For Random Flash Cards
+function RandomNumber(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min) + min)
+}
+//#endregion
