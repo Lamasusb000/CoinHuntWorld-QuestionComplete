@@ -1,5 +1,4 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "../components/CSS/Header.css"
 import "../components/CSS/bootstrap.min.css"
@@ -13,7 +12,7 @@ import LinkLabels from "../../site/settings/HeaderLinks.json"
 
 import SiteMetadata from "../../site/settings/SiteMetadata.json"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
     <header
         style={{
             color: `${Theme.TextColor}`,
@@ -62,7 +61,6 @@ const Header = ({ siteTitle }) => (
                 </ul>
             </div>
             <button
-                onLoad={PrimeNetlify}
                 onClick={NetlifyOpen}
                 type="button"
                 className="btn btn-primary NetlifyOpen"
@@ -72,13 +70,6 @@ const Header = ({ siteTitle }) => (
         </nav>
     </header>
 )
-Header.propTypes = {
-    siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-    siteTitle: ``,
-}
 
 function CheckForEXTlinks() {
     if (EXTlinks.LinkSet.length > 0) {
@@ -109,13 +100,8 @@ function CheckForEXTlinks() {
 }
 
 function NetlifyOpen() {
+    netlifyIdentity.init({})
     console.log("The Onclick Was Sent")
-    netlifyIdentity.open()
-}
-function PrimeNetlify() {
-    React.useEffect(() => {
-        netlifyIdentity.init({})
-    })
 }
 
 export default Header
