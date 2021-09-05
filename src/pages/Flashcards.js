@@ -194,7 +194,6 @@ function StartTrivia() {
 }
 
 function TriviaReveal() {
-    console.log("Test")
     $(TriviaAnswer).css("visibility", "visible")
     $(RevealAnswer).attr("disabled", true)
 }
