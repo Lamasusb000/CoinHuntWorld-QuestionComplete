@@ -71,6 +71,7 @@ exports.handler = (event, context, callback) => {
             console.log(result.data[0][1])
             //prettier-ignore
             var AnswerArray = JSON.parse(result.data[0][1])
+            var ContributorArray = JSON.parse(results.data[0][3])
             //prettier-ignore
             if (AnswerArray.includes(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, ""))) {
                 return callback(null, {
@@ -80,6 +81,7 @@ exports.handler = (event, context, callback) => {
                 var RefID = JSON.stringify(result.data[0][2])
                 RefID = JSON.parse(RefID)
                 AnswerArray.push(RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, ""))
+                ContributorArray.push(RecievedData.UserID)
                 Client.query(
                     q.Update(
                         q.Ref(
@@ -89,6 +91,7 @@ exports.handler = (event, context, callback) => {
                         {
                             data: {
                                 AnswerArray: `${JSON.stringify(AnswerArray)}`,
+                                ContributorID: `${JSON.stringify(ContributorID)}`
                             },
                         }
                     )

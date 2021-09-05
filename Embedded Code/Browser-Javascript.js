@@ -12,6 +12,24 @@ function LogDatabase(Number) {
     return JSON.parse(localStorage.getItem("Cache"))[Number]
 }
 
+function LogBasedOnUserID(UserID) {
+    var Database = JSON.parse(localStorage.getItem("Cache"))
+    var Count = 0
+    var SubmittedData = []
+    for (let i = 0; i < Database.length; i++) {
+        if (Database[i][2].includes(UserID)) {
+            SubmittedData[Count] = {
+                Count: Count,
+                Question: Database[i][0],
+                Answer: JSON.parse(Database[i][1]),
+                UserID: JSON.parse(Database[i][2]),
+            }
+            Count++
+        }
+    }
+    return SubmittedData
+}
+
 //#region Cookie Code
 function createCookie(name, value, Expiration) {
     if (Expiration) {
