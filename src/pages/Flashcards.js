@@ -130,7 +130,7 @@ var NextQuestion = ""
 var TriviaRestart = ""
 
 //Defining Arrays
-var Database = JSON.parse(localStorage.getItem("Cache"))
+var Database = ""
 var FlashcardArray = []
 
 //Define Variables
@@ -141,6 +141,7 @@ var TriviaCompleted = 1
 //Start Trivia
 function StartTrivia() {
     //#region Set Variables
+    JSON.parse(localStorage.getItem("Cache"))
     //Form
     FlashCardSelection = document.getElementById("FlashCardSelection")
 
