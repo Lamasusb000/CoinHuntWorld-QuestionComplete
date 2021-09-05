@@ -100,7 +100,11 @@ function CheckForEXTlinks() {
 }
 
 function NetlifyOpen() {
-    netlifyIdentity.init({})
+    if (!NetlifyInitialized) {
+        netlifyIdentity.init({})
+        var NetlifyInitialized = true
+    }
+    netlifyIdentity.open()
     console.log("The Onclick Was Sent")
 }
 
