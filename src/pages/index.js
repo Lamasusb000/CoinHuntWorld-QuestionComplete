@@ -41,7 +41,7 @@ const IndexPage = () => (
         <br />
         <div id="LeaderBoard">
             <div id="Leaderboard">
-                <table className="table text-white" onLoad={GrabLeaderBoards}>
+                <table className="table text-white" onLoad={FormatLeaderboards}>
                     <thead>
                         <tr>
                             <td>Rank</td>
@@ -156,22 +156,6 @@ async function ContactAPIForCookie() {
     }
 }
 
-async function GrabLeaderBoards() {
-    let response = await fetch(
-        "https://coinhuntworldtrivia.com/.netlify/functions/GrabQuestionsV2",
-        {
-            body: JSON.stringify({
-                Text: "Dummy Text",
-            }),
-            method: "POST",
-        }
-    )
-    if (response.status === 200) {
-        let data = await response.json()
-        window.RequestedData = data
-        return
-    }
-}
 //#endregion
 var UniqueUserIDs = []
 var LeaderBoards = []
@@ -261,38 +245,6 @@ async function FormatLeaderboards() {
     document
         .getElementById("JoinLeaderboard")
         .addEventListener("click", SendDisplayName)
-    window.LeaderboardPreventor = undefined
-    window.LeaderboardStopper = undefined
-}
-//#endregion
-
-//#region Gatsby Prevent Double Load
-var RoundCounter = 1
-function LoadLeaderboards() {
-    window.LeaderboardPreventor = true
-    if (window.LeaderboardStopper === undefined) {
-        try {
-            window.LeaderboardStopper = true
-            console.log(
-                `It took ${RoundCounter} Attemp/s to load The Leaderboards`
-            )
-            FormatLeaderboards()
-            return
-        } catch (err) {
-            RoundCounter++
-            if (window.LeaderboardStopper === undefined) {
-                setTimeout(LoadLeaderboards, 100)
-            }
-        }
-    }
-}
-
-$(window).off("load", LoadLeaderboards)
-$(window).on("load", LoadLeaderboards)
-
-if (window.LeaderboardPreventor === undefined) {
-    window.LeaderboardPreventor = true
-    LoadLeaderboards()
 }
 //#endregion
 
