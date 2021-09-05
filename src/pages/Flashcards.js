@@ -141,7 +141,7 @@ var TriviaCompleted = 1
 //Start Trivia
 function StartTrivia() {
     //#region Set Variables
-    JSON.parse(localStorage.getItem("Cache"))
+    Database = JSON.parse(localStorage.getItem("Cache"))
     //Form
     FlashCardSelection = document.getElementById("FlashCardSelection")
 
