@@ -73,14 +73,26 @@ exports.handler = (event, context, callback) => {
             var AnswerArray = JSON.parse(result.data[0][1])
             var ContributorArray = JSON.parse(results.data[0][3])
             //prettier-ignore
-            if (AnswerArray.includes(RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, ""))) {
+            var AnswerDupeCheck = []
+            for (let i = 0; i < AnswerArray.length; i++) {
+                AnswerDupeCheck.push(
+                    AnswerArray[i].replace(/[^A-Za-z0-9" ""//?"]/g, "")
+                )
+            }
+            if (
+                AnswerDupeCheck.includes(
+                    RecievedData.Answer.replace(/[^A-Za-z0-9" ""//?"]/g, "")
+                )
+            ) {
                 return callback(null, {
                     body: "Failed. Already in Database",
                 })
             } else {
                 var RefID = JSON.stringify(result.data[0][2])
                 RefID = JSON.parse(RefID)
-                AnswerArray.push(RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, ""))
+                AnswerArray.push(
+                    RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, "")
+                )
                 ContributorArray.push(RecievedData.UserID)
                 Client.query(
                     q.Update(
@@ -91,7 +103,9 @@ exports.handler = (event, context, callback) => {
                         {
                             data: {
                                 AnswerArray: `${JSON.stringify(AnswerArray)}`,
-                                ContributorID: `${JSON.stringify(ContributorID)}`
+                                ContributorID: `${JSON.stringify(
+                                    ContributorID
+                                )}`,
                             },
                         }
                     )
