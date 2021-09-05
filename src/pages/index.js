@@ -151,7 +151,7 @@ async function ContactAPIForCookie() {
     )
     if (response.status === 200) {
         let data = await response.json()
-        window.RequestedData = data
+        RequestedData = data
         return
     }
 }
@@ -191,7 +191,6 @@ async function ConstructLeaderboardArray() {
             }
         }
     }
-    window.LeaderBoards = LeaderBoards
     return
     //#endregion
 }
