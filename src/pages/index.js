@@ -40,75 +40,73 @@ const IndexPage = () => (
         <br />
         <br />
         <div id="LeaderBoard" onLoad={FormatLeaderboards}>
-            <div id="Leaderboard">
-                <table className="table text-white">
-                    <thead>
-                        <tr>
-                            <td>Rank</td>
-                            <td>User</td>
-                            <td>Submission Count</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="Rank1">Loading...</td>
-                            <td id="User1">Loading...</td>
-                            <td id="Count1">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank2">Loading...</td>
-                            <td id="User2">Loading...</td>
-                            <td id="Count2">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank3">Loading...</td>
-                            <td id="User3">Loading...</td>
-                            <td id="Count3">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank4">Loading...</td>
-                            <td id="User4">Loading...</td>
-                            <td id="Count4">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank5">Loading...</td>
-                            <td id="User5">Loading...</td>
-                            <td id="Count5">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank6">Loading...</td>
-                            <td id="User6">Loading...</td>
-                            <td id="Count6">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank7">Loading...</td>
-                            <td id="User7">Loading...</td>
-                            <td id="Count7">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank8">Loading...</td>
-                            <td id="User8">Loading...</td>
-                            <td id="Count8">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank9">Loading...</td>
-                            <td id="User9">Loading...</td>
-                            <td id="Count9">Loading...</td>
-                        </tr>
-                        <tr>
-                            <td id="Rank10">Loading...</td>
-                            <td id="User10">Loading...</td>
-                            <td id="Count10">Loading...</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p
-                    id="JoinLeaderboard"
-                    className="text-center Underline CursorClick"
-                >
-                    Click Here To Set You Leaderboard Name
-                </p>
-            </div>
+            <table className="table text-white">
+                <thead>
+                    <tr>
+                        <td>Rank</td>
+                        <td>User</td>
+                        <td>Submission Count</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="Rank1">Loading...</td>
+                        <td id="User1">Loading...</td>
+                        <td id="Count1">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank2">Loading...</td>
+                        <td id="User2">Loading...</td>
+                        <td id="Count2">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank3">Loading...</td>
+                        <td id="User3">Loading...</td>
+                        <td id="Count3">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank4">Loading...</td>
+                        <td id="User4">Loading...</td>
+                        <td id="Count4">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank5">Loading...</td>
+                        <td id="User5">Loading...</td>
+                        <td id="Count5">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank6">Loading...</td>
+                        <td id="User6">Loading...</td>
+                        <td id="Count6">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank7">Loading...</td>
+                        <td id="User7">Loading...</td>
+                        <td id="Count7">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank8">Loading...</td>
+                        <td id="User8">Loading...</td>
+                        <td id="Count8">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank9">Loading...</td>
+                        <td id="User9">Loading...</td>
+                        <td id="Count9">Loading...</td>
+                    </tr>
+                    <tr>
+                        <td id="Rank10">Loading...</td>
+                        <td id="User10">Loading...</td>
+                        <td id="Count10">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p
+                id="JoinLeaderboard"
+                className="text-center Underline CursorClick"
+            >
+                Click Here To Set You Leaderboard Name
+            </p>
         </div>
     </Layout>
 )
@@ -197,6 +195,7 @@ async function ConstructLeaderboardArray() {
 }
 var LeaderboardNames = ""
 async function FormatLeaderboards() {
+    console.log("Debug")
     await ConstructLeaderboardArray()
 
     //#region Grab Leaderboard Names
