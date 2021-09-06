@@ -72,6 +72,7 @@ exports.handler = (event, context, callback) => {
             //prettier-ignore
             var AnswerArray = JSON.parse(result.data[0][1])
             var ContributorArray = JSON.parse(result.data[0][3])
+            var EmailArray = JSON.parse(result.data[0][4])
             //prettier-ignore
             var AnswerDupeCheck = []
             for (let i = 0; i < AnswerArray.length; i++) {
@@ -94,6 +95,7 @@ exports.handler = (event, context, callback) => {
                     RecievedData.Answer.replace(/[^A-Za-z0-9" "]/g, "")
                 )
                 ContributorArray.push(RecievedData.UserID)
+                EmailArray.push(RecievedData.UserEmail)
                 Client.query(
                     q.Update(
                         q.Ref(
@@ -105,6 +107,9 @@ exports.handler = (event, context, callback) => {
                                 AnswerArray: `${JSON.stringify(AnswerArray)}`,
                                 ContributorID: `${JSON.stringify(
                                     ContributorArray
+                                )}`,
+                                ContributorEmail: `${JSON.stringify(
+                                    EmailArray
                                 )}`,
                             },
                         }
