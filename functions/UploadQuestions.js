@@ -104,7 +104,7 @@ exports.handler = (event, context, callback) => {
                             data: {
                                 AnswerArray: `${JSON.stringify(AnswerArray)}`,
                                 ContributorID: `${JSON.stringify(
-                                    ContributorID
+                                    ContributorArray
                                 )}`,
                             },
                         }
