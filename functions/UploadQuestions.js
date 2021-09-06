@@ -71,7 +71,7 @@ exports.handler = (event, context, callback) => {
             console.log(result.data[0][1])
             //prettier-ignore
             var AnswerArray = JSON.parse(result.data[0][1])
-            var ContributorArray = JSON.parse(results.data[0][3])
+            var ContributorArray = JSON.parse(result.data[0][3])
             //prettier-ignore
             var AnswerDupeCheck = []
             for (let i = 0; i < AnswerArray.length; i++) {
