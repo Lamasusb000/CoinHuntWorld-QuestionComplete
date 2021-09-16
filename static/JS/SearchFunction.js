@@ -145,6 +145,9 @@ function SetDatabaseRefresh() {
     var ExpirationHour = ExpirationDate.getHours()
     if (ExpirationHour >= 12) {
         TimePeriod = "PM"
+        if (ExpirationHour > 12) {
+            ExpirationHour = ExpirationHour - 12
+        }
     } else {
         TimePeriod = "AM"
     }

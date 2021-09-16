@@ -43,11 +43,26 @@ const QuestionLookup = () => (
             <p>
                 <br />
             </p>
-            <p className="RefreshDatabase CursorClick Underline text-white fixed-bottom">
-                Refresh Database Manually
-            </p>
+            <div className="text-center mb-5 fixed-bottom">
+                <button className="btn btn-primary RefreshDatabase">
+                    Refresh Database Manually
+                </button>
+                <button
+                    disabled
+                    className="btn btn-primary ml-5"
+                    onClick={DudeStop}
+                >
+                    Report Question/ Answer Pair
+                </button>
+            </div>
         </div>
     </Layout>
 )
 
 export default QuestionLookup
+
+function DudeStop() {
+    alert(
+        "This Button is still in development. Why did you Undisable it?... Rude..."
+    )
+}

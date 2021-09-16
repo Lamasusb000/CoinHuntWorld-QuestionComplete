@@ -14,33 +14,24 @@ function IndexPage() {
         <Layout>
             <Seo title="Home" />
             <JSimport File="Cookie.js" />
-            <h2 className="AlignCenter">
-                Welcome To The CHW Trivia Beta Site!
-            </h2>
-            <div className="WidthControl50">
-                <p className="AlignCenter">
-                    Coded For The Community By MrTurtlesGame
+            <div className="text-center">
+                <h2>Welcome To The CHW Trivia Beta Site!</h2>
+                <p>Be sure to have a look around!</p>
+                <p>
+                    Any Questions or Concerns please reach out to{" "}
+                    <a href="https://twitter.com/CHW_Trivia">@CHW_Trivia</a> on
+                    Twitter
                 </p>
-                <hr />
-                <p>Current Known Bugs</p>
-                <ul>
-                    <li>
-                        Database Does Not Properly Sync While on Flashcards,
-                        Index Page
-                    </li>
-                    <ul>
-                        <li>
-                            Temporary Solution. On The Search Page Press
-                            "Refresh Database Manually"
-                        </li>
-                    </ul>
-                </ul>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
+            <div
+                style={{
+                    height: "25vh",
+                }}
+            >
+                {/*Spacer Tag*/}
+            </div>
             <div id="LeaderBoard">
+                <h3 className="text-center">Our Top Community Contributors!</h3>
                 <table className="table text-white">
                     <thead>
                         <tr>
