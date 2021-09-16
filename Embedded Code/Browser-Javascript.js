@@ -5,7 +5,7 @@ function CountDatabase() {
         var Contributors = JSON.parse(Database[i][2])
         DatabaseLength = DatabaseLength + Contributors.length
     }
-    return DatabaseLength
+    return `There are Currently ${Database.length} Questions and ${DatabaseLength} Answers`
 }
 
 function LogDatabase(Number) {
