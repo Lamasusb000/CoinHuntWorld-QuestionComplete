@@ -36,6 +36,13 @@ function IndexPage() {
             </div>
             <div id="LeaderBoard">
                 <h3 className="text-center">Our Top Community Contributors!</h3>
+                <p
+                    id="DatabaseSize"
+                    className="text-center"
+                    style={{ display: "block" }}
+                >
+                    Database Size: Loading...
+                </p>
                 <table className="table text-white">
                     <thead>
                         <tr>
@@ -110,7 +117,11 @@ function IndexPage() {
 
 export default IndexPage
 
-function ShowDatabaseSize() {}
+function ShowDatabaseSize() {
+    document.getElementById("DatabaseSize").innerText = `Database Size: ${
+        JSON.parse(localStorage.getItem("Cache")).length
+    }`
+}
 //#region Javascript Code For Leaderboards
 //#region SetCurrent ExpirationDate
 var TempDate = new Date()
