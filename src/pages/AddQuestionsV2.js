@@ -652,11 +652,18 @@ async function SendToDatabase() {
                 FailurePage.style.display = "block"
                 console.log(data)
             } else {
+                VerificationContainer.style.display = "none"
                 ErrorPage.style.display = "block"
                 document.getElementById("ErrorCode").innerText = data
                 console.log(`Unknown Data Callback: ${data}`)
             }
         }
+    } else {
+        VerificationContainer.style.display = "none"
+        ErrorPage.style.display = "block"
+        document.getElementById("ErrorCode").innerText =
+            "Unknown Error has Occured"
+        console.log(`Unknown Data Callback`)
     }
 }
 
