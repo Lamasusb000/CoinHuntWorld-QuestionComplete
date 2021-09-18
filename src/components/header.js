@@ -12,64 +12,78 @@ import LinkLabels from "../../site/settings/HeaderLinks.json"
 
 import SiteMetadata from "../../site/settings/SiteMetadata.json"
 
-const Header = () => (
-    <header
-        style={{
-            color: `${Theme.TextColor}`,
-            backgroundColor: `${Theme.HeaderColor}`,
-            fontFamily: `${Theme.Font}`,
-        }}
-    >
-        <nav className="navbar navbar-light">
-            <button
-                className="navbar-toggler navbar-dark"
-                type="button"
-                data-toggle="collapse"
-                data-target="#BurgerMenu"
-                aria-controls="BurgerMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <Link to="/" className="navbar-brand mr-auto">
-                {SiteMetadata.SiteName}
-            </Link>
-            <div className="collapse navbar-collapse" id="BurgerMenu">
-                <ul className="navbar-nav nav">
-                    {CheckForEXTlinks()}
-                    <li className="nav-item">
-                        <Link to="/QuestionLookup" className="nav-link">
-                            Question Search
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/AddQuestionsV2" className="nav-link">
-                            Add QuestionsV2
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/Flashcards" className="nav-link">
-                            Flashcards
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/Donate" className="nav-link">
-                            Donation Page
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-            <button
-                onClick={NetlifyOpen}
-                type="button"
-                className="btn btn-primary NetlifyOpen"
-            >
-                Open Account
-            </button>
-        </nav>
-    </header>
-)
+function Header() {
+    React.useEffect(() => {
+        CheckLogin()
+    })
+    return (
+        <header
+            style={{
+                color: `${Theme.TextColor}`,
+                backgroundColor: `${Theme.HeaderColor}`,
+                fontFamily: `${Theme.Font}`,
+            }}
+        >
+            <nav className="navbar navbar-light">
+                <button
+                    className="navbar-toggler navbar-dark"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#BurgerMenu"
+                    aria-controls="BurgerMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <Link to="/" className="navbar-brand mr-auto">
+                    {SiteMetadata.SiteName}
+                </Link>
+                <div className="collapse navbar-collapse" id="BurgerMenu">
+                    <ul className="navbar-nav nav">
+                        {CheckForEXTlinks()}
+                        <li className="nav-item">
+                            <Link to="/QuestionLookup" className="nav-link">
+                                Question Search
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/AddQuestionsV2" className="nav-link">
+                                Add QuestionsV2
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Flashcards" className="nav-link">
+                                Flashcards
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/Donate" className="nav-link">
+                                Donation Page
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <button
+                    onClick={NetlifyOpen}
+                    type="button"
+                    className="btn btn-primary NetlifyOpen"
+                    id="SigninButton"
+                >
+                    Open Account
+                </button>
+            </nav>
+        </header>
+    )
+}
+function CheckLogin() {
+    netlifyIdentity.init({})
+    if (netlifyIdentity.currentUser()) {
+        document.getElementById("SigninButton").innerText = "Open Account"
+    } else {
+        document.getElementById("SigninButton").innerText = "Sign-in"
+    }
+}
 
 function CheckForEXTlinks() {
     if (EXTlinks.LinkSet.length > 0) {
