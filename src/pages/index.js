@@ -118,9 +118,16 @@ function IndexPage() {
 export default IndexPage
 
 function ShowDatabaseSize() {
+    var Database = JSON.parse(localStorage.getItem("Cache"))
+    var AnswerLength = 0
+
+    for (let i = 0; i < Database.length; i++) {
+        AnswerLength = AnswerLength + JSON.parse(Database[i][1]).length
+    }
+
     document.getElementById("DatabaseSize").innerText = `Database Size: ${
         JSON.parse(localStorage.getItem("Cache")).length
-    }`
+    } Total Questions and ${AnswerLength} Answers`
 }
 //#region Javascript Code For Leaderboards
 //#region SetCurrent ExpirationDate
