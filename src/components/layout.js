@@ -14,7 +14,6 @@ import "../components/CSS/Main.css"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
-import "bootstrap/js/dist/modal"
 
 import Theme from "../../site/settings/Theme.json"
 import { Helmet } from "react-helmet"
