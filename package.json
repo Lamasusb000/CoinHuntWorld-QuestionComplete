@@ -6,7 +6,9 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.2",
+    "@tarekraafat/autocomplete.js": "^10.2.6",
+    "bootstrap": "^5.1.1",
+    "croppie": "^2.6.5",
     "faunadb": "^4.3.0",
     "gatsby": "^3.9.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
@@ -23,9 +25,10 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-autocomplete": "^1.8.1",
-    "react-bootstrap": "^1.6.1",
+    "react-bootstrap": "^2.0.0-beta.6",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "tesseract.js": "^2.1.5"
   },
   "devDependencies": {
     "prettier": "2.2.1"

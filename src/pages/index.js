@@ -9,14 +9,18 @@ import netlifyIdentity from "netlify-identity-widget"
 function IndexPage() {
     React.useEffect(() => {
         FormatLeaderboards()
+        ShowDatabaseSize()
     })
     return (
         <Layout>
             <Seo title="Home" />
             <JSimport File="Cookie.js" />
             <div className="text-center">
-                <h2>Welcome To The CHW Trivia Beta Site!</h2>
-                <p>Be sure to have a look around!</p>
+                <h2>Welcome To The CHW Trivia Site!</h2>
+                <p>
+                    This site is a collection of community submitted questions
+                    and answers!
+                </p>
                 <p>
                     Any Questions or Concerns please reach out to{" "}
                     <a href="https://twitter.com/CHW_Trivia">@CHW_Trivia</a> on
@@ -25,7 +29,7 @@ function IndexPage() {
             </div>
             <div
                 style={{
-                    height: "25vh",
+                    height: "20vh",
                 }}
             >
                 {/*Spacer Tag*/}
@@ -106,6 +110,7 @@ function IndexPage() {
 
 export default IndexPage
 
+function ShowDatabaseSize() {}
 //#region Javascript Code For Leaderboards
 //#region SetCurrent ExpirationDate
 var TempDate = new Date()
