@@ -152,7 +152,6 @@ async function ReportQuestion() {
 //#endregion
 
 //#region SearchFunction Code
-$("#autoComplete-Import").on("load", LoadQuestions)
 
 var RequestedData = []
 var TempDate = new Date()
