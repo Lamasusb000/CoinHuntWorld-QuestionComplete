@@ -193,7 +193,7 @@ function QuestionLookup() {
                                 alt="Purple Vault"
                             />
                         </label>
-                        <small className="form-text">
+                        <small className="form-text text-white">
                             If You Do Not Remember, The Countdown Timer Color is
                             Also The Vault Color
                         </small>
@@ -203,7 +203,7 @@ function QuestionLookup() {
                                 textDecoration: "underline",
                                 cursor: "pointer",
                             }}
-                            className="form-text"
+                            className="form-text text-white"
                             data-toggle="modal"
                             data-target="#ImageReviewModal"
                         >
