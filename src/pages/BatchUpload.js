@@ -179,7 +179,7 @@ function BatchUpload() {
                             alt="Purple Vault"
                         />
                     </label>
-                    <small className="form-text">
+                    <small className="form-text text-white">
                         If You Do Not Remember, The Countdown Timer Color is
                         Also The Vault Color
                     </small>
@@ -189,7 +189,7 @@ function BatchUpload() {
                             textDecoration: "underline",
                             cursor: "pointer",
                         }}
-                        className="form-text"
+                        className="form-text text-white"
                         data-toggle="modal"
                         data-target="#ImageReviewModal"
                     >
@@ -488,13 +488,25 @@ async function DupeCheck() {
         )
     }
 }
-
+var ApprovedQuestions = []
 async function StartVerification() {
-    $("SubmissionVerification").css("display", "block")
-    console.log(FormatedQuesitons)
+    for (let i = 0; i < array.length; i++) {
+        if (FormatedQuesitons[i].ApprovalStatus === true) {
+            ApprovedQuestions.push(FormatedQuesitons[i])
+        }
+    }
+    if (ApprovedQuestions.length < 1) {
+        //Alert User to No New Questions Being Submit
+
+        return
+    }
+
+    $("#SubmissionVerification").css("display", "block")
     //Fill The Form
-    for (let i = 0; i < FormatedQuesitons.length; i++) {
-        console.log("Test")
+    for (let i = 0; i < ApprovedQuestions.length; i++) {
+        $("#CategoryVerification").value = ApprovedQuestions[i].Category
+        $("#QuestionVerification").value = ApprovedQuestions[i].Question
+        $("#AnswerVerification").value = ApprovedQuestions[i].Answer
     }
 }
 
