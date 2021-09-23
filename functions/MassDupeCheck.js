@@ -5,8 +5,19 @@ const Client = new faunadb.Client({
 })
 
 exports.handler = (event, callback) => {
-    var FormatedQuesitons = JSON.parse(event.body)
-
+        if (event.httpMethod == "OPTIONS") {
+        return callback(null, {
+            statusCode: 200,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Authorization",
+                "Access-Control-Request-Headers": "Authorization",
+                "Access-Control-Allow-Credentials": true,
+            },
+        })
+    }
+    if (event.httpMethod == "POST"){
+        var FormatedQuesitons = JSON.parse(event.body)
     console.log(FormatedQuesitons)
     for (let i = 0; i < FormatedQuesitons.length; i++) {
         FormatedQuesitons[i].ApprovalStatus = await QueryDatabase(FormatedQuesitons[i].Question)        
@@ -15,6 +26,7 @@ exports.handler = (event, callback) => {
         statusCode: 200,
         body: JSON.stringify(FormatedQuesitons),
     })
+    }
 }
 
 async function QueryDatabase(Question) {
