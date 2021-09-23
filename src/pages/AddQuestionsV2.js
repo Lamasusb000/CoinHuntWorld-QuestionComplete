@@ -349,7 +349,6 @@ function ImageToURL() {
     SubmissionPrompt.style.visibility = "visible"
     const file = ScreenshotSubmission.files[0]
     const reader = new FileReader()
-
     reader.addEventListener(
         "load",
         function () {
