@@ -4,8 +4,8 @@ const Client = new faunadb.Client({
     secret: "fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN",
 })
 
-exports.handler = (event, callback) => {
-        if (event.httpMethod == "OPTIONS") {
+exports.handler = async (event, callback) => {
+    if (event.httpMethod == "OPTIONS") {
         return callback(null, {
             statusCode: 200,
             headers: {
@@ -16,16 +16,18 @@ exports.handler = (event, callback) => {
             },
         })
     }
-    if (event.httpMethod == "POST"){
+    if (event.httpMethod == "POST") {
         var FormatedQuesitons = JSON.parse(event.body)
-    console.log(FormatedQuesitons)
-    for (let i = 0; i < FormatedQuesitons.length; i++) {
-        FormatedQuesitons[i].ApprovalStatus = await QueryDatabase(FormatedQuesitons[i].Question)        
-    }
-    return callback(null, {
-        statusCode: 200,
-        body: JSON.stringify(FormatedQuesitons),
-    })
+        console.log(FormatedQuesitons)
+        for (let i = 0; i < FormatedQuesitons.length; i++) {
+            FormatedQuesitons[i].ApprovalStatus = await QueryDatabase(
+                FormatedQuesitons[i].Question
+            )
+        }
+        return callback(null, {
+            statusCode: 200,
+            body: JSON.stringify(FormatedQuesitons),
+        })
     }
 }
 
