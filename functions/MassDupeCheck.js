@@ -4,7 +4,7 @@ const Client = new faunadb.Client({
     secret: "fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN",
 })
 
-exports.handler = async (event, callback) => {
+exports.handler = async (event, context, callback) => {
     if (event.httpMethod == "OPTIONS") {
         return callback(null, {
             statusCode: 200,
