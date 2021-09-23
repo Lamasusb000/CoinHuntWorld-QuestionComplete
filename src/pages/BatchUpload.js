@@ -491,7 +491,7 @@ async function DupeCheck() {
 
 async function StartVerification() {
     $("SubmissionVerification").css("display", "block")
-
+    console.log(FormatedQuesitons)
     //Fill The Form
     for (let i = 0; i < FormatedQuesitons.length; i++) {
         console.log("Test")
