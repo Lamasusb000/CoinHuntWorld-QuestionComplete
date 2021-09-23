@@ -20,7 +20,8 @@ exports.handler = async (event, context, callback) => {
         var FormatedQuesitons = JSON.parse(event.body)
         for (let i = 0; i < FormatedQuesitons.length; i++) {
             FormatedQuesitons[i].ApprovalStatus = await QueryDatabase(
-                FormatedQuesitons[i].Question
+                FormatedQuesitons[i].Question,
+                FormatedQuesitons[i].Answer
             )
         }
         return callback(null, {
@@ -36,7 +37,7 @@ exports.handler = async (event, context, callback) => {
     }
 }
 
-async function QueryDatabase(Question) {
+async function QueryDatabase(Question, Answer) {
     return new Promise(resolve => {
         Client.query(
             q.Paginate(
@@ -54,7 +55,24 @@ async function QueryDatabase(Question) {
                 resolve(true)
             } else {
                 //Positive Result Returns False
-                resolve(false)
+                var AnswerArray = JSON.parse(result.data[0][1])
+                var AnswerDupeCheck = []
+                for (let i = 0; i < AnswerArray.length; i++) {
+                    AnswerDupeCheck.push(
+                        AnswerArray[i].replace(/[^A-Za-z0-9" ""//?"]/g, "")
+                    )
+                }
+                if (
+                    AnswerDupeCheck.includes(
+                        Answer.replace(/[^A-Za-z0-9" ""//?"]/g, "")
+                    )
+                ) {
+                    // Previous Answer Contains new Answer
+                    resolve(false)
+                } else {
+                    // New Answer is Unique
+                    resolve(true)
+                }
             }
         })
     })
