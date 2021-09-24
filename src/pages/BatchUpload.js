@@ -212,7 +212,7 @@ function BatchUpload() {
             <div
                 id="CompletionScreen"
                 className="WidthControl50"
-                style={{ display: "none" }}
+                style={{ display: "block" }}
             >
                 <h3 className="text-center">Let's Check Your Statistics!</h3>
                 <hr />
@@ -283,6 +283,15 @@ function BatchUpload() {
                             placeholder="# Processed"
                         />
                     </div>
+                </div>
+                <div
+                    id="NoNewSets"
+                    style={{ display: "none" }}
+                    className="form-group row justify-content-center"
+                >
+                    <p className="col-sm-6 text-center">
+                        Unfortunately All Questions Uploaded Were Duplicates.
+                    </p>
                 </div>
                 <div className="form-group row justify-content-center">
                     <button
@@ -589,8 +598,9 @@ async function StartVerification() {
     }
     if (ApprovedQuestions.length < 1) {
         //Alert User to No New Questions Being Submit
-        console.log(FormatedQuesitons)
-        console.log("No Sets Approved")
+        CompleteScreen()
+        $("#NoNewSets").css("display", "block")
+        $("#RestartPage").prop("disabled", false)
         return
     }
     console.log(`${ApprovedQuestions.length} Sets Approved`)
