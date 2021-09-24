@@ -209,6 +209,82 @@ function BatchUpload() {
                     Submit Form
                 </button>
             </form>
+            <div
+                id="CompletionScreen"
+                className="WidthControl50"
+                style={{ display: "none" }}
+            >
+                <h3 className="text-center">Let's Check Your Statistics!</h3>
+                <hr />
+                <div className="form-group row justify-content-center">
+                    <label
+                        htmlFor="UploadedAdditions"
+                        className="col-sm-3 col-form-label"
+                    >
+                        Sets Uploaded
+                    </label>
+                    <div className="col-sm-3">
+                        <input
+                            disabled
+                            type="text"
+                            className="form-control"
+                            id="UploadedAdditions"
+                            placeholder="# Processed"
+                        />
+                    </div>
+                </div>
+                <div className="form-group row justify-content-center">
+                    <label
+                        htmlFor="AwaitingAdditions"
+                        className="col-sm-3 col-form-label"
+                    >
+                        Await Result
+                    </label>
+                    <div className="col-sm-3">
+                        <input
+                            disabled
+                            type="text"
+                            className="form-control"
+                            id="AwaitingAdditions"
+                            placeholder="# Processed"
+                        />
+                    </div>
+                </div>
+                <div className="form-group row justify-content-center">
+                    <label
+                        htmlFor="SuccessfulAdditions"
+                        className="col-sm-3 col-form-label"
+                    >
+                        Successful Additions
+                    </label>
+                    <div className="col-sm-3">
+                        <input
+                            disabled
+                            type="text"
+                            className="form-control"
+                            id="SuccessfulAdditions"
+                            placeholder="# Processed"
+                        />
+                    </div>
+                </div>
+                <div className="form-group row justify-content-center">
+                    <label
+                        htmlFor="DuplicateAdditions"
+                        className="col-sm-3 col-form-label"
+                    >
+                        Duplicates
+                    </label>
+                    <div className="col-sm-3">
+                        <input
+                            disabled
+                            type="text"
+                            className="form-control"
+                            id="DuplicateAdditions"
+                            placeholder="# Processed"
+                        />
+                    </div>
+                </div>
+            </div>
         </Layout>
     )
 }
@@ -497,6 +573,8 @@ async function StartVerification() {
     for (let i = 0; i < FormatedQuesitons.length; i++) {
         if (FormatedQuesitons[i].ApprovalStatus === true) {
             ApprovedQuestions.push(FormatedQuesitons[i])
+        } else {
+            FailedUploads++
         }
     }
     if (ApprovedQuestions.length < 1) {
@@ -509,30 +587,56 @@ async function StartVerification() {
 
     $("#SubmissionVerification").css("display", "block")
     //Fill The Form
+    console.log("Form Filling")
     for (let i = 0; i < ApprovedQuestions.length; i++) {
-        $("#CategoryVerification").value = ApprovedQuestions[i].Category
-        $("#QuestionVerification").value = ApprovedQuestions[i].Question
-        $("#AnswerVerification").value = ApprovedQuestions[i].Answer
+        $("#CategoryVerification").val(ApprovedQuestions[i].Category)
+        $("#QuestionVerification").val(ApprovedQuestions[i].Question)
+        $("#AnswerVerification").val(ApprovedQuestions[i].Answer)
+        console.log("Form Filled")
         await AwaitSubmit(i)
 
         ApprovedQuestions[i] = {
-            Question: $("#QuestionVerification").value,
-            Answer: $("#AnswerVerification").value,
-            Category: $("#CategoryVerification").value,
-            Color: $("#ColorVerification"),
+            Question: $("#QuestionVerification").val(),
+            Answer: $("#AnswerVerification").val(),
+            Category: $("#CategoryVerification").val(),
+            Color: await SetColor(),
             UserID: netlifyIdentity.currentUser().id,
             UserEmail: netlifyIdentity.currentUser().email,
         }
-
-        SendQuestions()
+        var Radios = document.getElementsByName("ColorSelection")
+        for (let k = 0; k < Radios.length; k++) {
+            if (Radios[k].checked) {
+                Radios[k].checked = false
+            }
+        }
+        SendQuestions(i)
     }
+    CompleteScreen()
+    $("#SubmissionVerification").css("display", "none")
+    $("#CompletionScreen").css("display", "block")
 }
 
 async function AwaitSubmit() {
     return new Promise(resolve => {
-        $("#FormSubmission").on("click", function () {
-            resolve()
+        $("#FormSubmission").on("click", async function () {
+            if (!(await SetColor())) {
+                alert("Please Select Vault Color")
+            } else {
+                resolve()
+            }
         })
+    })
+}
+var ColorVerification = ""
+async function SetColor() {
+    return new Promise(resolve => {
+        var Radios = document.getElementsByName("ColorSelection")
+        for (let i = 0; i < Radios.length; i++) {
+            if (Radios[i].checked) {
+                ColorVerification = Radios[i].value
+            }
+        }
+        resolve(ColorVerification)
     })
 }
 
@@ -570,5 +674,15 @@ async function SendQuestions(SetNumber) {
         FailedUploads++
         console.log(`Unknown Data Callback`)
     }
+    await CompleteScreen()
+}
+
+async function CompleteScreen() {
+    $("#UploadedAdditions").val(UploadedQuestionCount)
+    $("#AwaitingAdditions").val(
+        UploadedQuestionCount - SuccessfulUploads - FailedUploads
+    )
+    $("#SuccessfulAdditions").val(SuccessfulUploads)
+    $("#DuplicateAdditions").val(FailedUploads)
 }
 //#endregion
