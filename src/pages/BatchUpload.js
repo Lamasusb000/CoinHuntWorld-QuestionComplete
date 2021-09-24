@@ -284,6 +284,16 @@ function BatchUpload() {
                         />
                     </div>
                 </div>
+                <div className="form-group row justify-content-center">
+                    <button
+                        disabled
+                        className="btn btn-primary col-sm-6"
+                        id="RestartPage"
+                        type="button"
+                    >
+                        Submit More!
+                    </button>
+                </div>
             </div>
         </Layout>
     )
@@ -684,5 +694,9 @@ async function CompleteScreen() {
     )
     $("#SuccessfulAdditions").val(SuccessfulUploads)
     $("#DuplicateAdditions").val(FailedUploads)
+
+    if (UploadedQuestionCount - SuccessfulUploads - FailedUploads === 0) {
+        $("#RestartPage").prop("disabled", false)
+    }
 }
 //#endregion
