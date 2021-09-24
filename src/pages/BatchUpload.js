@@ -79,7 +79,12 @@ function BatchUpload() {
                 className="text-center"
                 style={{ display: "none" }}
             >
-                <button id="Snap" type="button" className="btn btn-primary">
+                <button
+                    disabled
+                    id="Snap"
+                    type="button"
+                    className="btn btn-primary"
+                >
                     Snap
                 </button>
             </div>
@@ -269,8 +274,10 @@ async function SetCroppie() {
     $("#SnapContainer").css("display", "none")
 }
 async function WaitForSnap() {
+    $("#Snap").prop("disabled", false)
     return new Promise(resolve => {
         $("#Snap").on("click", function () {
+            $("#Snap").prop("disabled", true)
             resolve("success")
         })
     })
@@ -462,11 +469,6 @@ async function CheckEligibility() {
         }
         k = k + 3
     }
-
-    //Debugging Logs
-    console.log(FormatedQuesitons)
-    console.log(VerifiedQuestions)
-
     DupeCheck()
 }
 
@@ -480,7 +482,7 @@ async function DupeCheck() {
     )
     if (response.status === 200) {
         //Success
-        FormatedQuesitons = response.json()
+        FormatedQuesitons = await response.json()
         StartVerification()
     } else {
         alert(
@@ -490,16 +492,20 @@ async function DupeCheck() {
 }
 var ApprovedQuestions = []
 async function StartVerification() {
-    for (let i = 0; i < array.length; i++) {
+    console.log(FormatedQuesitons)
+    netlifyIdentity.init({})
+    for (let i = 0; i < FormatedQuesitons.length; i++) {
         if (FormatedQuesitons[i].ApprovalStatus === true) {
             ApprovedQuestions.push(FormatedQuesitons[i])
         }
     }
     if (ApprovedQuestions.length < 1) {
         //Alert User to No New Questions Being Submit
-
+        console.log(FormatedQuesitons)
+        console.log("No Sets Approved")
         return
     }
+    console.log(`${ApprovedQuestions.length} Sets Approved`)
 
     $("#SubmissionVerification").css("display", "block")
     //Fill The Form
@@ -507,12 +513,62 @@ async function StartVerification() {
         $("#CategoryVerification").value = ApprovedQuestions[i].Category
         $("#QuestionVerification").value = ApprovedQuestions[i].Question
         $("#AnswerVerification").value = ApprovedQuestions[i].Answer
+        await AwaitSubmit(i)
+
+        ApprovedQuestions[i] = {
+            Question: $("#QuestionVerification").value,
+            Answer: $("#AnswerVerification").value,
+            Category: $("#CategoryVerification").value,
+            Color: $("#ColorVerification"),
+            UserID: netlifyIdentity.currentUser().id,
+            UserEmail: netlifyIdentity.currentUser().email,
+        }
+
+        SendQuestions()
     }
 }
 
 async function AwaitSubmit() {
     return new Promise(resolve => {
-        resolve()
+        $("#FormSubmission").on("click", function () {
+            resolve()
+        })
     })
+}
+
+var SuccessfulUploads = 0
+var FailedUploads = 0
+async function SendQuestions(SetNumber) {
+    let response = await fetch(
+        "https://coinhuntworldtrivia.com/.netlify/functions/UploadQuestions",
+        {
+            body: JSON.stringify({
+                Question: ApprovedQuestions[SetNumber].Question,
+                Answer: ApprovedQuestions[SetNumber].Answer,
+                Category: ApprovedQuestions[SetNumber].Category,
+                Color: ApprovedQuestions[SetNumber].Color,
+                UserID: ApprovedQuestions[SetNumber].UserID,
+                UserEmail: ApprovedQuestions[SetNumber].UserEmail,
+            }),
+            method: "POST",
+        }
+    )
+    if (response.status === 200) {
+        let data = await response.text()
+        if (data === "Success") {
+            SuccessfulUploads++
+        } else {
+            if (data === "Failed. Already in Database") {
+                FailedUploads++
+                console.log(data)
+            } else {
+                FailedUploads++
+                console.log(`Unknown Data Callback: ${data}`)
+            }
+        }
+    } else {
+        FailedUploads++
+        console.log(`Unknown Data Callback`)
+    }
 }
 //#endregion
