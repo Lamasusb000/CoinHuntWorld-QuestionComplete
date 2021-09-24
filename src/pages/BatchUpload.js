@@ -212,7 +212,7 @@ function BatchUpload() {
             <div
                 id="CompletionScreen"
                 className="WidthControl50"
-                style={{ display: "block" }}
+                style={{ display: "none" }}
             >
                 <h3 className="text-center">Let's Check Your Statistics!</h3>
                 <hr />
@@ -299,6 +299,9 @@ function BatchUpload() {
                         className="btn btn-primary col-sm-6"
                         id="RestartPage"
                         type="button"
+                        onClick={function () {
+                            window.location.reload()
+                        }}
                     >
                         Submit More!
                     </button>
