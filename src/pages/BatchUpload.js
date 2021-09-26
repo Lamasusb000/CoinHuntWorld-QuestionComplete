@@ -295,13 +295,11 @@ function BatchUpload() {
                 </div>
                 <div className="form-group row justify-content-center">
                     <button
-                        disabled
+                        disabled={true}
                         className="btn btn-primary col-sm-6"
                         id="RestartPage"
                         type="button"
-                        onClick={function () {
-                            window.location.reload()
-                        }}
+                        onClick={RestartPage()}
                     >
                         Submit More!
                     </button>
@@ -314,6 +312,10 @@ function BatchUpload() {
 export default BatchUpload
 
 //#region HandleOCRV3
+
+function RestartPage() {
+    window.location.reload()
+}
 var UploadedQuestionCount = 0
 var FilesAsDataURL = []
 async function DetectUpload() {
@@ -710,6 +712,9 @@ async function CompleteScreen() {
 
     if (UploadedQuestionCount - SuccessfulUploads - FailedUploads === 0) {
         $("#RestartPage").prop("disabled", false)
+        if (SuccessfulUploads == 0) {
+            $("#NoNewSets").css("display", "block")
+        }
     }
 }
 //#endregion
