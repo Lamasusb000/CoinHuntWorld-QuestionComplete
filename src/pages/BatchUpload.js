@@ -88,6 +88,14 @@ function BatchUpload() {
                     Snap
                 </button>
             </div>
+            <div
+                style={{ display: "none" }}
+                id="DupeCheckProcessing"
+                className="text-center"
+            >
+                <h4>Awaiting Duplicate Checking...</h4>
+                <p>Should only take a "Few" seconds</p>
+            </div>
             <form
                 autoComplete="off"
                 id="SubmissionVerification"
@@ -304,7 +312,6 @@ function BatchUpload() {
                         className="btn btn-primary col-sm-6"
                         id="RestartPage"
                         type="button"
-                        onClick={RestartPage}
                     >
                         Submit More!
                     </button>
@@ -318,13 +325,15 @@ export default BatchUpload
 
 //#region HandleOCRV3
 
-function RestartPage() {
+function ReloadPage() {
     console.log("test")
     window.location.reload(false)
 }
+
 var UploadedQuestionCount = 0
 var FilesAsDataURL = []
 async function DetectUpload() {
+    $("#RestartPage").on("click", ReloadPage())
     $("#StartUploadingButton").css("display", "none")
     $("#ProgressFrame").css("display", "block")
     $("#SnapContainer").css("display", "block")
@@ -576,6 +585,7 @@ async function CheckEligibility() {
         k = k + 3
     }
     DupeCheck()
+    $("#DupeCheckProcessing").css("display", "block")
 }
 
 async function DupeCheck() {
@@ -589,6 +599,8 @@ async function DupeCheck() {
     if (response.status === 200) {
         //Success
         FormatedQuesitons = await response.json()
+        $("#DupeCheckProcessing").css("display", "none")
+
         StartVerification()
     } else {
         alert(
