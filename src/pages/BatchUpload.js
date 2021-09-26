@@ -98,6 +98,11 @@ function BatchUpload() {
                     width: "50%",
                 }}
             >
+                <h3>
+                    Total Approved Questions:{" "}
+                    <span className="badge badge-info">15</span>
+                </h3>
+                <hr />
                 <div className="form-group">
                     <label htmlFor="CategoryVerification">
                         Verify Category
@@ -299,7 +304,7 @@ function BatchUpload() {
                         className="btn btn-primary col-sm-6"
                         id="RestartPage"
                         type="button"
-                        onClick={RestartPage()}
+                        onClick={RestartPage}
                     >
                         Submit More!
                     </button>
@@ -314,7 +319,8 @@ export default BatchUpload
 //#region HandleOCRV3
 
 function RestartPage() {
-    window.location.reload()
+    console.log("test")
+    window.location.reload(false)
 }
 var UploadedQuestionCount = 0
 var FilesAsDataURL = []
@@ -612,12 +618,10 @@ async function StartVerification() {
 
     $("#SubmissionVerification").css("display", "block")
     //Fill The Form
-    console.log("Form Filling")
     for (let i = 0; i < ApprovedQuestions.length; i++) {
         $("#CategoryVerification").val(ApprovedQuestions[i].Category)
         $("#QuestionVerification").val(ApprovedQuestions[i].Question)
         $("#AnswerVerification").val(ApprovedQuestions[i].Answer)
-        console.log("Form Filled")
         await AwaitSubmit(i)
 
         ApprovedQuestions[i] = {
@@ -712,7 +716,7 @@ async function CompleteScreen() {
 
     if (UploadedQuestionCount - SuccessfulUploads - FailedUploads === 0) {
         $("#RestartPage").prop("disabled", false)
-        if (SuccessfulUploads == 0) {
+        if (SuccessfulUploads === 0) {
             $("#NoNewSets").css("display", "block")
         }
     }
