@@ -225,7 +225,7 @@ function BatchUpload() {
             <div
                 id="CompletionScreen"
                 className="WidthControl50"
-                style={{ display: "none" }}
+                style={{ display: "block" }}
             >
                 <h3 className="text-center">Let's Check Your Statistics!</h3>
                 <hr />
@@ -299,12 +299,10 @@ function BatchUpload() {
                 </div>
                 <div
                     id="NoNewSets"
-                    style={{ display: "none" }}
-                    className="form-group row justify-content-center"
+                    style={{ display: "block" }}
+                    className="text-center"
                 >
-                    <p className="col-sm-6 text-center">
-                        Unfortunately All Questions Uploaded Were Duplicates.
-                    </p>
+                    <p>Unfortunately All Questions Uploaded Were Duplicates.</p>
                 </div>
                 <div className="form-group row justify-content-center">
                     <button
