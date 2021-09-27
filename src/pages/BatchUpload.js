@@ -225,7 +225,7 @@ function BatchUpload() {
                     >
                         <img
                             style={{
-                                height: "50vh",
+                                width: "100%",
                             }}
                             alt="Source Upload Check"
                             id="ImageReviewerObj"
