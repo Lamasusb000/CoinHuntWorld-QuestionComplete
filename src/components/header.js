@@ -5,10 +5,9 @@ import "../components/CSS/bootstrap.min.css"
 import netlifyIdentity from "netlify-identity-widget"
 
 import ExternalLinks from "./Links-External"
-import EXTlinks from "../../site/settings/HeaderLinks.json"
+import Links from "../../site/settings/HeaderLinks.json"
 
 import Theme from "../../site/settings/Theme.json"
-import LinkLabels from "../../site/settings/HeaderLinks.json"
 
 import SiteMetadata from "../../site/settings/SiteMetadata.json"
 
@@ -42,26 +41,7 @@ function Header() {
                 <div className="collapse navbar-collapse" id="BurgerMenu">
                     <ul className="navbar-nav nav">
                         {CheckForEXTlinks()}
-                        <li className="nav-item">
-                            <Link to="/QuestionLookup" className="nav-link">
-                                Question Search
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/AddQuestionsV2" className="nav-link">
-                                Add QuestionsV2
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/Flashcards" className="nav-link">
-                                Flashcards
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/Donate" className="nav-link">
-                                Donation Page
-                            </Link>
-                        </li>
+                        {InternalLinks()}
                     </ul>
                 </div>
                 <button
@@ -84,9 +64,24 @@ function CheckLogin() {
         document.getElementById("SigninButton").innerText = "Sign-in"
     }
 }
+function InternalLinks() {
+    if (Links.InternalLinks.length > 0) {
+        return (
+            <ul className="navbar-nav mr-auto">
+                {Links.InternalLinks.map((LinkSet, index) => (
+                    <li className="nav-item">
+                        <Link to={"/" + LinkSet.LinkURL} className="nav-link">
+                            {LinkSet.LinkName}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+}
 
 function CheckForEXTlinks() {
-    if (EXTlinks.LinkSet.length > 0) {
+    if (Links.LinkSet.length > 0) {
         return (
             <nav className="navbar navbar-fixed-top navbar-default">
                 <button
@@ -100,9 +95,7 @@ function CheckForEXTlinks() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <p className="navbar-brand mr-auto">
-                    {LinkLabels.ExternalLinks}
-                </p>
+                <p className="navbar-brand mr-auto">{Links.ExternalLinks}</p>
                 <div className="collapse navbar-collapse" id="SocialBurgerMenu">
                     <ul className="navbar-nav nav">
                         <ExternalLinks />
