@@ -331,7 +331,7 @@ function ReloadPage() {
 var UploadedQuestionCount = 0
 var FilesAsDataURL = []
 async function DetectUpload() {
-    $("#RestartPage").on("click", ReloadPage())
+    $("#RestartPage").on("click", ReloadPage)
     $("#StartUploadingButton").css("display", "none")
     $("#ProgressFrame").css("display", "block")
     $("#SnapContainer").css("display", "block")
