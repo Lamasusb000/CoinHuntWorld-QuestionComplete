@@ -202,6 +202,8 @@ function BatchUpload() {
                         Also The Vault Color
                     </small>
                     <small
+                        role="link"
+                        tabIndex="0"
                         id="ImageCallback"
                         style={{
                             textDecoration: "underline",
@@ -210,9 +212,26 @@ function BatchUpload() {
                         className="form-text text-white"
                         data-toggle="modal"
                         data-target="#ImageReviewModal"
+                        onKeyDown={SourceImageCheck}
+                        onClick={SourceImageCheck}
                     >
                         Click Here To Check Again
                     </small>
+                    <Modal
+                        ID="SourceImageCheck"
+                        Title="Source Image"
+                        SubmitButton={false}
+                        Size="sm"
+                    >
+                        <img
+                            style={{
+                                height: "50vh",
+                            }}
+                            alt="Source Upload Check"
+                            id="ImageReviewerObj"
+                            src=""
+                        ></img>
+                    </Modal>
                 </div>
                 <button
                     className="btn btn-primary"
@@ -608,7 +627,9 @@ async function DupeCheck() {
     }
 }
 var ApprovedQuestions = []
+var CurrentSourceImage = 0
 async function StartVerification() {
+    $("#page").css("display", "none")
     for (let i = 0; i < FilesAsDataURL.length; i++) {
         FormatedQuesitons[i].SourceImage = FilesAsDataURL[i]
     }
@@ -639,6 +660,7 @@ async function StartVerification() {
         $("#CategoryVerification").val(ApprovedQuestions[i].Category)
         $("#QuestionVerification").val(ApprovedQuestions[i].Question)
         $("#AnswerVerification").val(ApprovedQuestions[i].Answer)
+        CurrentSourceImage = i
         await AwaitSubmit(i)
 
         ApprovedQuestions[i] = {
@@ -660,6 +682,12 @@ async function StartVerification() {
     CompleteScreen()
     $("#SubmissionVerification").css("display", "none")
     $("#CompletionScreen").css("display", "block")
+}
+function SourceImageCheck() {
+    console.log(ApprovedQuestions)
+    window.$("#SourceImageCheck").modal("show")
+    document.getElementById("ImageReviewerObj").src =
+        ApprovedQuestions[CurrentSourceImage].SourceImage
 }
 
 async function AwaitSubmit() {

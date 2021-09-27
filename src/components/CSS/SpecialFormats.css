@@ -1,36 +1,44 @@
-.AlignCenter{
+.AlignCenter {
     text-align: center;
 }
-.AlignLeft{
+.AlignLeft {
     text-align: left;
 }
-.WidthControl50{
+.WidthControl50 {
     margin: auto;
     width: 50%;
 }
-.WidthControl80{
+.WidthControl80 {
     margin: auto;
     width: 80%;
 }
-.AutoCap{
-    text-transform: capitalize
+.AutoCap {
+    text-transform: capitalize;
 }
-.Underline{
+.Underline {
     text-decoration: underline;
 }
-.CursorClick{
+.CursorClick {
     cursor: pointer;
 }
-.Indent2{
+.Indent2 {
     text-indent: 2em;
 }
 
 @media (max-width: 800px) {
-    .WidthControl50{
+    .WidthControl50 {
         width: 100%;
     }
-    .WidthControl80{
+    .WidthControl80 {
         margin: auto;
         width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    #ImageReviewerObj {
+        margin: auto;
+        object-fit: cover;
+        max-height: 70vh;
     }
 }
