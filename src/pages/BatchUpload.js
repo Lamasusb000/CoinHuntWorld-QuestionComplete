@@ -625,6 +625,7 @@ async function StartVerification() {
         console.log("no New questions")
         //Alert User to No New Questions Being Submit
         CompleteScreen()
+        $("#CompletionScreen").css("display", "block")
         $("#NoNewSets").css("display", "block")
         $("#RestartPage").prop("disabled", false)
         return
