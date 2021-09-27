@@ -579,6 +579,7 @@ async function CheckEligibility() {
             Question: SubmissionArray[k + 1],
             Answer: SubmissionArray[k + 2],
             ApprovalStatus: "",
+            SourceImage: "",
         }
         k = k + 3
     }
@@ -608,6 +609,9 @@ async function DupeCheck() {
 }
 var ApprovedQuestions = []
 async function StartVerification() {
+    for (let i = 0; i < FilesAsDataURL.length; i++) {
+        FormatedQuesitons[i].SourceImage = FilesAsDataURL[i]
+    }
     console.log(FormatedQuesitons)
     netlifyIdentity.init({})
     for (let i = 0; i < FormatedQuesitons.length; i++) {
