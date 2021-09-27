@@ -622,12 +622,14 @@ async function StartVerification() {
         }
     }
     if (ApprovedQuestions.length < 1) {
+        console.log("no New questions")
         //Alert User to No New Questions Being Submit
         CompleteScreen()
         $("#NoNewSets").css("display", "block")
         $("#RestartPage").prop("disabled", false)
         return
     }
+    console.log("new questions")
     console.log(`${ApprovedQuestions.length} Sets Approved`)
 
     $("#SubmissionVerification").css("display", "block")
