@@ -29,6 +29,7 @@ function BatchUpload() {
                     data-toggle="modal"
                     data-target="#StartUploading"
                     className="btn btn-primary"
+                    onClick={ClearCache}
                 >
                     Start Uploading
                 </button>
@@ -341,6 +342,16 @@ function BatchUpload() {
 }
 
 export default BatchUpload
+//Ensures no Errors on variables
+function ClearCache() {
+    UploadedQuestionCount = 0
+    FilesAsDataURL = []
+    CroppieCounter = 0
+    CropCount = 0
+    ResolutionSelection = 0
+    CompletedCrops = 0
+    StagedQuestions = []
+}
 
 //#region HandleOCRV3
 
@@ -352,6 +363,9 @@ function ReloadPage() {
 var UploadedQuestionCount = 0
 var FilesAsDataURL = []
 async function DetectUpload() {
+    window.onbeforeunload = function () {
+        return "Are you Sure"
+    }
     $("#RestartPage").on("click", ReloadPage)
     $("#StartUploadingButton").css("display", "none")
     $("#ProgressFrame").css("display", "block")
@@ -751,6 +765,7 @@ async function SendQuestions(SetNumber) {
 }
 
 async function CompleteScreen() {
+    window.onbeforeunload = null
     $("#UploadedAdditions").val(UploadedQuestionCount)
     $("#AwaitingAdditions").val(
         UploadedQuestionCount - SuccessfulUploads - FailedUploads
