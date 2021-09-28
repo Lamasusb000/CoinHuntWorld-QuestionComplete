@@ -52,6 +52,7 @@ function QuestionLookup() {
                         Refresh Database Manually
                     </button>
                     <button
+                        disabled
                         className="btn btn-primary ml-5"
                         data-toggle="modal"
                         data-target="#ReportIssue"

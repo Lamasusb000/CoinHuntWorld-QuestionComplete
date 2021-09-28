@@ -108,7 +108,9 @@ function BatchUpload() {
             >
                 <h3>
                     Total Approved Questions:{" "}
-                    <span className="badge badge-info">15</span>
+                    <span id="ApprovedCount" className="badge badge-info">
+                        15
+                    </span>
                 </h3>
                 <hr />
                 <div className="form-group">
@@ -643,7 +645,6 @@ async function StartVerification() {
         }
     }
     if (ApprovedQuestions.length < 1) {
-        console.log("no New questions")
         //Alert User to No New Questions Being Submit
         CompleteScreen()
         $("#CompletionScreen").css("display", "block")
@@ -651,9 +652,7 @@ async function StartVerification() {
         $("#RestartPage").prop("disabled", false)
         return
     }
-    console.log("new questions")
-    console.log(`${ApprovedQuestions.length} Sets Approved`)
-
+    $("#ApprovedCount").text(ApprovedQuestions.length)
     $("#SubmissionVerification").css("display", "block")
     //Fill The Form
     for (let i = 0; i < ApprovedQuestions.length; i++) {

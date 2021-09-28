@@ -210,7 +210,6 @@ async function ConstructLeaderboardArray() {
 }
 var LeaderboardNames = ""
 async function FormatLeaderboards() {
-    console.log("Debug")
     await ConstructLeaderboardArray()
 
     //#region Grab Leaderboard Names

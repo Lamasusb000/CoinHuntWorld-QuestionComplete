@@ -18,10 +18,7 @@ const Modal = ({
             role="dialog"
             aria-hidden="true"
         >
-            <div
-                className={"modal-dialog" + " " + "modal-" + Size}
-                role="document"
-            >
+            <div className={`modal-dialog modal-${Size}`} role="document">
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLongTitle">
