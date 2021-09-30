@@ -40,17 +40,25 @@ function Header() {
                 <div className="collapse navbar-collapse" id="BurgerMenu">
                     <ul className="navbar-nav nav">
                         {CheckForEXTlinks()}
-                        {InternalLinks()}
+                        {CheckForIntLinks()}
+                        <li
+                            className="list-item d-grid gap-2 btn-group-vertical"
+                            style={{ width: "fit-content" }}
+                        >
+                            <Link to="/Donate" className="btn btn-primary">
+                                Donate
+                            </Link>
+                            <button
+                                onClick={NetlifyOpen}
+                                type="button"
+                                className="btn btn-primary NetlifyOpen"
+                                id="SigninButton"
+                            >
+                                Open Account
+                            </button>
+                        </li>
                     </ul>
                 </div>
-                <button
-                    onClick={NetlifyOpen}
-                    type="button"
-                    className="btn btn-primary NetlifyOpen"
-                    id="SigninButton"
-                >
-                    Open Account
-                </button>
             </nav>
         </header>
     )
@@ -61,6 +69,30 @@ function CheckLogin() {
         document.getElementById("SigninButton").innerText = "Open Account"
     } else {
         document.getElementById("SigninButton").innerText = "Sign-in"
+    }
+}
+
+function CheckForIntLinks() {
+    if (Links.InternalLinks.length > 0) {
+        return (
+            <nav className="navbar navbar-fixed-top navbar-default">
+                <button
+                    className="navbar-toggler navbar-dark"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#ToolBurgerMenu"
+                    aria-controls="ToolBurgerMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <p className="navbar-brand mr-auto">Tools</p>
+                <div className="collapse navbar-collapse" id="ToolBurgerMenu">
+                    <ul className="navbar-nav nav">{InternalLinks()}</ul>
+                </div>
+            </nav>
+        )
     }
 }
 function InternalLinks() {
