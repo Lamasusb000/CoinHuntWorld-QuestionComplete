@@ -7,7 +7,7 @@
   "InternalLinks": [
       {"LinkName": "Question Search", "LinkURL": "QuestionLookup"},
       {"LinkName": "Add Questions V2", "LinkURL": "AddQuestionsV2"},
-      {"LinkName": "Add Questions V3 [New]", "LinkURL": "AddQuestionsV3"},
+      {"LinkName": "Add Questions V3", "LinkURL": "AddQuestionsV3", "New": true},
       {"LinkName": "Flashcards", "LinkURL": "Flashcards"},
       {"LinkName": "Donate", "LinkURL": "Donate"}
       

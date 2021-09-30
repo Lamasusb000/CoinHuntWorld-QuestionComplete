@@ -4,7 +4,6 @@ import "../components/CSS/Header.css"
 import "../components/CSS/bootstrap.min.css"
 import netlifyIdentity from "netlify-identity-widget"
 
-import ExternalLinks from "./Links-External"
 import Links from "../../site/settings/HeaderLinks.json"
 
 import Theme from "../../site/settings/Theme.json"
@@ -69,15 +68,37 @@ function InternalLinks() {
         return (
             <ul className="navbar-nav mr-auto">
                 {Links.InternalLinks.map((LinkSet, index) => (
-                    <li className="nav-item">
+                    <li key={LinkSet.LinkName} className="nav-item">
                         <Link to={"/" + LinkSet.LinkURL} className="nav-link">
                             {LinkSet.LinkName}
+
+                            {CheckIfNew(LinkSet.New)}
                         </Link>
                     </li>
                 ))}
             </ul>
         )
     }
+}
+function CheckIfNew(New) {
+    if (New) {
+        return <span className="ml-2 badge badge-primary">New</span>
+    } else {
+        return
+    }
+}
+function ExternalLinks() {
+    return (
+        <ul className="navbar-nav mr-auto">
+            {Links.LinkSet.map((LinkSet, index) => (
+                <li key={LinkSet.LinkName} className="nav-item">
+                    <a href={LinkSet.LinkURL} className="nav-link">
+                        {LinkSet.LinkName}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    )
 }
 
 function CheckForEXTlinks() {
@@ -97,9 +118,7 @@ function CheckForEXTlinks() {
                 </button>
                 <p className="navbar-brand mr-auto">{Links.ExternalLinks}</p>
                 <div className="collapse navbar-collapse" id="SocialBurgerMenu">
-                    <ul className="navbar-nav nav">
-                        <ExternalLinks />
-                    </ul>
+                    <ul className="navbar-nav nav">{ExternalLinks()}</ul>
                 </div>
             </nav>
         )
