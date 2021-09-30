@@ -42,3 +42,13 @@
         max-height: 70vh;
     }
 }
+
+.AlternateIndent p:nth-child(even) {
+    text-indent: 2em;
+}
+
+.AlternateIndent p:nth-child(odd) {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 0%;
+}

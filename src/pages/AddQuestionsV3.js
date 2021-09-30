@@ -23,6 +23,21 @@ function BatchUpload() {
         <Layout>
             <Seo title="Batch Upload" />
             <div className="text-center">
+                <h3>Welcome to Version 3 of our Database Addition Tool!</h3>
+                <p>
+                    If you Are Unfamilar with this tool{" "}
+                    <span
+                        style={{
+                            textDecoration: "underline",
+                            cursor: "pointer",
+                        }}
+                        data-toggle="modal"
+                        data-target="#Tutorial"
+                    >
+                        Please Click Here.
+                    </span>
+                </p>
+                <br />
                 <button
                     id="StartUploadingButton"
                     type="button"
@@ -34,6 +49,63 @@ function BatchUpload() {
                     Start Uploading
                 </button>
             </div>
+            <Modal Title="Tutorial" ID="Tutorial" Buttons={false}>
+                <div className="AlternateIndent">
+                    <p>What This Tool is:</p>
+                    <p>
+                        This is a Tool Developed That allows the community to
+                        submit their screenshots of text based trivia questions
+                        to a community database for all to use.
+                    </p>
+                    <p>How To Get started:</p>
+                    <p>
+                        To get started all you would need is simple screenshots
+                        of the trivia screen that lists the Category, Question,
+                        Answer. For more casual hunters taking a screenshot
+                        before answering is the easiet but for more competative
+                        hunters we recommend screen recording before a hunt and
+                        then screenshotting from the recording post hunt to
+                        ensure the fastest answers
+                    </p>
+                    <p>getting started:</p>
+                    <p>
+                        As the user all you have to do to start would be
+                        uploading your series of screenshots as this version of
+                        the tool supports batch uploading. From there the tool
+                        will automatically detect the Category and Question then
+                        await your user input that selects which answer is the
+                        correct answer.
+                    </p>
+                    <p>Behing the Scenes:</p>
+                    <p>
+                        Once you submit all your screenshots the information
+                        will get sent to an API which detects if they are in the
+                        database and if any questions get returned as potential
+                        new additions they will be added to the next step and
+                        any leftover sets will be filtered out.
+                    </p>
+                    <p>Question Set Verification:</p>
+                    <p>
+                        The potential new questions will then be returned to you
+                        to verify one by one that the Image to Text system
+                        properly spelt everything (It is not perfect) and upon
+                        your spellchecking and selecting the vaults color it
+                        will then be sent to another API which double checks for
+                        duplicates. Although it was checked inititally if any
+                        phrasing was wrong it may of not been detected from the
+                        pre-spellchecked API
+                    </p>
+                    <p>Finishing up:</p>
+                    <p>
+                        Once you finish doing any spellchecking one by one the
+                        results from the second API will roll in and you will be
+                        greated with a results screen. on this screen you will
+                        see how many questions you submitted are new and how
+                        many were duplicates. And with that you are all
+                        finished!
+                    </p>
+                </div>
+            </Modal>
             <Modal Title="Batch Uploading" ID="StartUploading" Buttons={false}>
                 <div id="SubmissionPrompt" className="custom-file">
                     <input
