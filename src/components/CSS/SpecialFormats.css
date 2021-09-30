@@ -12,6 +12,10 @@
     margin: auto;
     width: 80%;
 }
+.WidthControl65 {
+    width: 65%;
+    margin: auto;
+}
 .AutoCap {
     text-transform: capitalize;
 }
@@ -27,6 +31,9 @@
 
 @media (max-width: 800px) {
     .WidthControl50 {
+        width: 100%;
+    }
+    .WidthControl65 {
         width: 100%;
     }
     .WidthControl80 {
@@ -51,4 +58,15 @@
     text-transform: capitalize;
     font-weight: bold;
     margin-bottom: 0%;
+}
+.NoIndent {
+    text-indent: 0%;
+}
+.CodeBlock {
+    width: fit-content;
+    margin-left: 5rem;
+    background-color: rgba(0, 0, 0, 0.192);
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
 }
