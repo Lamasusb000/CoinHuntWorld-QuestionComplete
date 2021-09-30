@@ -40,6 +40,9 @@
         margin: auto;
         width: 100%;
     }
+    .CodeBlock {
+        margin-left: 0%;
+    }
 }
 
 @media (max-width: 576px) {
