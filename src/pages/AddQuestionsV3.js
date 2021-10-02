@@ -22,7 +22,7 @@ function BatchUpload() {
     return (
         <Layout>
             <Seo title="Batch Upload" />
-            <div className="text-center">
+            <div className="text-center WidthControl65">
                 <h3>Welcome to Version 3 of our Database Addition Tool!</h3>
                 <p>
                     If you Are Unfamilar with this tool{" "}
@@ -37,7 +37,15 @@ function BatchUpload() {
                         Please Click Here.
                     </span>
                 </p>
+                <small className="WidthControl50">
+                    CoinHuntWorld Changed Trivia Formating with the new update.
+                    <br />
+                    AddQuestionsV3.1 Will Release soon with fixed Auto
+                    Recognition. For now new questions need to be processed
+                    through AddQuestionsV2
+                </small>
                 <br />
+                <hr />
                 <button
                     id="StartUploadingButton"
                     type="button"

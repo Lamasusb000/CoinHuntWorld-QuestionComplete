@@ -39,10 +39,9 @@ function Header() {
                 </Link>
                 <div className="collapse navbar-collapse" id="BurgerMenu">
                     <ul className="navbar-nav nav">
-                        {CheckForEXTlinks()}
-                        {CheckForIntLinks()}
+                        {InternalLinks()}
                         <li
-                            className="list-item d-grid gap-2 btn-group-vertical"
+                            className="list-item"
                             style={{ width: "fit-content" }}
                         >
                             <Link to="/Donate" className="btn btn-primary">
@@ -51,7 +50,7 @@ function Header() {
                             <button
                                 onClick={NetlifyOpen}
                                 type="button"
-                                className="btn btn-primary NetlifyOpen"
+                                className="btn btn-primary NetlifyOpen ml-2"
                                 id="SigninButton"
                             >
                                 Open Account
@@ -66,12 +65,13 @@ function Header() {
 function CheckLogin() {
     netlifyIdentity.init({})
     if (netlifyIdentity.currentUser()) {
-        document.getElementById("SigninButton").innerText = "Open Account"
+        document.getElementById("SigninButton").innerText = "Account"
     } else {
         document.getElementById("SigninButton").innerText = "Sign-in"
     }
 }
 
+/*      Adding Seperate Burger Menu
 function CheckForIntLinks() {
     if (Links.InternalLinks.length > 0) {
         return (
@@ -95,6 +95,7 @@ function CheckForIntLinks() {
         )
     }
 }
+*/
 function InternalLinks() {
     if (Links.InternalLinks.length > 0) {
         return (
@@ -119,6 +120,8 @@ function CheckIfNew(New) {
         return
     }
 }
+//Adding From External Links
+/*
 function ExternalLinks() {
     return (
         <ul className="navbar-nav mr-auto">
@@ -155,7 +158,7 @@ function CheckForEXTlinks() {
             </nav>
         )
     }
-}
+}*/
 
 var NetlifyInitialized = undefined
 function NetlifyOpen() {

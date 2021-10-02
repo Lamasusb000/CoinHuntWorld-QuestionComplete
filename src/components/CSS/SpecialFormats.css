@@ -28,6 +28,12 @@
 .Indent2 {
     text-indent: 2em;
 }
+.HiddenByWidth {
+    display: none;
+}
+.MainBody {
+    height: min-content;
+}
 
 @media (max-width: 800px) {
     .WidthControl50 {
@@ -42,6 +48,9 @@
     }
     .CodeBlock {
         margin-left: 0rem !important ;
+    }
+    .HiddenByWidth {
+        display: block;
     }
 }
 
@@ -72,4 +81,16 @@
     border: 1px solid #999;
     display: block;
     padding: 20px;
+}
+.SocialsIcon {
+    width: 25%;
+}
+.SocialMediaTwitter :hover {
+    color: #1da1f2 !important;
+}
+.SocialMediaDiscord :hover {
+    color: #5865f2 !important;
+}
+.SocialMediaEmail :hover {
+    color: #8d8f9c !important;
 }

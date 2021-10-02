@@ -5,31 +5,53 @@ import JSimport from "../components/JS-Import"
 import "../components/CSS/Leaderboards.css"
 import $ from "jquery"
 import netlifyIdentity from "netlify-identity-widget"
+import { Link } from "gatsby"
 
 function IndexPage() {
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
     React.useEffect(() => {
         FormatLeaderboards()
         ShowDatabaseSize()
-    })
+
+        window.addEventListener(
+            "resize",
+            () => {
+                var ismobile = window.innerWidth < 900
+                if (ismobile !== isMobile) setIsMobile(ismobile)
+            },
+            false
+        )
+    }, [isMobile])
     return (
         <Layout>
             <Seo title="Home" />
             <JSimport File="Cookie.js" />
-            <div className="text-center">
-                <h2>Welcome To The CHW Trivia Site!</h2>
+            <div className="text-center WidthControl65">
+                <h2>Welcome To CoinHuntWorldTrivia!</h2>
+                <hr />
                 <p>
-                    This site is a collection of community submitted questions
-                    and answers!
+                    Your go-to community resource for CoinHuntWorld Trivia
+                    Questions and Answers
                 </p>
-                <p>
-                    Any Questions or Concerns please reach out to{" "}
-                    <a href="https://twitter.com/CHW_Trivia">@CHW_Trivia</a> on
-                    Twitter
-                </p>
+                <div
+                    className={`gap-2 ${
+                        isMobile ? "btn-group-vertical" : "btn-group"
+                    }`}
+                >
+                    <Link to="" type="button" className="btn btn-primary">
+                        Question Search
+                    </Link>
+                    <Link to="" type="button" className="btn btn-primary">
+                        Add Questions V3
+                    </Link>
+                    <Link to="" type="button" className="btn btn-primary">
+                        Flashcards
+                    </Link>
+                </div>
             </div>
             <div
                 style={{
-                    height: "20vh",
+                    height: "15vh",
                 }}
             >
                 {/*Spacer Tag*/}

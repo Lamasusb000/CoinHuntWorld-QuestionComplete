@@ -10,13 +10,23 @@ import "../components/CSS/AddingQuestions.css"
 import Modal from "../components/Modal"
 
 function QuestionLookup() {
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
     React.useEffect(() => {
         LoadQuestions()
-    })
+
+        window.addEventListener(
+            "resize",
+            () => {
+                var ismobile = window.innerWidth < 900
+                if (ismobile !== isMobile) setIsMobile(ismobile)
+            },
+            false
+        )
+    }, [isMobile])
     return (
         <Layout>
             <Seo title="Question Lookup" />
-            <div className="AlignCenter">
+            <div style={{ height: "100%" }} className="AlignCenter row">
                 <h4 className="AlignCenter">Question Search</h4>
                 <p className="text-center" id="DatabaseRefresh"></p>
                 <div className="autoComplete_wrapper AlignCenter">
@@ -47,13 +57,18 @@ function QuestionLookup() {
                 <p>
                     <br />
                 </p>
-                <div className="text-center mb-5 fixed-bottom">
+                <div
+                    style={{ position: "absolute", bottom: 0 }}
+                    className={`gap-2 mb-5 ${
+                        isMobile ? "btn-group-vertical" : "btn-group"
+                    }`}
+                >
                     <button className="btn btn-primary RefreshDatabase">
                         Refresh Database Manually
                     </button>
                     <button
                         disabled
-                        className="btn btn-primary ml-5"
+                        className="btn btn-primary"
                         data-toggle="modal"
                         data-target="#ReportIssue"
                     >

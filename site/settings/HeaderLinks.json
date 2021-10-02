@@ -1,7 +1,8 @@
 {
   "LinkSet": [
       {"LinkURL": "https://twitter.com/CHW_Trivia", "LinkName": "Twitter"},
-      {"LinkURL": "https://discord.gg/383NnCVFkV", "LinkName": "Discord"}
+      {"LinkURL": "https://discord.gg/383NnCVFkV", "LinkName": "Discord"},
+        {"LinkURL": "mailto:CHW.Trivia@gmail.com", "LinkName": "Email"}
   ],
   "ExternalLinks": "Social Medias",
   "InternalLinks": [

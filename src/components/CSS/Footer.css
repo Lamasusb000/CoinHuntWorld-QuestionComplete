@@ -1,32 +1,33 @@
-.Footer-Container{
+.Footer-Container {
     margin: 0%;
     height: fit-content;
     padding: 2vh 2vh 0.5vh;
     display: flex;
     justify-content: space-between;
 }
-.Left-Column, .Right-Column{
+.Left-Column,
+.Right-Column {
     width: 50%;
     text-align: center;
 }
-.Left-Column div{
+.Left-Column div {
     display: flex;
     text-align: left;
     flex-direction: column;
-    padding-left: 5vw;
 }
-.Left-Column div address{
+.Left-Column div address {
     display: flex;
     flex-direction: row;
 }
-.Left-Column div address p:last-child{
+.Left-Column div address p:last-child {
     margin-left: 3vw;
 }
-@media screen and (max-width: 700px){
-    .Footer-Container{
+@media screen and (max-width: 700px) {
+    .Footer-Container {
         flex-direction: column;
     }
-    .Left-Column, .Right-Column{
+    .Left-Column,
+    .Right-Column {
         width: 100%;
     }
 }

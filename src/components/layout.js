@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
+import Footer from "./footer"
 import "../components/CSS/Main.css"
 
 import Theme from "../../site/settings/Theme.json"
@@ -52,11 +53,14 @@ const Layout = ({ children }) => {
                 <main
                     style={{
                         color: "inherit",
+                        minHeight: "92vh",
                     }}
+                    id="MainBody"
                 >
                     {children}
                 </main>
             </div>
+            <Footer />
         </>
     )
 }
