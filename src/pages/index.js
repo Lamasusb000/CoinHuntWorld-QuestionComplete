@@ -8,9 +8,8 @@ import netlifyIdentity from "netlify-identity-widget"
 import { Link } from "gatsby"
 
 
-
+var [isMobile, setIsMobile] = ""
 function IndexPage() {
-	var isMobile = ""
     React.useEffect(() => {
 		const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
 
@@ -25,7 +24,7 @@ function IndexPage() {
             },
             false
         )
-    })
+    }, [isMobile])
     return (
         <Layout>
             <Seo title="Home" />
