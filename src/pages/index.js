@@ -10,7 +10,6 @@ import { Link } from "gatsby"
 
 
 function IndexPage() {
-	var [IsMobile] = ""
     React.useEffect(() => {
 		const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
 
@@ -25,7 +24,7 @@ function IndexPage() {
             },
             false
         )
-    }, [isMobile])
+    })
     return (
         <Layout>
             <Seo title="Home" />
