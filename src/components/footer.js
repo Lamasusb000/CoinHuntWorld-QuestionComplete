@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import "../components/CSS/Footer.css"
 import Theme from "../../site/settings/Theme.json"
 import Links from "../../site/settings/HeaderLinks.json"
