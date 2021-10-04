@@ -9,8 +9,7 @@ import { Link } from "gatsby"
 
 function IndexPage() {
     React.useEffect(() => {
-		const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
-
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
         FormatLeaderboards()
         ShowDatabaseSize()
 
@@ -22,7 +21,7 @@ function IndexPage() {
             },
             false
         )
-    })
+    }, [isMobile])
     return (
         <Layout>
             <Seo title="Home" />
