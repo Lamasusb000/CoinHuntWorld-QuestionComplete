@@ -10,6 +10,7 @@ import "../components/CSS/AddingQuestions.css"
 import Modal from "../components/Modal"
 
 function QuestionLookup() {
+	var isMobile = ""
     React.useEffect(() => {
         LoadQuestions()
     	const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
