@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 
 function IndexPage() {
     function SetMobile() {
-        if (window.innerWidth) {
+        if (window) {
             return window.innerWidth < 900
         } else {
             return false
