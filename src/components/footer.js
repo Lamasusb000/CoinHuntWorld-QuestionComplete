@@ -9,7 +9,7 @@ import "../components/CSS/SpecialFormats.css"
 var [isMobile, setIsMobile] = ""
 function Footer() {
     React.useEffect(() => {
-    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
+    var [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
 	window.addEventListener(
             "resize",
             () => {
