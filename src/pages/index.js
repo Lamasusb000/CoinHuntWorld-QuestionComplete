@@ -8,8 +8,9 @@ import netlifyIdentity from "netlify-identity-widget"
 import { Link } from "gatsby"
 
 function IndexPage() {
-    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
     React.useEffect(() => {
+		const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
+
         FormatLeaderboards()
         ShowDatabaseSize()
 
