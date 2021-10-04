@@ -6,7 +6,15 @@ import Links from "../../site/settings/HeaderLinks.json"
 import "../components/CSS/SpecialFormats.css"
 
 function Footer() {
-    var [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
+    function SetMobile() {
+        if (window.innerWidth) {
+            return window.innerWidth < 900
+        } else {
+            return false
+        }
+    }
+
+    var [isMobile, setIsMobile] = React.useState(SetMobile())
     React.useEffect(() => {
         window.addEventListener(
             "resize",
