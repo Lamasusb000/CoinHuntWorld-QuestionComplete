@@ -7,7 +7,7 @@ import "../components/CSS/SpecialFormats.css"
 
 function Footer() {
     function SetMobile() {
-        if (window) {
+        if (typeof window !== "undefined") {
             return window.innerWidth < 900
         } else {
             return false

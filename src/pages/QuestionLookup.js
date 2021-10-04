@@ -11,7 +11,7 @@ import Modal from "../components/Modal"
 
 function QuestionLookup() {
     function SetMobile() {
-        if (window) {
+        if (typeof window !== "undefined") {
             return window.innerWidth < 900
         } else {
             return false
