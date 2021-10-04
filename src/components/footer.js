@@ -16,7 +16,7 @@ function Footer() {
             },
             false
         )
-    }, [isMobile] = "")
+    }, [isMobile])
     return (
         <div
             className="Footer-Container"

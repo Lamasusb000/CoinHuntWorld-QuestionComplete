@@ -22,7 +22,7 @@ function IndexPage() {
             },
             false
         )
-    }, [isMobile] = "")
+    }, [isMobile])
     return (
         <Layout>
             <Seo title="Home" />
