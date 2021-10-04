@@ -8,7 +8,7 @@ import "../components/CSS/SpecialFormats.css"
 function Footer() {
     
     React.useEffect(() => {
-		
+		var isMobile = ""
         window.addEventListener(
             "resize",
             () => {
