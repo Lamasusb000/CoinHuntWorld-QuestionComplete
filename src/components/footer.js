@@ -6,9 +6,8 @@ import Links from "../../site/settings/HeaderLinks.json"
 import "../components/CSS/SpecialFormats.css"
 
 function Footer() {
-    
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
     React.useEffect(() => {
-		var isMobile = ""
         window.addEventListener(
             "resize",
             () => {
@@ -17,7 +16,7 @@ function Footer() {
             },
             false
         )
-    }, [isMobile])
+    }, [isMobile] = "")
     return (
         <div
             className="Footer-Container"

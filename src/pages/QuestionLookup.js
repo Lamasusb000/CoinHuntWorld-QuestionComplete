@@ -10,9 +10,8 @@ import "../components/CSS/AddingQuestions.css"
 import Modal from "../components/Modal"
 
 function QuestionLookup() {
-	var isMobile = ""
+    const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
     React.useEffect(() => {
-		const [isMobile, setIsMobile] = React.useState(window.innerWidth < 900)
         LoadQuestions()
 
         window.addEventListener(
@@ -23,7 +22,7 @@ function QuestionLookup() {
             },
             false
         )
-    }, [isMobile])
+    }, [isMobile] = "")
     return (
         <Layout>
             <Seo title="Question Lookup" />
