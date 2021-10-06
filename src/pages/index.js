@@ -15,7 +15,6 @@ function IndexPage() {
             return false
         }
     }
-
     var [isMobile, setIsMobile] = React.useState(SetMobile())
     React.useEffect(() => {
         FormatLeaderboards()
