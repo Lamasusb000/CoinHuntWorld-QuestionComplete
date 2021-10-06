@@ -35,7 +35,7 @@ function Footer() {
             }}
         >
             <div className="Left-Column">
-                <h4>Social Medias</h4>
+                <h4>Social Media</h4>
                 <div className="d-flex flex-row justify-content-between">
                     <a
                         className="text-white SocialMediaTwitter d-flex flex-row justify-content-center"
