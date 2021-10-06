@@ -30,6 +30,38 @@ function LogBasedOnUserID(UserID) {
     return SubmittedData
 }
 
+//#region Download Database
+function download(csv) {
+    var hiddenElement = document.createElement("a")
+    hiddenElement.href =
+        "data:text/csv;charset=utf-8," + encodeURIComponent("\uFEFF" + csv)
+    hiddenElement.target = "_blank"
+    hiddenElement.download = "chw_trivia.csv"
+    hiddenElement.click()
+}
+
+function toCSV(table) {
+    return table
+        .map(row =>
+            row
+                .map(cell => {
+                    cell = cell.toString()
+                    if (cell.replace(/ /g, "").match(/[\s,"]/)) {
+                        return '"' + cell.replace(/"/g, '""') + '"'
+                    }
+                    return cell
+                })
+                .join(",")
+        )
+        .join("\n")
+}
+
+fetch("https://coinhuntworldtrivia.com/API/ExportJSON")
+    .then(response => response.json())
+    .then(toCSV)
+    .then(download)
+//#endregion
+
 //#region Cookie Code
 function createCookie(name, value, Expiration) {
     if (Expiration) {
