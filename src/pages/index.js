@@ -45,13 +45,13 @@ function IndexPage() {
                         isMobile ? "btn-group-vertical" : "btn-group"
                     }`}
                 >
-                    <Link to="" type="button" className="btn btn-primary">
+                    <Link to="QuestionLookup" type="button" className="btn btn-primary">
                         Question Search
                     </Link>
-                    <Link to="" type="button" className="btn btn-primary">
+                    <Link to="AddQuestionsV3" type="button" className="btn btn-primary">
                         Add Questions V3
                     </Link>
-                    <Link to="" type="button" className="btn btn-primary">
+                    <Link to="Flashcards" type="button" className="btn btn-primary">
                         Flashcards
                     </Link>
                 </div>
