@@ -658,10 +658,10 @@ async function SendToDatabase() {
             }
         }
     } else {
+		let data = await response.text()
         VerificationContainer.style.display = "none"
         ErrorPage.style.display = "block"
-        document.getElementById("ErrorCode").innerText =
-            "Unknown Error has Occured"
+		document.getElementById("ErrorCode").innerText = data
         console.log(`Unknown Data Callback`)
     }
 }
