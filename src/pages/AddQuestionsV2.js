@@ -662,7 +662,7 @@ async function SendToDatabase() {
         VerificationContainer.style.display = "none"
         ErrorPage.style.display = "block"
 		document.getElementById("ErrorCode").innerText = data
-        console.log(`Unknown Data Callback`)
+        console.log(`Unknown Data Callback:  ${data}`)
     }
 }
 
