@@ -185,8 +185,9 @@ var HourInUTC = TempDate.getUTCHours()
 if (0 <= HourInUTC && HourInUTC <= 11) {
     ExpirationDate.setUTCHours(12, 0, 0, 0)
 } else {
-    ExpirationDate.setUTCDate(TempDate.getUTCDay() + 2)
+    ExpirationDate.setUTCDate(TempDate.getUTCDate() + 1)
     ExpirationDate.setUTCHours(0, 0, 0, 0)
+    console.log(ExpirationDate)
 }
 function RefreshDatabase() {
     eraseCookie("Cache")
