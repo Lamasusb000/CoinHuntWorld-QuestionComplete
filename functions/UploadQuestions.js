@@ -54,13 +54,13 @@ exports.handler = (event, context, callback) => {
                 if ((result == "") | undefined) {
                     console.log("No Result")
                     return callback(null, {
-                        statusCode: 500,
-                        body: "Failed in Adding to Database",
+                        statusCode: 200,
+                        body: "Answer Failed To Be Created in Database",
                     })
                 }
                 return callback(null, {
                     statusCode: 200,
-                    body: `Successfully Posted Quesiton`,
+                    body: `Success`,
                 })
             })
             return callback(null, {
@@ -86,6 +86,7 @@ exports.handler = (event, context, callback) => {
                 )
             ) {
                 return callback(null, {
+					statusCode: 200,
                     body: "Failed. Already in Database",
                 })
             } else {
@@ -118,8 +119,8 @@ exports.handler = (event, context, callback) => {
                     if ((result == "") | undefined) {
                         console.log("No Result")
                         return callback(null, {
-                            statusCode: 500,
-                            body: "Failed in Adding To Question Array",
+                            statusCode: 200,
+                            body: "API Unable to Update Question Array",
                         })
                     }
                     return callback(null, {
