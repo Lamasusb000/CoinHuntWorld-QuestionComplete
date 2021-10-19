@@ -214,6 +214,8 @@ async function ContactAPI() {
 async function GetQuestions() {
     await ContactAPI()
     localStorage.setItem("Cache", JSON.stringify(RequestedData))
+	console.log(RequestedData)
+	console.log(ExpirationDate)
     createCookie("Cache", "True", ExpirationDate.toGMTString())
 
     var QuestionList = []
