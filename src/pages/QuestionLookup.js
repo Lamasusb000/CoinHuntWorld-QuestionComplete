@@ -248,7 +248,7 @@ function LoadQuestions() {
     var autoCompleteJS = new autoComplete({
         placeHolder: "Search Question",
         data: {
-            src: await CheckCache(),
+            src: CheckCache(),
             cache: true,
         },
         resultItem: {
