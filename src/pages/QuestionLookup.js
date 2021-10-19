@@ -226,7 +226,7 @@ async function GetQuestions() {
 async function CheckCache() {
     $(".RefreshDatabase").off("click", RefreshDatabase)
     $(".RefreshDatabase").on("click", RefreshDatabase)
-    if (readCookie("Cache") !== +(+null) && readCookie("Cache") !== +"") {
+    if (readCookie("Cache") !== null && readCookie("Cache") !== "") {
         RequestedData = JSON.parse(localStorage.getItem("Cache"))
         var QuestionList = []
         for (let i = 0; i < RequestedData.length; i++) {
