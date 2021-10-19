@@ -207,7 +207,9 @@ async function ContactAPI() {
     if (response.status === 200) {
         let data = await response.json()
         RequestedData = data
-        return
+		return new Promise(resolve => {
+			resolve("Success")
+		})
     }
 }
 
@@ -246,7 +248,7 @@ function LoadQuestions() {
     var autoCompleteJS = new autoComplete({
         placeHolder: "Search Question",
         data: {
-            src: CheckCache(),
+            src: await CheckCache(),
             cache: true,
         },
         resultItem: {
