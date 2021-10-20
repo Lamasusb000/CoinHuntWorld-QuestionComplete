@@ -18,7 +18,6 @@ function IndexPage() {
     var [isMobile, setIsMobile] = React.useState(SetMobile())
     React.useEffect(() => {
         FormatLeaderboards()
-        ShowDatabaseSize()
 
         window.addEventListener(
             "resize",
@@ -284,7 +283,7 @@ async function FormatLeaderboards() {
         $(`#User${i + 1}`).text(SortedDatabase[i].Name)
         $(`#Count${i + 1}`).text(SortedDatabase[i].Count)
     }
-
+	ShowDatabaseSize()
     document
         .getElementById("JoinLeaderboard")
         .addEventListener("click", SendDisplayName)
