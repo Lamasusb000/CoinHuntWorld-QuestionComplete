@@ -7,6 +7,11 @@ import $ from "jquery"
 import netlifyIdentity from "netlify-identity-widget"
 import { Link } from "gatsby"
 
+//Coded By Junior
+//Being Used as Submission of My SPA Final Project for EGCC
+//Class PGD103 Professor N. B. (Redacted For Privacy)
+
+
 function IndexPage() {
     function SetMobile() {
         if (typeof window !== "undefined") {
