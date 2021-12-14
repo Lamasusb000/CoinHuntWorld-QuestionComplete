@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "../components/CSS/Main.css"
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 import Theme from "../../site/settings/Theme.json"
 import { Helmet } from "react-helmet"

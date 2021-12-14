@@ -38,7 +38,7 @@ function IndexPage() {
             <Seo title="Home" />
             <JSimport File="Cookie.js" />
             <div className="text-center WidthControl65">
-                <h2>Welcome To CoinHuntWorldTrivia!</h2>
+                <h1>Welcome To CoinHuntWorldTrivia!</h1>
                 <hr />
                 <p>
                     Your go-to community resource for CoinHuntWorld Trivia
