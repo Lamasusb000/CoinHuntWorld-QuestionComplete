@@ -35,8 +35,7 @@ function Seo({ lang, title }) {
             title={title}
             titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
         >
-            <meta charSet="UTF-8>"/>
-            <meta name="description" content="Free Web tutorials"/>
+            <meta name="description" content="Database Collection Site for Trivia questions and answers for the game CoinHunt World"/>
             <meta name="keywords" content="Database, Trivia, Game, CoinHunt, CoinHuntWorld, Crypto, Bitcoin, Ethereum"/>
             <meta name="author" content="Junior MrTurtlesGame"/>
             <script

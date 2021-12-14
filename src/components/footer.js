@@ -103,11 +103,11 @@ function Footer() {
             <div className="Right-Column">
                 <h3>Disclaimer</h3>
                 <p className="">
-                    This is a Community project. There is no offical association
-                    between the Game developers and this site. All questions are
-                    submitted via the community and are not guarenteed 100%
-                    correct. Any Issues please reach out via social media to
-                    express your concerns
+                    This is a Community project. There is no official
+                    association between the Game developers and this site. All
+                    questions are submitted via the community and are not
+                    guaranteed 100% correct. Any Issues please reach out via
+                    social media to express your concerns
                 </p>
             </div>
         </div>
