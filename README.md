@@ -1,6 +1,6 @@
 # CHW Trivia Gatsby Site
 
-## Bulk Coded By Gatsby and Modified By Usbaldo Lamas Jr.
+## Bulk Coded By Gatsby and Modified By Junior (Mr Turtles Game)
 
 **A Non-Profit Website Coded For The CHW Game**
 
