@@ -7,10 +7,6 @@ import $ from "jquery"
 import netlifyIdentity from "netlify-identity-widget"
 import { Link } from "gatsby"
 
-//Coded By Junior
-//Being Used as Submission of My SPA Final Project for EGCC
-//Class PGD103 Professor N. B. (Redacted For Privacy)
-
 
 function IndexPage() {
     function SetMobile() {
@@ -38,7 +34,7 @@ function IndexPage() {
             <Seo title="Home" />
             <JSimport File="Cookie.js" />
             <div className="text-center WidthControl65">
-                <h1>CoinHuntWorldTrivia Home Page</h1>
+                <h1>CoinHuntWorldTrivia Testing Page</h1>
                 <hr />
                 <p>
                     Your go-to community resource for CoinHuntWorld Trivia
@@ -49,13 +45,25 @@ function IndexPage() {
                         isMobile ? "btn-group-vertical" : "btn-group"
                     }`}
                 >
-                    <Link to="QuestionLookup" type="button" className="btn btn-primary">
+                    <Link
+                        to="QuestionLookup"
+                        type="button"
+                        className="btn btn-primary"
+                    >
                         Question Search
                     </Link>
-                    <Link to="AddQuestionsV3" type="button" className="btn btn-primary">
+                    <Link
+                        to="AddQuestionsV3"
+                        type="button"
+                        className="btn btn-primary"
+                    >
                         Add Questions V3
                     </Link>
-                    <Link to="Flashcards" type="button" className="btn btn-primary">
+                    <Link
+                        to="Flashcards"
+                        type="button"
+                        className="btn btn-primary"
+                    >
                         Flashcards
                     </Link>
                 </div>
