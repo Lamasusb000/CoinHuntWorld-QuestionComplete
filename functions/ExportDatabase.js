@@ -5,7 +5,7 @@ const Client = new faunadb.Client({ secret: API_Key })
 var Output = "JSON Did not Attach"
 
 exports.handler = (event, context, callback) => {
-    if(event.headers.origin != "https://coinhuntworldtrivia.com" && event.body == "Lamasusb000-07282021"){
+    if(event.headers.origin != "https://coinhuntworldtrivia.com" && event.body == process.env.AdminPassword){
 		return callback(null, {
 			statusCode: 403,
 			body: "Sorry But This API is For CoinHuntWorldTrivia.com Admins."
