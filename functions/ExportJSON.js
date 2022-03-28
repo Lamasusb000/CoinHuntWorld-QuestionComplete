@@ -1,5 +1,6 @@
 const faunadb = require("faunadb"),
     q = faunadb.query
+
 var API_Key = process.env.FaunaDB
 const Client = new faunadb.Client({ secret: API_Key })
 
