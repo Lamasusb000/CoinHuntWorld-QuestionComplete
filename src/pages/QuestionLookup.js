@@ -99,6 +99,7 @@ function QuestionLookup() {
                                 Question
                             </label>
                             <input
+                                id="ReportQuestion"
                                 className="form-control"
                                 type="text"
                                 disabled
@@ -111,6 +112,7 @@ function QuestionLookup() {
                                 Answer
                             </label>
                             <input
+                                id="ReportAnswerArray"
                                 className="form-control"
                                 type="text"
                                 disabled
@@ -123,6 +125,7 @@ function QuestionLookup() {
                                 Color
                             </label>
                             <input
+                                id="ReportColor"
                                 className="form-control"
                                 type="text"
                                 disabled
@@ -135,10 +138,23 @@ function QuestionLookup() {
                                 Category
                             </label>
                             <input
+                                id="ReportCategory"
                                 className="form-control"
                                 type="text"
                                 disabled
                                 value="Category Listed Here"
+                            ></input>
+                            <label
+                                className="col-form-label"
+                                htmlFor="ReportQuest"
+                            >
+                                What is the Issue?
+                            </label>
+                            <input
+                                id="IssueReporting"
+                                className="form-control"
+                                type="text"
+                                placeholder="List Issue Here"
                             ></input>
                         </div>
                     </div>
@@ -161,13 +177,18 @@ async function ReportQuestion() {
     let response = await fetch(
         "https://coinhuntworldtrivia.com/.netlify/functions/ReportQuestion",
         {
-            body: ReportedID,
+            body: {
+                Question: 
+                AnswerArray:
+                Issue 
+
+            },
             method: "POST",
         }
     )
     if (response.status === 200) {
-        let data = await response.json()
-        RequestedData = data
+        let data = await response.text()
+        console.log(data)
         return
     }
     */
