@@ -1,8 +1,7 @@
 const faunadb = require("faunadb"),
     q = faunadb.query
-const Client = new faunadb.Client({
-    secret: "fnAEN56_MwACQKzzE9wDEAAY4w5EUN7nNnstIyAN",
-})
+var API_Key = process.env.FaunaDB
+const Client = new faunadb.Client({ secret: API_Key })
 
 exports.handler = (event, context, callback) => {
     if (event.httpMethod == "OPTIONS") {
