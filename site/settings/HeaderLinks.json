@@ -2,7 +2,9 @@
   "LinkSet": [
       {"LinkURL": "https://twitter.com/CHW_Trivia", "LinkName": "Twitter"},
       {"LinkURL": "https://discord.gg/383NnCVFkV", "LinkName": "Discord"},
-        {"LinkURL": "mailto:CHW.Trivia@gmail.com", "LinkName": "Email"}
+        {"LinkURL": "mailto:CHW.Trivia@gmail.com", "LinkName": "Email"},
+        {"LinkURL": "https://github.com/Lamasusb000/CoinHuntWorld-QuestionComplete", "LinkName": "Github"}
+
   ],
   "ExternalLinks": "Social Medias",
   "InternalLinks": [
